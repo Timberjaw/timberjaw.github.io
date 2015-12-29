@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>TIMBERTECH</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Dev journal and geek stuff.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TIMBERTECH">
+<meta property="og:url" content="http://timberjaw.github.io/page/15/index.html">
+<meta property="og:site_name" content="TIMBERTECH">
+<meta property="og:description" content="Dev journal and geek stuff.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TIMBERTECH">
+<meta name="twitter:description" content="Dev journal and geek stuff.">
+  
+  
+  
+ <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" type="text/css">
+  
+
+  
+
+  
+</head>
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="/" id="logo"><span class="site-title">TIMBERTECH</span></a>
+      <span class="site-subtitle">DATA COLLECTOR MK IV</span>
+      <nav id="main-nav">
+        
+      </nav>
+      
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tr>
+        
+        <td>
+          
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://timberjaw.github.io"></form>
+          
+        </td>
+      </tr>
+    </table>
+  </div>
+</header>
+
+    <div class="outer">
+      
+      <section id="main">
+      <article id="post-replay-value-something-new-from-something-old" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/09/replay-value-something-new-from-something-old/">Replay Value: Something New From Something Old</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/09/replay-value-something-new-from-something-old/">
+      <time datetime="2015-08-09T07:00:00.000Z" itemprop="datePublished">2015-08-09</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>I’ve been thinking a bit about replay value in a text adventure. SRPG is, as the name would indicate, an RPG, so there’s some inherent replay value in the form of race/class choices, moral decisions, etc. Getting away from specifics, though, replay value is all about getting a new experience from a familiar construct.</p>
+<p>Giving the player access to new/different mechanics is a good start. SRPG does that via race/class selection, which changes the starting items and stats for the player. If people feel invested enough to replay the game with each race or class, I’ll feel pretty satisfied about the variety available. But there’s probably more potential. Other avenues for replayability include: multiplayer, random events, procedural generation, and bullheaded dedication to completionism.</p>
+<p>Procedural content is of particular interest to me, but in most games I’m familiar with, that amounts to a slightly different random experience. In some cases that’s perfectly acceptable. Minecraft is one of my favorite games, though its replay value is largely driven by the combination of ‘another slightly different cave’ and ‘slightly different player base.’ I have more ambitious goals for procedural content in SRPG, using NPC behaviors in games like Elder Scrolls as a template.</p>
+<p>NPCs become interesting when they have their own lives, with motivations, goals, and challenges. Similarly, the same storyline gains new life when given a different cast or a new turn in the river. While I don’t aim for a completely new experience for the player each time they begin anew, I hope they’ll get a little bit more out of the game if they choose to replay it with fresh eyes and fresh decisions.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/09/replay-value-something-new-from-something-old/" data-id="ciiqok0r6004j4soh79caqp9c" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-stupidrpg-output-queue" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/08/stupidrpg-output-queue/">StupidRPG: Output Queue</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/08/stupidrpg-output-queue/">
+      <time datetime="2015-08-08T07:00:00.000Z" itemprop="datePublished">2015-08-08</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Input queue, output queue, callback queue…SRPG has all kinds of queues. The output queue is a fun one. On the basic side, it handles the process of outputting text to the browser (paragraphs generated by the player’s action). It does a few more interesting things as well.</p>
+<h2 id="Timing"><a href="#Timing" class="headerlink" title="Timing"></a>Timing</h2><p>Why a queue? Why not just output all the text immediately. Two reasons: screen management and dramatic timing.</p>
+<p><strong>Screen Management</strong></p>
+<p>Being a browser game, the dimensions (width and height) of the window in which it’s played are not known to me at design time. In particular, I don’t know how many lines of text will fit on the screen vertically. The output queue lets me ‘pause’ the flow of text when room runs out, and prompt the user to press a key to continue. You might recognize this feature from the classic Infocom games.</p>
+<p><strong>Dramatic Timing</strong></p>
+<p>This one is more fun. Not all text has to be drawn to the screen at the same speed. Pauses can be inserted between text items at will. This is particularly useful when outputting narration or dialogue, in which moments of hesitation or consideration by the GM or NPCs will make the output feel more lifelike.</p>
+<h2 id="Effects"><a href="#Effects" class="headerlink" title="Effects"></a>Effects</h2><p>I haven’t made use of this concept yet, but the output queue also allows for the inclusion of special effects down the road. For example, a typewriter output effect, backspacing to erase a typo by the GM, and so forth. Something to look forward to for the next time I don’t have pressing bugs to deal with.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/08/stupidrpg-output-queue/" data-id="ciiqok0pk00384sohu9kxkj76" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-wish-list-multiplayer" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/07/wish-list-multiplayer/">Wish List: Multiplayer</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/07/wish-list-multiplayer/">
+      <time datetime="2015-08-07T07:00:00.000Z" itemprop="datePublished">2015-08-07</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>One of my many pie-in-the-sky goals for StupidRPG is networked multiplayer. I have absolutely no hands-on experience with network programming (browser or otherwise), so it’s toward the bottom of the priority list. I do know a little bit about websockets and a moderate amount about databases.</p>
+<p>The engine for SRPG was built with future multiplayer in mind (sort of). Actions usually enter the queue from local input, but that’s not a requirement. I’ve already shown examples of input being added via test functions and via previous input (an action triggering another action). Handling a remotely-entered command (and appropriate context, such as the remote player entity) doesn’t pose an architectural problem. There are, however, many design challenges to overcome to make multiplayer work in a plot-driven, turn-based RPG. I’ll talk about a few problems and concepts I’ve been considering.</p>
+<h2 id="Problem_3A_Whose_Turn_Is_It_3F"><a href="#Problem_3A_Whose_Turn_Is_It_3F" class="headerlink" title="Problem: Whose Turn Is It?"></a>Problem: Whose Turn Is It?</h2><p>In short, for the game to work as-is, it needs to remain purely turn based and synchronous. Players take turns inputting commands, then the engine distributes the commands to the other players. For common actions like moving around, opening doors, and picking up objects, this is no problem. There are a few cases where it gets tricky though:</p>
+<ul>
+<li>Command interrupts (these need to be contextual per-player)</li>
+<li>Dialogue trees (does P2 have to wait for P1 to finish an entire conversation before they can take an action?)</li>
+<li>No-tick actions</li>
+<li>Guided segments like the intro</li>
+</ul>
+<p>I have solutions in mind for some of these. No-tick actions (which I’ll talk more about in another post) don’t need to be synchronized between players. This means P1 can look at their inventory while P2 is taking their turn, for example.</p>
+<p>Thinking more broadly, I’ll need to develop a method for flagging synchronous/asynchronous sections (in addition to no-tick actions). Synchronous actions can only be done on your turn, while asynchronous actions can be done at any time.</p>
+<h2 id="Problem_3A_Gameplay"><a href="#Problem_3A_Gameplay" class="headerlink" title="Problem: Gameplay"></a>Problem: Gameplay</h2><p>This ties in to the previous problem a bit (particularly the handling of dialogue trees), but it’s a more fundamental set of questions. In short, what does Player 2 do? Are they another fully-fledged individual just like Player 1? Are they a sidekick of some type? Are they present for the duration of the game’s plot? Do I need to build separate puzzles and gameplay elements for the solo and multiplayer modes?</p>
+<h2 id="Concept_3A_Act_IV_Multiplayer"><a href="#Concept_3A_Act_IV_Multiplayer" class="headerlink" title="Concept: Act IV Multiplayer"></a>Concept: Act IV Multiplayer</h2><p>Traditional multiplayer aside, another concept I’m considering is to only introduce multiplayer at the end of the game’s story. Essentially, the campaign would wrap up and then the game would turn into a more open world with multiple players. Might be overly ambitious, and for a new player who wants to play with a friend, they have a lot of content to get through first.</p>
+<h2 id="Concept_3A_Asymmetric_Multiplayer"><a href="#Concept_3A_Asymmetric_Multiplayer" class="headerlink" title="Concept: Asymmetric Multiplayer"></a>Concept: Asymmetric Multiplayer</h2><p>Lastly, I’m looking at asymmetric play. Instead of having both players exist as equals in the storyline, the second would have a different experience entirely (sidekick, animal, etc). Some Wii U games use this type of play for the 5th player, allowing them to assist the other players from outside the regular mode. This is just as ambitious as the Act IV concept, as it needs a lot of extra content and coding to be meaningful.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/07/wish-list-multiplayer/" data-id="ciiqok0m200094sohh6sgnidu" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wishlist/">wishlist</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-save-load-undo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/06/save-load-undo/">StupidRPG: Save, Load, &amp; Undo</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/06/save-load-undo/">
+      <time datetime="2015-08-06T07:00:00.000Z" itemprop="datePublished">2015-08-06</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Most text adventures (that I’ve played, at least) don’t feature the auto-save ‘checkpoints’ common in modern videogames. They do include <code>SAVE</code> and <code>LOAD</code> commands which work exactly as you’d expect, but they also typically provide another command for state management: <code>UNDO</code>.</p>
+<p>In a singleplayer, turn-based game, <code>UNDO</code> is a pretty straightforward feature to implement. There are a few different approaches, but I’ve elected to leverage the savestate functionality for efficiency’s sake. More on that in a bit.</p>
+<h2 id="SAVE"><a href="#SAVE" class="headerlink" title="SAVE"></a><code>SAVE</code></h2><p>The save command in SRPG is handled primarily by the ECS. Since <em>Everything is an Entity</em>, I can simply loop through all the entities, building a new object which can be stored in JSON format. From there, it can be saved in the browser’s local storage or downloaded to the user’s computer.</p>
+<p>Not every piece of data on an object is needed for savestate. Most callbacks don’t change once they’re set, and many object attributes are static as well. Accordingly, each Component can specify the persistent attributes that should be included in the save process. For example, the Living component specifies that the HP attribute should be saved.</p>
+<h2 id="LOAD"><a href="#LOAD" class="headerlink" title="LOAD"></a><code>LOAD</code></h2><p>Loading works exactly as you’d expect: saving in reverse. The JSON data is read back and the entity attributes are re-applied to the live versions.</p>
+<h2 id="UNDO"><a href="#UNDO" class="headerlink" title="UNDO"></a><code>UNDO</code></h2><p>Undo is a combination of an internal save (before each action, save the current state) and load, allowing the player to jump back in time just as if they had manually saved and loaded. Effectively, it’s an automated Quick Save feature. Supporting additional steps of undo is possible, at the cost of additional memory and CPU time.</p>
+<p>Because <code>UNDO</code> is a verb just like any other in the game, there are some interesting opportunities for integration into the mechanics and story. That’s a surprise for another day, though.</p>
+<h2 id="Next_Steps"><a href="#Next_Steps" class="headerlink" title="Next Steps"></a>Next Steps</h2><p>There are a few shortcomings of the current model:</p>
+<ul>
+<li>Saving multiple levels of undo is not cost efficient. I need to do better profiling of the memory consumption of the game.</li>
+<li>Much of the saved data is not actually changed from the base entity state. I could reduce the size of the save files by only saving attributes that have actually changed, but that means adding more tracking code.</li>
+<li>Some circumstances need special handling. For example, what happens if the player uses <code>UNDO</code> directly after <code>SAVE</code>?</li>
+<li>Entities have to be uniquely identified in order for loading to work properly. This isn’t currently a problem, but could become one in the future with dynamically generated entities.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/06/save-load-undo/" data-id="ciiqok0r0004d4sohisdnp0xf" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-testing-a-text-adventure" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/05/testing-a-text-adventure/">Testing a Text Adventure</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/05/testing-a-text-adventure/">
+      <time datetime="2015-08-05T07:00:00.000Z" itemprop="datePublished">2015-08-05</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Testing is an important component of any software project, and games are no exception. Javascript is easy enough to unit test for core functionality, but the genre of SRPG offers an interesting opportunity for automated game-aware testing.</p>
+<p>All input in the game is simply text, and the game engine already has an ‘input queue’ capable of handling multiple commands in sequence. This feature is already being used for one simple test process, to get me back to a particular state in the game after making changes. It can be taken further, however.</p>
+<p>Random events in SRPG are handled with a seeded random number generator, meaning that given the same seed and same inputs, all random effects in the game will happen in the same way. That means I can save a transcript (sequence of inputs) and a seed, then play them back and check the output. This is a natural place to automate tests.</p>
+<p>My current plan is to develop tests that specify:</p>
+<ul>
+<li>Starting state (optional, used to shortcut to later portions of the game before testing something specific)</li>
+<li>Random seed</li>
+<li>Input sequence</li>
+<li>Test callback</li>
+</ul>
+<p>If/when the input sequence concludes, the callback is run to check for certain elements. For example, checking the last text output, or looking at an attribute of a particular object.</p>
+<p>Helpful tests could include:</p>
+<ul>
+<li>Intro process works (race/class selection)</li>
+<li>Movement works (starting area)</li>
+<li>Checking inventory works</li>
+</ul>
+<p>During each build, I can run all the tests to get an idea of the health of the game code, and find out immediately if my most recent changes have broken anything.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/05/testing-a-text-adventure/" data-id="ciiqok0p0002n4sohlf98bfz2" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/testing/">testing</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-stupidrpg-tutorial-or-not-tutorial" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/04/stupidrpg-tutorial-or-not-tutorial/">StupidRPG: Tutorial or not Tutorial</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/04/stupidrpg-tutorial-or-not-tutorial/">
+      <time datetime="2015-08-04T07:00:00.000Z" itemprop="datePublished">2015-08-04</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>One of the open questions I’m contemplating about the design of SRPG is the inclusion (and nature) of a tutorial. I want the game to be reasonably accessible to people unfamiliar with text adventure conventions, but I don’t want an obtrusive starting tutorial. I’m considering a three-part tutorial: implicit, explicit, and help.</p>
+<h2 id="Explicit_Tutorial"><a href="#Explicit_Tutorial" class="headerlink" title="Explicit Tutorial"></a>Explicit Tutorial</h2><p>In an explicit tutorial, the player knows they are being taught how to play. The tutorial gives instructions and advice, like:</p>
+<blockquote>Navigation in StupidRPG is performed using cardinal directions (like on a compass), along with context-specific movement like up and down. To proceed to the next area, type <code>NORTH</code> or <code>N</code>, then press enter.</blockquote>
+
+<p>While helpful, this information is not well-integrated into the game, and is only of interest to complete novices. More experienced players will likely want to skip the tutorial.</p>
+<p>If I include an explicit tutorial, it will likely be opt-in (i.e. the player will be prompted to start the tutorial if desired).</p>
+<h2 id="Implicit_Tutorial"><a href="#Implicit_Tutorial" class="headerlink" title="Implicit Tutorial"></a>Implicit Tutorial</h2><p>An implicit tutorial is more appealing to me, as it’s fully integrated into the game (and story). If done well, the player might not even notice that they’re being guided through the early portions of the game. The first level in Super Mario Bros provides a <a href="https://www.youtube.com/watch?v=ZH2wGpEZVgE" target="_blank" rel="external">great example</a> of an implicit tutorial.</p>
+<p>While I can’t (probably) teach the player something as basic as <em>how</em> to enter a command via implicit means, I can definitely guide them into certain actions that give greater insight into the game mechanics. For example, in the first area of the game, an item on the ground is described to the player. Loot hoarders that they are, most players will attempt to acquire it (via <code>TAKE OBJECT</code>, <code>PICK UP OBJECT</code>, etc). The first area also has only one exit, forcing the player to learn a basic movement command to progress.</p>
+<p>I haven’t discussed Command Tags much previously. Command tags take advantage of the game’s HTML output by creating clickable, highlighted links in the game’s text. This is mostly intended as a utility, allowing the player to simply click on objects, people, and scenery to interact with them rather than typing out a command. The default action for command tags is <code>LOOK AT (OBJECT)</code>. When a command tag is clicked, the associated input (which is <strong>always</strong> a text command that they player could have typed themselves) is echoed back and executed. That is, the player sees the command that was executed. If they’re paying attention, they just learned how to use the <code>LOOK</code> command.</p>
+<h2 id="Help"><a href="#Help" class="headerlink" title="Help"></a>Help</h2><p>Lastly, I plan on including a help menu (accessible via a link or by typing <code>HELP</code>). The menu will include a general overview of interacting with the game, as well as specific instructions for core commands (<code>MOVE</code>, <code>LOOK</code>, <code>TAKE</code>, <code>INVENTORY</code>, etc). A hint guide might be a nice future addition as well.</p>
+<h2 id="Putting_it_All_Together"><a href="#Putting_it_All_Together" class="headerlink" title="Putting it All Together"></a>Putting it All Together</h2><p>There are opportunities for combining these instructional elements. For example, if the very first command the player enters is not understood, they can be prompted to take the tutorial or view the help menu.</p>
+<p>Right now I’m focused on the implicit tutorial (which I believe is the most valuable), followed by the help menu (which acts as a nice reference even for experienced players). The explicit tutorial is unlikely to get time devoted to it until later in playtesting.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/04/stupidrpg-tutorial-or-not-tutorial/" data-id="ciiqok0p5002u4sohfc3w8y2s" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-weekly-update-3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/03/weekly-update-3/">Weekly Update #3</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/03/weekly-update-3/">
+      <time datetime="2015-08-03T07:00:00.000Z" itemprop="datePublished">2015-08-03</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Mostly side projects this week. Big new project starting at work, that will be eating up most of my weekly dev time. Evenings and weekends, here I come.</p>
+<p><strong>Changelog:</strong></p>
+<ul>
+<li>Continued refactoring dialogue trees.</li>
+<li>Side Project: Built Numenera card generator in C++. Sent sample to be printed.</li>
+</ul>
+<p><strong>Known Issues:</strong></p>
+<ul>
+<li>Nothing new</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/03/weekly-update-3/" data-id="ciiqok0mu000x4sohosozflyk" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-reading-list" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/02/reading-list/">Reading List</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/02/reading-list/">
+      <time datetime="2015-08-02T07:00:00.000Z" itemprop="datePublished">2015-08-02</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>As part of my programming adventures, I have several books I’m in the midst of reading to broaden my horizons:</p>
+<ul>
+<li><a href="http://amzn.com/0201889544" target="_blank" rel="external">The C++ Programming Language</a> by Bjarne Stroustrup</li>
+<li><a href="http://amzn.com/0123694965" target="_blank" rel="external">The Art of Game Design</a> by Jesse Schell</li>
+<li><a href="http://amzn.com/B00B7R87FU" target="_blank" rel="external">Creating Interactive Fiction With Inform 7</a> by Aaron A. Reed</li>
+<li><a href="http://amzn.com/0465026567" target="_blank" rel="external">Gödel, Escher, Bach: An Eternal Golden Braid</a> by Douglas R. Hofstadter</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/02/reading-list/" data-id="ciiqok0r7004k4soh4jcmai7q" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-stupidrpg-callbacks" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/01/stupidrpg-callbacks/">StupidRPG: Callbacks</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/01/stupidrpg-callbacks/">
+      <time datetime="2015-08-01T07:00:00.000Z" itemprop="datePublished">2015-08-01</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Callbacks are functions on an object, typically executed based on an event somewhere in the game. For example, each time a game ‘tick’ occurs, an AI callback is triggered on every living thing (allowing them to move, attack, or take other actions). SRPG has a couple types of callbacks, which I hope to consolidate in future refactoring.</p>
+<h2 id="Callback_Types"><a href="#Callback_Types" class="headerlink" title="Callback Types"></a>Callback Types</h2><p>The current callback behavior is slightly convoluted, due to changes mid-development. Initially, each object could only have one callback of a given name, which proved to be too limiting. It meant that I couldn’t stack callbacks to allow objects to inherit behaviors <em>and</em> expand on them.</p>
+<p>The quick solution to this was to use an array of functions, and instead of setting the callback directly, add it to the end of the array. This works fine for the most part, but the code feels a bit clunky for more advanced use cases, and due to the mix of new code and old code, I have to perform several additional checks before executing callbacks.</p>
+<h2 id="Refactoring"><a href="#Refactoring" class="headerlink" title="Refactoring"></a>Refactoring</h2><p>One of my refactoring tasks is to clean up the callbacks in a few ways:</p>
+<ul>
+<li>Create a Callback prototype which all callbacks inherit from</li>
+<li>Standardize all object callback fields to use an array (no direct references to single callbacks)</li>
+<li>Standardize callback return values to let the caller know definitively how/whether the callback was handled</li>
+</ul>
+<p>Reorganizing will allow me to add more advanced callback functionality as well, such as specifying event filters for callbacks, prioritizing callbacks, and allowing callbacks to cancel events entirely (not allowing other callbacks to run).</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/01/stupidrpg-callbacks/" data-id="ciiqok0q5003v4sohmiugfruc" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-side-project-power-cards" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/31/side-project-power-cards/">Side Project: Power Cards</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/07/31/side-project-power-cards/">
+      <time datetime="2015-07-31T07:00:00.000Z" itemprop="datePublished">2015-07-31</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>One of the many shortcomings of my technology toolkit is C++. I’ve tinkered with it here and there over the years, but the vast majority of my time and energy has gone into easier languages such as C#, Java, and PHP. I set out to rectify that recently by 1) borrowing a copy of <a href="http://amzn.com/0201889544" target="_blank" rel="external">The C++ Programming Language</a> from a generous friend, and 2) diving into a hands-on project well beyond my capabilities. If learning by beating your head against a compiler was a valid way of learning programming, I’d be a Computer Science professor.</p>
+<h2 id="The_Project"><a href="#The_Project" class="headerlink" title="The Project"></a>The Project</h2><p>I currently GM two systems: Dungeons &amp; Dragons 5th Edition, and <a href="http://www.numenera.com/" target="_blank" rel="external">Numenera</a> (a more recent system by former D&amp;D designer Monte Cook). For D&amp;D, Wizards of the Coast had a set of “power cards” produced for every spell in the game. They’re standard playing card size, excellent quality (sturdy and laminated), and big time-savers at the table, especially for newer players or anyone with an inordinate number of spells (hello Wizard!). For most spells it’s no longer necessary to look them up in the rulebook (a few have too much information to fit on a card).</p>
+<p>Numenera doesn’t have power cards. Maybe they’ll get around to it at some point (they’ve released card decks for random items and XP). In the meantime, it seemed like a fun project. The basic idea is:</p>
+<ol>
+<li>Copy the powers (Esoteries for the Nano type/class, Tricks of the Trade for Jacks, and Fighting Moves for Glaives) from the source book(s).</li>
+<li>Organize the powers in Excel (separating fields for character type, power tier, title, description, cost and so forth).</li>
+<li>Export to CSV.</li>
+<li>Import the CSV in my C++ program, loop through the entries and output nicely-formatted card images using ImageMagick.</li>
+<li>Print the cards, either on cardstock at home or via a print service / shop.</li>
+</ol>
+<h2 id="Step_One_3A_Learn_C++"><a href="#Step_One_3A_Learn_C++" class="headerlink" title="Step One: Learn C++"></a>Step One: Learn C++</h2><p>This process will continue through every other step and beyond. C++ requires more attention to things like memory management, use of references/pointers, and in general has a less friendly syntax than a language like C#. I have several blocks of code that work for reasons still unknown to me, and several things I tried previously failed to work due to equally mysterious causes.</p>
+<h2 id="Step_Two_3A_Learn_ImageMagick"><a href="#Step_Two_3A_Learn_ImageMagick" class="headerlink" title="Step Two: Learn ImageMagick"></a>Step Two: Learn ImageMagick</h2><p>I spent way more time on this step than I should have. Most of it can be explained by my inexperience with C++ (and with native Windows development), but it <em>seems</em> like there are a few areas where ImageMagick’s actual behavior doesn’t match its documentation. I eventually got it compiled and working with my program (while learning a lot about lib files and DLL loading along the way).</p>
+<p>Once I had the library working, drawing elements to an image and saving it was surprisingly easy. Working with text, however, is another story. Among other issues, ImageMagick doesn’t seem to have built-in support for text wrapping. Since I need to write decent-sized chunks of text and I don’t feel like using a monospaced font, I ended up writing what may be the worst text wrapping function of all time.</p>
+<h2 id="Step_Three_3A_Write_the_Worst_Text-Wrapping_Function_of_All_Time"><a href="#Step_Three_3A_Write_the_Worst_Text-Wrapping_Function_of_All_Time" class="headerlink" title="Step Three: Write the Worst Text-Wrapping Function of All Time"></a>Step Three: Write the Worst Text-Wrapping Function of All Time</h2><p>Ok. So there’s no built-in text wrapping. There’s also no built-in way to measure the size of a piece of text. I <em>think</em> there’s a non-ImageMagick way to get the font data that would let me do that, but at this point my head is already full of too much other new information. So I decided to work around the issue using only ImageMagick’s functionality and plain C++. I noticed that when drawing text, you can specify a background color, which will draw a colored rectangle behind the text. You can also sample pixels from anywhere in the image, which turns out to be pretty handy.</p>
+<p>Here’s how the text wrap works:</p>
+<ul>
+<li>Set the background color AND the text color to red</li>
+<li>Write the text onto a temp image</li>
+<li>Get a pixel at the right side of the image</li>
+<li>If the pixel is red, the text is too long to fit on the line</li>
+<li>Cut a word from the end of the text and try again</li>
+<li>If it’s stupid but it works, it’s not stupid</li>
+</ul>
+<p>I did perform some optimizations, as this turned out to be (predictably) slow with longer strings. In particular, I picked a semi-arbitrary character count that I think is unlikely to ever fit on a single line, and I only write/check that amount of text at a time. If I have 800 characters of text to write, chances are no more than about 50 characters will fit on each line (for the font size and image size I’m using). This reduces the number of failed attempts for each line considerably. Each time I write a line, I get the next ~50 characters, move down to the next line and continue.</p>
+<p>The function currently lacks a few features (some more important than others):</p>
+<ul>
+<li>Doesn’t handle overflow off the bottom of the image</li>
+<li>Doesn’t minimize wasted space at ends of lines (e.g. sometimes it might be better to leave a larger gap at the end of one line to use the next few more optimally)</li>
+<li>Only handles left or right alignment; I’d like to have the text justified</li>
+</ul>
+<h2 id="Step_4_3A_Tidy_Up_and_Print_21"><a href="#Step_4_3A_Tidy_Up_and_Print_21" class="headerlink" title="Step 4: Tidy Up and Print!"></a>Step 4: Tidy Up and Print!</h2><p>With the basic functionality working, I put some time into cleaning up the output, designing some card backs, and doing general cleanup. I’m almost ready to print the actual cards.</p>
+<img src="/2015/07/31/side-project-power-cards/ExampleCard.png" alt="Example card" title="Example card">
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/07/31/side-project-power-cards/" data-id="ciiqok0qu00484sohbiun8ssd" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cplusplus/">cplusplus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/numenera/">numenera</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <nav id="page-nav">
+        <a class="extend prev" rel="prev" href="/page/14/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><span class="page-number current">15</span><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/16/">Next &raquo;</a>
+      </nav>
+    </section>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Steven Richards<br>
+    </div>
+  </div>
+</footer>
+    
+
+
+
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

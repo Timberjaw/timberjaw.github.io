@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Rule Specificity | TIMBERTECH</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="I have a problem with the SRPG rulebook that I’ve been intentionally ignoring while there are still only a few rules. Namely, specificity. The situation is similar to that of CSS specificity.
+Right no">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Rule Specificity">
+<meta property="og:url" content="http://timberjaw.github.io/2015/11/15/rule-specificity/index.html">
+<meta property="og:site_name" content="TIMBERTECH">
+<meta property="og:description" content="I have a problem with the SRPG rulebook that I’ve been intentionally ignoring while there are still only a few rules. Namely, specificity. The situation is similar to that of CSS specificity.
+Right no">
+<meta property="og:updated_time" content="2015-12-29T00:06:01.493Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Rule Specificity">
+<meta name="twitter:description" content="I have a problem with the SRPG rulebook that I’ve been intentionally ignoring while there are still only a few rules. Namely, specificity. The situation is similar to that of CSS specificity.
+Right no">
+  
+  
+  
+ <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" type="text/css">
+  
+
+  
+
+  
+</head>
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="/" id="logo"><span class="site-title">TIMBERTECH</span></a>
+      <span class="site-subtitle">DATA COLLECTOR MK IV</span>
+      <nav id="main-nav">
+        
+      </nav>
+      
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tr>
+        
+        <td>
+          
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://timberjaw.github.io"></form>
+          
+        </td>
+      </tr>
+    </table>
+  </div>
+</header>
+
+    <div class="outer">
+      
+      <section id="main"><article id="post-rule-specificity" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Rule Specificity
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/11/15/rule-specificity/">
+      <time datetime="2015-11-15T08:00:00.000Z" itemprop="datePublished">2015-11-15</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>I have a problem with the SRPG rulebook that I’ve been intentionally ignoring while there are still only a few rules. Namely, specificity. The situation is similar to that of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity" target="_blank" rel="external">CSS specificity</a>.</p>
+<p>Right now, Rules are checked in the order they were added, which has the side effect of making overlapping rules effectively random in order. That said, the Rule system is marginally resistant to the randomness, as multiple rules can apply to an action and can stack outputs (or cancel execution entirely).</p>
+<p>In the interest of making the process more predictable, I’m working on a plan for calculating specificity of Rules, and executing them in order from most specific (‘rule for walking north from dim clearing while the door is locked and the player has the key’) to least specific (‘rule for walking while the player has the key’).</p>
+<p>There are some implementation details to work out with the weighting (assuming I don’t go with a naive approach based simply on the number of conditionals). The ‘callback’ conditionals are especially tricky, as they can conceal additional conditionals within their custom code. The ability to directly assign a boosted specificity score might be useful (similar to the bad-practice !important keyword in CSS), but I’d like to avoid it if possible.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/11/15/rule-specificity/" data-id="ciiqok0r1004f4sohaf7jc8hm" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/11/16/weekly-update-18/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Weekly Update #18
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/11/14/daily-update-317-2015/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Daily Update 317.2015</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+</section>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Steven Richards<br>
+    </div>
+  </div>
+</footer>
+    
+
+
+
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

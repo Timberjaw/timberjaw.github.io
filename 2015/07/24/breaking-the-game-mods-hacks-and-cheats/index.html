@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Breaking the Game: Mods, Hacks, and Cheats | TIMBERTECH</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="StupidRPG is very, very modular. Most of the core functionality of the engine and the main campaign are implemented in modules. Examples of modules include: combat (fighting things), social (talking t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Breaking the Game: Mods, Hacks, and Cheats">
+<meta property="og:url" content="http://timberjaw.github.io/2015/07/24/breaking-the-game-mods-hacks-and-cheats/index.html">
+<meta property="og:site_name" content="TIMBERTECH">
+<meta property="og:description" content="StupidRPG is very, very modular. Most of the core functionality of the engine and the main campaign are implemented in modules. Examples of modules include: combat (fighting things), social (talking t">
+<meta property="og:updated_time" content="2015-12-28T23:46:05.903Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Breaking the Game: Mods, Hacks, and Cheats">
+<meta name="twitter:description" content="StupidRPG is very, very modular. Most of the core functionality of the engine and the main campaign are implemented in modules. Examples of modules include: combat (fighting things), social (talking t">
+  
+  
+  
+ <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" type="text/css">
+  
+
+  
+
+  
+</head>
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="/" id="logo"><span class="site-title">TIMBERTECH</span></a>
+      <span class="site-subtitle">DATA COLLECTOR MK IV</span>
+      <nav id="main-nav">
+        
+      </nav>
+      
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tr>
+        
+        <td>
+          
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://timberjaw.github.io"></form>
+          
+        </td>
+      </tr>
+    </table>
+  </div>
+</header>
+
+    <div class="outer">
+      
+      <section id="main"><article id="post-breaking-the-game-mods-hacks-and-cheats" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Breaking the Game: Mods, Hacks, and Cheats
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/07/24/breaking-the-game-mods-hacks-and-cheats/">
+      <time datetime="2015-07-24T07:00:00.000Z" itemprop="datePublished">2015-07-24</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>StupidRPG is very, very modular. Most of the core functionality of the engine and the main campaign are implemented in modules. Examples of modules include: combat (fighting things), social (talking to things), containers (things that open and close), darkness (whether things are visible based on available light), etc. There are a few reasons for this structure:</p>
+<ul>
+<li>The engine is (mostly) reusable for a completely different type of text adventure</li>
+<li>The game/engine is relatively straightforward to mod</li>
+<li>I thought it would be a fun challenge</li>
+</ul>
+<p>Long-term, I’d like to expand SRPG to include some level of multiplayer. This has been a driving factor in the architecture of the ECS (Entity-Component-System) library. The ‘player’ is not particularly special in the architecture, by design. NPCs possess a similar ability to influence the game world/state, and Player 2 has little technical distinction from an NPC. By extension, within the context of the engine, the player is just another entity imposing its will on the game state. This is useful.</p>
+<p>SRPG has no protection against source modification. The game runs entirely in Javascript in the player’s browser. As such, it is very hackable, moddable, and breakable. This applies to both the singleplayer and multiplayer experience.</p>
+<p>I’m ok with this.</p>
+<p>I spent a bit of time with <a href="http://orteil.dashnet.org/cookieclicker/" target="_blank" rel="external">Cookie Clicker</a>. Hacker/cheater that I am, I eventually discovered the built-in variables and functions for unlocking content, maximizing stats, and generally breaking the game. This is Not A Problem in Cookie Clicker because the game is single player only. If you ‘ruin’ the experience, you’re only ruining it for yourself. I have the same mentality about SRPG, as I see only two valid use cases: playing alone, or playing with friends. In either case, if you want to mess with the engine or content, go nuts.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/07/24/breaking-the-game-mods-hacks-and-cheats/" data-id="ciiqok0up007c4soh3k9ziswb" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/07/25/stupidrpg-natural-language-processing/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          StupidRPG: Natural Language Processing
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/07/23/stupidrpg-command-interrupts/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">StupidRPG: Command Interrupts</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+</section>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Steven Richards<br>
+    </div>
+  </div>
+</footer>
+    
+
+
+
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

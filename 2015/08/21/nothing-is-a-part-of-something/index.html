@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Nothing is a Part of Something | TIMBERTECH</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Yesterday I added two new Components to the game: Part and Nothing. These are intended to help simplify a couple object interactions I ran into.
+PartA Part is a regular object in most respects, but it">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nothing is a Part of Something">
+<meta property="og:url" content="http://timberjaw.github.io/2015/08/21/nothing-is-a-part-of-something/index.html">
+<meta property="og:site_name" content="TIMBERTECH">
+<meta property="og:description" content="Yesterday I added two new Components to the game: Part and Nothing. These are intended to help simplify a couple object interactions I ran into.
+PartA Part is a regular object in most respects, but it">
+<meta property="og:updated_time" content="2015-12-29T00:04:25.874Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Nothing is a Part of Something">
+<meta name="twitter:description" content="Yesterday I added two new Components to the game: Part and Nothing. These are intended to help simplify a couple object interactions I ran into.
+PartA Part is a regular object in most respects, but it">
+  
+  
+  
+ <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" type="text/css">
+  
+
+  
+
+  
+</head>
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="/" id="logo"><span class="site-title">TIMBERTECH</span></a>
+      <span class="site-subtitle">DATA COLLECTOR MK IV</span>
+      <nav id="main-nav">
+        
+      </nav>
+      
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tr>
+        
+        <td>
+          
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://timberjaw.github.io"></form>
+          
+        </td>
+      </tr>
+    </table>
+  </div>
+</header>
+
+    <div class="outer">
+      
+      <section id="main"><article id="post-nothing-is-a-part-of-something" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Nothing is a Part of Something
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/21/nothing-is-a-part-of-something/">
+      <time datetime="2015-08-21T07:00:00.000Z" itemprop="datePublished">2015-08-21</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Yesterday I added two new Components to the game: Part and Nothing. These are intended to help simplify a couple object interactions I ran into.</p>
+<h2 id="Part"><a href="#Part" class="headerlink" title="Part"></a>Part</h2><p>A Part is a regular object in most respects, but it’s directly connected to another object. A button on a shirt, a branch on a tree, etc. Parts don’t have much in the way of unique behavior (yet). For now it allows me to easily restrict objects from being taken when they’re part of a larger object.</p>
+<p></p><h3 class="highlight-header">Part Component</h3><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">parts.c(<span class="string">'part'</span>, &#123;</span><br><span class="line">    <span class="string">'dependencies'</span>: [],</span><br><span class="line">    <span class="string">'onAction.TAKE'</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        queueGMOutput(<span class="string">"That's part of the "</span>+getNameTag(<span class="keyword">this</span>.parent)+<span class="string">"."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p></p>
+<p>Later on, parts might interact with their parent objects in more complex ways.</p>
+<h2 id="Nothing"><a href="#Nothing" class="headerlink" title="Nothing"></a>Nothing</h2><p>A Nothing is a thing that isn’t really a thing. The specific use case was creating a hole in something. You can look at a hole, and possibly put things in a hole, but some activities don’t make sense with an abstract object like a hole. For example, you can’t take a hole. The response to a player trying to take a Nothing is slightly different than a Part. You can’t take a Part because it’s attached to something; you can’t take a Nothing because it’s fundamentally not a thing that can be taken.</p>
+<p></p><h3 class="highlight-header">Nothing Component</h3><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">coreModule.c(<span class="string">'nothing'</span>, &#123;</span><br><span class="line">	<span class="string">'dependencies'</span>: [],</span><br><span class="line">	<span class="string">'onAction.TAKE'</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		queueGMOutput(<span class="string">"That's too abstract to be taken."</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p></p>
+<p>As part of building the bird feeder item, I added a hole (nothing) that is a part of the feeder. The feeder also has a part called a post (which is not nothing), and together it all makes a whole.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/21/nothing-is-a-part-of-something/" data-id="ciiqok0rd004p4soh5q7hhx38" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/08/22/stupidrpg-litterbug-quest/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          StupidRPG: Litterbug Quest
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/08/20/stupidrpg-there-is-no-time/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">StupidRPG: There is no Time</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+</section>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Steven Richards<br>
+    </div>
+  </div>
+</footer>
+    
+
+
+
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

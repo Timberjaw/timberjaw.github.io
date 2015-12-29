@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>TIMBERTECH</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Dev journal and geek stuff.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TIMBERTECH">
+<meta property="og:url" content="http://timberjaw.github.io/page/14/index.html">
+<meta property="og:site_name" content="TIMBERTECH">
+<meta property="og:description" content="Dev journal and geek stuff.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TIMBERTECH">
+<meta name="twitter:description" content="Dev journal and geek stuff.">
+  
+  
+  
+ <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" type="text/css">
+  
+
+  
+
+  
+</head>
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="/" id="logo"><span class="site-title">TIMBERTECH</span></a>
+      <span class="site-subtitle">DATA COLLECTOR MK IV</span>
+      <nav id="main-nav">
+        
+      </nav>
+      
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tr>
+        
+        <td>
+          
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://timberjaw.github.io"></form>
+          
+        </td>
+      </tr>
+    </table>
+  </div>
+</header>
+
+    <div class="outer">
+      
+      <section id="main">
+      <article id="post-web-apps-for-the-desktop" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/19/web-apps-for-the-desktop/">Web Apps for the Desktop</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/19/web-apps-for-the-desktop/">
+      <time datetime="2015-08-19T07:00:00.000Z" itemprop="datePublished">2015-08-19</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>This is a weird one. SRPG is a website (web app?). But what if…what if you could run web apps directly on your desktop?</p>
+<p>Well, as it turns out, technology has come full circle. A few months back I looked into a system called TideSDK, which acted as a native wrapper around WebKit (the backend for browsers like Chrome) and allowed you to distribute websites/web-apps as native applications. On the face of it, this is slightly ridiculous, and I don’t have much of an argument for why such a thing should exist (beyond “lots of people have experience building software with web tools these days”).</p>
+<p>TideSDK died under mysterious circumstances, but the semi-recent release of the Atom.io IDE (built on NodeJS) led to the creation of <a href="http://electron.atom.io" target="_blank" rel="external">Electron</a>, which performs similar functions but has the advantages of being 1) not dead, and 2) open source. It took about 3 minutes to install it and get StupidRPG running:</p>
+<img src="/2015/08/19/web-apps-for-the-desktop/srpg-electron.png" alt="Electron Screenshot" title="Electron Screenshot">
+<p>So far so good. Supports full screen, seems to be using a recent (if not the latest) version of Chromium (which means that dumb rainbow text works, unlike in TideSDK), and gives access to the standard debug tools. Nifty.</p>
+<p>On to the tougher bit: finding a good reason to view this as anything other than a novelty. It does open up a few interesting features / conveniences. For example:</p>
+<ul>
+<li>Helpers for native file handling (handy for save files/etc, but you can accomplish this without much trouble in a standard website)</li>
+<li>Can add user tasks (basically a context menu on your application icon). Don’t have an immediate use for this.</li>
+<li>Can easily register global keyboard shortcuts.</li>
+<li>Can create native menus and native context menus.</li>
+</ul>
+<p>Super exciting, I know. Not a compelling case yet, but it’s been fun to play with. Now that I think of it, Steam doesn’t have nearly enough text adventures…</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/19/web-apps-for-the-desktop/" data-id="ciiqok0nv00264sohq3ghu3fa" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-stupidrpg-the-big-bad" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/18/stupidrpg-the-big-bad/">StupidRPG: The Big Bad</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/18/stupidrpg-the-big-bad/">
+      <time datetime="2015-08-18T07:00:00.000Z" itemprop="datePublished">2015-08-18</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Spoilers incoming.</p>
+<p>I’ll do a proper bio of the Big Bad later. For now I want to talk about the concept. Most RPG stories have a final boss, primary threat, etc. The final (usually) challenge for the players to overcome on their way to heroic victory. This usually involves a lot of setup, sometimes early in the campaign (as a distant threat the players can’t/shouldn’t address immediately).</p>
+<p>In the case of StupidRPG, the Big Bad is:</p>
+<div class="spoiler"><br>The mysterious Baron, actual name unknown. A relative newcomer to the local territories, the Baron has established a significant powerbase through various means. It’s not all bad, in the same way that the Industrial Revolution wasn’t all bad. The Baron’s motives are unclear, and though violence doesn’t seem to be off the table, outright slaughter doesn’t seem to be on it.<br></div>
+
+<p>In short, it might take a while before it becomes apparent whether the Baron is a real threat, or if this is one of those stories where the real challenge was overcoming inner conflict and achieving your full potential.</p>
+<p>Could be a bit of both.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/18/stupidrpg-the-big-bad/" data-id="ciiqok0pd00324soh17lfoszd" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-weekly-update-5" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/17/weekly-update-5/">Weekly Update #5</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/17/weekly-update-5/">
+      <time datetime="2015-08-17T07:00:00.000Z" itemprop="datePublished">2015-08-17</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>More progress!</p>
+<p><strong>Changelog:</strong></p>
+<ul>
+<li>Added a bird. It flies around the map looking for food. Once it finds (and eats) something it likes, it will go find the Ranger and hang out with him.</li>
+<li>Worked on some AI handling style to support the bird behavior in a reasonably clean way.</li>
+<li>Added a bird feeder for the bird.</li>
+<li>Moved all BlackBox module content into sub-files broken down by type. Creatures, locations, items get their own files (module file was getting huge).</li>
+<li>Added a ‘local output’ function to supplement the output and GM output functions. Local output only displays if the originating entity is in the same location as the player. Lets me skip redundant code (i.e. having the entity itself check for locality before printing something).</li>
+<li>Added ECS.moveEntity function to simplify NPC movement.</li>
+<li>Added locationIs function to Thing component to simplify NPC location checking.</li>
+<li>Fixed NPCs executing during non-tick turns.</li>
+</ul>
+<p><strong>Known Issues:</strong></p>
+<ul>
+<li>Nothing new</li>
+</ul>
+<p><strong>Next Up:</strong></p>
+<ul>
+<li>Fill out Ranger Bob’s dialogue tree.</li>
+<li>Add The Twins.</li>
+<li>Litterbug quest.</li>
+<li>Feed the bird quest.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/17/weekly-update-5/" data-id="ciiqok0mp000r4soh5gtlxh39" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-feature-creep" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/16/feature-creep/">Feature Creep</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/16/feature-creep/">
+      <time datetime="2015-08-16T07:00:00.000Z" itemprop="datePublished">2015-08-16</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Many (most?) of my projects are marred by scope/feature creep. That is, the tendency to continually add features or expand the scope of the project after starting it. It’s a dangerous game. For my hobby projects, the size of the project tends to be inversely proportional to the likelihood of completion.</p>
+<p>For recent projects I’ve been vigilant about creep, as I’d like to actually finish a few things for once. My side project (Numenera power cards) was successfully finished and test printed, which is a nice morale boost. I have a couple tweaks to make on the coloring and font sizes, but the test went very well.</p>
+<p>SRPG is particularly open to creep. It’s a big project, has a lot of interlocking pieces, and is taking place over a long period of time. As such, I have to be very strict about not adding anything (or doing refactoring) that doesn’t absolutely need to be there to meet my milestone goals. Structured AI, callback improvements, more content, etc.</p>
+<p>So far, so good.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/16/feature-creep/" data-id="ciiqok0sa00554sohoyjv1nxk" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-stupidrpg-bird-is-the-word" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/15/stupidrpg-bird-is-the-word/">StupidRPG: Bird is the Word</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/15/stupidrpg-bird-is-the-word/">
+      <time datetime="2015-08-15T07:00:00.000Z" itemprop="datePublished">2015-08-15</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Today I’m working on the first indepently-acting NPC: a bird. Pretty exciting, yeah? It flies around the map looking for food, avoiding unwelcome contact from the player, and (when no longer hungry), paying a visit to Ranger Bob.</p>
+<p>Its behavior will likely grow more complex over time, but as a proof of concept I’m pretty happy with how it’s working. I started with a basic outline of the bird’s possible actions and logic.</p>
+<p><div class="highlight-header">Behaviors</div><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The bird roams the Forest, chattering away and looking for food.&#10;&#10;Starting (Max) hunger is 100.&#10;    Reduced by 60 when eating.&#10;    Can go below 0.&#10;    Increased by 1 per turn.&#10;    &#10;General Behaviors&#10;    If the player tries to touch/take/hurt/socialize me, flee along loop&#10;&#10;Hungry Behaviors&#10;    Every turn, if the player is in the location, chirp&#10;    Every turn, if there is something edible in the location, try to eat it&#10;    Every 2nd turn, if there are no edibles in the location, move along loop&#10;    If the bird feeder is here, check it for food&#10;&#10;Full Behaviors (Hunger &#60;= 20)&#10;    Every turn, head toward ranger station&#10;    If I&#39;m at ranger station, sing</span><br></pre></td></tr></table></figure></p>
+<p>Next, I started putting together a set of functions to handle each of the bird’s actions: look for food, move along path, etc.</p>
+<p><div class="highlight-header">Actions</div><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">actions = &#123;</span><br><span class="line">  <span class="string">'_lookForFood'</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> things = <span class="keyword">this</span>.location().children;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> f <span class="keyword">in</span> things) &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"BIRD EYEBALLING "</span>+things[f].name);</span><br><span class="line">      <span class="keyword">if</span>(things[f].hasComponent(<span class="string">'edible'</span>)) &#123;</span><br><span class="line">        <span class="keyword">if</span>(things[f].nutrition &gt; <span class="number">0</span>) &#123;</span><br><span class="line">          queueLocalOutput(<span class="keyword">this</span>, <span class="string">"The bird pecks at the "</span> + things[f].name + <span class="string">" eagerly."</span>);</span><br><span class="line">          <span class="keyword">this</span>.hunger -= things[f].nutrition;</span><br><span class="line">          <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          queueLocalOutput(<span class="keyword">this</span>, <span class="string">"The bird pecks at the "</span> + things[f].name + <span class="string">" half-heartedly."</span>);</span><br><span class="line">          <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">'_moveAlongPath'</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> prev = <span class="keyword">this</span>.location().key;</span><br><span class="line">    <span class="keyword">var</span> next = <span class="keyword">this</span>.path[prev];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>._alertPlayerToMovement(prev,next);</span><br><span class="line"></span><br><span class="line">    ECS.moveEntity(<span class="keyword">this</span>, next);</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">'_alertPlayerToMovement'</span>:<span class="function"><span class="keyword">function</span>(<span class="params">prev,next</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(player.locationIs(prev)) &#123;</span><br><span class="line">      queueGMOutput(<span class="string">"The bird flits away toward "</span> + ECS.getEntity(next).name + <span class="string">"."</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(player.locationIs(next)) &#123;</span><br><span class="line">      queueGMOutput(<span class="string">"The bird flits in from "</span> + <span class="keyword">this</span>.location().name + <span class="string">"."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Finally, I put it together into some simple branching logic, executed on each game tick.</p>
+<p><div class="highlight-header">Bird Brain</div><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">// Look for food when hungry</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">this</span>._hungry())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(!<span class="keyword">this</span>._lookForFood()) &#123;</span><br><span class="line">            <span class="keyword">this</span>._moveAlongPath();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Head toward ranger station when full</span></span><br><span class="line">    <span class="keyword">if</span>(!<span class="keyword">this</span>.locationIs(<span class="string">'ranger-station'</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// Head to ranger station</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">this</span>.locationIs(<span class="string">'north-trail'</span>)) &#123;</span><br><span class="line">            <span class="keyword">this</span>._alertPlayerToMovement(<span class="string">'north-trail'</span>, <span class="string">'ranger-station'</span>);</span><br><span class="line">            ECS.moveEntity(<span class="keyword">this</span>, <span class="string">'ranger-station'</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>._moveAlongPath();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Sing at random</span></span><br><span class="line">    <span class="keyword">if</span>(random() &gt; <span class="number">0.75</span>) &#123;</span><br><span class="line">        queueLocalOutput(<span class="string">"The bird chirps a happy tune."</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Update hunger</span></span><br><span class="line">    <span class="keyword">this</span>.hunger++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>With these simple behaviors and extremely simple logic, the bird will roam the map, interacting dynamically with any food it encounters (stopping to sample it, and continuing to eat if it’s still hungry and the food is nutritious). Once full, it will make its way to see Ranger Bob, and serenade him until it gets hungry again.</p>
+<p>The code structure is a little clunky, and I’d like to turn it into something closer to a state machine, where the bird starts in one of a few states (<code>LOOKING_FOR_FOOD</code>, <code>LOOKING_FOR_BOB</code>, <code>SINGING</code>) and can then transition into other states. Managing AI via a state machine is a more scalable solution and will make it easier for me to assemble complex NPC behaviors.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/15/stupidrpg-bird-is-the-word/" data-id="ciiqok0q6003x4sohmazdw67n" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-the-grind" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/14/the-grind/">The Grind</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/14/the-grind/">
+      <time datetime="2015-08-14T07:00:00.000Z" itemprop="datePublished">2015-08-14</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Computer RPGs have a bad habit of padding their content to increase the game’s playtime. They have a bit of incentive to do so, as many players measure the game’s worth in part based on the number of hours they can sink into it. Some games justify the length, but more often in my experience, the game becomes a grind. Hack-and-slash or action RPGs are particularly common examples, but even more plot-heavy RPGs like Final Fantasy VII or Mass Effect are guilty of this.</p>
+<p>Random encounters, same-y enemies, and arbitrary objectives (Collect 30 Wolf Pelts) tend to leave me feeling burnt out (YMMV). Action RPGs try to keep things fresh by varying up the locations, periodically introducing new enemies (often location-themed), and tossing in the occasional puzzle or unique side quest. It’s a distraction (a welcome one) from the otherwise repetitive gameplay.</p>
+<p>For StupidRPG, I’m aiming for roughly a 4-hour playtime. Even that length may be excessive; I’m not confident in my ability to keep a modern gaming audience interested in a text-based game for several hours, at least not without moving in more of a MUD direction. The exact amount of time isn’t important to me right now, however. What’s more important is the amount of unique, quality content. SRPG is more about interesting text than increasingly large numbers.</p>
+<p>I have a lot of work to do.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/14/the-grind/" data-id="ciiqok0ov002j4soh5oml08tk" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-stupidrpg-milestones" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/13/stupidrpg-milestones/">StupidRPG: Milestones</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/13/stupidrpg-milestones/">
+      <time datetime="2015-08-13T07:00:00.000Z" itemprop="datePublished">2015-08-13</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Now that coding is properly back underway, it’s time to layout some development milestones. It’s a big project and there’s a long way to go. <em>This post will contain small spoilers, which will not be hidden with spoiler tags.</em></p>
+<h2 id="Phase_I_3A_The_Black_Box"><a href="#Phase_I_3A_The_Black_Box" class="headerlink" title="Phase I: The Black Box"></a>Phase I: The Black Box</h2><p><strong>Milestone 0: The Engine (Done)</strong></p>
+<p>This milestone was considered finished with the completion of the ECS, NLP, and Core module. The majority of development after this point consists of creating Modules, Components, Verbs, and Entities.</p>
+<p><strong>Milestone 1: The Forest (Done)</strong></p>
+<p>Laying out the starting area of the game with some basic gameplay (movement, NPC interaction, containers, etc) as a proof of concept.</p>
+<p><strong>Milestone 2: The People</strong></p>
+<p>Adding interactive NPCs in the starting region, complete with dialogue trees, awareness of the player and of each other.</p>
+<p><strong>Milestone 3: The Quest</strong></p>
+<p>Giving the player objectives, measuring their progress, and offering a gameplay path to the first act of the game.</p>
+<p><strong>Milestone 4: The End</strong></p>
+<p>This one might sound out of order, but immediately after the prologue I’m going to write and construct the ending of the game. At the end of this milestone, the game will be in a fully playable state with beginning and end, choices to make, and challenges to overcome. The rest is content, content, content.</p>
+<p><strong>Retrospective I</strong></p>
+<p>After completing milestone 4, I’m going to pause briefly and consider the rest of the game’s structure. This is effectively a second design phase to make sure I’m on the right track and that the plot/quest/world/style are working well.</p>
+<h2 id="Phase_II_3A_StupidRPG"><a href="#Phase_II_3A_StupidRPG" class="headerlink" title="Phase II: StupidRPG"></a>Phase II: StupidRPG</h2><p><strong>Milestone 5: Act I</strong></p>
+<p>Content milestone. Two regions, one NPC, and a couple challenges.</p>
+<p><strong>Milestone 5: Act II</strong></p>
+<p>Content milestone. Two regions, several NPCs, and many challenges.</p>
+<p><strong>Milestone 5: Act III</strong></p>
+<p>Content milestone. Two or three regions, including a larger one. Many NPCs, many challenges, more social interactions. Leads into the endgame segment from Milestone 4.</p>
+<p><strong>Retrospective II</strong></p>
+<p>The second retrospective will assess the game as a whole, looking at:</p>
+<ol>
+<li>Content that should be cut (sometimes less is more)</li>
+<li>Areas where content needs added</li>
+<li>Areas where the content doesn’t work</li>
+<li>Fun factor</li>
+</ol>
+<p><strong>Milestone 6: Release Candidate</strong></p>
+<p>At this point the game should be feature-complete and content-complete, with all the changes from Retrospective II implemented. Top priorities are bug fixes, editing, and balancing.</p>
+<p><strong>Milestone 7: Release</strong></p>
+<p>The game is done(ish)!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/13/stupidrpg-milestones/" data-id="ciiqok0pn003e4sohayh8yqxd" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-licensing-and-copyright" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/11/licensing-and-copyright/">Licensing &amp; Copyright</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/11/licensing-and-copyright/">
+      <time datetime="2015-08-12T00:00:00.000Z" itemprop="datePublished">2015-08-11</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Short post today. I’ve been thinking a bit about how to license SRPG. On the engine side, I’m learning toward a permissive open source license such as MIT, LGPL, or the more extreme WTFPL. It’s not much of a technological marvel, and probably doesn’t have much use outside of a <em>very</em> specific niche.</p>
+<p>The actual content (story, locations, NPCs, etc) of the game will likely be covered under standard copyright rules. At this time the plan is to make the game freely available for play in an online format (though I’ve done a couple experiments with wrapping it inside a native app).</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/11/licensing-and-copyright/" data-id="ciiqok0rw004v4sohihbqz94b" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-stupidrpg-game-ticks" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/11/stupidrpg-game-ticks/">StupidRPG: Game Ticks</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/11/stupidrpg-game-ticks/">
+      <time datetime="2015-08-11T07:00:00.000Z" itemprop="datePublished">2015-08-11</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>A game tick is a unit of time for something happening in the world. Generally, when the player takes an action, a tick occurs. Entities within the ECS can watch for ticks and take actions. NPCs, for example, have the opportunity to take an action on each tick. You can think of a tick as a round of combat in D&amp;D, where each combatant has their own turn within the round (in a particular order).</p>
+<p>Ticks are controlled very flexibly, allowing for layers of precedence and handlers:</p>
+<ol>
+<li>Global: defaults to on, run after any user input</li>
+<li>NLP: disables current tick if the player’s input wasn’t understood</li>
+<li>Verb: enables/disables current tick for an entire verb (e.g. <code>INVENTORY</code>)</li>
+<li>Callback: can enable/disable current tick on the fly during verb callback</li>
+</ol>
+<p>Some fun things I might look into:</p>
+<ul>
+<li>Time scaling as a result of plot or a character power (ticks happen more/less frequently than normal).</li>
+<li>Exempting a creature from the normal tick rules, allowing them to act after bad input or non-tick verbs.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/11/stupidrpg-game-ticks/" data-id="ciiqok0pu003m4soh6iijbm30" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-weekly-update-4" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/10/weekly-update-4/">Weekly Update #4</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/10/weekly-update-4/">
+      <time datetime="2015-08-10T07:00:00.000Z" itemprop="datePublished">2015-08-10</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Progress!</p>
+<p><strong>Changelog:</strong></p>
+<ul>
+<li>Fixed dialogue tree bug that was preventing other progress. Now the sword won’t talk to you while you’re trying to talk to Ranger Bob.</li>
+<li>Finally solved a Rubik’s Cube without using a guide. Now I can go do more useful things with my life.</li>
+</ul>
+<p><strong>Known Issues:</strong></p>
+<ul>
+<li>Nothing new</li>
+</ul>
+<p><strong>Next Up:</strong></p>
+<ul>
+<li>Fill out Ranger Bob’s dialogue tree.</li>
+<li>Add The Twins.</li>
+<li>Litterbug quest.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/10/weekly-update-4/" data-id="ciiqok0mr000u4sohqjwlzu1c" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <nav id="page-nav">
+        <a class="extend prev" rel="prev" href="/page/13/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/">15</a><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/15/">Next &raquo;</a>
+      </nav>
+    </section>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Steven Richards<br>
+    </div>
+  </div>
+</footer>
+    
+
+
+
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Component Removal | TIMBERTECH</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="One of the tricky issues I’m sorting out right now is how to handle removing a Component from an Entity. When a component is added to an entity, its values are merged into the entity’s grab-bag type c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Component Removal">
+<meta property="og:url" content="http://timberjaw.github.io/2015/10/08/component-removal/index.html">
+<meta property="og:site_name" content="TIMBERTECH">
+<meta property="og:description" content="One of the tricky issues I’m sorting out right now is how to handle removing a Component from an Entity. When a component is added to an entity, its values are merged into the entity’s grab-bag type c">
+<meta property="og:updated_time" content="2015-12-28T23:47:27.854Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Component Removal">
+<meta name="twitter:description" content="One of the tricky issues I’m sorting out right now is how to handle removing a Component from an Entity. When a component is added to an entity, its values are merged into the entity’s grab-bag type c">
+  
+  
+  
+ <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" type="text/css">
+  
+
+  
+
+  
+</head>
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="/" id="logo"><span class="site-title">TIMBERTECH</span></a>
+      <span class="site-subtitle">DATA COLLECTOR MK IV</span>
+      <nav id="main-nav">
+        
+      </nav>
+      
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tr>
+        
+        <td>
+          
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://timberjaw.github.io"></form>
+          
+        </td>
+      </tr>
+    </table>
+  </div>
+</header>
+
+    <div class="outer">
+      
+      <section id="main"><article id="post-component-removal" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Component Removal
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/10/08/component-removal/">
+      <time datetime="2015-10-08T07:00:00.000Z" itemprop="datePublished">2015-10-08</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>One of the tricky issues I’m sorting out right now is how to handle removing a Component from an Entity. When a component is added to an entity, its values are merged into the entity’s grab-bag type collection of attributes, and the component can perform initialization tasks. Certain components overlap in terms of which attributes they modify, so the process of removing a component isn’t straightforward.</p>
+<p>The specific case I have in mind is a Part entity (that is, an object that is part of something else), which is pretty simple to clean up manually if need be (it adds some <code>TAKE</code> checks and not much else), but there are almost certainly more complex use cases.</p>
+<p>Given that not all components need to be removable, the most straightforward approach may be to define an (optional) onRemove function at the Component level, and let each component decide how to handle its own removal. No refactoring required for components that don’t need to support the new behavior.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/10/08/component-removal/" data-id="ciiqok0uh00764soh7gwwjkqs" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/10/09/fetch-quest/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Fetch Quest
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/10/07/daily-update-279-2015/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Daily Update 279.2015</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+</section>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Steven Richards<br>
+    </div>
+  </div>
+</footer>
+    
+
+
+
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

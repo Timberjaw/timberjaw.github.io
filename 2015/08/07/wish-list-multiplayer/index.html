@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Wish List: Multiplayer | TIMBERTECH</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="One of my many pie-in-the-sky goals for StupidRPG is networked multiplayer. I have absolutely no hands-on experience with network programming (browser or otherwise), so it’s toward the bottom of the p">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Wish List: Multiplayer">
+<meta property="og:url" content="http://timberjaw.github.io/2015/08/07/wish-list-multiplayer/index.html">
+<meta property="og:site_name" content="TIMBERTECH">
+<meta property="og:description" content="One of my many pie-in-the-sky goals for StupidRPG is networked multiplayer. I have absolutely no hands-on experience with network programming (browser or otherwise), so it’s toward the bottom of the p">
+<meta property="og:updated_time" content="2015-12-29T00:42:01.460Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Wish List: Multiplayer">
+<meta name="twitter:description" content="One of my many pie-in-the-sky goals for StupidRPG is networked multiplayer. I have absolutely no hands-on experience with network programming (browser or otherwise), so it’s toward the bottom of the p">
+  
+  
+  
+ <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" type="text/css">
+  
+
+  
+
+  
+</head>
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="/" id="logo"><span class="site-title">TIMBERTECH</span></a>
+      <span class="site-subtitle">DATA COLLECTOR MK IV</span>
+      <nav id="main-nav">
+        
+      </nav>
+      
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tr>
+        
+        <td>
+          
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://timberjaw.github.io"></form>
+          
+        </td>
+      </tr>
+    </table>
+  </div>
+</header>
+
+    <div class="outer">
+      
+      <section id="main"><article id="post-wish-list-multiplayer" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Wish List: Multiplayer
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/07/wish-list-multiplayer/">
+      <time datetime="2015-08-07T07:00:00.000Z" itemprop="datePublished">2015-08-07</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>One of my many pie-in-the-sky goals for StupidRPG is networked multiplayer. I have absolutely no hands-on experience with network programming (browser or otherwise), so it’s toward the bottom of the priority list. I do know a little bit about websockets and a moderate amount about databases.</p>
+<p>The engine for SRPG was built with future multiplayer in mind (sort of). Actions usually enter the queue from local input, but that’s not a requirement. I’ve already shown examples of input being added via test functions and via previous input (an action triggering another action). Handling a remotely-entered command (and appropriate context, such as the remote player entity) doesn’t pose an architectural problem. There are, however, many design challenges to overcome to make multiplayer work in a plot-driven, turn-based RPG. I’ll talk about a few problems and concepts I’ve been considering.</p>
+<h2 id="Problem_3A_Whose_Turn_Is_It_3F"><a href="#Problem_3A_Whose_Turn_Is_It_3F" class="headerlink" title="Problem: Whose Turn Is It?"></a>Problem: Whose Turn Is It?</h2><p>In short, for the game to work as-is, it needs to remain purely turn based and synchronous. Players take turns inputting commands, then the engine distributes the commands to the other players. For common actions like moving around, opening doors, and picking up objects, this is no problem. There are a few cases where it gets tricky though:</p>
+<ul>
+<li>Command interrupts (these need to be contextual per-player)</li>
+<li>Dialogue trees (does P2 have to wait for P1 to finish an entire conversation before they can take an action?)</li>
+<li>No-tick actions</li>
+<li>Guided segments like the intro</li>
+</ul>
+<p>I have solutions in mind for some of these. No-tick actions (which I’ll talk more about in another post) don’t need to be synchronized between players. This means P1 can look at their inventory while P2 is taking their turn, for example.</p>
+<p>Thinking more broadly, I’ll need to develop a method for flagging synchronous/asynchronous sections (in addition to no-tick actions). Synchronous actions can only be done on your turn, while asynchronous actions can be done at any time.</p>
+<h2 id="Problem_3A_Gameplay"><a href="#Problem_3A_Gameplay" class="headerlink" title="Problem: Gameplay"></a>Problem: Gameplay</h2><p>This ties in to the previous problem a bit (particularly the handling of dialogue trees), but it’s a more fundamental set of questions. In short, what does Player 2 do? Are they another fully-fledged individual just like Player 1? Are they a sidekick of some type? Are they present for the duration of the game’s plot? Do I need to build separate puzzles and gameplay elements for the solo and multiplayer modes?</p>
+<h2 id="Concept_3A_Act_IV_Multiplayer"><a href="#Concept_3A_Act_IV_Multiplayer" class="headerlink" title="Concept: Act IV Multiplayer"></a>Concept: Act IV Multiplayer</h2><p>Traditional multiplayer aside, another concept I’m considering is to only introduce multiplayer at the end of the game’s story. Essentially, the campaign would wrap up and then the game would turn into a more open world with multiple players. Might be overly ambitious, and for a new player who wants to play with a friend, they have a lot of content to get through first.</p>
+<h2 id="Concept_3A_Asymmetric_Multiplayer"><a href="#Concept_3A_Asymmetric_Multiplayer" class="headerlink" title="Concept: Asymmetric Multiplayer"></a>Concept: Asymmetric Multiplayer</h2><p>Lastly, I’m looking at asymmetric play. Instead of having both players exist as equals in the storyline, the second would have a different experience entirely (sidekick, animal, etc). Some Wii U games use this type of play for the 5th player, allowing them to assist the other players from outside the regular mode. This is just as ambitious as the Act IV concept, as it needs a lot of extra content and coding to be meaningful.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/07/wish-list-multiplayer/" data-id="ciiqok0m200094sohh6sgnidu" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wishlist/">wishlist</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/08/08/stupidrpg-output-queue/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          StupidRPG: Output Queue
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/08/06/save-load-undo/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">StupidRPG: Save, Load, &amp; Undo</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+</section>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Steven Richards<br>
+    </div>
+  </div>
+</footer>
+    
+
+
+
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
