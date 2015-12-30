@@ -60,6 +60,113 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-licensing-and-copyright" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/11/licensing-and-copyright/">Licensing &amp; Copyright</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/11/licensing-and-copyright/">
+      <time datetime="2015-08-12T00:00:00.000Z" itemprop="datePublished">2015-08-11</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Short post today. I’ve been thinking a bit about how to license SRPG. On the engine side, I’m learning toward a permissive open source license such as MIT, LGPL, or the more extreme WTFPL. It’s not much of a technological marvel, and probably doesn’t have much use outside of a <em>very</em> specific niche.</p>
+<p>The actual content (story, locations, NPCs, etc) of the game will likely be covered under standard copyright rules. At this time the plan is to make the game freely available for play in an online format (though I’ve done a couple experiments with wrapping it inside a native app).</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/11/licensing-and-copyright/" data-id="ciitdxklq004vowohlfe28nho" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-stupidrpg-game-ticks" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/11/stupidrpg-game-ticks/">StupidRPG: Game Ticks</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/11/stupidrpg-game-ticks/">
+      <time datetime="2015-08-11T07:00:00.000Z" itemprop="datePublished">2015-08-11</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>A game tick is a unit of time for something happening in the world. Generally, when the player takes an action, a tick occurs. Entities within the ECS can watch for ticks and take actions. NPCs, for example, have the opportunity to take an action on each tick. You can think of a tick as a round of combat in D&amp;D, where each combatant has their own turn within the round (in a particular order).</p>
+<p>Ticks are controlled very flexibly, allowing for layers of precedence and handlers:</p>
+<ol>
+<li>Global: defaults to on, run after any user input</li>
+<li>NLP: disables current tick if the player’s input wasn’t understood</li>
+<li>Verb: enables/disables current tick for an entire verb (e.g. <code>INVENTORY</code>)</li>
+<li>Callback: can enable/disable current tick on the fly during verb callback</li>
+</ol>
+<p>Some fun things I might look into:</p>
+<ul>
+<li>Time scaling as a result of plot or a character power (ticks happen more/less frequently than normal).</li>
+<li>Exempting a creature from the normal tick rules, allowing them to act after bad input or non-tick verbs.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/11/stupidrpg-game-ticks/" data-id="ciitdxkik003mowohav51vow4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-weekly-update-4" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -110,7 +217,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/10/weekly-update-4/" data-id="ciirsthbw000ua0oh1may70vd" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/10/weekly-update-4/" data-id="ciitdxkdn000uowoh9vhg8jdy" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -161,7 +268,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/09/replay-value-something-new-from-something-old/" data-id="ciirsthh7004ja0ohezej7ch0" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/09/replay-value-something-new-from-something-old/" data-id="ciitdxkkl004jowohkzgakxf1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -213,7 +320,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/08/stupidrpg-output-queue/" data-id="ciirsthfc0038a0ohzsamdvtw" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/08/stupidrpg-output-queue/" data-id="ciitdxki30038owohrfhfux3k" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -274,7 +381,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/07/wish-list-multiplayer/" data-id="ciirsthbb0009a0ohmgpeesdu" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/07/wish-list-multiplayer/" data-id="ciitdxkcr0009owohqmwxerim" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wishlist/">wishlist</a></li></ul>
@@ -335,7 +442,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/06/save-load-undo/" data-id="ciirsthh0004da0oh32lb8kuf" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/06/save-load-undo/" data-id="ciitdxkkd004dowohddn8w7ac" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -400,7 +507,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/05/testing-a-text-adventure/" data-id="ciirstheo002na0ohewji1o30" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/05/testing-a-text-adventure/" data-id="ciitdxkhf002nowohqq1472qs" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/testing/">testing</a></li></ul>
@@ -459,7 +566,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/04/stupidrpg-tutorial-or-not-tutorial/" data-id="ciirsthex002ua0ohyd63ie4r" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/04/stupidrpg-tutorial-or-not-tutorial/" data-id="ciitdxkhm002uowoh48dhdgkb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -516,119 +623,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/03/weekly-update-3/" data-id="ciirsthc0000xa0ohuol898rh" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/03/weekly-update-3/" data-id="ciitdxkdq000xowohog3ltimx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-reading-list" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/02/reading-list/">Reading List</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/08/02/reading-list/">
-      <time datetime="2015-08-02T07:00:00.000Z" itemprop="datePublished">2015-08-02</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>As part of my programming adventures, I have several books I’m in the midst of reading to broaden my horizons:</p>
-<ul>
-<li><a href="http://amzn.com/0201889544" target="_blank" rel="external">The C++ Programming Language</a> by Bjarne Stroustrup</li>
-<li><a href="http://amzn.com/0123694965" target="_blank" rel="external">The Art of Game Design</a> by Jesse Schell</li>
-<li><a href="http://amzn.com/B00B7R87FU" target="_blank" rel="external">Creating Interactive Fiction With Inform 7</a> by Aaron A. Reed</li>
-<li><a href="http://amzn.com/0465026567" target="_blank" rel="external">Gödel, Escher, Bach: An Eternal Golden Braid</a> by Douglas R. Hofstadter</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/02/reading-list/" data-id="ciirsthh8004ka0ohtsctk4mb" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-stupidrpg-callbacks" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/01/stupidrpg-callbacks/">StupidRPG: Callbacks</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/08/01/stupidrpg-callbacks/">
-      <time datetime="2015-08-01T07:00:00.000Z" itemprop="datePublished">2015-08-01</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Callbacks are functions on an object, typically executed based on an event somewhere in the game. For example, each time a game ‘tick’ occurs, an AI callback is triggered on every living thing (allowing them to move, attack, or take other actions). SRPG has a couple types of callbacks, which I hope to consolidate in future refactoring.</p>
-<h2 id="Callback_Types"><a href="#Callback_Types" class="headerlink" title="Callback Types"></a>Callback Types</h2><p>The current callback behavior is slightly convoluted, due to changes mid-development. Initially, each object could only have one callback of a given name, which proved to be too limiting. It meant that I couldn’t stack callbacks to allow objects to inherit behaviors <em>and</em> expand on them.</p>
-<p>The quick solution to this was to use an array of functions, and instead of setting the callback directly, add it to the end of the array. This works fine for the most part, but the code feels a bit clunky for more advanced use cases, and due to the mix of new code and old code, I have to perform several additional checks before executing callbacks.</p>
-<h2 id="Refactoring"><a href="#Refactoring" class="headerlink" title="Refactoring"></a>Refactoring</h2><p>One of my refactoring tasks is to clean up the callbacks in a few ways:</p>
-<ul>
-<li>Create a Callback prototype which all callbacks inherit from</li>
-<li>Standardize all object callback fields to use an array (no direct references to single callbacks)</li>
-<li>Standardize callback return values to let the caller know definitively how/whether the callback was handled</li>
-</ul>
-<p>Reorganizing will allow me to add more advanced callback functionality as well, such as specifying event filters for callbacks, prioritizing callbacks, and allowing callbacks to cancel events entirely (not allowing other callbacks to run).</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/01/stupidrpg-callbacks/" data-id="ciirsthfz003va0oh6dz5pdk1" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
 
     </footer>
   </div>
