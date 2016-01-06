@@ -60,6 +60,68 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-internal-rules-rulebooks" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/17/internal-rules-rulebooks/">Internal Rules &amp;amp; Rulebooks</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/09/17/internal-rules-rulebooks/">
+      <time datetime="2015-09-17T07:00:00.000Z" itemprop="datePublished">2015-09-17</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Yesterday I added an Internal Rule feature to the engine; it’s an extension of the Rulebook system with some interesting uses.</p>
+<h2 id="Rulebook_Categories_/_Rule_Groups"><a href="#Rulebook_Categories_/_Rule_Groups" class="headerlink" title="Rulebook Categories / Rule Groups"></a>Rulebook Categories / Rule Groups</h2><p>The Rulebook is now categorized, so every Rule belongs to a Rule Group. The current groups are:</p>
+<ul>
+<li>Before (which is the default; rules I’ve previously created all go here)</li>
+<li>After (new group for rules that run after regular action processing; they can’t interrupt actions)</li>
+<li>Internal</li>
+</ul>
+<p>I can add more Groups later that can be executed at different times, or based on specific types of events. This will be important both for functionality improvements and performance, since I can avoid running every rule on every tick.</p>
+<h2 id="Internal_Rules"><a href="#Internal_Rules" class="headerlink" title="Internal Rules"></a>Internal Rules</h2><p>Internal rules are triggered directly by the ECS, and aren’t dependent (entirely) on action execution. They can happen during non-tick executions, and can have a variety of effects. The basic idea is that I can define an internal action called (for example) <code>getLocationName</code>, and then apply rules to that action as if it were a regular verb action. I can also supply a default function if no rules override it.</p>
+<p></p><h3 class="highlight-header">Internal Action: getLocationName</h3><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ECS.addInternalAction(<span class="string">'getLocationName'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> data.location.name;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p></p>
+<p>This defines the default action for the getLocationName, which simply returns the name of the location. This is used by the Place component to print the location name during place descriptions.</p>
+<p>Ok, so far I’ve just complicated the place descriptions. Next up is the fun part: modifying location names based on rules.</p>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><p></p><h3 class="highlight-header">Internal Rule: inside object location name rule</h3><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">understand(<span class="string">'inside object location name rule'</span>)</span><br><span class="line">    .internal(<span class="string">'getLocationName'</span>)</span><br><span class="line">    .attribute(<span class="string">'actor.parent'</span>, <span class="string">'is'</span>, <span class="string">'holder'</span>)</span><br><span class="line">    .do(<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">        data.self.responseText = <span class="string">" (inside "</span>+ data.actor.parent.name +<span class="string">")"</span>;</span><br><span class="line">        <span class="keyword">return</span> Rulebook.ACTION_APPEND;</span><br><span class="line">    &#125;)</span><br><span class="line">    .start();</span><br></pre></td></tr></table></figure><p></p>
+<p>This verbosely-named Rule checks to see if the actor (usually the player) is in/on an object in the location. They could be hiding inside a box, soaking in the hot springs, etc. If so, it appends a parenthetical description to the location name, e.g. “Hot Springs (inside pools)”.</p>
+<p>Similar internal rules can be created for object names (appending object state or changing the name entirely), controlling which objects can be seen through a window, etc. Like any other rule, internal rules can be deregistered once they’ve served their purpose.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/09/17/internal-rules-rulebooks/" data-id="cij2gywzt004wzsohmn8mcdfm" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-daily-update-258-2015" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -106,7 +168,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/16/daily-update-258-2015/" data-id="cij0z92e00070c8ohzvalrn7v" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/16/daily-update-258-2015/" data-id="cij2gyx350070zsohropo7s54" class="article-share-link">Share</a>
       
       
     </footer>
@@ -164,7 +226,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/15/daily-update-257-2015/" data-id="cij0z92e30071c8ohd7nghh3g" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/15/daily-update-257-2015/" data-id="cij2gyx3a0071zsoh16y9dxdt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -239,7 +301,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/14/weekly-update-9/" data-id="cij0z925v000cc8ohu4av22da" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/14/weekly-update-9/" data-id="cij2gywsd000czsohomi4cs3f" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -362,7 +424,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/13/the-rulebook/" data-id="cij0z9288002fc8ohhonfmzbj" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/13/the-rulebook/" data-id="cij2gywvh002fzsoh6at8yclo" class="article-share-link">Share</a>
       
       
     </footer>
@@ -426,7 +488,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/12/daily-update-254-2015/" data-id="cij0z92e40072c8oh1ok5w6lp" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/12/daily-update-254-2015/" data-id="cij2gyx3c0072zsoh13czytof" class="article-share-link">Share</a>
       
       
     </footer>
@@ -486,7 +548,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/11/daily-update-253-2015/" data-id="cij0z92e50073c8ohqte0lcvf" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/11/daily-update-253-2015/" data-id="cij2gyx3e0073zsoh1odwiojh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -547,7 +609,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/10/update-and-bugs/" data-id="cij0z927q0027c8ohdf4u64a8" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/10/update-and-bugs/" data-id="cij2gywuy0027zsohjklf8bsz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -600,7 +662,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/09/getting-serious/" data-id="cij0z92br0052c8ohumrnf249" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/09/getting-serious/" data-id="cij2gyx060052zsohlos8ktg1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -647,73 +709,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/08/stupidrpg-temperature/" data-id="cij0z928w0034c8ohu9wd31av" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/08/stupidrpg-temperature/" data-id="cij2gywwc0034zsoh8a2wr6e8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-weekly-update-8" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/07/weekly-update-8/">Weekly Update #8</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/09/07/weekly-update-8/">
-      <time datetime="2015-09-07T07:00:00.000Z" itemprop="datePublished">2015-09-07</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Too busy. Things heating up at work.</p>
-<p><strong>Changelog:</strong></p>
-<ul>
-<li>Planning</li>
-</ul>
-<p><strong>Known Issues:</strong></p>
-<ul>
-<li>Nothing new</li>
-</ul>
-<p><strong>Next Up:</strong></p>
-<ul>
-<li>Fill out Ranger Bob’s dialogue tree.</li>
-<li>Add The Twins.</li>
-<li>Wrap up litterbug quest</li>
-<li>Fill in new character</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/07/weekly-update-8/" data-id="cij0z925y000hc8oholliiy0d" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
 
     </footer>
   </div>
