@@ -60,6 +60,76 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-weekly-update-5" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/17/weekly-update-5/">Weekly Update #5</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/17/weekly-update-5/">
+      <time datetime="2015-08-17T07:00:00.000Z" itemprop="datePublished">2015-08-17</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>More progress!</p>
+<p><strong>Changelog:</strong></p>
+<ul>
+<li>Added a bird. It flies around the map looking for food. Once it finds (and eats) something it likes, it will go find the Ranger and hang out with him.</li>
+<li>Worked on some AI handling style to support the bird behavior in a reasonably clean way.</li>
+<li>Added a bird feeder for the bird.</li>
+<li>Moved all BlackBox module content into sub-files broken down by type. Creatures, locations, items get their own files (module file was getting huge).</li>
+<li>Added a ‘local output’ function to supplement the output and GM output functions. Local output only displays if the originating entity is in the same location as the player. Lets me skip redundant code (i.e. having the entity itself check for locality before printing something).</li>
+<li>Added ECS.moveEntity function to simplify NPC movement.</li>
+<li>Added locationIs function to Thing component to simplify NPC location checking.</li>
+<li>Fixed NPCs executing during non-tick turns.</li>
+</ul>
+<p><strong>Known Issues:</strong></p>
+<ul>
+<li>Nothing new</li>
+</ul>
+<p><strong>Next Up:</strong></p>
+<ul>
+<li>Fill out Ranger Bob’s dialogue tree.</li>
+<li>Add The Twins.</li>
+<li>Litterbug quest.</li>
+<li>Feed the bird quest.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/17/weekly-update-5/" data-id="cijfetppp000rzwohamnxe05h" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-feature-creep" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -98,7 +168,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/16/feature-creep/" data-id="cijdy31zk0055ukohobam72u8" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/16/feature-creep/" data-id="cijfetpve0055zwohetap8se3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -152,7 +222,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/15/stupidrpg-bird-is-the-word/" data-id="cijdy31x2003xukohhlyffjll" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/15/stupidrpg-bird-is-the-word/" data-id="cijfetpt7003xzwohtk4mmk1d" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -203,7 +273,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/14/the-grind/" data-id="cijdy31ve002jukohg0dzvm0t" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/14/the-grind/" data-id="cijfetprx002jzwoh108za5yk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -279,7 +349,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/13/stupidrpg-milestones/" data-id="cijdy31wd003eukohejtor2z4" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/13/stupidrpg-milestones/" data-id="cijfetpsn003ezwohhw7i6x6c" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -328,7 +398,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/11/licensing-and-copyright/" data-id="cijdy31z6004vukohyyk02a9d" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/11/licensing-and-copyright/" data-id="cijfetpuy004vzwohomsldu0z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -386,7 +456,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/11/stupidrpg-game-ticks/" data-id="cijdy31wn003mukoh79jdlsyh" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/11/stupidrpg-game-ticks/" data-id="cijfetpsv003mzwoh0ugqku4x" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -449,7 +519,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/10/weekly-update-4/" data-id="cijdy31sx000uukohvycpdfem" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/10/weekly-update-4/" data-id="cijfetppr000uzwohmo2q8esn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -500,7 +570,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/09/replay-value-something-new-from-something-old/" data-id="cijdy31ya004jukoh4quh17lk" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/09/replay-value-something-new-from-something-old/" data-id="cijfetpu9004jzwoh14kovvog" class="article-share-link">Share</a>
       
       
     </footer>
@@ -552,71 +622,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/08/stupidrpg-output-queue/" data-id="cijdy31wa0038ukoho98f35cn" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/08/stupidrpg-output-queue/" data-id="cijfetpsk0038zwohxwz56q5e" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-wish-list-multiplayer" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/07/wish-list-multiplayer/">Wish List: Multiplayer</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/08/07/wish-list-multiplayer/">
-      <time datetime="2015-08-07T07:00:00.000Z" itemprop="datePublished">2015-08-07</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>One of my many pie-in-the-sky goals for StupidRPG is networked multiplayer. I have absolutely no hands-on experience with network programming (browser or otherwise), so it’s toward the bottom of the priority list. I do know a little bit about websockets and a moderate amount about databases.</p>
-<p>The engine for SRPG was built with future multiplayer in mind (sort of). Actions usually enter the queue from local input, but that’s not a requirement. I’ve already shown examples of input being added via test functions and via previous input (an action triggering another action). Handling a remotely-entered command (and appropriate context, such as the remote player entity) doesn’t pose an architectural problem. There are, however, many design challenges to overcome to make multiplayer work in a plot-driven, turn-based RPG. I’ll talk about a few problems and concepts I’ve been considering.</p>
-<h2 id="Problem_3A_Whose_Turn_Is_It_3F"><a href="#Problem_3A_Whose_Turn_Is_It_3F" class="headerlink" title="Problem: Whose Turn Is It?"></a>Problem: Whose Turn Is It?</h2><p>In short, for the game to work as-is, it needs to remain purely turn based and synchronous. Players take turns inputting commands, then the engine distributes the commands to the other players. For common actions like moving around, opening doors, and picking up objects, this is no problem. There are a few cases where it gets tricky though:</p>
-<ul>
-<li>Command interrupts (these need to be contextual per-player)</li>
-<li>Dialogue trees (does P2 have to wait for P1 to finish an entire conversation before they can take an action?)</li>
-<li>No-tick actions</li>
-<li>Guided segments like the intro</li>
-</ul>
-<p>I have solutions in mind for some of these. No-tick actions (which I’ll talk more about in another post) don’t need to be synchronized between players. This means P1 can look at their inventory while P2 is taking their turn, for example.</p>
-<p>Thinking more broadly, I’ll need to develop a method for flagging synchronous/asynchronous sections (in addition to no-tick actions). Synchronous actions can only be done on your turn, while asynchronous actions can be done at any time.</p>
-<h2 id="Problem_3A_Gameplay"><a href="#Problem_3A_Gameplay" class="headerlink" title="Problem: Gameplay"></a>Problem: Gameplay</h2><p>This ties in to the previous problem a bit (particularly the handling of dialogue trees), but it’s a more fundamental set of questions. In short, what does Player 2 do? Are they another fully-fledged individual just like Player 1? Are they a sidekick of some type? Are they present for the duration of the game’s plot? Do I need to build separate puzzles and gameplay elements for the solo and multiplayer modes?</p>
-<h2 id="Concept_3A_Act_IV_Multiplayer"><a href="#Concept_3A_Act_IV_Multiplayer" class="headerlink" title="Concept: Act IV Multiplayer"></a>Concept: Act IV Multiplayer</h2><p>Traditional multiplayer aside, another concept I’m considering is to only introduce multiplayer at the end of the game’s story. Essentially, the campaign would wrap up and then the game would turn into a more open world with multiple players. Might be overly ambitious, and for a new player who wants to play with a friend, they have a lot of content to get through first.</p>
-<h2 id="Concept_3A_Asymmetric_Multiplayer"><a href="#Concept_3A_Asymmetric_Multiplayer" class="headerlink" title="Concept: Asymmetric Multiplayer"></a>Concept: Asymmetric Multiplayer</h2><p>Lastly, I’m looking at asymmetric play. Instead of having both players exist as equals in the storyline, the second would have a different experience entirely (sidekick, animal, etc). Some Wii U games use this type of play for the 5th player, allowing them to assist the other players from outside the regular mode. This is just as ambitious as the Act IV concept, as it needs a lot of extra content and coding to be meaningful.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/07/wish-list-multiplayer/" data-id="cijdy31s90009ukohdjityrhj" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wishlist/">wishlist</a></li></ul>
 
     </footer>
   </div>

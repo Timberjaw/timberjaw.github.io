@@ -60,6 +60,91 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-stupidrpg-everything-is-an-entity" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/28/stupidrpg-everything-is-an-entity/">StupidRPG: Everything is an Entity</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/07/28/stupidrpg-everything-is-an-entity/">
+      <time datetime="2015-07-28T07:00:00.000Z" itemprop="datePublished">2015-07-28</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>The most basic element in SRPG is an Entity, which you can think of as a bag of stuff (where ‘stuff’ can mean a name, a list of things, references to other Entities, or functions). Items, locations, and NPCs are all Entities (plus more stuff).</p>
+<p>The basic entity definition (or prototype) looks like this:</p>
+<p><div class="highlight-header">ECS: Entity Prototype</div><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Entity = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.key = <span class="string">''</span>; <span class="comment">// Identifier</span></span><br><span class="line">	<span class="keyword">this</span>.parent = <span class="literal">null</span>; <span class="comment">// Parent entity</span></span><br><span class="line">	<span class="keyword">this</span>.children = []; <span class="comment">// Child entities</span></span><br><span class="line">	<span class="keyword">this</span>.components = []; <span class="comment">// Component list, for convenience / searching</span></span><br><span class="line">	<span class="keyword">this</span>.onComponentAdd = []; <span class="comment">// Add component callback</span></span><br><span class="line">	<span class="keyword">this</span>.tags = []; <span class="comment">// Tag list; generally the same as the component list</span></span><br><span class="line">	<span class="keyword">this</span>.persist = [<span class="string">'parent'</span>]; <span class="comment">// Raw attributes to persist</span></span><br><span class="line">	<span class="keyword">this</span>.persistActive = <span class="literal">true</span>; <span class="comment">// Save objects by default</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>Nothing super exciting here. The base entity mostly defines ‘housekeeping’ items: an identifier, references to parent and child entities, etc. I want to focus on Components right now, as that’s the most important part of ‘everything is an entity.’</p>
+<p>Functionality and data associated with game objects are defined by Components. You can think of a Component as a ‘type of thing’. Examples include Place (a location), Region (a group of Places), Living (an entity that is alive), Container (an object that holds other objects), and so forth. Most components correlate to some kind of real-world designation.</p>
+<p>The most basic Component is called Thing. When I said ‘everything is an entity,’ I could have instead said that ‘everything is a thing.’ A Thing, of course, is also an Entity, but as a Thing it has a variety of in-world properties.</p>
+<p>Things have a bunch of properties included by default, acting as the building blocks of item interaction in the game world:</p>
+<ul>
+<li>name (e.g. ‘blue flowers’)</li>
+<li>descriptions (a list of descriptions for different contexts)</li>
+<li>place (the current location of the thing)</li>
+<li>spawn (the starting location of the thing)</li>
+</ul>
+<p>There are a bunch of additional elements that make up a thing (mostly callback functions to handle basic behaviors: picking up and dropping the thing, adding more components to the thing, which data to save for the thing, etc). Certain basic items in the game don’t need any additional components, but most will have their interactivity and behaviors further expanded.</p>
+<p>For example, the Living component adds:</p>
+<ul>
+<li>hp (hit points)</li>
+<li>onTick (a callback function, run on each game ‘tick’, allowing the object to take actions)</li>
+<li>onHit (callback, run any time the object is attacked)</li>
+<li>onDeath (callback, run when the object’s HP is reduced to 0)</li>
+</ul>
+<h2 id="Example_3A_Containers"><a href="#Example_3A_Containers" class="headerlink" title="Example: Containers"></a>Example: Containers</h2><p>The Container component is a bit more advanced, as it is actually dependent on the Holder component. Components can specify a dependency list (meaning other component(s) the base object should also have). The Holder component specifies functionality used by both the Container (an object in which other objects can be placed) and Supporter (an object <em>on</em> which other objects can be placed) components.</p>
+<p>The Holder component specifies:</p>
+<ul>
+<li>capacity (how many objects can be held)</li>
+<li>isTransparent (whether the object can be seen through)</li>
+<li>canTakeFrom and canPutInto (whether things can currently be placed in/on the holder)</li>
+<li>inventory (a list of objects being held)</li>
+</ul>
+<p>The Container component adds:</p>
+<ul>
+<li>isOpen (whether the container is open)</li>
+<li>onOpen and onClose (callbacks, run when the container is opened/closed)</li>
+<li>onList (callback, overrides a basic Thing callback and controls how the object’s description is printed)</li>
+</ul>
+<p>The onList callback is particularly notable, as it changes based on the isTransparent property (from Holder) and the isOpen property (from Container). If the container is open <em>or</em> transparent, its contents are listed when the object is described. Otherwise, only the object itself is described.</p>
+<p>The Supporter component also has an onList callback, but it’s much simpler as it doesn’t need to pay attention to transparency or openness.</p>
+<h2 id="Component_Interactions"><a href="#Component_Interactions" class="headerlink" title="Component Interactions"></a>Component Interactions</h2><p>In general, there are no hard-coded restrictions on which components (or how many) can be applied to a particular entity. This has advantages (e.g. you can do interesting things like allowing a location to be alive and move around the world) and disadvantages (e.g. whatever happens when you add two components, each of which overrides the ‘onList’ behavior). Interactions can become complex or hard to predict. I was aware of this while building the system, and felt that the disadvantages could usually be worked around, while the advantages were particularly exciting to me.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/07/28/stupidrpg-everything-is-an-entity/" data-id="cijfetpt1003qzwohzfwbmzrz" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-weekly-update-2" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -103,7 +188,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/27/weekly-update-2/" data-id="cijdy31t80016ukoh0gekevei" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/27/weekly-update-2/" data-id="cijfetpq10016zwohlpx4t7du" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -153,7 +238,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/26/with-graphics-sound/" data-id="cijdy31s60008ukohge6sfnfy" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/26/with-graphics-sound/" data-id="cijfetpp40008zwohzu9oefsl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -273,7 +358,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/25/stupidrpg-natural-language-processing/" data-id="cijdy31wb003aukohp8f25knu" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/25/stupidrpg-natural-language-processing/" data-id="cijfetpsl003azwohm4zazvbd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nlp/">nlp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -330,7 +415,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/24/breaking-the-game-mods-hacks-and-cheats/" data-id="cijdy322p007cukohr1u3od97" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/24/breaking-the-game-mods-hacks-and-cheats/" data-id="cijfetpxx007czwoh8o0uc6xx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -405,7 +490,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/23/stupidrpg-command-interrupts/" data-id="cijdy31wx003uukohoxrdwkrr" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/23/stupidrpg-command-interrupts/" data-id="cijfetpt5003uzwoh46n3woas" class="article-share-link">Share</a>
       
       
     </footer>
@@ -458,7 +543,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/22/post-schedule/" data-id="cijdy31yk004oukohxmzrgt5r" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/22/post-schedule/" data-id="cijfetpuf004ozwoh6wyr9h54" class="article-share-link">Share</a>
       
       
     </footer>
@@ -507,7 +592,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/21/stupidrpg-the-gm/" data-id="cijdy31vz0030ukohvkrkwoui" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/21/stupidrpg-the-gm/" data-id="cijfetpsc0030zwohgcb0wuyq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -566,7 +651,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/20/weekly-update-1/" data-id="cijdy31uc0023ukoh6b2yqwas" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/20/weekly-update-1/" data-id="cijfetpqv0023zwohfjwyijiy" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -616,86 +701,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/19/dungeons-dragons/" data-id="cijdy31zv005aukohsur6tnqv" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-stupidrpg-the-black-box" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/18/stupidrpg-the-black-box/">StupidRPG: The Black Box</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/07/18/stupidrpg-the-black-box/">
-      <time datetime="2015-07-18T07:00:00.000Z" itemprop="datePublished">2015-07-18</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>SRPG is divided into four sections:</p>
-<ul>
-<li>Prologue: The Black Box</li>
-<li>Act I</li>
-<li>Act II</li>
-<li>Act III</li>
-</ul>
-<p>The prologue is the only part that exists right now. It acts as the test bed for the overall project, but over time it’s being refined into a playable introduction to the game. It’s currently called <a href="https://en.wikipedia.org/wiki/Black_box" target="_blank" rel="external">The Black Box</a>, but it could accurately be referred to as a ‘<a href="https://en.wikipedia.org/wiki/Vertical_slice" target="_blank" rel="external">vertical slice</a>‘ just as easily (though it doesn’t sound as cool, unless we’re talking about a swordfighting game). It has (or will have) all the core components of the overall game:</p>
-<ul>
-<li>Moving around</li>
-<li>Scenery</li>
-<li>NPCs</li>
-<li>Talking to NPCs (dialogue trees!)</li>
-<li>Murdering NPCs</li>
-<li>Riddles and puzzles (so the game takes more than 30 minutes)</li>
-<li>Containers (which can be opened/closed/locked/unlocked)</li>
-<li>Darkness / light</li>
-<li>Scripted segments</li>
-<li>The GM being a bit of a dummy (more on that later)</li>
-<li>Two years of on-again, off-again development to make a from-scratch text adventure engine that could have been immediately reproduced at any time by an out-of-the-box system known as Inform 7</li>
-</ul>
-<p>Engine development aside, the first part of a game is very important. It sets the tone, introduces key gameplay elements, and does a bunch of other stuff that game designers really value a lot. I have 3 goals for the SRPG prologue:</p>
-<ol>
-<li>The player is having fun</li>
-<li>The player is mildly confused</li>
-<li>The player is having fun</li>
-</ol>
-<p>Why two funs? Well, you can’t spell confused without funs.</p>
-<p>I also have two anti-goals for the SPRG prologue:</p>
-<ol>
-<li>The player should not feel like the experience is random nonsense</li>
-<li>The player should not not be having fun</li>
-</ol>
-<p>The distinction between mild confusion and random nonsense is important. The game has rules, the world within the game has rules. The rules may not be entirely static, but in general the player can expect their actions to have an effect on the world that roughly corresponds to their intent. As in a procedurally generated world, true randomness is not the end goal. <em>Interesting</em> randomness is more appealing.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/18/stupidrpg-the-black-box/" data-id="cijdy31w00031ukoh1vffrhrq" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/19/dungeons-dragons/" data-id="cijfetpvk005azwoh547e0nm8" class="article-share-link">Share</a>
       
       
     </footer>
