@@ -60,6 +60,158 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-fetch-quest" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/09/fetch-quest/">Fetch Quest</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/10/09/fetch-quest/">
+      <time datetime="2015-10-09T07:00:00.000Z" itemprop="datePublished">2015-10-09</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>One of the many tangential ideas I have for SRPG is the Infinite Side Quest. It’s not really infinite, but the idea is an absurdly overcomplicated fetch quest. That is, you need the key bo the bathroom, but before you can get the key you need to do a favor for the custodian, but before you can do that you need to acquire the macguffin, and so on and so forth.</p>
+<p>SRPG will have at least one game-spanning quest, the reward for which is likely to be insignificant relative to the effort involved. That said, I’d like it to be a badge of honor for anyone stubborn enough to stick it out to the end.</p>
+<p>Time permitting, I’d like to make the ISQ truly infinite, and rank players based on how far they get.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/10/09/fetch-quest/" data-id="cijkq9z2c0054qgoh7va01rkx" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-component-removal" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/08/component-removal/">Component Removal</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/10/08/component-removal/">
+      <time datetime="2015-10-08T07:00:00.000Z" itemprop="datePublished">2015-10-08</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>One of the tricky issues I’m sorting out right now is how to handle removing a Component from an Entity. When a component is added to an entity, its values are merged into the entity’s grab-bag type collection of attributes, and the component can perform initialization tasks. Certain components overlap in terms of which attributes they modify, so the process of removing a component isn’t straightforward.</p>
+<p>The specific case I have in mind is a Part entity (that is, an object that is part of something else), which is pretty simple to clean up manually if need be (it adds some <code>TAKE</code> checks and not much else), but there are almost certainly more complex use cases.</p>
+<p>Given that not all components need to be removable, the most straightforward approach may be to define an (optional) onRemove function at the Component level, and let each component decide how to handle its own removal. No refactoring required for components that don’t need to support the new behavior.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/10/08/component-removal/" data-id="cijkq9z4s0076qgohvqy9xpoe" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-daily-update-279-2015" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/07/daily-update-279-2015/">Daily Update 279.2015</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/10/07/daily-update-279-2015/">
+      <time datetime="2015-10-07T07:00:00.000Z" itemprop="datePublished">2015-10-07</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><strong>Changes:</strong></p>
+<ul>
+<li>Added a magic ice cube.</li>
+<li>Added an icy key.</li>
+</ul>
+<p><strong>Bugs &amp; Problems:</strong></p>
+<ul>
+<li>Nothing new.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/10/07/daily-update-279-2015/" data-id="cijkq9z3v0066qgoh2mhz8xsr" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-daily-update-278-2015" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -99,7 +251,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/06/daily-update-278-2015/" data-id="cijfetpwv0068zwohw9ydxc3b" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/06/daily-update-278-2015/" data-id="cijkq9z3w0068qgohfl9ifvyx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -174,7 +326,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/05/weekly-update-12/" data-id="cijfetpql001uzwohkem5h052" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/05/weekly-update-12/" data-id="cijkq9yxc001uqgoh61a8jrxv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -231,7 +383,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/04/daily-update-276-2015/" data-id="cijfetpww006azwohzib9pcjd" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/04/daily-update-276-2015/" data-id="cijkq9z3y006aqgoh685gfx5h" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -286,7 +438,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/03/daily-update-275-2015/" data-id="cijfetpwz006czwoh7b6lsz4v" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/03/daily-update-275-2015/" data-id="cijkq9z41006cqgoh8y771477" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -346,7 +498,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/02/daily-update-274-2015/" data-id="cijfetpx1006ezwoh2cxvmonw" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/02/daily-update-274-2015/" data-id="cijkq9z43006eqgohtocuc518" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -402,7 +554,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/01/daily-update-273-2015/" data-id="cijfetpx2006gzwohyaoa4v1l" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/01/daily-update-273-2015/" data-id="cijkq9z45006gqgohz8sb7r66" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -458,194 +610,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/30/daily-update-272-2015/" data-id="cijfetpx4006izwohjnjv9pyh" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-daily-update-271-2015" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/29/daily-update-271-2015/">Daily Update 271.2015</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/09/29/daily-update-271-2015/">
-      <time datetime="2015-09-29T07:00:00.000Z" itemprop="datePublished">2015-09-29</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Little bit of progress today.</p>
-<p><strong>Changes:</strong></p>
-<ul>
-<li>Stubbed in the Twins</li>
-<li>Added a description for when the player is inside the hot springs</li>
-<li>Added a dialogue option for the Rainbow Sword</li>
-</ul>
-<p><strong>Bugs &amp; Problems:</strong></p>
-<ul>
-<li>Need to handle ‘inside’ (and other types) descriptions in a general way</li>
-<li>Need to have scenery available in multiple locations</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/29/daily-update-271-2015/" data-id="cijfetpx6006kzwohr6cyizex" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-weekly-update-11" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/28/weekly-update-11/">Weekly Update #11</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/09/28/weekly-update-11/">
-      <time datetime="2015-09-28T07:00:00.000Z" itemprop="datePublished">2015-09-28</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Chipping away this week when I have time away from work (which I don’t).</p>
-<p><strong>Changelog:</strong></p>
-<ul>
-<li>Tested various actions in the forest after recent refactoring.</li>
-<li>Added a ‘counter’ helper. It uses the ECS setData/getData methods to keep track of how many times a particular event has happened. This will let me customize output and activities to be more dynamic. e.g. every third time you enter Dim Clearing, a butterfly flutters by. Or the first time you encounter a character, they’re surprised to see you.</li>
-<li>Added Handlebars helpers to tie into yesterday’s ECS counter feature. Now I can add conditional templating in room descriptions and such based on how many times something has happened.</li>
-<li>Added generic tracker of how many times a location has been visted.</li>
-<li>Added generic tracker of how many times an object has been seen.</li>
-<li>Added variable description for Ranger Bob the first time the player meets him.</li>
-<li>Added variable description for Other East Trail the second time it’s visited.</li>
-<li>Laid groundwork for making experimental context menus dynamic based on target. Disabled context menu on everything except name tags.</li>
-<li>Added nametags with context dropdowns to Dim Clearing.</li>
-<li>Nametag helper now generates nametags instead of tags.</li>
-<li>Fixed clickability and styling of context items.</li>
-<li>Fixed <code>MOVE</code> verb not outputting responses when invalid directions are given. More generally, the NLP once again allows text return values from verbs, which it appends to the response output.</li>
-<li>Fixed speech tags (special purpose name tags for conversation trees) generating incorrectly.</li>
-<li>Fixed <code>EAT</code> verb.</li>
-<li>Fixed <code>LOOK IN</code> verb.</li>
-</ul>
-<p><strong>Known Issues:</strong></p>
-<ul>
-<li>Nothing new</li>
-</ul>
-<p><strong>Next Up:</strong></p>
-<ul>
-<li>Add The Twins.</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/28/weekly-update-11/" data-id="cijfetpqp001xzwohq67v07hp" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-daily-update-269-2015" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/27/daily-update-269-2015/">Daily Update 269.2015</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/09/27/daily-update-269-2015/">
-      <time datetime="2015-09-27T07:00:00.000Z" itemprop="datePublished">2015-09-27</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Busy over the weekend.</p>
-<p><strong>Thoughts:</strong></p>
-<ul>
-<li>Need to start leaving custom handlers for last, let functionality interactions happen organically. Especially important for puzzles to give player a ‘toy’ to play with as part of the process of solving.</li>
-<li>Need more stupid and more rpg.</li>
-<li>Ran some Numenera this weekend. Should try to draw more inspiration from my actual roleplaying experiences.</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/27/daily-update-269-2015/" data-id="cijfetpx7006mzwohca9xnfzs" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/30/daily-update-272-2015/" data-id="cijkq9z47006iqgohufm5jae4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>

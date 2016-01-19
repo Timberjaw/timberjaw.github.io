@@ -60,6 +60,193 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-daily-update-271-2015" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/29/daily-update-271-2015/">Daily Update 271.2015</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/09/29/daily-update-271-2015/">
+      <time datetime="2015-09-29T07:00:00.000Z" itemprop="datePublished">2015-09-29</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Little bit of progress today.</p>
+<p><strong>Changes:</strong></p>
+<ul>
+<li>Stubbed in the Twins</li>
+<li>Added a description for when the player is inside the hot springs</li>
+<li>Added a dialogue option for the Rainbow Sword</li>
+</ul>
+<p><strong>Bugs &amp; Problems:</strong></p>
+<ul>
+<li>Need to handle ‘inside’ (and other types) descriptions in a general way</li>
+<li>Need to have scenery available in multiple locations</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/09/29/daily-update-271-2015/" data-id="cijkq9z48006kqgoh2wa9bmya" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-weekly-update-11" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/28/weekly-update-11/">Weekly Update #11</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/09/28/weekly-update-11/">
+      <time datetime="2015-09-28T07:00:00.000Z" itemprop="datePublished">2015-09-28</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Chipping away this week when I have time away from work (which I don’t).</p>
+<p><strong>Changelog:</strong></p>
+<ul>
+<li>Tested various actions in the forest after recent refactoring.</li>
+<li>Added a ‘counter’ helper. It uses the ECS setData/getData methods to keep track of how many times a particular event has happened. This will let me customize output and activities to be more dynamic. e.g. every third time you enter Dim Clearing, a butterfly flutters by. Or the first time you encounter a character, they’re surprised to see you.</li>
+<li>Added Handlebars helpers to tie into yesterday’s ECS counter feature. Now I can add conditional templating in room descriptions and such based on how many times something has happened.</li>
+<li>Added generic tracker of how many times a location has been visted.</li>
+<li>Added generic tracker of how many times an object has been seen.</li>
+<li>Added variable description for Ranger Bob the first time the player meets him.</li>
+<li>Added variable description for Other East Trail the second time it’s visited.</li>
+<li>Laid groundwork for making experimental context menus dynamic based on target. Disabled context menu on everything except name tags.</li>
+<li>Added nametags with context dropdowns to Dim Clearing.</li>
+<li>Nametag helper now generates nametags instead of tags.</li>
+<li>Fixed clickability and styling of context items.</li>
+<li>Fixed <code>MOVE</code> verb not outputting responses when invalid directions are given. More generally, the NLP once again allows text return values from verbs, which it appends to the response output.</li>
+<li>Fixed speech tags (special purpose name tags for conversation trees) generating incorrectly.</li>
+<li>Fixed <code>EAT</code> verb.</li>
+<li>Fixed <code>LOOK IN</code> verb.</li>
+</ul>
+<p><strong>Known Issues:</strong></p>
+<ul>
+<li>Nothing new</li>
+</ul>
+<p><strong>Next Up:</strong></p>
+<ul>
+<li>Add The Twins.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/09/28/weekly-update-11/" data-id="cijkq9yxg001xqgoh36gdscfy" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-daily-update-269-2015" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/27/daily-update-269-2015/">Daily Update 269.2015</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/09/27/daily-update-269-2015/">
+      <time datetime="2015-09-27T07:00:00.000Z" itemprop="datePublished">2015-09-27</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Busy over the weekend.</p>
+<p><strong>Thoughts:</strong></p>
+<ul>
+<li>Need to start leaving custom handlers for last, let functionality interactions happen organically. Especially important for puzzles to give player a ‘toy’ to play with as part of the process of solving.</li>
+<li>Need more stupid and more rpg.</li>
+<li>Ran some Numenera this weekend. Should try to draw more inspiration from my actual roleplaying experiences.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/09/27/daily-update-269-2015/" data-id="cijkq9z49006mqgohllk5aom9" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-context-menus" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -106,7 +293,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/26/context-menus/" data-id="cijfetpxp0075zwohm8mti190" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/26/context-menus/" data-id="cijkq9z4r0075qgoh9n4249w7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -161,7 +348,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/25/daily-update-267-2015/" data-id="cijfetpx8006ozwohtbhjr8xk" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/25/daily-update-267-2015/" data-id="cijkq9z4b006oqgoh1t50awlu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -221,7 +408,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/24/daily-update-266-2015/" data-id="cijfetpxa006qzwohctgwktoy" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/24/daily-update-266-2015/" data-id="cijkq9z4c006qqgohj1une3uo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -278,7 +465,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/23/daily-update-265-2015/" data-id="cijfetpxc006szwohvn6z3ohv" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/23/daily-update-265-2015/" data-id="cijkq9z4e006sqgoh9kzi8bvq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -335,7 +522,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/22/daily-update-264-2015/" data-id="cijfetpxd006uzwohkmyad1ue" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/22/daily-update-264-2015/" data-id="cijkq9z4f006uqgohc8yzo66e" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -406,7 +593,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/21/weekly-update-10/" data-id="cijfetpqr0020zwohwegtk673" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/21/weekly-update-10/" data-id="cijkq9yxl0020qgohyjovgwdx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -461,193 +648,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/20/daily-update-262-2015/" data-id="cijfetpxf006wzwoh7mlov8ob" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-rule-chaining" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/19/rule-chaining/">Rule Chaining</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/09/19/rule-chaining/">
-      <time datetime="2015-09-19T07:00:00.000Z" itemprop="datePublished">2015-09-19</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>I’m putting some thought into refactoring the Rules handling a little bit. I have two goals: 1) making the process of modifying/replacing action output more elegant, and 2) supporting rule chaining (allowing multiple Rules to modify the same output).</p>
-<p>Right now a Rule returns text, along with a constant which specifies whether the Rule cancels the action, replaces the action, does nothing, or appends to the action’s output. However, I’ve already done the groundwork for Rules that happen before or after the action is handled. The idea is that I can have rules like:</p>
-<ul>
-<li>Before Rule: Instead of Walking North from Dim Clearing while Actor is stuck in Bear Trap, say “You can’t move. You are stuck in a bear trap.”</li>
-<li>After Rule: After Walking North from Dim Clearing, say “Something clangs loudly behind you.”</li>
-</ul>
-<p>The first Rule cancels the regular action processing, whereas the second merely adds to the output. This approach renders the “append” rule handling moot. Instead, I’d like to create some kind of Action object, which is created before the first Rules are processed. It would look something like:</p>
-<p></p><h3 class="highlight-header">Action Object</h3><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> action = &#123;</span><br><span class="line">    <span class="string">'actor'</span>:player,</span><br><span class="line">    <span class="string">'action'</span>:input,</span><br><span class="line">    <span class="string">'output'</span>:<span class="string">''</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p></p>
-<p>This object would be passed to each rule in sequence, where it might be modified (primarily the output field). It can be prepended, appended, replaced entirely, etc. The resulting object is passed to the next rule, and so on until all rules have been processed or a rule has cancelled the action.</p>
-<p>The full flow would look like:</p>
-<ol>
-<li>Run ‘Before’ rules</li>
-<li>If action is not canceled, run Verb processing and append to Action output</li>
-<li>If action is not canceled, run ‘After’ rules</li>
-<li>Return Action object</li>
-</ol>
-<p>Note that the After rules cannot cancel the action. It’s too late. They can still prepend, append, or change the output.</p>
-<p>Lastly, this makes me think certain rules will need broken into two rules (Before and After), which I’d like to streamline. Could expand the understand() rule builder to have before() and after() methods (effectively generating two rules in one overall block), but I don’t know if that’s really worthwhile (vs just generating two rules one after the other). Probably not.</p>
-<p>Open questions:</p>
-<ul>
-<li>Is there a need for a Rule to not cancel the action entirely, but cancel any remaining rules in the current rule group?</li>
-<li>Is there a need for a Rule to cancel Verb processing but not cancel After rules?</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/19/rule-chaining/" data-id="cijfetpu5004gzwoh8pnb7ttr" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-daily-update-260-2015" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/18/daily-update-260-2015/">Daily Update&amp;#58; 260.2015</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/09/18/daily-update-260-2015/">
-      <time datetime="2015-09-18T07:00:00.000Z" itemprop="datePublished">2015-09-18</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p><strong>Changes:</strong></p>
-<ul>
-<li>Prototyped context dropdowns for command tags.</li>
-</ul>
-<p><strong>Bugs &amp; Problems:</strong></p>
-<ul>
-<li>Not really a problem, but I need to add a descriptive layer for when the player is inside something.</li>
-<li>Need to figure out a good way to populate the dropdowns (probably something rule based so modules can add entries to tags, but that also requires rules to chain nicely). Not a trivial problem, but one that if I solve it for command tags, it will also be useful elsewhere.</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/18/daily-update-260-2015/" data-id="cijfetpxg006yzwoh20lgsxzb" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-internal-rules-rulebooks" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/17/internal-rules-rulebooks/">Internal Rules &amp;amp; Rulebooks</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/09/17/internal-rules-rulebooks/">
-      <time datetime="2015-09-17T07:00:00.000Z" itemprop="datePublished">2015-09-17</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Yesterday I added an Internal Rule feature to the engine; it’s an extension of the Rulebook system with some interesting uses.</p>
-<h2 id="Rulebook_Categories_/_Rule_Groups"><a href="#Rulebook_Categories_/_Rule_Groups" class="headerlink" title="Rulebook Categories / Rule Groups"></a>Rulebook Categories / Rule Groups</h2><p>The Rulebook is now categorized, so every Rule belongs to a Rule Group. The current groups are:</p>
-<ul>
-<li>Before (which is the default; rules I’ve previously created all go here)</li>
-<li>After (new group for rules that run after regular action processing; they can’t interrupt actions)</li>
-<li>Internal</li>
-</ul>
-<p>I can add more Groups later that can be executed at different times, or based on specific types of events. This will be important both for functionality improvements and performance, since I can avoid running every rule on every tick.</p>
-<h2 id="Internal_Rules"><a href="#Internal_Rules" class="headerlink" title="Internal Rules"></a>Internal Rules</h2><p>Internal rules are triggered directly by the ECS, and aren’t dependent (entirely) on action execution. They can happen during non-tick executions, and can have a variety of effects. The basic idea is that I can define an internal action called (for example) <code>getLocationName</code>, and then apply rules to that action as if it were a regular verb action. I can also supply a default function if no rules override it.</p>
-<p></p><h3 class="highlight-header">Internal Action: getLocationName</h3><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ECS.addInternalAction(<span class="string">'getLocationName'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> data.location.name;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p></p>
-<p>This defines the default action for the getLocationName, which simply returns the name of the location. This is used by the Place component to print the location name during place descriptions.</p>
-<p>Ok, so far I’ve just complicated the place descriptions. Next up is the fun part: modifying location names based on rules.</p>
-<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><p></p><h3 class="highlight-header">Internal Rule: inside object location name rule</h3><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">understand(<span class="string">'inside object location name rule'</span>)</span><br><span class="line">    .internal(<span class="string">'getLocationName'</span>)</span><br><span class="line">    .attribute(<span class="string">'actor.parent'</span>, <span class="string">'is'</span>, <span class="string">'holder'</span>)</span><br><span class="line">    .do(<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">        data.self.responseText = <span class="string">" (inside "</span>+ data.actor.parent.name +<span class="string">")"</span>;</span><br><span class="line">        <span class="keyword">return</span> Rulebook.ACTION_APPEND;</span><br><span class="line">    &#125;)</span><br><span class="line">    .start();</span><br></pre></td></tr></table></figure><p></p>
-<p>This verbosely-named Rule checks to see if the actor (usually the player) is in/on an object in the location. They could be hiding inside a box, soaking in the hot springs, etc. If so, it appends a parenthetical description to the location name, e.g. “Hot Springs (inside pools)”.</p>
-<p>Similar internal rules can be created for object names (appending object state or changing the name entirely), controlling which objects can be seen through a window, etc. Like any other rule, internal rules can be deregistered once they’ve served their purpose.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/17/internal-rules-rulebooks/" data-id="cijfetpv0004wzwoh39jj5nvb" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/20/daily-update-262-2015/" data-id="cijkq9z4g006wqgohor0q6w5o" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
