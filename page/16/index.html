@@ -60,6 +60,58 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-nothing-is-a-part-of-something" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/21/nothing-is-a-part-of-something/">Nothing is a Part of Something</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/21/nothing-is-a-part-of-something/">
+      <time datetime="2015-08-21T07:00:00.000Z" itemprop="datePublished">2015-08-21</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Yesterday I added two new Components to the game: Part and Nothing. These are intended to help simplify a couple object interactions I ran into.</p>
+<h2 id="Part"><a href="#Part" class="headerlink" title="Part"></a>Part</h2><p>A Part is a regular object in most respects, but it’s directly connected to another object. A button on a shirt, a branch on a tree, etc. Parts don’t have much in the way of unique behavior (yet). For now it allows me to easily restrict objects from being taken when they’re part of a larger object.</p>
+<p></p><h3 class="highlight-header">Part Component</h3><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">parts.c(<span class="string">'part'</span>, &#123;</span><br><span class="line">    <span class="string">'dependencies'</span>: [],</span><br><span class="line">    <span class="string">'onAction.TAKE'</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        queueGMOutput(<span class="string">"That's part of the "</span>+getNameTag(<span class="keyword">this</span>.parent)+<span class="string">"."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p></p>
+<p>Later on, parts might interact with their parent objects in more complex ways.</p>
+<h2 id="Nothing"><a href="#Nothing" class="headerlink" title="Nothing"></a>Nothing</h2><p>A Nothing is a thing that isn’t really a thing. The specific use case was creating a hole in something. You can look at a hole, and possibly put things in a hole, but some activities don’t make sense with an abstract object like a hole. For example, you can’t take a hole. The response to a player trying to take a Nothing is slightly different than a Part. You can’t take a Part because it’s attached to something; you can’t take a Nothing because it’s fundamentally not a thing that can be taken.</p>
+<p></p><h3 class="highlight-header">Nothing Component</h3><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">coreModule.c(<span class="string">'nothing'</span>, &#123;</span><br><span class="line">	<span class="string">'dependencies'</span>: [],</span><br><span class="line">	<span class="string">'onAction.TAKE'</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		queueGMOutput(<span class="string">"That's too abstract to be taken."</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p></p>
+<p>As part of building the bird feeder item, I added a hole (nothing) that is a part of the feeder. The feeder also has a part called a post (which is not nothing), and together it all makes a whole.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/21/nothing-is-a-part-of-something/" data-id="cijmfkl5m004pusohwkdl022s" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-stupidrpg-there-is-no-time" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -97,7 +149,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/20/stupidrpg-there-is-no-time/" data-id="cijkq9yz5002wqgohmeruyeoh" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/20/stupidrpg-there-is-no-time/" data-id="cijmfkl2s002wusohqoe6ch9d" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -157,7 +209,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/19/web-apps-for-the-desktop/" data-id="cijkq9yxr0026qgohjin42wg7" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/19/web-apps-for-the-desktop/" data-id="cijmfkl1g0026usohblk7hwxg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -209,7 +261,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/18/stupidrpg-the-big-bad/" data-id="cijkq9yza0032qgoh0qrbblt7" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/18/stupidrpg-the-big-bad/" data-id="cijmfkl340032usohc6wsg4ay" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -279,7 +331,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/17/weekly-update-5/" data-id="cijkq9ywd000rqgoh3wa9wgsc" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/17/weekly-update-5/" data-id="cijmfkkzn000rusohkkbtbbbx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -330,7 +382,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/16/feature-creep/" data-id="cijkq9z2d0055qgohh9lya7ud" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/16/feature-creep/" data-id="cijmfkl6s0055usoheu66ks6a" class="article-share-link">Share</a>
       
       
     </footer>
@@ -384,7 +436,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/15/stupidrpg-bird-is-the-word/" data-id="cijkq9z03003xqgoh5ivg23xe" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/15/stupidrpg-bird-is-the-word/" data-id="cijmfkl46003xusohkroftko9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -435,7 +487,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/14/the-grind/" data-id="cijkq9yys002jqgohogaokglw" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/14/the-grind/" data-id="cijmfkl2e002jusoht0xv3c4c" class="article-share-link">Share</a>
       
       
     </footer>
@@ -511,7 +563,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/13/stupidrpg-milestones/" data-id="cijkq9yzk003eqgoh0kboijng" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/13/stupidrpg-milestones/" data-id="cijmfkl3f003eusohyt1161eb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -560,69 +612,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/11/licensing-and-copyright/" data-id="cijkq9z1y004vqgoh7xwk6taz" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/11/licensing-and-copyright/" data-id="cijmfkl6b004vusohgs7q0ut8" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-stupidrpg-game-ticks" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/11/stupidrpg-game-ticks/">StupidRPG: Game Ticks</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/08/11/stupidrpg-game-ticks/">
-      <time datetime="2015-08-11T07:00:00.000Z" itemprop="datePublished">2015-08-11</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>A game tick is a unit of time for something happening in the world. Generally, when the player takes an action, a tick occurs. Entities within the ECS can watch for ticks and take actions. NPCs, for example, have the opportunity to take an action on each tick. You can think of a tick as a round of combat in D&amp;D, where each combatant has their own turn within the round (in a particular order).</p>
-<p>Ticks are controlled very flexibly, allowing for layers of precedence and handlers:</p>
-<ol>
-<li>Global: defaults to on, run after any user input</li>
-<li>NLP: disables current tick if the player’s input wasn’t understood</li>
-<li>Verb: enables/disables current tick for an entire verb (e.g. <code>INVENTORY</code>)</li>
-<li>Callback: can enable/disable current tick on the fly during verb callback</li>
-</ol>
-<p>Some fun things I might look into:</p>
-<ul>
-<li>Time scaling as a result of plot or a character power (ticks happen more/less frequently than normal).</li>
-<li>Exempting a creature from the normal tick rules, allowing them to act after bad input or non-tick verbs.</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/11/stupidrpg-game-ticks/" data-id="cijkq9yzr003mqgoh98c8wtjr" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
-
     </footer>
   </div>
   
