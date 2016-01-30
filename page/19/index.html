@@ -60,6 +60,63 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-stupidrpg-callbacks" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/01/stupidrpg-callbacks/">StupidRPG: Callbacks</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/01/stupidrpg-callbacks/">
+      <time datetime="2015-08-01T07:00:00.000Z" itemprop="datePublished">2015-08-01</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Callbacks are functions on an object, typically executed based on an event somewhere in the game. For example, each time a game ‘tick’ occurs, an AI callback is triggered on every living thing (allowing them to move, attack, or take other actions). SRPG has a couple types of callbacks, which I hope to consolidate in future refactoring.</p>
+<h2 id="Callback_Types"><a href="#Callback_Types" class="headerlink" title="Callback Types"></a>Callback Types</h2><p>The current callback behavior is slightly convoluted, due to changes mid-development. Initially, each object could only have one callback of a given name, which proved to be too limiting. It meant that I couldn’t stack callbacks to allow objects to inherit behaviors <em>and</em> expand on them.</p>
+<p>The quick solution to this was to use an array of functions, and instead of setting the callback directly, add it to the end of the array. This works fine for the most part, but the code feels a bit clunky for more advanced use cases, and due to the mix of new code and old code, I have to perform several additional checks before executing callbacks.</p>
+<h2 id="Refactoring"><a href="#Refactoring" class="headerlink" title="Refactoring"></a>Refactoring</h2><p>One of my refactoring tasks is to clean up the callbacks in a few ways:</p>
+<ul>
+<li>Create a Callback prototype which all callbacks inherit from</li>
+<li>Standardize all object callback fields to use an array (no direct references to single callbacks)</li>
+<li>Standardize callback return values to let the caller know definitively how/whether the callback was handled</li>
+</ul>
+<p>Reorganizing will allow me to add more advanced callback functionality as well, such as specifying event filters for callbacks, prioritizing callbacks, and allowing callbacks to cancel events entirely (not allowing other callbacks to run).</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/01/stupidrpg-callbacks/" data-id="cik1iqcuw003vdwoh6a58fowv" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-side-project-power-cards" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -126,7 +183,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/31/side-project-power-cards/" data-id="cijz7q30f0048q0ohoy1dp6d6" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/31/side-project-power-cards/" data-id="cik1iqcvo0048dwohy4vkh0fk" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cplusplus/">cplusplus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/numenera/">numenera</a></li></ul>
@@ -178,7 +235,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/30/stupidrpg-the-rpg/" data-id="cijz7q2xx002yq0ohupso04hs" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/30/stupidrpg-the-rpg/" data-id="cik1iqctz002ydwoh3ah5gnme" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -235,7 +292,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/29/bio-ranger-bob/" data-id="cijz7q36c007dq0ohiavqveya" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/29/bio-ranger-bob/" data-id="cik1iqd07007ddwohv402iz8j" class="article-share-link">Share</a>
       
       
     </footer>
@@ -318,7 +375,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/28/stupidrpg-everything-is-an-entity/" data-id="cijz7q2z3003qq0oh9zh4ex3e" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/28/stupidrpg-everything-is-an-entity/" data-id="cik1iqcus003qdwohksredsbo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -374,7 +431,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/27/weekly-update-2/" data-id="cijz7q2u00016q0ohkvz0dpck" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/27/weekly-update-2/" data-id="cik1iqcrl0016dwohyuwunvli" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -424,7 +481,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/26/with-graphics-sound/" data-id="cijz7q2sz0008q0ohqy9uf4m0" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/26/with-graphics-sound/" data-id="cik1iqcqp0008dwohlhlxf4hh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -544,7 +601,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/25/stupidrpg-natural-language-processing/" data-id="cijz7q2yg003aq0ohe72itz0p" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/25/stupidrpg-natural-language-processing/" data-id="cik1iqcub003adwoh19eobijy" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nlp/">nlp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -601,7 +658,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/24/breaking-the-game-mods-hacks-and-cheats/" data-id="cijz7q369007cq0ohy5op2iqx" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/24/breaking-the-game-mods-hacks-and-cheats/" data-id="cik1iqd06007cdwohnyj87oge" class="article-share-link">Share</a>
       
       
     </footer>
@@ -676,60 +733,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/23/stupidrpg-command-interrupts/" data-id="cijz7q2z9003uq0ohy6lq05dx" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-post-schedule" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/22/post-schedule/">Post Schedule</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/07/22/post-schedule/">
-      <time datetime="2015-07-22T07:00:00.000Z" itemprop="datePublished">2015-07-22</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>The overall goal of this journal is not so much to document my dev progress as it is to <em>encourage</em> my dev progress. The basic idea is that if I have to publish a post every day, I’m also forced to actually work on the game at least semi-regularly. Otherwise I’ll run out of things to talk about. We’ll see how that goes.</p>
-<p>My planned post schedule looks something like this:</p>
-<ul>
-<li>Monday: Weekly Update (actual work done on the game in the last week)</li>
-<li>Tue/Thu/Sat: StupidRPG post (discussion of a component within the game)</li>
-<li>Wed/Fri/Sun: General post (technical/writing discussion not directly related to SRPG)</li>
-</ul>
-<p>Other than the Weekly Update, I’ll shuffle things around as needed.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/22/post-schedule/" data-id="cijz7q318004oq0oh3a1uirw1" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/23/stupidrpg-command-interrupts/" data-id="cik1iqcuv003udwoho9xwazp0" class="article-share-link">Share</a>
       
       
     </footer>
