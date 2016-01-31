@@ -60,6 +60,81 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-stupidrpg-command-interrupts" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/23/stupidrpg-command-interrupts/">StupidRPG: Command Interrupts</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/07/23/stupidrpg-command-interrupts/">
+      <time datetime="2015-07-23T07:00:00.000Z" itemprop="datePublished">2015-07-23</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>I’ll talk more about the language parser in SRPG in a future post, but I need to give a little context for this discussion. In the majority of cases, SRPG is a turn-based, player-driven game. The player enters a command, the game engine parses the command, and the game state is updated accordingly. During normal execution, the player’s input is matched to a ‘verb’ (an action handler) along with relevant nouns (objects/entities) and modifiers (cardinal directions, for example). Various command patterns are supported, from the basic <code>GO NORTH</code> (<code>VERB MODIFIER</code>) to the more complex <code>PUT BEER BOTTLE ON PEDESTAL</code> (<code>VERB NOUN MODIFIER NOUN</code>).</p>
+<p>This gives a lot of flexibility, but it’s missing support for a couple of use cases: 1) easter eggs; and 2) sass. As it turns out, the command interrupt feature has some less frivolous applications as well.</p>
+<h2 id="What_is_a_Command_Interrupt_3F"><a href="#What_is_a_Command_Interrupt_3F" class="headerlink" title="What is a Command Interrupt?"></a>What is a Command Interrupt?</h2><p>A command interrupt is a special callback that interrupts the regular flow of command processing. This allows for contextual, off-the-cuff responses from the player, along with aforementioned non-frivolous uses.</p>
+<p><strong>Example:</strong></p>
+<p><div class="spoiler"><br><b>GM:</b> Deep in the gloom, you see the fearsome troglodyte. You’re not sure how to describe it because you don’t remember what a troglodyte is.<br><br><b>Input:</b> yes i do<br><br><b>GM:</b> Oh, my mistake. It looks exactly like you expected a troglodyte to look.<br></div><br><br>Now let’s break down what’s happening here.</p>
+<h2 id="How_does_a_Command_Interrupt_work_3F"><a href="#How_does_a_Command_Interrupt_work_3F" class="headerlink" title="How does a Command Interrupt work?"></a>How does a Command Interrupt work?</h2><p>The game does not have a verb for ‘yes’ or ‘yes i do’. This is a special case, only available for the next action after the GM’s initial text. The code looks like this:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Describe troglodyte</span></span><br><span class="line">queueOutput(<span class="string">"&#123;&#123;gm&#125;&#125;&lt;p&gt;Deep in the gloom, you see the fearsome &#123;&#123;tag 'troglodyte' classes='object enemy' command='x troglodyte'&#125;&#125;. You're not sure how to describe it because you don't remember what a troglodyte is.&lt;/p&gt;"</span>);</span><br><span class="line">					</span><br><span class="line">NLP.interrupt(</span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="comment">/* Init */</span> &#125;,</span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params">string</span>)</span>&#123;</span><br><span class="line">        NLP.interrupt(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(string == <span class="string">"yes i do"</span>) &#123;</span><br><span class="line">            queueOutput(<span class="string">"&#123;&#123;gm&#125;&#125;&lt;p&gt;Oh, my mistake. It looks exactly like you expected a troglodyte to look.&lt;/p&gt;"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// Resume normal input</span></span><br><span class="line">            queueOutput(parse( NLP.parse(string), &#123;&#125; ));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>On line 1, the GM response is queued as normal.</p>
+<p>The fun stuff happens on line 4, where an interrupt is registered with the NLP (the Natural Language Processor). This tells the NLP that when the player enters their next command, control should first be handed to the interrupt. The interrupt acts autonomously, deciding whether it wants to handle the action or not.</p>
+<p>Line 5 is an optional initialization function triggered when the interrupt is queued. Without getting too far into the weeds, I’ll just say that multiple interrupts can be ‘stacked’. When one is completed (unregistered) the next is enabled.</p>
+<p>On line 7, the interrupt deregisters itself. If the player doesn’t immediately enter the response we’re looking for, we’re not going to give them another chance. Interrupts are given first priority until they deregister themselves (this is important because it lets us do more interesting things than simple one-off responses to snarky player text).</p>
+<p>On line 9, we check for the string we’re expecting. In this case, we’re looking for the player entering “yes i do” in response to the GM’s “you’re not sure how to describe it because you don’t remember what a troglodyte is”. If we matched the string, we queue an equally snarky response from the GM.</p>
+<p>If the string is not matched, we re-parse the command. Since we already de-registered the interrupt, the player’s input will be handled normally, and they will have no idea that there was a special response available.</p>
+<h2 id="Alternate_Uses"><a href="#Alternate_Uses" class="headerlink" title="Alternate Uses"></a>Alternate Uses</h2><p>Command interrupts were initially intended for use in easter eggs: special responses from the GM based on the player inputting non-standard commands in specific situations. As it turns out, however, there are better uses for the feature. I’ll cover three use cases:</p>
+<ul>
+<li>Raw text input</li>
+<li>Menu selections</li>
+<li>Dialogue trees</li>
+</ul>
+<h2 id="Raw_Text_Input"><a href="#Raw_Text_Input" class="headerlink" title="Raw Text Input"></a>Raw Text Input</h2><p>This is actually the first thing the player encounters when starting the game. The player is prompted for their name, and a command interrupt is used to capture the (arbitrary) text they entered. As usual, the interrupt can decide how to handle the player’s input, and whether to deregister itself or not.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ADD PLAYER NAME TO INTERRUPT QUEUE</span></span><br><span class="line">NLP.interrupt(</span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">// Leadup to player name input</span></span><br><span class="line">        queueOutput(<span class="string">"&#123;&#123;gm&#125;&#125;&lt;p&gt;You are an adventurer, but not a very good one. You are known as...&lt;/p&gt;"</span>, <span class="number">2000</span>);</span><br><span class="line">        queueOutput(<span class="string">"&#123;&#123;gm&#125;&#125;&lt;p&gt;Hmm.&lt;/p&gt;"</span>, <span class="number">1500</span>);</span><br><span class="line">        queueOutput(<span class="string">"&#123;&#123;gm&#125;&#125;&lt;p&gt;Who are you again?&lt;/p&gt;"</span>, <span class="number">1000</span>);</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params">string</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(string.length &gt; <span class="number">0</span>)&#123;</span><br><span class="line">            player.name = string;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        queueOutput(<span class="string">"&#123;&#123;gm&#125;&#125;&lt;p&gt;That name seems kind of...short. I'm not going to steal your identity, I promise.&lt;/p&gt;"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>This interrupt is a little more complex than the previous example. It has an initialization function (which prompts the player for their name), and it has a return value rather than manually deregistering itself. This communicates to the NLP whether the interrupt is done. If the interrupt returns false, it will be executed again on the player’s next input. This is useful because we want to make sure the player has entered valid input for their name. For now, we’re just checking for a non-empty string, but we could create more complex validation in the future.</p>
+<p>When we’re satisfied the player’s input is valid, the interrupt returns true, telling the NLP to continue (either to the next interrupt, or back to regular command processing).  During the SRPG intro segment, several interrupts are queued to capture the player’s name, race, class, gender, and preferences.</p>
+<h2 id="Menus"><a href="#Menus" class="headerlink" title="Menus"></a>Menus</h2><p>The first interrupt in SRPG is a simple text interrupt. The rest of the interrupts during the SRPG intro are menus. They present a list of options, and validate the player’s input against the available options before allowing them to continue.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ADD RACE MENU TO INTERRUPT QUEUE</span></span><br><span class="line">NLP.interrupt(</span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">// Build menu</span></span><br><span class="line">        <span class="keyword">var</span> menu = parse(<span class="string">"&#123;&#123;menu races&#125;&#125;"</span>, &#123;<span class="string">'races'</span>:shuffle(ECS.getData(<span class="string">'races'</span>))&#125;);</span><br><span class="line">        queueOutput(<span class="string">"&#123;&#123;gm&#125;&#125;&lt;p&gt;If you say so. Well, &#123;&#123;player.name&#125;&#125;, what manner of creature are you?&lt;/p&gt;"</span>+menu);</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params">string</span>)</span>&#123;</span><br><span class="line">        player.race = string;</span><br><span class="line">        disableLastMenu(string);</span><br><span class="line">        <span class="keyword">if</span>(ECS.isValidMenuOption(ECS.getData(<span class="string">'races'</span>), string)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        enableLastMenu();</span><br><span class="line">        queueOutput(<span class="string">"&#123;&#123;gm&#125;&#125;&lt;p&gt;That wasn't one of the options. Try again, you rebel.&lt;/p&gt;"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>Note the check on line 11, which validates the player’s input. If the input is invalid, the menu is displayed again. A fair bit of work is done on line 5 to build the menu output, which I’ll cover in another post. In general, a menu option includes some text, and a command to execute when the option is clicked.</p>
+<h2 id="Dialogue_Trees"><a href="#Dialogue_Trees" class="headerlink" title="Dialogue Trees"></a>Dialogue Trees</h2><p>Dialogue trees function similarly to menus, in that they present a clickable list of options that cannot be ‘escaped’ until certain criteria are established. You can think of a dialogue tree as a set of interlinked menus with more advanced command interrupt logic (to determine which menu options are currently available, and therefore which player inputs are currently valid). The code for handling dialogue trees is a bit too extensive to present here. When a conversation with an NPC is initiated, the Social module handles the process of finding the correct conversation nodes and setting NLP interrupts.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> conversation = <span class="keyword">this</span>;</span><br><span class="line">    <span class="keyword">var</span> nodes = <span class="keyword">this</span>.getCurrentNodes();</span><br><span class="line">    <span class="keyword">var</span> menu = [];</span><br><span class="line">    <span class="keyword">var</span> node = <span class="keyword">this</span>.currentNode;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> n <span class="keyword">in</span> nodes) &#123;</span><br><span class="line">        menu.push(&#123;<span class="string">'text'</span>: nodes[n].prompt, <span class="string">'command'</span>: nodes[n].key, <span class="string">'subtext'</span>: <span class="string">'&lt;small&gt;'</span>+(nodes[n].visited ? <span class="string">'(Visited)'</span> : <span class="string">''</span>)+<span class="string">'&lt;/small&gt;'</span>&#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    menu.push(&#123;<span class="string">'text'</span>:<span class="string">"&lt;i&gt;(EXIT)&lt;/i&gt;"</span>,<span class="string">'command'</span>:<span class="string">'exit'</span>,<span class="string">'subtext'</span>:<span class="string">"I'm done talking."</span>&#125;);</span><br><span class="line"></span><br><span class="line">    NLP.interrupt(</span><br><span class="line">        <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            node.callback();</span><br><span class="line">            queueOutput(parse(<span class="string">"&#123;&#123;menu options&#125;&#125;"</span>, &#123;<span class="string">'options'</span>:menu&#125;));</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="function"><span class="keyword">function</span>(<span class="params">string</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(string == <span class="string">'exit'</span> || conversation.doTopicNode(string)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            enableLastMenu();</span><br><span class="line">            queueOutput(<span class="string">"&#123;&#123;gm&#125;&#125;&lt;p&gt;There is no response.&lt;/p&gt;"</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>This general-purpose block of code populates a menu with dialogue options, then sets the interrupt. Within the interrupt, we check for valid player input (either selecting a dialogue option or exiting the tree) and process the selected node (if any). Lastly, if the input was invalid, we return an appropriate response (later on this will probably become a callback, so different NPCs can give different “no response” responses).</p>
+<p>Topic for tomorrow: the game is a mod of itself.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/07/23/stupidrpg-command-interrupts/" data-id="cik2dcz8y003udkohsoix2fob" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-post-schedule" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -102,7 +177,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/22/post-schedule/" data-id="cik1iqcw8004odwoh4a5yj9on" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/22/post-schedule/" data-id="cik2dczad004odkoh4jd4bw9x" class="article-share-link">Share</a>
       
       
     </footer>
@@ -151,7 +226,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/21/stupidrpg-the-gm/" data-id="cik1iqcu00030dwohhgzmildr" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/21/stupidrpg-the-gm/" data-id="cik2dcz830030dkohz7x97ffq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -210,7 +285,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/20/weekly-update-1/" data-id="cik1iqcsl0023dwohhnxykj26" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/20/weekly-update-1/" data-id="cik2dcz6o0023dkohlsjij1ke" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -260,7 +335,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/19/dungeons-dragons/" data-id="cik1iqcxg005adwohnx5r74m4" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/19/dungeons-dragons/" data-id="cik2dczbo005adkoh61urmbtt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -339,7 +414,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/18/stupidrpg-the-black-box/" data-id="cik1iqcu10031dwoh1kwibj17" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/18/stupidrpg-the-black-box/" data-id="cik2dcz850031dkoht2uavkkt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -415,7 +490,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/17/tools-of-the-trade/" data-id="cik1iqct6002adwohrt3gwqqs" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/17/tools-of-the-trade/" data-id="cik2dcz7a002adkoh53wt9agc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -503,7 +578,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/16/stupidrpg-dialogue-trees/" data-id="cik1iqcuu003sdwohp9vtotyz" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/16/stupidrpg-dialogue-trees/" data-id="cik2dcz8w003sdkohreq5cff3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -553,7 +628,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/15/static-site-generators/" data-id="cik1iqcv30042dwoh8bapvh0c" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/15/static-site-generators/" data-id="cik2dcz960042dkohmt3p6rph" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -616,7 +691,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/15/so-im-making-a-video-game/" data-id="cik1iqcv70045dwoh0qxxy6y3" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/15/so-im-making-a-video-game/" data-id="cik2dcz9a0045dkohn688f9vg" class="article-share-link">Share</a>
       
       
     </footer>
