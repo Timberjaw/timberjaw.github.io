@@ -60,6 +60,62 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-stupidrpg-bird-is-the-word" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/15/stupidrpg-bird-is-the-word/">StupidRPG: Bird is the Word</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/15/stupidrpg-bird-is-the-word/">
+      <time datetime="2015-08-15T07:00:00.000Z" itemprop="datePublished">2015-08-15</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Today I’m working on the first indepently-acting NPC: a bird. Pretty exciting, yeah? It flies around the map looking for food, avoiding unwelcome contact from the player, and (when no longer hungry), paying a visit to Ranger Bob.</p>
+<p>Its behavior will likely grow more complex over time, but as a proof of concept I’m pretty happy with how it’s working. I started with a basic outline of the bird’s possible actions and logic.</p>
+<p><div class="highlight-header">Behaviors</div><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The bird roams the Forest, chattering away and looking for food.&#10;&#10;Starting (Max) hunger is 100.&#10;    Reduced by 60 when eating.&#10;    Can go below 0.&#10;    Increased by 1 per turn.&#10;    &#10;General Behaviors&#10;    If the player tries to touch/take/hurt/socialize me, flee along loop&#10;&#10;Hungry Behaviors&#10;    Every turn, if the player is in the location, chirp&#10;    Every turn, if there is something edible in the location, try to eat it&#10;    Every 2nd turn, if there are no edibles in the location, move along loop&#10;    If the bird feeder is here, check it for food&#10;&#10;Full Behaviors (Hunger &#60;= 20)&#10;    Every turn, head toward ranger station&#10;    If I&#39;m at ranger station, sing</span><br></pre></td></tr></table></figure></p>
+<p>Next, I started putting together a set of functions to handle each of the bird’s actions: look for food, move along path, etc.</p>
+<p><div class="highlight-header">Actions</div><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">actions = &#123;</span><br><span class="line">  <span class="string">'_lookForFood'</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> things = <span class="keyword">this</span>.location().children;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> f <span class="keyword">in</span> things) &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"BIRD EYEBALLING "</span>+things[f].name);</span><br><span class="line">      <span class="keyword">if</span>(things[f].hasComponent(<span class="string">'edible'</span>)) &#123;</span><br><span class="line">        <span class="keyword">if</span>(things[f].nutrition &gt; <span class="number">0</span>) &#123;</span><br><span class="line">          queueLocalOutput(<span class="keyword">this</span>, <span class="string">"The bird pecks at the "</span> + things[f].name + <span class="string">" eagerly."</span>);</span><br><span class="line">          <span class="keyword">this</span>.hunger -= things[f].nutrition;</span><br><span class="line">          <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          queueLocalOutput(<span class="keyword">this</span>, <span class="string">"The bird pecks at the "</span> + things[f].name + <span class="string">" half-heartedly."</span>);</span><br><span class="line">          <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">'_moveAlongPath'</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> prev = <span class="keyword">this</span>.location().key;</span><br><span class="line">    <span class="keyword">var</span> next = <span class="keyword">this</span>.path[prev];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>._alertPlayerToMovement(prev,next);</span><br><span class="line"></span><br><span class="line">    ECS.moveEntity(<span class="keyword">this</span>, next);</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">'_alertPlayerToMovement'</span>:<span class="function"><span class="keyword">function</span>(<span class="params">prev,next</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(player.locationIs(prev)) &#123;</span><br><span class="line">      queueGMOutput(<span class="string">"The bird flits away toward "</span> + ECS.getEntity(next).name + <span class="string">"."</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(player.locationIs(next)) &#123;</span><br><span class="line">      queueGMOutput(<span class="string">"The bird flits in from "</span> + <span class="keyword">this</span>.location().name + <span class="string">"."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Finally, I put it together into some simple branching logic, executed on each game tick.</p>
+<p><div class="highlight-header">Bird Brain</div><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">// Look for food when hungry</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">this</span>._hungry())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(!<span class="keyword">this</span>._lookForFood()) &#123;</span><br><span class="line">            <span class="keyword">this</span>._moveAlongPath();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Head toward ranger station when full</span></span><br><span class="line">    <span class="keyword">if</span>(!<span class="keyword">this</span>.locationIs(<span class="string">'ranger-station'</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// Head to ranger station</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">this</span>.locationIs(<span class="string">'north-trail'</span>)) &#123;</span><br><span class="line">            <span class="keyword">this</span>._alertPlayerToMovement(<span class="string">'north-trail'</span>, <span class="string">'ranger-station'</span>);</span><br><span class="line">            ECS.moveEntity(<span class="keyword">this</span>, <span class="string">'ranger-station'</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>._moveAlongPath();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Sing at random</span></span><br><span class="line">    <span class="keyword">if</span>(random() &gt; <span class="number">0.75</span>) &#123;</span><br><span class="line">        queueLocalOutput(<span class="string">"The bird chirps a happy tune."</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Update hunger</span></span><br><span class="line">    <span class="keyword">this</span>.hunger++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>With these simple behaviors and extremely simple logic, the bird will roam the map, interacting dynamically with any food it encounters (stopping to sample it, and continuing to eat if it’s still hungry and the food is nutritious). Once full, it will make its way to see Ranger Bob, and serenade him until it gets hungry again.</p>
+<p>The code structure is a little clunky, and I’d like to turn it into something closer to a state machine, where the bird starts in one of a few states (<code>LOOKING_FOR_FOOD</code>, <code>LOOKING_FOR_BOB</code>, <code>SINGING</code>) and can then transition into other states. Managing AI via a state machine is a more scalable solution and will make it easier for me to assemble complex NPC behaviors.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/15/stupidrpg-bird-is-the-word/" data-id="cikkvapel003x4soh7uafyy41" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-the-grind" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -98,7 +154,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/14/the-grind/" data-id="cikjccrwq002jkgoh33j5agl3" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/14/the-grind/" data-id="cikkvapcz002j4sohyehl0h53" class="article-share-link">Share</a>
       
       
     </footer>
@@ -174,7 +230,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/13/stupidrpg-milestones/" data-id="cikjccrxj003ekgohbg0276bb" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/13/stupidrpg-milestones/" data-id="cikkvape3003e4sohk25nyqr2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -223,7 +279,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/11/licensing-and-copyright/" data-id="cikjccrzy004vkgoh3vjsk1ox" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/11/licensing-and-copyright/" data-id="cikkvapgu004v4sohz81esna2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -281,7 +337,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/11/stupidrpg-game-ticks/" data-id="cikjccrxp003mkgoh8qzy7m1o" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/11/stupidrpg-game-ticks/" data-id="cikkvape8003m4soh76hbcmxl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -344,7 +400,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/10/weekly-update-4/" data-id="cikjccrui000ukgohvtyhb4y9" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/10/weekly-update-4/" data-id="cikkvapa0000u4sohv6i5vefx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -395,7 +451,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/09/replay-value-something-new-from-something-old/" data-id="cikjccrz2004jkgohb0bs2kwb" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/09/replay-value-something-new-from-something-old/" data-id="cikkvapfs004j4soh8iajmtf4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -447,7 +503,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/08/stupidrpg-output-queue/" data-id="cikjccrxf0038kgoh08658puq" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/08/stupidrpg-output-queue/" data-id="cikkvapdw00384soh3hhuhjh1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -508,7 +564,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/07/wish-list-multiplayer/" data-id="cikjccrtz0009kgoh2lgpw9za" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/07/wish-list-multiplayer/" data-id="cikkvap9700094sohah8kv3f5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wishlist/">wishlist</a></li></ul>
@@ -569,75 +625,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/06/save-load-undo/" data-id="cikjccryw004dkgohluydqlzs" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/06/save-load-undo/" data-id="cikkvapfm004d4sohd215a0ne" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-testing-a-text-adventure" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/05/testing-a-text-adventure/">Testing a Text Adventure</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/08/05/testing-a-text-adventure/">
-      <time datetime="2015-08-05T07:00:00.000Z" itemprop="datePublished">2015-08-05</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Testing is an important component of any software project, and games are no exception. Javascript is easy enough to unit test for core functionality, but the genre of SRPG offers an interesting opportunity for automated game-aware testing.</p>
-<p>All input in the game is simply text, and the game engine already has an ‘input queue’ capable of handling multiple commands in sequence. This feature is already being used for one simple test process, to get me back to a particular state in the game after making changes. It can be taken further, however.</p>
-<p>Random events in SRPG are handled with a seeded random number generator, meaning that given the same seed and same inputs, all random effects in the game will happen in the same way. That means I can save a transcript (sequence of inputs) and a seed, then play them back and check the output. This is a natural place to automate tests.</p>
-<p>My current plan is to develop tests that specify:</p>
-<ul>
-<li>Starting state (optional, used to shortcut to later portions of the game before testing something specific)</li>
-<li>Random seed</li>
-<li>Input sequence</li>
-<li>Test callback</li>
-</ul>
-<p>If/when the input sequence concludes, the callback is run to check for certain elements. For example, checking the last text output, or looking at an attribute of a particular object.</p>
-<p>Helpful tests could include:</p>
-<ul>
-<li>Intro process works (race/class selection)</li>
-<li>Movement works (starting area)</li>
-<li>Checking inventory works</li>
-</ul>
-<p>During each build, I can run all the tests to get an idea of the health of the game code, and find out immediately if my most recent changes have broken anything.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/05/testing-a-text-adventure/" data-id="cikjccrwv002nkgoh7d8yvr8y" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/testing/">testing</a></li></ul>
 
     </footer>
   </div>
