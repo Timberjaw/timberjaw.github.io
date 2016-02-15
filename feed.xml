@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>TIMBERTECH</title>
+    <link>http://timberjaw.github.io/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>Dev journal and geek stuff.</description>
+    <pubDate>Mon, 15 Feb 2016 04:06:09 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.02.14</title>
+      <link>http://timberjaw.github.io/2016/02/14/Daily-Update-2016-02-14/</link>
+      <guid>http://timberjaw.github.io/2016/02/14/Daily-Update-2016-02-14/</guid>
+      <pubDate>Mon, 15 Feb 2016 04:06:09 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Wrote up optional late-game sidequests for Fighter, Wizard, Homemaker, Liar, and Uni
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Wrote up optional late-game sidequests for Fighter, Wizard, Homemaker, Liar, and Unicorn Hunter. No spoilers yet, but I think they’ll be a lot of fun.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/14/Daily-Update-2016-02-14/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Daily Update 2016.02.13</title>
+      <link>http://timberjaw.github.io/2016/02/13/Daily-Update-2016-02-13/</link>
+      <guid>http://timberjaw.github.io/2016/02/13/Daily-Update-2016-02-13/</guid>
+      <pubDate>Sat, 13 Feb 2016 08:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Slow day. Messed around with D3.js a bit, considering using it to dynamically graph the world layout (mostly for my own benefit, not as a
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Slow day. Messed around with D3.js a bit, considering using it to dynamically graph the world layout (mostly for my own benefit, not as an in-game thing).&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/13/Daily-Update-2016-02-13/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Movie Night</title>
+      <link>http://timberjaw.github.io/2016/02/12/Movie-Night/</link>
+      <guid>http://timberjaw.github.io/2016/02/12/Movie-Night/</guid>
+      <pubDate>Fri, 12 Feb 2016 08:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Went and saw Deadpool. I have little knowledge and little interest in Deadpool, but the movie was pretty good if you like dick jokes.&lt;/p&gt;
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Went and saw Deadpool. I have little knowledge and little interest in Deadpool, but the movie was pretty good if you like dick jokes.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/12/Movie-Night/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Daily Update 2016.02.11</title>
+      <link>http://timberjaw.github.io/2016/02/11/Daily-Update-2016-02-11/</link>
+      <guid>http://timberjaw.github.io/2016/02/11/Daily-Update-2016-02-11/</guid>
+      <pubDate>Fri, 12 Feb 2016 06:56:42 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;First wireframe for resume screen. I don’t care for it much.&lt;/p&gt;
+&lt;img src=&quot;/2016/02/11/Daily-Update-2016-02-11/mockup.png&quot; alt=&quot;A Wirefra
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;First wireframe for resume screen. I don’t care for it much.&lt;/p&gt;
+&lt;img src=&quot;/2016/02/11/Daily-Update-2016-02-11/mockup.png&quot; alt=&quot;A Wireframe&quot; title=&quot;A Wireframe&quot;&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/11/Daily-Update-2016-02-11/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Daily Update 2016.02.10</title>
+      <link>http://timberjaw.github.io/2016/02/10/Daily-Update-2016-02-10/</link>
+      <guid>http://timberjaw.github.io/2016/02/10/Daily-Update-2016-02-10/</guid>
+      <pubDate>Wed, 10 Feb 2016 08:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Had a dream about a fantastic idea for SRPG.&lt;/p&gt;
+&lt;p&gt;Woke up and realized it made no sense whatsoever.&lt;/p&gt;
+
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Had a dream about a fantastic idea for SRPG.&lt;/p&gt;
+&lt;p&gt;Woke up and realized it made no sense whatsoever.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/10/Daily-Update-2016-02-10/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Daily Update 2016.02.09</title>
+      <link>http://timberjaw.github.io/2016/02/09/Daily-Update-2016-02-09/</link>
+      <guid>http://timberjaw.github.io/2016/02/09/Daily-Update-2016-02-09/</guid>
+      <pubDate>Wed, 10 Feb 2016 03:46:36 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;In the midst of putting together a plan for mobile/tablet device support. The game is already responsive, but there are input issues rela
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;In the midst of putting together a plan for mobile/tablet device support. The game is already responsive, but there are input issues related to my choice of a non-standard text input field. There are several possible workarounds for that, but I need to make some key design decisions first (like whether the entire game should be finishable with mouse/touch only).&lt;/p&gt;
+&lt;p&gt;I would like to support phones, but tablets are the preferred mobile form-factor due to the larger screen size (supporting the side artwork panels on a phone is a no-go due to size limitations). Desktop will remain the primary focus.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/09/Daily-Update-2016-02-09/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Daily Update 2016.02.08</title>
+      <link>http://timberjaw.github.io/2016/02/08/Daily-Update-2016-02-08/</link>
+      <guid>http://timberjaw.github.io/2016/02/08/Daily-Update-2016-02-08/</guid>
+      <pubDate>Mon, 08 Feb 2016 08:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Didn’t get much done today, things getting busy at work.&lt;/p&gt;
+
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Didn’t get much done today, things getting busy at work.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/08/Daily-Update-2016-02-08/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Daily Update 2016.02.07</title>
+      <link>http://timberjaw.github.io/2016/02/07/Daily-Update-2016-02-07/</link>
+      <guid>http://timberjaw.github.io/2016/02/07/Daily-Update-2016-02-07/</guid>
+      <pubDate>Sun, 07 Feb 2016 08:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Worked on some concepts for the intro segment for first-time players and resuming pl
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Worked on some concepts for the intro segment for first-time players and resuming players.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/07/Daily-Update-2016-02-07/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Daily Update 2016.02.06</title>
+      <link>http://timberjaw.github.io/2016/02/06/Daily-Update-2016-02-06/</link>
+      <guid>http://timberjaw.github.io/2016/02/06/Daily-Update-2016-02-06/</guid>
+      <pubDate>Sun, 07 Feb 2016 07:33:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Got the twins’ intro conversation working.&lt;/li&gt;
+&lt;li&gt;Rough draft on output timing for
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Got the twins’ intro conversation working.&lt;/li&gt;
+&lt;li&gt;Rough draft on output timing for twins conversation. Came out much too fast at first, so I did some research on avg reading speeds and added an ‘auto’ rate to calculate the timers based on the # of words in each sentence. Will require some tuning but gives much better results already, and requires way less work to set up the conversations (I can still override it with specific times when needed).&lt;/li&gt;
+&lt;li&gt;Refined handling of conversation topic shortcuts.&lt;/li&gt;
+&lt;li&gt;Wired up special topics for the sword.&lt;/li&gt;
+&lt;li&gt;Improved on() filter for rules.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/06/Daily-Update-2016-02-06/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Daily Update 2016.02.05</title>
+      <link>http://timberjaw.github.io/2016/02/05/Daily-Update-2016-02-05/</link>
+      <guid>http://timberjaw.github.io/2016/02/05/Daily-Update-2016-02-05/</guid>
+      <pubDate>Fri, 05 Feb 2016 08:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Testing, cleanup and bug fixing for recent changes/additions. Had some accumulated c
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Testing, cleanup and bug fixing for recent changes/additions. Had some accumulated cruft from new rulebook capabilities and the new conversations.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/05/Daily-Update-2016-02-05/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Welcome Back</title>
+      <link>http://timberjaw.github.io/2016/02/04/Welcome-Back/</link>
+      <guid>http://timberjaw.github.io/2016/02/04/Welcome-Back/</guid>
+      <pubDate>Fri, 05 Feb 2016 07:59:44 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;SRPG can save, and in theory load, games. It’s a web-based game, so I’d like to take it a step further and remember the player the next t
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;SRPG can save, and in theory load, games. It’s a web-based game, so I’d like to take it a step further and remember the player the next time they visit the page (via a cookie or HTML5 local storage).&lt;/p&gt;
+&lt;p&gt;If the user is a returning player, they should be presented with a few options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Start a new game&lt;/li&gt;
+&lt;li&gt;Resume a saved game from local storage&lt;/li&gt;
+&lt;li&gt;Load a save file from the user’s computer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now that I’m getting into the realm of storing data on the user’s behalf, I guess I’ll also need a “forget me” command somewhere to delete local storage data and cookies, resetting the game to its original state.&lt;/p&gt;
+&lt;p&gt;I’m also very tempted to include elements that progress/trigger based on the player’s absence, but I think I’ll have to pass on that, since it would break the seeded RNG.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/04/Welcome-Back/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Daily Update 2016.02.03</title>
+      <link>http://timberjaw.github.io/2016/02/03/Daily-Update-2016-02-03/</link>
+      <guid>http://timberjaw.github.io/2016/02/03/Daily-Update-2016-02-03/</guid>
+      <pubDate>Thu, 04 Feb 2016 05:20:48 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Long day today. Home inspection and late start at work.&lt;/p&gt;
+&lt;p&gt;Learned how to do server-side processing (filter/search and paging) for th
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Long day today. Home inspection and late start at work.&lt;/p&gt;
+&lt;p&gt;Learned how to do server-side processing (filter/search and paging) for the DataTables jQuery plugin. The documentation is pretty thorough, but it can be tough to find the terminology for what you’re trying to do.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/03/Daily-Update-2016-02-03/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>What Has It Got In Its Pockets?</title>
+      <link>http://timberjaw.github.io/2016/02/02/What-Has-It-Got-In-Its-Pockets/</link>
+      <guid>http://timberjaw.github.io/2016/02/02/What-Has-It-Got-In-Its-Pockets/</guid>
+      <pubDate>Wed, 03 Feb 2016 04:42:43 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Some notes for inventories. The SRPG inventory is very rudimentary right now (a simple list of objects held by the player). I need someth
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Some notes for inventories. The SRPG inventory is very rudimentary right now (a simple list of objects held by the player). I need something a bit more robust, supporting the following feature set:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Concrete (held object) vs abstract (character traits)&lt;/li&gt;
+&lt;li&gt;Visible (e.g. a hat being worn) vs concealed (e.g. a ring in a pocket)&lt;/li&gt;
+&lt;li&gt;Accessibility restriction (object held by another creature can be seen but not touched, at least not without social repercussions)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Abstract Inventory&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This includes anything a creature (including the player) could be said to ‘have’, but isn’t a physical object. Hit points, gumption, parents, etc.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Concealed Objects&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I made a post a while back about inventory/equipment slots (swords are held, hats are worn on the head, and so forth). Concealment follows the normal container rules. That is, a backpack would be an opaque openable container: objects inside are visible when it’s open, but hidden when it’s closed. Pants with pockets would behave similarly.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Accessibility&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Touching other people’s belongings is rude, especially when its on their person. Not sure if this should simply be blocked by default or if it should lead to more interesting (but more difficult to develop) social responses.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/02/What-Has-It-Got-In-Its-Pockets/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Aggregation #25</title>
+      <link>http://timberjaw.github.io/2016/02/01/Aggregation-25/</link>
+      <guid>http://timberjaw.github.io/2016/02/01/Aggregation-25/</guid>
+      <pubDate>Mon, 01 Feb 2016 08:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added get/set methods for entities to make it easier to check for values without bei
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added get/set methods for entities to make it easier to check for values without being sure the key exists on the object.&lt;/li&gt;
+&lt;li&gt;Made the bird sad if it can’t get at the bird feeder.&lt;/li&gt;
+&lt;li&gt;Bird is happy if the player helps with the bird feeder problem.&lt;/li&gt;
+&lt;li&gt;Moved magic ice cube to bird feeder.&lt;/li&gt;
+&lt;li&gt;Unblock feeder when ice cube is removed.&lt;/li&gt;
+&lt;li&gt;Added telescope descriptions for various objects the player might be interested in getting a closer look at.&lt;/li&gt;
+&lt;li&gt;Decided to make the sword much chattier (possibly even replacing the hint system). For starters, I gave it dialogue responses for: destiny, eternity, the black box, the player, the magic ice cube, the ice key, the red berries, the scrap of paper, the litter, the glowing orb, the bird feeder, the bird, the jack, the jane, the ranger bob, the troglodyte, the wyrmling, the telescope, the structure, the gold coin, the moon, the hawk, the observer, the unicorn musk, the counterfeit seal, the steel-toed boots, the magic wand and the treasure chest.&lt;/li&gt;
+&lt;li&gt;Arrays of multiple text matches are now allowed for the .text() method for Rules.&lt;/li&gt;
+&lt;li&gt;Added the introductory monologue for the Twins.&lt;/li&gt;
+&lt;li&gt;Added the introductory argument between the Twins and the GM.&lt;/li&gt;
+&lt;li&gt;Added the first riddle.&lt;/li&gt;
+&lt;li&gt;Assembled the first draft of the Observer’s introductory dialogue.&lt;/li&gt;
+&lt;li&gt;Wrote up key responses for the Observer regarding the Baron, the aethernauts, the station, and so forth. He’s a chatty old fellow.&lt;/li&gt;
+&lt;li&gt;Wrote sword dialogue for the void, the aethernauts, the station, Pete the dog, the moon, the stars, the space suit, the pod, and the rover.&lt;/li&gt;
+&lt;li&gt;Added sword entries for: the cabin, the town, the inn, the twins (again), the cemetery, the gravekeeper, the (SPOILER), the elevator, the baron’s lair, and the baron.&lt;/li&gt;
+&lt;li&gt;Settled on some conventions for the sword’s mode of speech.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/01/Aggregation-25/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Daily Update 2016.01.31</title>
+      <link>http://timberjaw.github.io/2016/01/31/Daily-Update-2016-01-31/</link>
+      <guid>http://timberjaw.github.io/2016/01/31/Daily-Update-2016-01-31/</guid>
+      <pubDate>Mon, 01 Feb 2016 06:19:03 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added sword entries for: the cabin, the town, the inn, the twins (again), the cemete
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added sword entries for: the cabin, the town, the inn, the twins (again), the cemetery, the gravekeeper, the (SPOILER), the elevator, the baron’s lair, and the baron.&lt;/li&gt;
+&lt;li&gt;Settled on some conventions for the sword’s mode of speech.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/01/31/Daily-Update-2016-01-31/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Daily Update 2016.01.30</title>
+      <link>http://timberjaw.github.io/2016/01/30/Daily-Update-2016-01-30/</link>
+      <guid>http://timberjaw.github.io/2016/01/30/Daily-Update-2016-01-30/</guid>
+      <pubDate>Sat, 30 Jan 2016 08:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Wrote sword dialogue for the void, the aethernauts, the station, Pete the dog, the m
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Wrote sword dialogue for the void, the aethernauts, the station, Pete the dog, the moon, the stars, the space suit, the pod, and the rover.&lt;/li&gt;
+&lt;li&gt;When I saved my draft in Word, the suggested filename was ‘THE VASTNESS OF SPACE IS A FITTING SYMBOL’. I left it that way.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/01/30/Daily-Update-2016-01-30/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Paperwork</title>
+      <link>http://timberjaw.github.io/2016/01/29/Paperwork/</link>
+      <guid>http://timberjaw.github.io/2016/01/29/Paperwork/</guid>
+      <pubDate>Fri, 29 Jan 2016 08:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Many many paperworks today. Between home buying and work, the time flies.&lt;/p&gt;
+&lt;p&gt;Maybe SRPG should have a side quest where you have to fi
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Many many paperworks today. Between home buying and work, the time flies.&lt;/p&gt;
+&lt;p&gt;Maybe SRPG should have a side quest where you have to file your adventurer taxes.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/01/29/Paperwork/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Writing Dialogue</title>
+      <link>http://timberjaw.github.io/2016/01/28/Writing-Dialogue/</link>
+      <guid>http://timberjaw.github.io/2016/01/28/Writing-Dialogue/</guid>
+      <pubDate>Fri, 29 Jan 2016 04:47:57 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;I’ve made some serious progress on dialogue writing for the Prologue and Act I this week. Some characters are much easier to write for th
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;I’ve made some serious progress on dialogue writing for the Prologue and Act I this week. Some characters are much easier to write for than others. Easiest to hardest so far:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The Sword&lt;/li&gt;
+&lt;li&gt;The Twins&lt;/li&gt;
+&lt;li&gt;The GM&lt;/li&gt;
+&lt;li&gt;Ranger Bob&lt;/li&gt;
+&lt;li&gt;The Observer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The easier characters, unsurprisingly, tend to be closer to myself in personality. They also tend to be the characters with better-defined roles in the story. Can’t do much about the former, but the latter is worth investing some time into.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/01/28/Writing-Dialogue/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Daily Update 2016.01.27</title>
+      <link>http://timberjaw.github.io/2016/01/27/Daily-Update-2016-01-27/</link>
+      <guid>http://timberjaw.github.io/2016/01/27/Daily-Update-2016-01-27/</guid>
+      <pubDate>Thu, 28 Jan 2016 07:14:17 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Assembled the first draft of the Observer’s introductory dialogue.&lt;/li&gt;
+&lt;li&gt;Wrote up
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Assembled the first draft of the Observer’s introductory dialogue.&lt;/li&gt;
+&lt;li&gt;Wrote up key responses for the Observer regarding the Baron, the aethernauts, the station, and so forth. He’s a chatty old fellow.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/01/27/Daily-Update-2016-01-27/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Daily Update 2016.01.26</title>
+      <link>http://timberjaw.github.io/2016/01/26/Daily-Update-2016-01-26/</link>
+      <guid>http://timberjaw.github.io/2016/01/26/Daily-Update-2016-01-26/</guid>
+      <pubDate>Wed, 27 Jan 2016 07:02:11 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Arrays of multiple text matches are now allowed for the .text() method for Rules.&lt;/l
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Arrays of multiple text matches are now allowed for the .text() method for Rules.&lt;/li&gt;
+&lt;li&gt;Added the introductory monologue for the Twins.&lt;/li&gt;
+&lt;li&gt;Added the introductory argument between the Twins and the GM.&lt;/li&gt;
+&lt;li&gt;Added the first riddle.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/01/26/Daily-Update-2016-01-26/#disqus_thread</comments>
+    </item>
+    
+  </channel>
+</rss>
