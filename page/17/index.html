@@ -60,6 +60,103 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-busy" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/06/busy/">Busy</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/09/06/busy/">
+      <time datetime="2015-09-06T07:00:00.000Z" itemprop="datePublished">2015-09-06</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Don’t have a regular update today. Went to a friend’s wedding, partied hard. Excellent evening.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/09/06/busy/" data-id="cikngl1mc007biwohv485ouq0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-stupidrpg-versioning" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/05/stupidrpg-versioning/">StupidRPG: Versioning</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/09/05/stupidrpg-versioning/">
+      <time datetime="2015-09-05T07:00:00.000Z" itemprop="datePublished">2015-09-05</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>I’ve been thinking a bit about versioning. StupidRPG as a project is version controlled, just like any software project should be. Now I’m considering versioning save files, at a yet-to-be-determined level of granularity.</p>
+<p>The problem this is intended to solve is program changes breaking a player’s save file. For example, if I remove an area entirely from the game, and the player’s save puts them in that area, now they have an invalid savestate.</p>
+<p>Versioning the save file (as a whole) allows for ‘migrations’ (a script that transitions the structure of the data) for save-breaking changes like this. A change that removes an area would also include a version migration to check for objects in the area and move them to another location deemed appropriate.</p>
+<p>I don’t <em>think</em> there’s any case where the versioning needs to be more granular (i.e. per-entity versioning). I sure hope not.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/09/05/stupidrpg-versioning/" data-id="cikngl1bu002siwohfi1ldkcv" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-you-cant-kill-everyone" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -96,7 +193,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/04/you-cant-kill-everyone/" data-id="cikkvap8m00014soh7ly3hyax" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/04/you-cant-kill-everyone/" data-id="cikngl16g0001iwoh9dpmp2et" class="article-share-link">Share</a>
       
       
     </footer>
@@ -153,7 +250,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/03/stupidrpg-filters/" data-id="cikkvapeb003o4sohqx937qnv" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/03/stupidrpg-filters/" data-id="cikngl1dj003oiwoh0s0v815a" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -203,7 +300,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/02/profiling/" data-id="cikkvapg0004m4soh57qd3c39" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/02/profiling/" data-id="cikngl1fh004miwohmbxz2tbt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -270,7 +367,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/01/stupidrpg-putting-the-prelude-together/" data-id="cikkvapdu00364sohdtmyhos1" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/01/stupidrpg-putting-the-prelude-together/" data-id="cikngl1ct0036iwohi4zwt6il" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -334,7 +431,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/31/weekly-update-7/" data-id="cikkvap9o000k4soh5gc0dxj7" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/31/weekly-update-7/" data-id="cikngl17i000kiwoh6isrq4vw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -388,7 +485,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/30/reading-list-update/" data-id="cikkvapfx004l4sohpu0hs4g3" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/30/reading-list-update/" data-id="cikngl1fe004liwohiimt6q6q" class="article-share-link">Share</a>
       
       
     </footer>
@@ -441,7 +538,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/29/stupidrpg-always-two-there-are/" data-id="cikkvapen003z4soh6y1ooomj" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/29/stupidrpg-always-two-there-are/" data-id="cikngl1dx003ziwoh27xhz6f7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -491,119 +588,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/28/metagame/" data-id="cikkvapg5004q4sohh053uqd8" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-stupidrpg-wandering" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/27/stupidrpg-wandering/">StupidRPG: Wandering</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/08/27/stupidrpg-wandering/">
-      <time datetime="2015-08-27T07:00:00.000Z" itemprop="datePublished">2015-08-27</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Two things to talk about today, both related to wandering. Mild mechanical spoilers.</p>
-<h2 id="Nooks__26amp_3B_Crannies"><a href="#Nooks__26amp_3B_Crannies" class="headerlink" title="Nooks &amp; Crannies"></a>Nooks &amp; Crannies</h2><p>This is really just fleshing out the world, and giving the player an incentive to poke around beyond the level required to complete the game. Easter eggs aside, everything in the game (required or optional) should add to the experience in some way. In other words, having side areas simply to pad the node count isn’t my goal. I’m more interested in adding side areas (and items, and characters) that give optional insights into lore, help build the world, or add to the story.</p>
-<h2 id="Overworld"><a href="#Overworld" class="headerlink" title="Overworld"></a>Overworld</h2><p>Most of the time, the player moves around the world via commands like <code>WALK NORTH</code> (or simply <code>NORTH</code> or <code>N</code>). Location nodes are connected via compass directions (plus special cases like up and down), usually in some sensible relation you could draw on a map.</p>
-<p>Act II of the game includes a large region best described as an overworld, where movement is slightly different. Compass directions still apply, but not every spot on the map is a distinct location node. Without giving away too much, it’s an exploration-based area, so learning how to traverse it (and finding the hidden mysteries scattered around it) is a significant portion of the Act.</p>
-<p>With that in mind, I’m considering a few novel command modifiers for the <code>WALK</code> verb. In particular, I don’t want to get into miles or kilometers (e.g. <code>WALK NORTH 1KM</code>), but <code>WALK NORTH REALLY FAR</code> sounds like fun. So far my measurements are:</p>
-<ul>
-<li>A bit</li>
-<li>A ways</li>
-<li>A long way</li>
-<li>Really far</li>
-</ul>
-<p>Playtesting will have to determine whether this is actually fun/interesting, or simply annoying. If I’m going to annoy the player, I want it to be intentional.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/27/stupidrpg-wandering/" data-id="cikkvapda002q4soh2v2xi9er" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-tutorial-quest" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/26/tutorial-quest/">Tutorial Quest</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/08/26/tutorial-quest/">
-      <time datetime="2015-08-26T07:00:00.000Z" itemprop="datePublished">2015-08-26</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>The answer to my tutorial conundrum was staring me in the face all along: Quests. Today I set up a fully-functioning first quest, which also acts as a brief tutorial on how to acquire items. It’s just a proof of concept, but it includes every piece of a more complex quest:</p>
-<ul>
-<li>Trigger to receive the quest (game starts)</li>
-<li>Objectives (acquire the sword)</li>
-<li>Game tick handling to check for objectives being met (player has sword)</li>
-<li>Game tick handling to end the quest (all objectives met)</li>
-</ul>
-<p>Still running into occasional problems with prototype behavior in JS, but I’m slowly figuring it out.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/26/tutorial-quest/" data-id="cikkvapca00284sohzjkvkhy0" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/28/metagame/" data-id="cikngl1gg004qiwoh7gy83kow" class="article-share-link">Share</a>
       
       
     </footer>

@@ -60,6 +60,125 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-weekly-update-5" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/17/weekly-update-5/">Weekly Update #5</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/17/weekly-update-5/">
+      <time datetime="2015-08-17T07:00:00.000Z" itemprop="datePublished">2015-08-17</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>More progress!</p>
+<p><strong>Changelog:</strong></p>
+<ul>
+<li>Added a bird. It flies around the map looking for food. Once it finds (and eats) something it likes, it will go find the Ranger and hang out with him.</li>
+<li>Worked on some AI handling style to support the bird behavior in a reasonably clean way.</li>
+<li>Added a bird feeder for the bird.</li>
+<li>Moved all BlackBox module content into sub-files broken down by type. Creatures, locations, items get their own files (module file was getting huge).</li>
+<li>Added a ‘local output’ function to supplement the output and GM output functions. Local output only displays if the originating entity is in the same location as the player. Lets me skip redundant code (i.e. having the entity itself check for locality before printing something).</li>
+<li>Added ECS.moveEntity function to simplify NPC movement.</li>
+<li>Added locationIs function to Thing component to simplify NPC location checking.</li>
+<li>Fixed NPCs executing during non-tick turns.</li>
+</ul>
+<p><strong>Known Issues:</strong></p>
+<ul>
+<li>Nothing new</li>
+</ul>
+<p><strong>Next Up:</strong></p>
+<ul>
+<li>Fill out Ranger Bob’s dialogue tree.</li>
+<li>Add The Twins.</li>
+<li>Litterbug quest.</li>
+<li>Feed the bird quest.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/17/weekly-update-5/" data-id="cikngl17m000riwohugc4yb2l" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-feature-creep" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/16/feature-creep/">Feature Creep</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/16/feature-creep/">
+      <time datetime="2015-08-16T07:00:00.000Z" itemprop="datePublished">2015-08-16</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Many (most?) of my projects are marred by scope/feature creep. That is, the tendency to continually add features or expand the scope of the project after starting it. It’s a dangerous game. For my hobby projects, the size of the project tends to be inversely proportional to the likelihood of completion.</p>
+<p>For recent projects I’ve been vigilant about creep, as I’d like to actually finish a few things for once. My side project (Numenera power cards) was successfully finished and test printed, which is a nice morale boost. I have a couple tweaks to make on the coloring and font sizes, but the test went very well.</p>
+<p>SRPG is particularly open to creep. It’s a big project, has a lot of interlocking pieces, and is taking place over a long period of time. As such, I have to be very strict about not adding anything (or doing refactoring) that doesn’t absolutely need to be there to meet my milestone goals. Structured AI, callback improvements, more content, etc.</p>
+<p>So far, so good.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/16/feature-creep/" data-id="cikngl1i60055iwohmhm464lh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-stupidrpg-bird-is-the-word" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -103,7 +222,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/15/stupidrpg-bird-is-the-word/" data-id="cikkvapel003x4soh7uafyy41" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/15/stupidrpg-bird-is-the-word/" data-id="cikngl1dv003xiwohmujhettn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -154,7 +273,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/14/the-grind/" data-id="cikkvapcz002j4sohyehl0h53" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/14/the-grind/" data-id="cikngl1b2002jiwohdg63pt22" class="article-share-link">Share</a>
       
       
     </footer>
@@ -230,7 +349,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/13/stupidrpg-milestones/" data-id="cikkvape3003e4sohk25nyqr2" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/13/stupidrpg-milestones/" data-id="cikngl1d6003eiwohqamhx6zc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -279,7 +398,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/11/licensing-and-copyright/" data-id="cikkvapgu004v4sohz81esna2" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/11/licensing-and-copyright/" data-id="cikngl1hi004viwohowxj35sh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -337,7 +456,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/11/stupidrpg-game-ticks/" data-id="cikkvape8003m4soh76hbcmxl" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/11/stupidrpg-game-ticks/" data-id="cikngl1dd003miwohf1fu6ap1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -400,7 +519,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/10/weekly-update-4/" data-id="cikkvapa0000u4sohv6i5vefx" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/10/weekly-update-4/" data-id="cikngl17p000uiwohrowu04pt" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -451,7 +570,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/09/replay-value-something-new-from-something-old/" data-id="cikkvapfs004j4soh8iajmtf4" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/09/replay-value-something-new-from-something-old/" data-id="cikngl1fa004jiwohjvoss4li" class="article-share-link">Share</a>
       
       
     </footer>
@@ -503,129 +622,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/08/stupidrpg-output-queue/" data-id="cikkvapdw00384soh3hhuhjh1" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-wish-list-multiplayer" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/07/wish-list-multiplayer/">Wish List: Multiplayer</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/08/07/wish-list-multiplayer/">
-      <time datetime="2015-08-07T07:00:00.000Z" itemprop="datePublished">2015-08-07</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>One of my many pie-in-the-sky goals for StupidRPG is networked multiplayer. I have absolutely no hands-on experience with network programming (browser or otherwise), so it’s toward the bottom of the priority list. I do know a little bit about websockets and a moderate amount about databases.</p>
-<p>The engine for SRPG was built with future multiplayer in mind (sort of). Actions usually enter the queue from local input, but that’s not a requirement. I’ve already shown examples of input being added via test functions and via previous input (an action triggering another action). Handling a remotely-entered command (and appropriate context, such as the remote player entity) doesn’t pose an architectural problem. There are, however, many design challenges to overcome to make multiplayer work in a plot-driven, turn-based RPG. I’ll talk about a few problems and concepts I’ve been considering.</p>
-<h2 id="Problem_3A_Whose_Turn_Is_It_3F"><a href="#Problem_3A_Whose_Turn_Is_It_3F" class="headerlink" title="Problem: Whose Turn Is It?"></a>Problem: Whose Turn Is It?</h2><p>In short, for the game to work as-is, it needs to remain purely turn based and synchronous. Players take turns inputting commands, then the engine distributes the commands to the other players. For common actions like moving around, opening doors, and picking up objects, this is no problem. There are a few cases where it gets tricky though:</p>
-<ul>
-<li>Command interrupts (these need to be contextual per-player)</li>
-<li>Dialogue trees (does P2 have to wait for P1 to finish an entire conversation before they can take an action?)</li>
-<li>No-tick actions</li>
-<li>Guided segments like the intro</li>
-</ul>
-<p>I have solutions in mind for some of these. No-tick actions (which I’ll talk more about in another post) don’t need to be synchronized between players. This means P1 can look at their inventory while P2 is taking their turn, for example.</p>
-<p>Thinking more broadly, I’ll need to develop a method for flagging synchronous/asynchronous sections (in addition to no-tick actions). Synchronous actions can only be done on your turn, while asynchronous actions can be done at any time.</p>
-<h2 id="Problem_3A_Gameplay"><a href="#Problem_3A_Gameplay" class="headerlink" title="Problem: Gameplay"></a>Problem: Gameplay</h2><p>This ties in to the previous problem a bit (particularly the handling of dialogue trees), but it’s a more fundamental set of questions. In short, what does Player 2 do? Are they another fully-fledged individual just like Player 1? Are they a sidekick of some type? Are they present for the duration of the game’s plot? Do I need to build separate puzzles and gameplay elements for the solo and multiplayer modes?</p>
-<h2 id="Concept_3A_Act_IV_Multiplayer"><a href="#Concept_3A_Act_IV_Multiplayer" class="headerlink" title="Concept: Act IV Multiplayer"></a>Concept: Act IV Multiplayer</h2><p>Traditional multiplayer aside, another concept I’m considering is to only introduce multiplayer at the end of the game’s story. Essentially, the campaign would wrap up and then the game would turn into a more open world with multiple players. Might be overly ambitious, and for a new player who wants to play with a friend, they have a lot of content to get through first.</p>
-<h2 id="Concept_3A_Asymmetric_Multiplayer"><a href="#Concept_3A_Asymmetric_Multiplayer" class="headerlink" title="Concept: Asymmetric Multiplayer"></a>Concept: Asymmetric Multiplayer</h2><p>Lastly, I’m looking at asymmetric play. Instead of having both players exist as equals in the storyline, the second would have a different experience entirely (sidekick, animal, etc). Some Wii U games use this type of play for the 5th player, allowing them to assist the other players from outside the regular mode. This is just as ambitious as the Act IV concept, as it needs a lot of extra content and coding to be meaningful.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/07/wish-list-multiplayer/" data-id="cikkvap9700094sohah8kv3f5" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wishlist/">wishlist</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-save-load-undo" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/06/save-load-undo/">StupidRPG: Save, Load, &amp; Undo</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/08/06/save-load-undo/">
-      <time datetime="2015-08-06T07:00:00.000Z" itemprop="datePublished">2015-08-06</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Most text adventures (that I’ve played, at least) don’t feature the auto-save ‘checkpoints’ common in modern videogames. They do include <code>SAVE</code> and <code>LOAD</code> commands which work exactly as you’d expect, but they also typically provide another command for state management: <code>UNDO</code>.</p>
-<p>In a singleplayer, turn-based game, <code>UNDO</code> is a pretty straightforward feature to implement. There are a few different approaches, but I’ve elected to leverage the savestate functionality for efficiency’s sake. More on that in a bit.</p>
-<h2 id="SAVE"><a href="#SAVE" class="headerlink" title="SAVE"></a><code>SAVE</code></h2><p>The save command in SRPG is handled primarily by the ECS. Since <em>Everything is an Entity</em>, I can simply loop through all the entities, building a new object which can be stored in JSON format. From there, it can be saved in the browser’s local storage or downloaded to the user’s computer.</p>
-<p>Not every piece of data on an object is needed for savestate. Most callbacks don’t change once they’re set, and many object attributes are static as well. Accordingly, each Component can specify the persistent attributes that should be included in the save process. For example, the Living component specifies that the HP attribute should be saved.</p>
-<h2 id="LOAD"><a href="#LOAD" class="headerlink" title="LOAD"></a><code>LOAD</code></h2><p>Loading works exactly as you’d expect: saving in reverse. The JSON data is read back and the entity attributes are re-applied to the live versions.</p>
-<h2 id="UNDO"><a href="#UNDO" class="headerlink" title="UNDO"></a><code>UNDO</code></h2><p>Undo is a combination of an internal save (before each action, save the current state) and load, allowing the player to jump back in time just as if they had manually saved and loaded. Effectively, it’s an automated Quick Save feature. Supporting additional steps of undo is possible, at the cost of additional memory and CPU time.</p>
-<p>Because <code>UNDO</code> is a verb just like any other in the game, there are some interesting opportunities for integration into the mechanics and story. That’s a surprise for another day, though.</p>
-<h2 id="Next_Steps"><a href="#Next_Steps" class="headerlink" title="Next Steps"></a>Next Steps</h2><p>There are a few shortcomings of the current model:</p>
-<ul>
-<li>Saving multiple levels of undo is not cost efficient. I need to do better profiling of the memory consumption of the game.</li>
-<li>Much of the saved data is not actually changed from the base entity state. I could reduce the size of the save files by only saving attributes that have actually changed, but that means adding more tracking code.</li>
-<li>Some circumstances need special handling. For example, what happens if the player uses <code>UNDO</code> directly after <code>SAVE</code>?</li>
-<li>Entities have to be uniquely identified in order for loading to work properly. This isn’t currently a problem, but could become one in the future with dynamically generated entities.</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/06/save-load-undo/" data-id="cikkvapfm004d4sohd215a0ne" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/08/stupidrpg-output-queue/" data-id="cikngl1cy0038iwohb82g1k8u" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
