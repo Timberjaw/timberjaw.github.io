@@ -8,8 +8,38 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Mon, 15 Feb 2016 04:06:09 GMT</pubDate>
+    <pubDate>Tue, 16 Feb 2016 05:23:11 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Aggregation #26</title>
+      <link>http://timberjaw.github.io/2016/02/15/Aggregation-26/</link>
+      <guid>http://timberjaw.github.io/2016/02/15/Aggregation-26/</guid>
+      <pubDate>Tue, 16 Feb 2016 05:23:11 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Testing, cleanup and bug fixing for recent changes/additions. Had some accumulated c
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Testing, cleanup and bug fixing for recent changes/additions. Had some accumulated cruft from new rulebook capabilities and the new conversations.&lt;/li&gt;
+&lt;li&gt;Got the twins’ intro conversation working.&lt;/li&gt;
+&lt;li&gt;Rough draft on output timing for twins conversation. Came out much too fast at first, so I did some research on avg reading speeds and added an ‘auto’ rate to calculate the timers based on the # of words in each sentence. Will require some tuning but gives much better results already, and requires way less work to set up the conversations (I can still override it with specific times when needed).&lt;/li&gt;
+&lt;li&gt;Refined handling of conversation topic shortcuts.&lt;/li&gt;
+&lt;li&gt;Wired up special topics for the sword.&lt;/li&gt;
+&lt;li&gt;Improved on() filter for rules.&lt;/li&gt;
+&lt;li&gt;Worked on some concepts for the intro segment for first-time players and resuming players.&lt;/li&gt;
+&lt;li&gt;Made wireframe for resume screen. Don’t like it so I need to try some other things.&lt;/li&gt;
+&lt;li&gt;Wrote up optional late-game sidequests for Fighter, Wizard, Homemaker, Liar, and Unicorn Hunter. No spoilers yet, but I think they’ll be a lot of fun.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/15/Aggregation-26/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.02.14</title>
@@ -434,31 +464,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/01/27/Daily-Update-2016-01-27/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.01.26</title>
-      <link>http://timberjaw.github.io/2016/01/26/Daily-Update-2016-01-26/</link>
-      <guid>http://timberjaw.github.io/2016/01/26/Daily-Update-2016-01-26/</guid>
-      <pubDate>Wed, 27 Jan 2016 07:02:11 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Arrays of multiple text matches are now allowed for the .text() method for Rules.&lt;/l
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Arrays of multiple text matches are now allowed for the .text() method for Rules.&lt;/li&gt;
-&lt;li&gt;Added the introductory monologue for the Twins.&lt;/li&gt;
-&lt;li&gt;Added the introductory argument between the Twins and the GM.&lt;/li&gt;
-&lt;li&gt;Added the first riddle.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/01/26/Daily-Update-2016-01-26/#disqus_thread</comments>
     </item>
     
   </channel>
