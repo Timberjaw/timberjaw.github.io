@@ -8,8 +8,26 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Tue, 16 Feb 2016 05:23:11 GMT</pubDate>
+    <pubDate>Wed, 17 Feb 2016 08:15:43 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.02.16</title>
+      <link>http://timberjaw.github.io/2016/02/16/Daily-Update-2016-02-16/</link>
+      <guid>http://timberjaw.github.io/2016/02/16/Daily-Update-2016-02-16/</guid>
+      <pubDate>Tue, 16 Feb 2016 08:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Sketched out a puzzle involving several weighted pedestals and a mysterious water basin. The general idea is that each pedestal will fill
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Sketched out a puzzle involving several weighted pedestals and a mysterious water basin. The general idea is that each pedestal will fill the basin with a different liquid when activated, and the properties of the liquids are needed to acquire/create/modify certain objects (e.g. turning them to lead, changing their size, etc) to allow for the activation of multiple pedestals simultaneously.&lt;/p&gt;
+&lt;p&gt;If it works out, it will make for some interesting possibilities in Act III (when the forest becomes available once again).&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/16/Daily-Update-2016-02-16/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Aggregation #26</title>
@@ -440,30 +458,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/01/28/Writing-Dialogue/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.01.27</title>
-      <link>http://timberjaw.github.io/2016/01/27/Daily-Update-2016-01-27/</link>
-      <guid>http://timberjaw.github.io/2016/01/27/Daily-Update-2016-01-27/</guid>
-      <pubDate>Thu, 28 Jan 2016 07:14:17 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Assembled the first draft of the Observer’s introductory dialogue.&lt;/li&gt;
-&lt;li&gt;Wrote up
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Assembled the first draft of the Observer’s introductory dialogue.&lt;/li&gt;
-&lt;li&gt;Wrote up key responses for the Observer regarding the Baron, the aethernauts, the station, and so forth. He’s a chatty old fellow.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/01/27/Daily-Update-2016-01-27/#disqus_thread</comments>
     </item>
     
   </channel>
