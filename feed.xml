@@ -8,8 +8,42 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Wed, 17 Feb 2016 08:15:43 GMT</pubDate>
+    <pubDate>Thu, 18 Feb 2016 06:01:49 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.02.17</title>
+      <link>http://timberjaw.github.io/2016/02/17/Daily-Update-2016-02-17/</link>
+      <guid>http://timberjaw.github.io/2016/02/17/Daily-Update-2016-02-17/</guid>
+      <pubDate>Thu, 18 Feb 2016 06:01:48 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Working through the mechanics of the basin system. Some ideas for effects:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Make object larger (and heavier; useful for activ
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Working through the mechanics of the basin system. Some ideas for effects:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Make object larger (and heavier; useful for activating a 2nd plate)&lt;/li&gt;
+&lt;li&gt;Make object ‘better’&lt;/li&gt;
+&lt;li&gt;Transform object into a common, everyday object (e.g. a hat or a cinderblock)&lt;/li&gt;
+&lt;li&gt;Transform object into a snowglobe containing a tiny alternate dimension populated by living copies of the object&lt;/li&gt;
+&lt;li&gt;Cycle the color of the object&lt;/li&gt;
+&lt;li&gt;Cycle the material of the object (original, metal, wood, etc)&lt;/li&gt;
+&lt;li&gt;Make object sentient&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Open questions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Should the number of objects transformed at one time be limited in some way? (Leaning yes)&lt;/li&gt;
+&lt;li&gt;What triggers the change? (Leaning toward requiring a manual activation of the basin to avoid weird edge cases)&lt;/li&gt;
+&lt;li&gt;What’s the end goal, once the player has found a way to activate all the pedestals simultaneously? (Leaning toward I have no idea)&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/17/Daily-Update-2016-02-17/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.02.16</title>
@@ -433,31 +467,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/01/29/Paperwork/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Writing Dialogue</title>
-      <link>http://timberjaw.github.io/2016/01/28/Writing-Dialogue/</link>
-      <guid>http://timberjaw.github.io/2016/01/28/Writing-Dialogue/</guid>
-      <pubDate>Fri, 29 Jan 2016 04:47:57 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;I’ve made some serious progress on dialogue writing for the Prologue and Act I this week. Some characters are much easier to write for th
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;I’ve made some serious progress on dialogue writing for the Prologue and Act I this week. Some characters are much easier to write for than others. Easiest to hardest so far:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The Sword&lt;/li&gt;
-&lt;li&gt;The Twins&lt;/li&gt;
-&lt;li&gt;The GM&lt;/li&gt;
-&lt;li&gt;Ranger Bob&lt;/li&gt;
-&lt;li&gt;The Observer&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The easier characters, unsurprisingly, tend to be closer to myself in personality. They also tend to be the characters with better-defined roles in the story. Can’t do much about the former, but the latter is worth investing some time into.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/01/28/Writing-Dialogue/#disqus_thread</comments>
     </item>
     
   </channel>
