@@ -8,8 +8,26 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Thu, 18 Feb 2016 06:01:49 GMT</pubDate>
+    <pubDate>Fri, 19 Feb 2016 08:07:39 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.02.18</title>
+      <link>http://timberjaw.github.io/2016/02/18/Daily-Update-2016-02-18/</link>
+      <guid>http://timberjaw.github.io/2016/02/18/Daily-Update-2016-02-18/</guid>
+      <pubDate>Thu, 18 Feb 2016 08:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;img src=&quot;/2016/02/18/Daily-Update-2016-02-18/basin.png&quot; alt=&quot;Basin and pedestals&quot; title=&quot;Basin and pedestals&quot;&gt;
+
+      
+      </description>
+      
+      <content:encoded>&lt;img src=&quot;/2016/02/18/Daily-Update-2016-02-18/basin.png&quot; alt=&quot;Basin and pedestals&quot; title=&quot;Basin and pedestals&quot;&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/18/Daily-Update-2016-02-18/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.02.17</title>
@@ -448,25 +466,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/01/30/Daily-Update-2016-01-30/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Paperwork</title>
-      <link>http://timberjaw.github.io/2016/01/29/Paperwork/</link>
-      <guid>http://timberjaw.github.io/2016/01/29/Paperwork/</guid>
-      <pubDate>Fri, 29 Jan 2016 08:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Many many paperworks today. Between home buying and work, the time flies.&lt;/p&gt;
-&lt;p&gt;Maybe SRPG should have a side quest where you have to fi
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Many many paperworks today. Between home buying and work, the time flies.&lt;/p&gt;
-&lt;p&gt;Maybe SRPG should have a side quest where you have to file your adventurer taxes.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/01/29/Paperwork/#disqus_thread</comments>
     </item>
     
   </channel>
