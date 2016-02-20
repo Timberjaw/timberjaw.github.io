@@ -8,8 +8,47 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Fri, 19 Feb 2016 08:07:39 GMT</pubDate>
+    <pubDate>Sat, 20 Feb 2016 08:23:36 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.02.19</title>
+      <link>http://timberjaw.github.io/2016/02/19/Daily-Update-2016-02-19/</link>
+      <guid>http://timberjaw.github.io/2016/02/19/Daily-Update-2016-02-19/</guid>
+      <pubDate>Fri, 19 Feb 2016 08:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Goal ideas for the basin puzzle.&lt;/p&gt;
+&lt;h1 id=&quot;SKELETON_KEY&quot;&gt;&lt;a href=&quot;#SKELETON_KEY&quot; class=&quot;headerlink&quot; title=&quot;SKELETON KEY&quot;&gt;&lt;/a&gt;SKELETON K
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Goal ideas for the basin puzzle.&lt;/p&gt;
+&lt;h1 id=&quot;SKELETON_KEY&quot;&gt;&lt;a href=&quot;#SKELETON_KEY&quot; class=&quot;headerlink&quot; title=&quot;SKELETON KEY&quot;&gt;&lt;/a&gt;SKELETON KEY&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;Place heavy object on material pedestal&lt;/li&gt;
+&lt;li&gt;Change target object to metal&lt;/li&gt;
+&lt;li&gt;Place target object on improvement pedestal&lt;/li&gt;
+&lt;li&gt;Improve second target object (bone) and change to metal, producing skeleton key&lt;/li&gt;
+&lt;li&gt;Unlock everything&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;WHAT_A_WORLD&quot;&gt;&lt;a href=&quot;#WHAT_A_WORLD&quot; class=&quot;headerlink&quot; title=&quot;WHAT A WORLD&quot;&gt;&lt;/a&gt;WHAT A WORLD&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;Place heavy object on size pedestal&lt;/li&gt;
+&lt;li&gt;Change target object to large size&lt;/li&gt;
+&lt;li&gt;Place target object on transmutate pedestal&lt;/li&gt;
+&lt;li&gt;Transform second target object to cinder block&lt;/li&gt;
+&lt;li&gt;Place cinder block on snowglobe pedestal&lt;/li&gt;
+&lt;li&gt;Transform third target object to snowglobe&lt;/li&gt;
+&lt;li&gt;Give snowglobe to someone as a gift&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;EASY_WAY_OUT&quot;&gt;&lt;a href=&quot;#EASY_WAY_OUT&quot; class=&quot;headerlink&quot; title=&quot;EASY WAY OUT&quot;&gt;&lt;/a&gt;EASY WAY OUT&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;Place heavy object on improvement pedestal&lt;/li&gt;
+&lt;li&gt;Sit in basin&lt;/li&gt;
+&lt;li&gt;Win game&lt;/li&gt;
+&lt;/ol&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/19/Daily-Update-2016-02-19/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.02.18</title>
@@ -443,29 +482,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/01/31/Daily-Update-2016-01-31/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.01.30</title>
-      <link>http://timberjaw.github.io/2016/01/30/Daily-Update-2016-01-30/</link>
-      <guid>http://timberjaw.github.io/2016/01/30/Daily-Update-2016-01-30/</guid>
-      <pubDate>Sat, 30 Jan 2016 08:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Wrote sword dialogue for the void, the aethernauts, the station, Pete the dog, the m
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Wrote sword dialogue for the void, the aethernauts, the station, Pete the dog, the moon, the stars, the space suit, the pod, and the rover.&lt;/li&gt;
-&lt;li&gt;When I saved my draft in Word, the suggested filename was ‘THE VASTNESS OF SPACE IS A FITTING SYMBOL’. I left it that way.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/01/30/Daily-Update-2016-01-30/#disqus_thread</comments>
     </item>
     
   </channel>

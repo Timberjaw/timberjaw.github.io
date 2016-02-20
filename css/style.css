@@ -887,7 +887,7 @@ a.article-title:hover {
 .article-entry h5,
 .article-entry h6 {
   line-height: 1.1em;
-  margin: 1.1em 0;
+  margin: 1.1em 0 0.8rem 0;
 }
 .article-entry a {
   color: #38b7ea;
@@ -899,7 +899,7 @@ a.article-title:hover {
 .article-entry ul,
 .article-entry ol,
 .article-entry dl {
-  margin-top: 1.6em;
+  margin-top: 0;
   margin-bottom: 1.6em;
 }
 .article-entry img,
