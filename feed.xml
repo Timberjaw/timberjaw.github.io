@@ -8,8 +8,26 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Sun, 21 Feb 2016 08:56:49 GMT</pubDate>
+    <pubDate>Tue, 23 Feb 2016 01:11:40 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.02.21</title>
+      <link>http://timberjaw.github.io/2016/02/21/Daily-Update-2016-02-21/</link>
+      <guid>http://timberjaw.github.io/2016/02/21/Daily-Update-2016-02-21/</guid>
+      <pubDate>Sun, 21 Feb 2016 08:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Caught up on The Walking Dead and did some packing. Good stuff.&lt;/p&gt;
+
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Caught up on The Walking Dead and did some packing. Good stuff.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/21/Daily-Update-2016-02-21/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.02.20</title>
@@ -441,43 +459,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/02/02/What-Has-It-Got-In-Its-Pockets/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Aggregation #25</title>
-      <link>http://timberjaw.github.io/2016/02/01/Aggregation-25/</link>
-      <guid>http://timberjaw.github.io/2016/02/01/Aggregation-25/</guid>
-      <pubDate>Mon, 01 Feb 2016 08:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added get/set methods for entities to make it easier to check for values without bei
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added get/set methods for entities to make it easier to check for values without being sure the key exists on the object.&lt;/li&gt;
-&lt;li&gt;Made the bird sad if it can’t get at the bird feeder.&lt;/li&gt;
-&lt;li&gt;Bird is happy if the player helps with the bird feeder problem.&lt;/li&gt;
-&lt;li&gt;Moved magic ice cube to bird feeder.&lt;/li&gt;
-&lt;li&gt;Unblock feeder when ice cube is removed.&lt;/li&gt;
-&lt;li&gt;Added telescope descriptions for various objects the player might be interested in getting a closer look at.&lt;/li&gt;
-&lt;li&gt;Decided to make the sword much chattier (possibly even replacing the hint system). For starters, I gave it dialogue responses for: destiny, eternity, the black box, the player, the magic ice cube, the ice key, the red berries, the scrap of paper, the litter, the glowing orb, the bird feeder, the bird, the jack, the jane, the ranger bob, the troglodyte, the wyrmling, the telescope, the structure, the gold coin, the moon, the hawk, the observer, the unicorn musk, the counterfeit seal, the steel-toed boots, the magic wand and the treasure chest.&lt;/li&gt;
-&lt;li&gt;Arrays of multiple text matches are now allowed for the .text() method for Rules.&lt;/li&gt;
-&lt;li&gt;Added the introductory monologue for the Twins.&lt;/li&gt;
-&lt;li&gt;Added the introductory argument between the Twins and the GM.&lt;/li&gt;
-&lt;li&gt;Added the first riddle.&lt;/li&gt;
-&lt;li&gt;Assembled the first draft of the Observer’s introductory dialogue.&lt;/li&gt;
-&lt;li&gt;Wrote up key responses for the Observer regarding the Baron, the aethernauts, the station, and so forth. He’s a chatty old fellow.&lt;/li&gt;
-&lt;li&gt;Wrote sword dialogue for the void, the aethernauts, the station, Pete the dog, the moon, the stars, the space suit, the pod, and the rover.&lt;/li&gt;
-&lt;li&gt;Added sword entries for: the cabin, the town, the inn, the twins (again), the cemetery, the gravekeeper, the (SPOILER), the elevator, the baron’s lair, and the baron.&lt;/li&gt;
-&lt;li&gt;Settled on some conventions for the sword’s mode of speech.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/02/01/Aggregation-25/#disqus_thread</comments>
     </item>
     
   </channel>
