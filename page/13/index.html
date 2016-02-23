@@ -60,6 +60,70 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-interactivity" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/24/interactivity/">Interactivity</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/10/24/interactivity/">
+      <time datetime="2015-10-24T07:00:00.000Z" itemprop="datePublished">2015-10-24</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>I’ve been having a bit of trouble figuring out the mechanics for SRPG. Specifically, making them interesting, deep, and open to emergent interactions. So I’m trying to break down interactivity in the game to make the mechanical behaviors more composable.</p>
+<p>Ways you interact in SRPG:</p>
+<ul>
+<li>Translation: Moving an object from one place to another.</li>
+<li>Communication: Talking to someone.</li>
+<li>Destruction: Breaking something or attacking someone.</li>
+<li>Configuration: Changing the state of something without changing the thing itself.</li>
+<li>Transmutation: Changing something into something else.</li>
+<li>Combination: Using something with something else to configure, transmute, translate, or destroy it. This is usually a combination of Translation and another interaction type.</li>
+</ul>
+<p>This is helpful already. Let’s say you need to get a raccoon to leave a location, but it won’t because there’s a delicious cake on the ground. The goal requires translation (moving the raccoon to a different location), but you can’t accomplish it directly. This is where the other modes of interaction come into play. You could:</p>
+<ul>
+<li>Communicate: Explain to the raccoon that an all-cake diet is bad for its health. If your reputation with the local wildlife is sufficient, the racoon will listen to your advice.</li>
+<li>Destroy: Smash the cake into oblivion. Even a raccoon doesn’t want to eat dirt.</li>
+<li>Transmute: Use your magic wand to turn the cake into a healthy salad. The raccoon will go look for something tastier.</li>
+<li>Translate: Just pick up the cake and take it with you. The raccoon will follow.</li>
+<li>Combine: Put a stick of dynamite in the cake. The ensuing explosion will certainly destroy the cake and might kill the raccoon. Either way, no more raccoon in that location.</li>
+</ul>
+<p>I like this approach so far. In general, I want to separate means from ends. The player is presented with an end goal, and combines (composes) the interactive mechanics in their toolkit to accomplish the goal. This makes for a nice separation in the code as well. Instead of coding a quest condition like “player dropped cake in dim clearing” (which implies a particular solution), the check would look like: “raccoon is no longer in west trail”. If I add game mechanics later on, such as a ray gun that transforms any target into sawdust, the quest/goal doesn’t need to be updated, because it’s checking for outcomes rather than actions.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/10/24/interactivity/" data-id="cikyt231x004xn4oht7q9uayc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-card-builder-part-3" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -101,7 +165,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/23/card-builder-part-3/" data-id="cikyqjccp007988ohqmqrum7q" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/23/card-builder-part-3/" data-id="cikyt234k0078n4oh7o3r1cqr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -150,7 +214,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/22/card-builder-part-2/" data-id="cikyqjccq007a88ohqdbz6cbl" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/22/card-builder-part-2/" data-id="cikyt234l0079n4oh2xgpz7m0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -196,7 +260,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/21/the-martian/" data-id="cikyqjc5u002h88ohx95jdidd" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/21/the-martian/" data-id="cikyt22yn002gn4ohvr0q31yi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -269,7 +333,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/20/card-builder/" data-id="cikyqjcco007888ohcod0op37" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/20/card-builder/" data-id="cikyt234j0077n4ohrg52cs0l" class="article-share-link">Share</a>
       
       
     </footer>
@@ -323,7 +387,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/19/weekly-update-14/" data-id="cikyqjc4o001o88oha74735pz" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/19/weekly-update-14/" data-id="cikyt22xb001nn4ohdaa3gben" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -371,7 +435,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/18/resume/" data-id="cikyqjc8o004i88oh41z12yzj" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/18/resume/" data-id="cikyt2313004hn4ohl6mxncms" class="article-share-link">Share</a>
       
       
     </footer>
@@ -421,7 +485,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/17/the-aethernauts/" data-id="cikyqjc64002l88oh0vp76jmw" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/17/the-aethernauts/" data-id="cikyt22yu002kn4oh5hgn63gn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -474,7 +538,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/16/writing-to-victory-part-3/" data-id="cikyqjc31000388ohrplrq87f" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/16/writing-to-victory-part-3/" data-id="cikyt22vv0002n4oh06djwp2y" class="article-share-link">Share</a>
       
       
     </footer>
@@ -525,60 +589,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/15/writing-to-victory-part-2/" data-id="cikyqjc33000488ohxs0wczec" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-writing-to-victory" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/14/writing-to-victory/">Writing to Victory</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/10/14/writing-to-victory/">
-      <time datetime="2015-10-14T07:00:00.000Z" itemprop="datePublished">2015-10-14</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>I’m on kind of a Myst mental kick after discovering the MystCraft mod for Minecraft. The mod’s primary purpose is to let you ‘write’ custom Minecraft worlds using a set of symbols and a complicated (arguably overcomplicated) set of tools and machines.</p>
-<p>Writing as a game mechanic makes a lot of sense for a text-based game like SRPG. I have a few ideas so far, mostly derivative of clever things other people have done, such as:</p>
-<ol>
-<li>Changing the properties of an object by renaming it, or</li>
-<li>Modifying the game transcript to retroactively alter events, or</li>
-<li>Summoning or spellcasting via written text (a la Scribblenauts), or</li>
-<li>Writing a letter to your in-game grandma and receiving a package of Christmas cookies in return, which are just the item you needed to solve a tricky puzzle.</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/14/writing-to-victory/" data-id="cikyqjc2z000288oht3y8naxj" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/15/writing-to-victory-part-2/" data-id="cikyt22vx0003n4oh5ki48xrx" class="article-share-link">Share</a>
       
       
     </footer>

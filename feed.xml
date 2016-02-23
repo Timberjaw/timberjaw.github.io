@@ -8,8 +8,26 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Tue, 23 Feb 2016 01:11:40 GMT</pubDate>
+    <pubDate>Tue, 23 Feb 2016 02:40:08 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.02.22</title>
+      <link>http://timberjaw.github.io/2016/02/22/Daily-Update-2016-02-22/</link>
+      <guid>http://timberjaw.github.io/2016/02/22/Daily-Update-2016-02-22/</guid>
+      <pubDate>Tue, 23 Feb 2016 02:40:08 GMT</pubDate>
+      <description>
+      
+        &lt;img src=&quot;/2016/02/22/Daily-Update-2016-02-22/Map-BlackBox.png&quot; alt=&quot;Map of first area&quot; title=&quot;Map of first area&quot;&gt;
+
+      
+      </description>
+      
+      <content:encoded>&lt;img src=&quot;/2016/02/22/Daily-Update-2016-02-22/Map-BlackBox.png&quot; alt=&quot;Map of first area&quot; title=&quot;Map of first area&quot;&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/22/Daily-Update-2016-02-22/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.02.21</title>
@@ -431,34 +449,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/02/03/Daily-Update-2016-02-03/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>What Has It Got In Its Pockets?</title>
-      <link>http://timberjaw.github.io/2016/02/02/What-Has-It-Got-In-Its-Pockets/</link>
-      <guid>http://timberjaw.github.io/2016/02/02/What-Has-It-Got-In-Its-Pockets/</guid>
-      <pubDate>Wed, 03 Feb 2016 04:42:43 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Some notes for inventories. The SRPG inventory is very rudimentary right now (a simple list of objects held by the player). I need someth
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Some notes for inventories. The SRPG inventory is very rudimentary right now (a simple list of objects held by the player). I need something a bit more robust, supporting the following feature set:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Concrete (held object) vs abstract (character traits)&lt;/li&gt;
-&lt;li&gt;Visible (e.g. a hat being worn) vs concealed (e.g. a ring in a pocket)&lt;/li&gt;
-&lt;li&gt;Accessibility restriction (object held by another creature can be seen but not touched, at least not without social repercussions)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Abstract Inventory&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;This includes anything a creature (including the player) could be said to ‘have’, but isn’t a physical object. Hit points, gumption, parents, etc.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Concealed Objects&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;I made a post a while back about inventory/equipment slots (swords are held, hats are worn on the head, and so forth). Concealment follows the normal container rules. That is, a backpack would be an opaque openable container: objects inside are visible when it’s open, but hidden when it’s closed. Pants with pockets would behave similarly.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Accessibility&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Touching other people’s belongings is rude, especially when its on their person. Not sure if this should simply be blocked by default or if it should lead to more interesting (but more difficult to develop) social responses.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/02/02/What-Has-It-Got-In-Its-Pockets/#disqus_thread</comments>
     </item>
     
   </channel>
