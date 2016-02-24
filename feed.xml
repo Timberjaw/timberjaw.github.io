@@ -8,8 +8,26 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Tue, 23 Feb 2016 02:40:08 GMT</pubDate>
+    <pubDate>Wed, 24 Feb 2016 09:11:41 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.02.23</title>
+      <link>http://timberjaw.github.io/2016/02/23/Daily-Update-2016-02-23/</link>
+      <guid>http://timberjaw.github.io/2016/02/23/Daily-Update-2016-02-23/</guid>
+      <pubDate>Wed, 24 Feb 2016 02:40:08 GMT</pubDate>
+      <description>
+      
+        &lt;img src=&quot;/2016/02/23/Daily-Update-2016-02-23/Map-ActI.png&quot; alt=&quot;Map of second area&quot; title=&quot;Map of second area&quot;&gt;
+
+      
+      </description>
+      
+      <content:encoded>&lt;img src=&quot;/2016/02/23/Daily-Update-2016-02-23/Map-ActI.png&quot; alt=&quot;Map of second area&quot; title=&quot;Map of second area&quot;&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/23/Daily-Update-2016-02-23/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.02.22</title>
@@ -430,25 +448,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/02/04/Welcome-Back/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.02.03</title>
-      <link>http://timberjaw.github.io/2016/02/03/Daily-Update-2016-02-03/</link>
-      <guid>http://timberjaw.github.io/2016/02/03/Daily-Update-2016-02-03/</guid>
-      <pubDate>Thu, 04 Feb 2016 05:20:48 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Long day today. Home inspection and late start at work.&lt;/p&gt;
-&lt;p&gt;Learned how to do server-side processing (filter/search and paging) for th
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Long day today. Home inspection and late start at work.&lt;/p&gt;
-&lt;p&gt;Learned how to do server-side processing (filter/search and paging) for the DataTables jQuery plugin. The documentation is pretty thorough, but it can be tough to find the terminology for what you’re trying to do.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/02/03/Daily-Update-2016-02-03/#disqus_thread</comments>
     </item>
     
   </channel>
