@@ -8,8 +8,26 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Wed, 24 Feb 2016 09:11:41 GMT</pubDate>
+    <pubDate>Thu, 25 Feb 2016 05:04:30 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.02.24</title>
+      <link>http://timberjaw.github.io/2016/02/24/Daily-Update-2016-02-24/</link>
+      <guid>http://timberjaw.github.io/2016/02/24/Daily-Update-2016-02-24/</guid>
+      <pubDate>Thu, 25 Feb 2016 05:04:30 GMT</pubDate>
+      <description>
+      
+        &lt;img src=&quot;/2016/02/24/Daily-Update-2016-02-24/Map-ActII.png&quot; alt=&quot;Map of third area&quot; title=&quot;Map of third area&quot;&gt;
+
+      
+      </description>
+      
+      <content:encoded>&lt;img src=&quot;/2016/02/24/Daily-Update-2016-02-24/Map-ActII.png&quot; alt=&quot;Map of third area&quot; title=&quot;Map of third area&quot;&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/24/Daily-Update-2016-02-24/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.02.23</title>
@@ -423,31 +441,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/02/05/Daily-Update-2016-02-05/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Welcome Back</title>
-      <link>http://timberjaw.github.io/2016/02/04/Welcome-Back/</link>
-      <guid>http://timberjaw.github.io/2016/02/04/Welcome-Back/</guid>
-      <pubDate>Fri, 05 Feb 2016 07:59:44 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;SRPG can save, and in theory load, games. It’s a web-based game, so I’d like to take it a step further and remember the player the next t
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;SRPG can save, and in theory load, games. It’s a web-based game, so I’d like to take it a step further and remember the player the next time they visit the page (via a cookie or HTML5 local storage).&lt;/p&gt;
-&lt;p&gt;If the user is a returning player, they should be presented with a few options:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Start a new game&lt;/li&gt;
-&lt;li&gt;Resume a saved game from local storage&lt;/li&gt;
-&lt;li&gt;Load a save file from the user’s computer&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Now that I’m getting into the realm of storing data on the user’s behalf, I guess I’ll also need a “forget me” command somewhere to delete local storage data and cookies, resetting the game to its original state.&lt;/p&gt;
-&lt;p&gt;I’m also very tempted to include elements that progress/trigger based on the player’s absence, but I think I’ll have to pass on that, since it would break the seeded RNG.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/02/04/Welcome-Back/#disqus_thread</comments>
     </item>
     
   </channel>
