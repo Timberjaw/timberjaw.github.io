@@ -8,8 +8,26 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Thu, 25 Feb 2016 05:04:30 GMT</pubDate>
+    <pubDate>Fri, 26 Feb 2016 02:43:30 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.02.25</title>
+      <link>http://timberjaw.github.io/2016/02/25/Daily-Update-2016-02-25/</link>
+      <guid>http://timberjaw.github.io/2016/02/25/Daily-Update-2016-02-25/</guid>
+      <pubDate>Fri, 26 Feb 2016 02:43:30 GMT</pubDate>
+      <description>
+      
+        &lt;img src=&quot;/2016/02/25/Daily-Update-2016-02-25/Map-ActIII.png&quot; alt=&quot;Map of final area&quot; title=&quot;Map of final area&quot;&gt;
+
+      
+      </description>
+      
+      <content:encoded>&lt;img src=&quot;/2016/02/25/Daily-Update-2016-02-25/Map-ActIII.png&quot; alt=&quot;Map of final area&quot; title=&quot;Map of final area&quot;&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/25/Daily-Update-2016-02-25/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.02.24</title>
@@ -419,28 +437,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/02/06/Daily-Update-2016-02-06/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.02.05</title>
-      <link>http://timberjaw.github.io/2016/02/05/Daily-Update-2016-02-05/</link>
-      <guid>http://timberjaw.github.io/2016/02/05/Daily-Update-2016-02-05/</guid>
-      <pubDate>Fri, 05 Feb 2016 08:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Testing, cleanup and bug fixing for recent changes/additions. Had some accumulated c
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Testing, cleanup and bug fixing for recent changes/additions. Had some accumulated cruft from new rulebook capabilities and the new conversations.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/02/05/Daily-Update-2016-02-05/#disqus_thread</comments>
     </item>
     
   </channel>
