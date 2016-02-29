@@ -8,8 +8,56 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Sun, 28 Feb 2016 07:51:57 GMT</pubDate>
+    <pubDate>Mon, 29 Feb 2016 05:33:53 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.02.28</title>
+      <link>http://timberjaw.github.io/2016/02/28/Daily-Update-2016-02-28/</link>
+      <guid>http://timberjaw.github.io/2016/02/28/Daily-Update-2016-02-28/</guid>
+      <pubDate>Sun, 28 Feb 2016 08:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed bug with text rules with multiple text items.&lt;/li&gt;
+&lt;li&gt;Tried to set up a Twitt
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed bug with text rules with multiple text items.&lt;/li&gt;
+&lt;li&gt;Tried to set up a Twitter for the rainbow sword, but the good names were taken. Oh well.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/28/Daily-Update-2016-02-28/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Daily Update 2016.02.27</title>
+      <link>http://timberjaw.github.io/2016/02/27/Daily-Update-2016-02-27/</link>
+      <guid>http://timberjaw.github.io/2016/02/27/Daily-Update-2016-02-27/</guid>
+      <pubDate>Sat, 27 Feb 2016 08:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added a sword line about the GM.&lt;/li&gt;
+&lt;li&gt;Added a 1-5 ‘rate this game’ command to gi
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added a sword line about the GM.&lt;/li&gt;
+&lt;li&gt;Added a 1-5 ‘rate this game’ command to give the GM some helpful feedback. Also renames the game to reflect the player’s view.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/27/Daily-Update-2016-02-27/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Aggregation #27</title>
@@ -396,46 +444,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/02/09/Daily-Update-2016-02-09/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.02.08</title>
-      <link>http://timberjaw.github.io/2016/02/08/Daily-Update-2016-02-08/</link>
-      <guid>http://timberjaw.github.io/2016/02/08/Daily-Update-2016-02-08/</guid>
-      <pubDate>Mon, 08 Feb 2016 08:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Didn’t get much done today, things getting busy at work.&lt;/p&gt;
-
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Didn’t get much done today, things getting busy at work.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/02/08/Daily-Update-2016-02-08/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.02.07</title>
-      <link>http://timberjaw.github.io/2016/02/07/Daily-Update-2016-02-07/</link>
-      <guid>http://timberjaw.github.io/2016/02/07/Daily-Update-2016-02-07/</guid>
-      <pubDate>Sun, 07 Feb 2016 08:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Worked on some concepts for the intro segment for first-time players and resuming pl
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Worked on some concepts for the intro segment for first-time players and resuming players.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/02/07/Daily-Update-2016-02-07/#disqus_thread</comments>
     </item>
     
   </channel>
