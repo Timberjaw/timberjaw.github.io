@@ -8,8 +8,27 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Mon, 29 Feb 2016 05:33:53 GMT</pubDate>
+    <pubDate>Wed, 02 Mar 2016 04:29:15 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.02.29</title>
+      <link>http://timberjaw.github.io/2016/02/29/Daily-Update-2016-02-29/</link>
+      <guid>http://timberjaw.github.io/2016/02/29/Daily-Update-2016-02-29/</guid>
+      <pubDate>Mon, 29 Feb 2016 08:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Leap day! Went out for some leap day festivities with friends.&lt;/p&gt;
+&lt;p&gt;Also learned a few things about managing subnets and cache clusters
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Leap day! Went out for some leap day festivities with friends.&lt;/p&gt;
+&lt;p&gt;Also learned a few things about managing subnets and cache clusters on AWS.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/02/29/Daily-Update-2016-02-29/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.02.28</title>
@@ -426,24 +445,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/02/10/Daily-Update-2016-02-10/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.02.09</title>
-      <link>http://timberjaw.github.io/2016/02/09/Daily-Update-2016-02-09/</link>
-      <guid>http://timberjaw.github.io/2016/02/09/Daily-Update-2016-02-09/</guid>
-      <pubDate>Wed, 10 Feb 2016 03:46:36 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;In the midst of putting together a plan for mobile/tablet device support. The game is already responsive, but there are input issues rela
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;In the midst of putting together a plan for mobile/tablet device support. The game is already responsive, but there are input issues related to my choice of a non-standard text input field. There are several possible workarounds for that, but I need to make some key design decisions first (like whether the entire game should be finishable with mouse/touch only).&lt;/p&gt;
-&lt;p&gt;I would like to support phones, but tablets are the preferred mobile form-factor due to the larger screen size (supporting the side artwork panels on a phone is a no-go due to size limitations). Desktop will remain the primary focus.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/02/09/Daily-Update-2016-02-09/#disqus_thread</comments>
     </item>
     
   </channel>
