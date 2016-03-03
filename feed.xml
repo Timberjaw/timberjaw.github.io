@@ -8,8 +8,44 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Wed, 02 Mar 2016 04:29:15 GMT</pubDate>
+    <pubDate>Thu, 03 Mar 2016 06:16:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>9</title>
+      <link>http://timberjaw.github.io/2016/03/02/9/</link>
+      <guid>http://timberjaw.github.io/2016/03/02/9/</guid>
+      <pubDate>Thu, 03 Mar 2016 06:16:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;9 year anniversary today. Time flies when you’re having fun.&lt;/p&gt;
+
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;9 year anniversary today. Time flies when you’re having fun.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/03/02/9/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>House Hunting</title>
+      <link>http://timberjaw.github.io/2016/03/01/House-Hunting-1/</link>
+      <guid>http://timberjaw.github.io/2016/03/01/House-Hunting-1/</guid>
+      <pubDate>Tue, 01 Mar 2016 08:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Rough day. House purchase didn’t work out, back to hunting.&lt;/p&gt;
+
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Rough day. House purchase didn’t work out, back to hunting.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/03/01/House-Hunting-1/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.02.29</title>
@@ -406,45 +442,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/02/12/Movie-Night/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.02.11</title>
-      <link>http://timberjaw.github.io/2016/02/11/Daily-Update-2016-02-11/</link>
-      <guid>http://timberjaw.github.io/2016/02/11/Daily-Update-2016-02-11/</guid>
-      <pubDate>Fri, 12 Feb 2016 06:56:42 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;First wireframe for resume screen. I don’t care for it much.&lt;/p&gt;
-&lt;img src=&quot;/2016/02/11/Daily-Update-2016-02-11/mockup.png&quot; alt=&quot;A Wirefra
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;First wireframe for resume screen. I don’t care for it much.&lt;/p&gt;
-&lt;img src=&quot;/2016/02/11/Daily-Update-2016-02-11/mockup.png&quot; alt=&quot;A Wireframe&quot; title=&quot;A Wireframe&quot;&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/02/11/Daily-Update-2016-02-11/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.02.10</title>
-      <link>http://timberjaw.github.io/2016/02/10/Daily-Update-2016-02-10/</link>
-      <guid>http://timberjaw.github.io/2016/02/10/Daily-Update-2016-02-10/</guid>
-      <pubDate>Wed, 10 Feb 2016 08:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Had a dream about a fantastic idea for SRPG.&lt;/p&gt;
-&lt;p&gt;Woke up and realized it made no sense whatsoever.&lt;/p&gt;
-
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Had a dream about a fantastic idea for SRPG.&lt;/p&gt;
-&lt;p&gt;Woke up and realized it made no sense whatsoever.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/02/10/Daily-Update-2016-02-10/#disqus_thread</comments>
     </item>
     
   </channel>
