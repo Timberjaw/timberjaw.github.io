@@ -60,6 +60,71 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-testing-a-text-adventure" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/05/testing-a-text-adventure/">Testing a Text Adventure</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/05/testing-a-text-adventure/">
+      <time datetime="2015-08-05T07:00:00.000Z" itemprop="datePublished">2015-08-05</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Testing is an important component of any software project, and games are no exception. Javascript is easy enough to unit test for core functionality, but the genre of SRPG offers an interesting opportunity for automated game-aware testing.</p>
+<p>All input in the game is simply text, and the game engine already has an ‘input queue’ capable of handling multiple commands in sequence. This feature is already being used for one simple test process, to get me back to a particular state in the game after making changes. It can be taken further, however.</p>
+<p>Random events in SRPG are handled with a seeded random number generator, meaning that given the same seed and same inputs, all random effects in the game will happen in the same way. That means I can save a transcript (sequence of inputs) and a seed, then play them back and check the output. This is a natural place to automate tests.</p>
+<p>My current plan is to develop tests that specify:</p>
+<ul>
+<li>Starting state (optional, used to shortcut to later portions of the game before testing something specific)</li>
+<li>Random seed</li>
+<li>Input sequence</li>
+<li>Test callback</li>
+</ul>
+<p>If/when the input sequence concludes, the callback is run to check for certain elements. For example, checking the last text output, or looking at an attribute of a particular object.</p>
+<p>Helpful tests could include:</p>
+<ul>
+<li>Intro process works (race/class selection)</li>
+<li>Movement works (starting area)</li>
+<li>Checking inventory works</li>
+</ul>
+<p>During each build, I can run all the tests to get an idea of the health of the game code, and find out immediately if my most recent changes have broken anything.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/05/testing-a-text-adventure/" data-id="cilein1ov002n6kohkg81c030" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/testing/">testing</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-stupidrpg-tutorial-or-not-tutorial" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -106,7 +171,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/04/stupidrpg-tutorial-or-not-tutorial/" data-id="cilbvphde002u00oh7osyy6g1" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/04/stupidrpg-tutorial-or-not-tutorial/" data-id="cilein1p0002u6kohoqtv7k28" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -163,7 +228,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/03/weekly-update-3/" data-id="cilbvphb6000x00ohwppa1kg0" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/03/weekly-update-3/" data-id="cilein1n1000x6koh6qak5uaa" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -217,7 +282,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/02/reading-list/" data-id="cilbvphfk004k00ohmmqii4dj" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/02/reading-list/" data-id="cilein1r7004k6koh89bkzzdu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -272,7 +337,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/01/stupidrpg-callbacks/" data-id="cilbvphef003v00ohlumbtgzu" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/01/stupidrpg-callbacks/" data-id="cilein1q0003v6kohdbgfcte2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -351,7 +416,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/31/side-project-power-cards/" data-id="cilbvphf5004800ohiat600et" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/31/side-project-power-cards/" data-id="cilein1qt00486kohfalb6upb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cplusplus/">cplusplus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/numenera/">numenera</a></li></ul>
@@ -403,7 +468,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/30/stupidrpg-the-rpg/" data-id="cilbvphdi002y00ohnh0lefnb" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/30/stupidrpg-the-rpg/" data-id="cilein1p3002y6koh37v8pk3v" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -460,7 +525,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/29/bio-ranger-bob/" data-id="cilbvphje007d00ohjxlqpyr3" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/29/bio-ranger-bob/" data-id="cilein1uw007d6kohi76lupq1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -543,7 +608,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/28/stupidrpg-everything-is-an-entity/" data-id="cilbvpheb003q00ohv7127saf" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/28/stupidrpg-everything-is-an-entity/" data-id="cilein1pv003q6kohckzv3sjn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -599,59 +664,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/27/weekly-update-2/" data-id="cilbvphbd001600oh5gsupk47" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/27/weekly-update-2/" data-id="cilein1n600166kohm1i2v3v7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-with-graphics-sound" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/26/with-graphics-sound/">With Graphics &amp; Sound</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/07/26/with-graphics-sound/">
-      <time datetime="2015-07-26T07:00:00.000Z" itemprop="datePublished">2015-07-26</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Short post today. I’d like to give a quick overview of the ‘graphics and sound’ portion of the statement ‘StupidRPG is a text adventure with graphics and sound.’</p>
-<h2 id="Sound"><a href="#Sound" class="headerlink" title="Sound"></a>Sound</h2><p>I’m the least musically-inclined person I’ve ever met, so I made the wise choice of marrying a composer. Sound in SRPG includes soundscapes (background noises) and music (the stuff with notes and whatnot). Sound/music can be optionally enabled during the intro portion of the game, and plays via an HTML5 audio element. Music can be cued by entering a new region or by triggering a specific event. Each track can provide settings for volume, looping, and closed captions.</p>
-<h2 id="Graphics"><a href="#Graphics" class="headerlink" title="Graphics"></a>Graphics</h2><p>This part is still up in the air, but it’s a definite goal for the game. In particular, I’d like to make use of the empty sidebar areas for some nice ambient/background art, varied per location/region. Highlighting key items and NPCs graphically would be a nice addition as well. One of the nice things about the way the engine is built is that actions/input can be triggered from anywhere (for example, clicking on a bush in the sidebar could trigger the <code>LOOK AT BUSH</code> action).</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/26/with-graphics-sound/" data-id="cilbvphaf000800oh1myog8sh" class="article-share-link">Share</a>
-      
-      
     </footer>
   </div>
   

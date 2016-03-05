@@ -8,8 +8,25 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Thu, 03 Mar 2016 06:16:00 GMT</pubDate>
+    <pubDate>Sat, 05 Mar 2016 02:33:31 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.03.03</title>
+      <link>http://timberjaw.github.io/2016/03/03/Daily-Update-2016-03-03/</link>
+      <guid>http://timberjaw.github.io/2016/03/03/Daily-Update-2016-03-03/</guid>
+      <pubDate>Thu, 03 Mar 2016 08:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Learned about installing PostgreSQL extensions today. Needed to do some fuzzy string matching (I’ve previously used SOUNDEX for this). En
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Learned about installing PostgreSQL extensions today. Needed to do some fuzzy string matching (I’ve previously used SOUNDEX for this). Ended up going with metaphone(), which is more flexible on precision, and also converts normal text into something reminiscient of the Swedish Chef.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/03/03/Daily-Update-2016-03-03/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>9</title>
@@ -425,23 +442,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/02/13/Daily-Update-2016-02-13/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Movie Night</title>
-      <link>http://timberjaw.github.io/2016/02/12/Movie-Night/</link>
-      <guid>http://timberjaw.github.io/2016/02/12/Movie-Night/</guid>
-      <pubDate>Fri, 12 Feb 2016 08:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Went and saw Deadpool. I have little knowledge and little interest in Deadpool, but the movie was pretty good if you like dick jokes.&lt;/p&gt;
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Went and saw Deadpool. I have little knowledge and little interest in Deadpool, but the movie was pretty good if you like dick jokes.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/02/12/Movie-Night/#disqus_thread</comments>
     </item>
     
   </channel>
