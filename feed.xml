@@ -8,8 +8,37 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Sat, 05 Mar 2016 02:33:31 GMT</pubDate>
+    <pubDate>Sun, 06 Mar 2016 02:21:18 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.03.04</title>
+      <link>http://timberjaw.github.io/2016/03/04/Daily-Update-2016-03-04/</link>
+      <guid>http://timberjaw.github.io/2016/03/04/Daily-Update-2016-03-04/</guid>
+      <pubDate>Fri, 04 Mar 2016 08:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Wrote up some details on moon locations, which use a different method of navigation (coordinate and distance-based). Requires some specia
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Wrote up some details on moon locations, which use a different method of navigation (coordinate and distance-based). Requires some special handling of boundaries and pathfinding (e.g. you can’t walk up a cliff).&lt;/p&gt;
+&lt;p&gt;Something like:&lt;/p&gt;
+&lt;pre&gt;
+LunarLocale {
+    int x, // Canonical X coordinate
+    int y, // Canonical Y coordinate
+    rect bounds, // Rectangle defining the bounds (size) of the locale
+    bool blocksMovement, // Whether the bounds block movement through it
+    int visibleRange, // How far away the locale is
+    bool fastTravelAllowed, // Whether the player can fast travel to the location
+    bool discovered, // Whether the player has discovered the location
+}
+&lt;/pre&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/03/04/Daily-Update-2016-03-04/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.03.03</title>
@@ -425,23 +454,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/02/14/Daily-Update-2016-02-14/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.02.13</title>
-      <link>http://timberjaw.github.io/2016/02/13/Daily-Update-2016-02-13/</link>
-      <guid>http://timberjaw.github.io/2016/02/13/Daily-Update-2016-02-13/</guid>
-      <pubDate>Sat, 13 Feb 2016 08:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Slow day. Messed around with D3.js a bit, considering using it to dynamically graph the world layout (mostly for my own benefit, not as a
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Slow day. Messed around with D3.js a bit, considering using it to dynamically graph the world layout (mostly for my own benefit, not as an in-game thing).&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/02/13/Daily-Update-2016-02-13/#disqus_thread</comments>
     </item>
     
   </channel>
