@@ -8,8 +8,26 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Thu, 10 Mar 2016 04:32:04 GMT</pubDate>
+    <pubDate>Fri, 11 Mar 2016 01:50:24 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.03.09</title>
+      <link>http://timberjaw.github.io/2016/03/09/Daily-Update-2016-03-09/</link>
+      <guid>http://timberjaw.github.io/2016/03/09/Daily-Update-2016-03-09/</guid>
+      <pubDate>Wed, 09 Mar 2016 08:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Finished an 8-month project at work today. Feels good.&lt;/p&gt;
+
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Finished an 8-month project at work today. Feels good.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/03/09/Daily-Update-2016-03-09/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.03.08</title>
@@ -413,24 +431,6 @@ LunarLocale {
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/02/19/Daily-Update-2016-02-19/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.02.18</title>
-      <link>http://timberjaw.github.io/2016/02/18/Daily-Update-2016-02-18/</link>
-      <guid>http://timberjaw.github.io/2016/02/18/Daily-Update-2016-02-18/</guid>
-      <pubDate>Thu, 18 Feb 2016 08:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;img src=&quot;/2016/02/18/Daily-Update-2016-02-18/basin.png&quot; alt=&quot;Basin and pedestals&quot; title=&quot;Basin and pedestals&quot;&gt;
-
-      
-      </description>
-      
-      <content:encoded>&lt;img src=&quot;/2016/02/18/Daily-Update-2016-02-18/basin.png&quot; alt=&quot;Basin and pedestals&quot; title=&quot;Basin and pedestals&quot;&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/02/18/Daily-Update-2016-02-18/#disqus_thread</comments>
     </item>
     
   </channel>
