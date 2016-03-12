@@ -8,8 +8,66 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Fri, 11 Mar 2016 01:50:24 GMT</pubDate>
+    <pubDate>Sat, 12 Mar 2016 09:33:11 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Aggregation #28</title>
+      <link>http://timberjaw.github.io/2016/03/11/Aggregation-28/</link>
+      <guid>http://timberjaw.github.io/2016/03/11/Aggregation-28/</guid>
+      <pubDate>Fri, 11 Mar 2016 08:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added a sword line about the GM.&lt;/li&gt;
+&lt;li&gt;Added a 1-5 ‘rate this game’ command to gi
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added a sword line about the GM.&lt;/li&gt;
+&lt;li&gt;Added a 1-5 ‘rate this game’ command to give the GM some helpful feedback. Also renames the game to reflect the player’s view.&lt;/li&gt;
+&lt;li&gt;Fixed bug with text rules with multiple text items.&lt;/li&gt;
+&lt;li&gt;Tried to set up a Twitter for the rainbow sword, but the good names were taken. Oh well.&lt;/li&gt;
+&lt;li&gt;9-year anniversary!&lt;/li&gt;
+&lt;li&gt;Wrote up some details on moon locations, which use a different method of navigation (coordinate and distance-based). Requires some special handling of boundaries and pathfinding (e.g. you can’t walk up a cliff).&lt;/li&gt;
+&lt;li&gt;Mapped out the new, bridge-connected zones, which includes 18 new locations and a series of tests for the adventurer. They’ll need brains, brawn, and initiative, but not always where they expect.&lt;/li&gt;
+&lt;li&gt;Spider room.&lt;/li&gt;
+&lt;li&gt;Launched V5 of our main website at work.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/03/11/Aggregation-28/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Daily Update 2016.03.10</title>
+      <link>http://timberjaw.github.io/2016/03/10/Daily-Update-2016-03-10/</link>
+      <guid>http://timberjaw.github.io/2016/03/10/Daily-Update-2016-03-10/</guid>
+      <pubDate>Thu, 10 Mar 2016 08:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Another long work day, but things are coming together.&lt;/p&gt;
+&lt;p&gt;Unrelated notes (will make sense later):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Time button&lt;/li&gt;
+&lt;li&gt;
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Another long work day, but things are coming together.&lt;/p&gt;
+&lt;p&gt;Unrelated notes (will make sense later):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Time button&lt;/li&gt;
+&lt;li&gt;Illuminated text&lt;/li&gt;
+&lt;li&gt;Eyes in the dark&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/03/10/Daily-Update-2016-03-10/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.03.09</title>
@@ -373,64 +431,6 @@ LunarLocale {
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/02/21/Daily-Update-2016-02-21/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.02.20</title>
-      <link>http://timberjaw.github.io/2016/02/20/Daily-Update-2016-02-20/</link>
-      <guid>http://timberjaw.github.io/2016/02/20/Daily-Update-2016-02-20/</guid>
-      <pubDate>Sat, 20 Feb 2016 08:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Today was game day (D&amp;amp;D). Always a good source of inspiration.&lt;/p&gt;
-&lt;p&gt;In other news, moving day is looming. Will have to carve out so
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Today was game day (D&amp;amp;D). Always a good source of inspiration.&lt;/p&gt;
-&lt;p&gt;In other news, moving day is looming. Will have to carve out some time to pre-write a few posts.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/02/20/Daily-Update-2016-02-20/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.02.19</title>
-      <link>http://timberjaw.github.io/2016/02/19/Daily-Update-2016-02-19/</link>
-      <guid>http://timberjaw.github.io/2016/02/19/Daily-Update-2016-02-19/</guid>
-      <pubDate>Fri, 19 Feb 2016 08:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Goal ideas for the basin puzzle.&lt;/p&gt;
-&lt;h1 id=&quot;SKELETON_KEY&quot;&gt;&lt;a href=&quot;#SKELETON_KEY&quot; class=&quot;headerlink&quot; title=&quot;SKELETON KEY&quot;&gt;&lt;/a&gt;SKELETON K
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Goal ideas for the basin puzzle.&lt;/p&gt;
-&lt;h1 id=&quot;SKELETON_KEY&quot;&gt;&lt;a href=&quot;#SKELETON_KEY&quot; class=&quot;headerlink&quot; title=&quot;SKELETON KEY&quot;&gt;&lt;/a&gt;SKELETON KEY&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;Place heavy object on material pedestal&lt;/li&gt;
-&lt;li&gt;Change target object to metal&lt;/li&gt;
-&lt;li&gt;Place target object on improvement pedestal&lt;/li&gt;
-&lt;li&gt;Improve second target object (bone) and change to metal, producing skeleton key&lt;/li&gt;
-&lt;li&gt;Unlock everything&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&quot;WHAT_A_WORLD&quot;&gt;&lt;a href=&quot;#WHAT_A_WORLD&quot; class=&quot;headerlink&quot; title=&quot;WHAT A WORLD&quot;&gt;&lt;/a&gt;WHAT A WORLD&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;Place heavy object on size pedestal&lt;/li&gt;
-&lt;li&gt;Change target object to large size&lt;/li&gt;
-&lt;li&gt;Place target object on transmutate pedestal&lt;/li&gt;
-&lt;li&gt;Transform second target object to cinder block&lt;/li&gt;
-&lt;li&gt;Place cinder block on snowglobe pedestal&lt;/li&gt;
-&lt;li&gt;Transform third target object to snowglobe&lt;/li&gt;
-&lt;li&gt;Give snowglobe to someone as a gift&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&quot;EASY_WAY_OUT&quot;&gt;&lt;a href=&quot;#EASY_WAY_OUT&quot; class=&quot;headerlink&quot; title=&quot;EASY WAY OUT&quot;&gt;&lt;/a&gt;EASY WAY OUT&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;Place heavy object on improvement pedestal&lt;/li&gt;
-&lt;li&gt;Sit in basin&lt;/li&gt;
-&lt;li&gt;Win game&lt;/li&gt;
-&lt;/ol&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/02/19/Daily-Update-2016-02-19/#disqus_thread</comments>
     </item>
     
   </channel>
