@@ -8,8 +8,37 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Sat, 12 Mar 2016 09:33:11 GMT</pubDate>
+    <pubDate>Mon, 14 Mar 2016 02:47:41 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.03.12</title>
+      <link>http://timberjaw.github.io/2016/03/12/Daily-Update-2016-03-12/</link>
+      <guid>http://timberjaw.github.io/2016/03/12/Daily-Update-2016-03-12/</guid>
+      <pubDate>Sat, 12 Mar 2016 08:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;I have a 4-day weekend, and I want to make the most of it by using my extra days as “SRPG Work Days”. With that goal in mind, here’s my s
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;I have a 4-day weekend, and I want to make the most of it by using my extra days as “SRPG Work Days”. With that goal in mind, here’s my spoiler-filled to-do list:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Wire up riddle solutions for the twins. The first riddle and options are in place, but the solution process isn’t finalized. Needs to give appropriate response and make 2nd riddle available.&lt;/li&gt;
+&lt;li&gt;Place gate blocking access to the black box chamber. Getting through the gate is the final goal for the prologue. Need to finish ‘doors’ module for this, plus lock-and-key support.&lt;/li&gt;
+&lt;li&gt;Hook up time button and resultant temporal paradox.&lt;/li&gt;
+&lt;li&gt;Link up new locations and write descriptions for them.&lt;/li&gt;
+&lt;li&gt;Build ‘devices’ module with generic support for items that can be manipulated (pressed, turned, etc). Needed for wheel on bridge.&lt;/li&gt;
+&lt;li&gt;Dynamic rotation of the bridge wheel.&lt;/li&gt;
+&lt;li&gt;Improve quest reward output. It’s really bland right now.&lt;/li&gt;
+&lt;li&gt;Finish wiring up ice key puzzle mechanics. Needed to make gate accessible.&lt;/li&gt;
+&lt;li&gt;Add interlude/transition from Black Box to Act I. Most likely some communication from the sword.&lt;/li&gt;
+&lt;li&gt;(Low Priority) Work on basin puzzle. Optional usage during the prologue.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/03/12/Daily-Update-2016-03-12/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Aggregation #28</title>
@@ -413,24 +442,6 @@ LunarLocale {
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/02/22/Daily-Update-2016-02-22/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.02.21</title>
-      <link>http://timberjaw.github.io/2016/02/21/Daily-Update-2016-02-21/</link>
-      <guid>http://timberjaw.github.io/2016/02/21/Daily-Update-2016-02-21/</guid>
-      <pubDate>Sun, 21 Feb 2016 08:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Caught up on The Walking Dead and did some packing. Good stuff.&lt;/p&gt;
-
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Caught up on The Walking Dead and did some packing. Good stuff.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/02/21/Daily-Update-2016-02-21/#disqus_thread</comments>
     </item>
     
   </channel>

@@ -60,6 +60,67 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-so-im-making-a-video-game" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/15/so-im-making-a-video-game/">So I&#39;m Making a Video Game</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/07/15/so-im-making-a-video-game/">
+      <time datetime="2015-07-15T07:00:00.000Z" itemprop="datePublished">2015-07-15</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>I like to describe it as “a text adventure with graphics and sound.”<br>It’s called StupidRPG and it’s a semi-branching, largely fantasy-based game.<br>Loosely speaking, it’s the text adventure I want to play.<br>It’s mostly coded in scratch using vanilla Javascript, with a bit of jQuery on the side.</p>
+<p>So far I have:</p>
+<ul>
+<li>An ECS (entity-component-system) engine to store game state and propagate actions</li>
+<li>A language parser (to turn “PUNCH GOBLIN” into a meaningful action within the game)</li>
+<li>1 troglodyte</li>
+<li>A nice little forest to wander around</li>
+<li>Magical swords</li>
+<li>Modules for: combat, lighting, containers, dialogue trees, and a couple other things</li>
+<li>Just one magical sword, actually</li>
+<li>A park ranger</li>
+<li>Music!</li>
+</ul>
+<p>The first two items ate up about 90% of the work invested so far, and now that work is starting to pay off in the form of content creation:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Race list</span></span><br><span class="line">ECS.setData(<span class="string">'races'</span>, [</span><br><span class="line">  &#123;<span class="string">'text'</span>:<span class="string">'ELF'</span>,<span class="string">'command'</span>:<span class="string">'elf'</span>,<span class="string">'subtext'</span>:<span class="string">'+ KEEN SENSES, + EVASION'</span>&#125;,</span><br><span class="line">  &#123;<span class="string">'text'</span>:<span class="string">'DWARF'</span>,<span class="string">'command'</span>:<span class="string">'dwarf'</span>,<span class="string">'subtext'</span>:<span class="string">'+ DARKVISION'</span>&#125;,</span><br><span class="line">  &#123;<span class="string">'text'</span>:<span class="string">'CEO'</span>,<span class="string">'command'</span>:<span class="string">'ceo'</span>,<span class="string">'subtext'</span>:<span class="string">'+ PERSUASION'</span>&#125;,</span><br><span class="line">  &#123;<span class="string">'text'</span>:<span class="string">'HUMAN'</span>,<span class="string">'command'</span>:<span class="string">'human'</span>,<span class="string">'subtext'</span>:<span class="string">'+1 TO EVERYTHING'</span>&#125;,</span><br><span class="line">  &#123;<span class="string">'text'</span>:<span class="string">'PAN-DIMENSIONAL BEING'</span>,<span class="string">'command'</span>:<span class="string">'pan-dimensional being'</span>,<span class="string">'subtext'</span>:<span class="string">'- MATERIAL NEEDS'</span>&#125;</span><br><span class="line">]);</span><br></pre></td></tr></table></figure>
+<p>I’ll be documenting the rest of the game’s development here.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/07/15/so-im-making-a-video-game/" data-id="cilre3yne0045ckohvbtx4lqz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-static-site-generators" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -97,7 +158,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/15/static-site-generators/" data-id="ciloxppx10042tkohxbev4fg2" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/15/static-site-generators/" data-id="cilre3yn80042ckohdub8zt9d" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
