@@ -60,6 +60,146 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-stupidrpg-dialogue-trees" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/16/stupidrpg-dialogue-trees/">StupidRPG Dialogue Trees</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/07/16/stupidrpg-dialogue-trees/">
+      <time datetime="2015-07-16T07:00:00.000Z" itemprop="datePublished">2015-07-16</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>A game like StupidRPG wouldn’t be complete without extensive NPC interaction. It’s a crucial part of the roleplaying experience the game is inspired by. The world of text adventures and computer RPGs offer many different ways of handling this. I considered several options, each of which has pros and cons. In the end, I tried to take the pieces I liked from multiple styles. This is a non-exhaustive list of the methods I considered.</p>
+<h2 id="Dialogue_Tree"><a href="#Dialogue_Tree" class="headerlink" title="Dialogue Tree"></a>Dialogue Tree</h2><p>Popular in computer RPGs and adventure games, dialogue trees are basically directed graphs. Each dialogue option is a ‘node’ that can connect to a semi-arbitrary number of additional nodes. Significant depth is supported, particularly when alternate nodes are locked behind prerequesites (for example: possessing a certain item, meeting a certain NPC, or meeting alignment requirements). This style of NPC interaction has carried into modern games (pretty much any BioWare game, for starters), with a couple tweaks.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Conversations of varying complexity supported</li>
+<li>Easy to set up conversational ‘rabbit holes’ which eventually loop back to a root node</li>
+<li>Easy to ‘gate’ nodes or chains of nodes behind situational requirements</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>Rigidly defines what can be talked about and when</li>
+<li>Player’s dialogue may not match their conceptualization based on the presented (simplified) dialogue text</li>
+</ul>
+<h2 id="Glossary_/_Dictionary"><a href="#Glossary_/_Dictionary" class="headerlink" title="Glossary / Dictionary"></a>Glossary / Dictionary</h2><p>Commonly seen in classic adventure games and text adventures, where the player can <code>ASK SUSAN ABOUT KOBOLDS</code> or drag an inventory item onto a character to learn more about it.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Very user-driven, somewhat freeform</li>
+<li>Allows for hidden interactions / easter eggs</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>Inevitably motivates the player to attempt every possible combination of item/topic with each NPC</li>
+<li>Each interaction is isolated from the rest (lack of continuity)</li>
+</ul>
+<h2 id="Commands__26amp_3B_Parsing"><a href="#Commands__26amp_3B_Parsing" class="headerlink" title="Commands &amp; Parsing"></a>Commands &amp; Parsing</h2><p>Low-tech as they are, some text adventures allow the player to give directions to NPCs, such as <code>GARY, GO NORTH AND EAT CAKE</code>. It’s not as complicated as it sounds; once you’ve identified the target of the command, the rest is identical to parsing a normal instruction from the player. I haven’t seen an example of more advanced parsing (e.g. <code>TELL GARY HIS FACE IS BAD</code>), but if such a thing exists, kudos.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Situationally useful feature when dealing with friendly NPCs</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>More complex text parsing is really hard</li>
+</ul>
+<h2 id="The_StupidRPG_Way"><a href="#The_StupidRPG_Way" class="headerlink" title="The StupidRPG Way"></a>The StupidRPG Way</h2><p>I settled on a combination of the first two options, with the third a distant goal if I find a use for it. In SRPG, a command like <code>TALK TO THE OGRES</code> generally initiates a dialogue tree (if one is available). Each node has:</p>
+<ul>
+<li>Text (actually a callback, in case more complex text generation or other triggers are needed)</li>
+<li>(Optional) Restrictions (e.g. this node is only available if the player previously fought the minotaur)</li>
+<li>(Optional) A visibility setting (default is visible, some nodes may be hidden for reasons other than access restrictions)</li>
+<li>(Optional) A node list (nodes available from this point in the conversation)</li>
+<li>(Optional) A list of keywords (more on that in a second)</li>
+</ul>
+<p>The second option comes into play with a list of topics each NPC can discuss. These are actually tree nodes, but the player can shortcut to them via commands like <code>ASK ELLEN ABOUT DIVORCE</code>.</p>
+<p>As indicated in a previous post, the SRPG parser allows for a variety of command patterns, including patterns with ‘overflow’ text (i.e. arbitrary text only understood by a particular command or object). One of the neat things about that is the ability to define custom parsing behaviors for specific NPCs or types of NPCs. For example, a town guard might respond poorly to the (non-standard syntax) statement: <code>SAY &#39;GO LICK A BEAR&#39; TO CAPTAIN ROTH</code>. The sky’s the limit, really.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/07/16/stupidrpg-dialogue-trees/" data-id="cilsykkp8003s5wohqvqgs0zg" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-static-site-generators" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/15/static-site-generators/">Command Patterns &amp; Static Site Generators</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/07/15/static-site-generators/">
+      <time datetime="2015-07-15T07:00:00.000Z" itemprop="datePublished">2015-07-15</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>First off, a snippet from the language processor in StupidRPG. This section handles the command patterns the game can (attempt to) interpret.<br>Examples are included for my own benefit; it became difficult to keep track of how exactly each pattern might present itself within the game.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Pattern list</span></span><br><span class="line"><span class="comment">// Cannot start with a modifier</span></span><br><span class="line"><span class="comment">// In order of priority (highest to lowest):</span></span><br><span class="line">patterns = [</span><br><span class="line">  <span class="string">'VERB'</span>,                             <span class="comment">// inventory</span></span><br><span class="line">  <span class="string">'VERB NOUN'</span>,                        <span class="comment">// eat baby</span></span><br><span class="line">  <span class="string">'VERB MODIFIER'</span>,                    <span class="comment">// saunter west</span></span><br><span class="line">  <span class="string">'VERB MODIFIER NOUN'</span>,               <span class="comment">// get in closet</span></span><br><span class="line">  <span class="string">'VERB NOUN MODIFIER NOUN'</span>,          <span class="comment">// attack goblin with hammer</span></span><br><span class="line">  <span class="string">'VERB MODIFIER MODIFIER NOUN'</span>,      <span class="comment">// look north through telescope</span></span><br><span class="line">  <span class="string">'VERB MODIFIER NOUN MODIFIER NOUN'</span>, <span class="comment">// look at bob through telescope</span></span><br><span class="line">  <span class="comment">// Overflow patterns</span></span><br><span class="line">  <span class="string">'VERB MODIFIER NOUN MODIFIER TEXT'</span>, <span class="comment">// talk to goblin about greatest fears</span></span><br><span class="line">  <span class="string">'VERB MODIFIER MODIFIER TEXT'</span>,      <span class="comment">// look north through telescope saucily</span></span><br><span class="line">  <span class="string">'VERB NOUN MODIFIER TEXT'</span>,          <span class="comment">// ask bob about back pain</span></span><br><span class="line">  <span class="string">'VERB MODIFIER TEXT'</span>                <span class="comment">// talk about floops</span></span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+<h2 id="Static_Site_Generators"><a href="#Static_Site_Generators" class="headerlink" title="Static Site Generators"></a>Static Site Generators</h2><p>In a nutshell, they seem a bit clunky. I’m currently trying out <a href="https://middlemanapp.com/" target="_blank" rel="external">Middleman</a>, which proved more straightforward to get set up than <a href="http://jekyllrb.com/" target="_blank" rel="external">Jekyll</a>.<br>In both cases, there is an unwelcome surplus of dependency-related issues, requiring specific (old) versions of Ruby and Python.<br>For hot new tech, these static site generators sure don’t play nice with other hot new tech.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/07/15/static-site-generators/" data-id="cilsykkph00425wohipguknxw" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-so-im-making-a-video-game" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -110,59 +250,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/15/so-im-making-a-video-game/" data-id="cilre3yne0045ckohvbtx4lqz" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/15/so-im-making-a-video-game/" data-id="cilsykkpm00455wohas84s05q" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-static-site-generators" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/15/static-site-generators/">Command Patterns &amp; Static Site Generators</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/07/15/static-site-generators/">
-      <time datetime="2015-07-15T07:00:00.000Z" itemprop="datePublished">2015-07-15</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>First off, a snippet from the language processor in StupidRPG. This section handles the command patterns the game can (attempt to) interpret.<br>Examples are included for my own benefit; it became difficult to keep track of how exactly each pattern might present itself within the game.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Pattern list</span></span><br><span class="line"><span class="comment">// Cannot start with a modifier</span></span><br><span class="line"><span class="comment">// In order of priority (highest to lowest):</span></span><br><span class="line">patterns = [</span><br><span class="line">  <span class="string">'VERB'</span>,                             <span class="comment">// inventory</span></span><br><span class="line">  <span class="string">'VERB NOUN'</span>,                        <span class="comment">// eat baby</span></span><br><span class="line">  <span class="string">'VERB MODIFIER'</span>,                    <span class="comment">// saunter west</span></span><br><span class="line">  <span class="string">'VERB MODIFIER NOUN'</span>,               <span class="comment">// get in closet</span></span><br><span class="line">  <span class="string">'VERB NOUN MODIFIER NOUN'</span>,          <span class="comment">// attack goblin with hammer</span></span><br><span class="line">  <span class="string">'VERB MODIFIER MODIFIER NOUN'</span>,      <span class="comment">// look north through telescope</span></span><br><span class="line">  <span class="string">'VERB MODIFIER NOUN MODIFIER NOUN'</span>, <span class="comment">// look at bob through telescope</span></span><br><span class="line">  <span class="comment">// Overflow patterns</span></span><br><span class="line">  <span class="string">'VERB MODIFIER NOUN MODIFIER TEXT'</span>, <span class="comment">// talk to goblin about greatest fears</span></span><br><span class="line">  <span class="string">'VERB MODIFIER MODIFIER TEXT'</span>,      <span class="comment">// look north through telescope saucily</span></span><br><span class="line">  <span class="string">'VERB NOUN MODIFIER TEXT'</span>,          <span class="comment">// ask bob about back pain</span></span><br><span class="line">  <span class="string">'VERB MODIFIER TEXT'</span>                <span class="comment">// talk about floops</span></span><br><span class="line">];</span><br></pre></td></tr></table></figure>
-<h2 id="Static_Site_Generators"><a href="#Static_Site_Generators" class="headerlink" title="Static Site Generators"></a>Static Site Generators</h2><p>In a nutshell, they seem a bit clunky. I’m currently trying out <a href="https://middlemanapp.com/" target="_blank" rel="external">Middleman</a>, which proved more straightforward to get set up than <a href="http://jekyllrb.com/" target="_blank" rel="external">Jekyll</a>.<br>In both cases, there is an unwelcome surplus of dependency-related issues, requiring specific (old) versions of Ruby and Python.<br>For hot new tech, these static site generators sure don’t play nice with other hot new tech.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/15/static-site-generators/" data-id="cilre3yn80042ckohdub8zt9d" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
-
     </footer>
   </div>
   
