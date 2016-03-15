@@ -8,8 +8,37 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Tue, 15 Mar 2016 05:08:07 GMT</pubDate>
+    <pubDate>Tue, 15 Mar 2016 08:01:48 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.03.14</title>
+      <link>http://timberjaw.github.io/2016/03/14/Daily-Update-2016-03-14/</link>
+      <guid>http://timberjaw.github.io/2016/03/14/Daily-Update-2016-03-14/</guid>
+      <pubDate>Mon, 14 Mar 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Pie day!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Significant refactoring of the NLP to use an action stack. Needed to
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Pie day!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Significant refactoring of the NLP to use an action stack. Needed to preserve original action data when an implicit action is triggered.&lt;/li&gt;
+&lt;li&gt;Got doors and locks working (mostly). Needs some visibility/accessibility work for the target location, since currently objects are only visible in their primary location.&lt;/li&gt;
+&lt;li&gt;Added thermal system to support ice key quest. Prologue is officially playable end-to-end in its current state.&lt;/li&gt;
+&lt;li&gt;Added list (array) support for ‘in location’ checks in rules.&lt;/li&gt;
+&lt;li&gt;Fixed combat actions to use new Action object.&lt;/li&gt;
+&lt;li&gt;Fixed open/close actions to use new Action object.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/03/14/Daily-Update-2016-03-14/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.03.13</title>
@@ -433,24 +462,6 @@ LunarLocale {
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/02/24/Daily-Update-2016-02-24/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.02.23</title>
-      <link>http://timberjaw.github.io/2016/02/23/Daily-Update-2016-02-23/</link>
-      <guid>http://timberjaw.github.io/2016/02/23/Daily-Update-2016-02-23/</guid>
-      <pubDate>Wed, 24 Feb 2016 02:40:08 GMT</pubDate>
-      <description>
-      
-        &lt;img src=&quot;/2016/02/23/Daily-Update-2016-02-23/Map-ActI.png&quot; alt=&quot;Map of second area&quot; title=&quot;Map of second area&quot;&gt;
-
-      
-      </description>
-      
-      <content:encoded>&lt;img src=&quot;/2016/02/23/Daily-Update-2016-02-23/Map-ActI.png&quot; alt=&quot;Map of second area&quot; title=&quot;Map of second area&quot;&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/02/23/Daily-Update-2016-02-23/#disqus_thread</comments>
     </item>
     
   </channel>
