@@ -8,8 +8,45 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Tue, 15 Mar 2016 08:01:48 GMT</pubDate>
+    <pubDate>Wed, 16 Mar 2016 04:13:11 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.03.15</title>
+      <link>http://timberjaw.github.io/2016/03/15/Daily-Update-2016-03-15/</link>
+      <guid>http://timberjaw.github.io/2016/03/15/Daily-Update-2016-03-15/</guid>
+      <pubDate>Wed, 16 Mar 2016 04:13:11 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Prettified quest outputs using box handler.&lt;/li&gt;
+&lt;li&gt;Made player input stand out mor
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Prettified quest outputs using box handler.&lt;/li&gt;
+&lt;li&gt;Made player input stand out more.&lt;/li&gt;
+&lt;li&gt;Fixed wyrmling onTick running twice (wasn’t checking System, wyrmling belongs to two).&lt;/li&gt;
+&lt;li&gt;Fixed bug where certain queued outputs wouldn’t get displayed until the beginning of the next tick.&lt;/li&gt;
+&lt;li&gt;Fixed “New Quest” output displaying before action output in some cases.&lt;/li&gt;
+&lt;li&gt;Cleaned up chamber sequence and ending.&lt;/li&gt;
+&lt;li&gt;Creepified black box entry.&lt;/li&gt;
+&lt;li&gt;Added visibility support for objects in multiple locations.&lt;/li&gt;
+&lt;li&gt;Improved key handling of action overrides on entities.&lt;/li&gt;
+&lt;li&gt;Added temperature feedback for hot springs.&lt;/li&gt;
+&lt;li&gt;Fixed internal rules with no output canceling other rules.&lt;/li&gt;
+&lt;li&gt;Fixed chamber entrance sequence not working.&lt;/li&gt;
+&lt;li&gt;Added prologue outro.&lt;/li&gt;
+&lt;li&gt;Cleaned up some sequence timings.&lt;/li&gt;
+&lt;li&gt;Improved handling of input area to make it more obvious when more text is incoming.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/03/15/Daily-Update-2016-03-15/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.03.14</title>
@@ -444,24 +481,6 @@ LunarLocale {
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/02/25/Daily-Update-2016-02-25/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.02.24</title>
-      <link>http://timberjaw.github.io/2016/02/24/Daily-Update-2016-02-24/</link>
-      <guid>http://timberjaw.github.io/2016/02/24/Daily-Update-2016-02-24/</guid>
-      <pubDate>Thu, 25 Feb 2016 05:04:30 GMT</pubDate>
-      <description>
-      
-        &lt;img src=&quot;/2016/02/24/Daily-Update-2016-02-24/Map-ActII.png&quot; alt=&quot;Map of third area&quot; title=&quot;Map of third area&quot;&gt;
-
-      
-      </description>
-      
-      <content:encoded>&lt;img src=&quot;/2016/02/24/Daily-Update-2016-02-24/Map-ActII.png&quot; alt=&quot;Map of third area&quot; title=&quot;Map of third area&quot;&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/02/24/Daily-Update-2016-02-24/#disqus_thread</comments>
     </item>
     
   </channel>
