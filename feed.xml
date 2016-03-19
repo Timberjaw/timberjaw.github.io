@@ -8,8 +8,35 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Thu, 17 Mar 2016 23:27:15 GMT</pubDate>
+    <pubDate>Sat, 19 Mar 2016 07:14:58 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.03.17</title>
+      <link>http://timberjaw.github.io/2016/03/17/Daily-Update-2016-03-17/</link>
+      <guid>http://timberjaw.github.io/2016/03/17/Daily-Update-2016-03-17/</guid>
+      <pubDate>Thu, 17 Mar 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Weekend goals:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Clean up bird feeder segment of ice key puzzle.&lt;/li&gt;
+&lt;li&gt;Give the player more guidance for their overall goal
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Weekend goals:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Clean up bird feeder segment of ice key puzzle.&lt;/li&gt;
+&lt;li&gt;Give the player more guidance for their overall goal and steps along the way.&lt;/li&gt;
+&lt;li&gt;Properly link lair to hot springs location (they’re invisibly linked right now).&lt;/li&gt;
+&lt;li&gt;General bug fixing to get Prologue ready for playtesting.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This small round of playtesting is intended to be somewhat high-level. Is the game fun? Are the objectives clear? Are reasonable commands understood by the game?&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/03/17/Daily-Update-2016-03-17/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.03.16</title>
@@ -454,32 +481,6 @@ LunarLocale {
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/02/27/Daily-Update-2016-02-27/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Aggregation #27</title>
-      <link>http://timberjaw.github.io/2016/02/26/Aggregation-27/</link>
-      <guid>http://timberjaw.github.io/2016/02/26/Aggregation-27/</guid>
-      <pubDate>Sat, 27 Feb 2016 05:23:11 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Sketched out pedestal/water basin puzzle.&lt;/li&gt;
-&lt;li&gt;Wrote up some quest concepts rela
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Sketched out pedestal/water basin puzzle.&lt;/li&gt;
-&lt;li&gt;Wrote up some quest concepts related to the basin mechanic.&lt;/li&gt;
-&lt;li&gt;Played some D&amp;amp;D.&lt;/li&gt;
-&lt;li&gt;Mapped out the (current) entirety of the game world.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/02/26/Aggregation-27/#disqus_thread</comments>
     </item>
     
   </channel>
