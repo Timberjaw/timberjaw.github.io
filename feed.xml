@@ -8,8 +8,33 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Sat, 19 Mar 2016 07:14:58 GMT</pubDate>
+    <pubDate>Sun, 20 Mar 2016 03:45:28 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.03.18</title>
+      <link>http://timberjaw.github.io/2016/03/18/Daily-Update-2016-03-18/</link>
+      <guid>http://timberjaw.github.io/2016/03/18/Daily-Update-2016-03-18/</guid>
+      <pubDate>Fri, 18 Mar 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Altered bird behavior to more directly telegraph what the bird wants.&lt;/li&gt;
+&lt;li&gt;Bird 
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Altered bird behavior to more directly telegraph what the bird wants.&lt;/li&gt;
+&lt;li&gt;Bird now returns to the feeder any time the player is there.&lt;/li&gt;
+&lt;li&gt;Added aliases and tags to draw the player’s attention to the feeder.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/03/18/Daily-Update-2016-03-18/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.03.17</title>
@@ -457,30 +482,6 @@ LunarLocale {
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/02/28/Daily-Update-2016-02-28/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.02.27</title>
-      <link>http://timberjaw.github.io/2016/02/27/Daily-Update-2016-02-27/</link>
-      <guid>http://timberjaw.github.io/2016/02/27/Daily-Update-2016-02-27/</guid>
-      <pubDate>Sat, 27 Feb 2016 08:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added a sword line about the GM.&lt;/li&gt;
-&lt;li&gt;Added a 1-5 ‘rate this game’ command to gi
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added a sword line about the GM.&lt;/li&gt;
-&lt;li&gt;Added a 1-5 ‘rate this game’ command to give the GM some helpful feedback. Also renames the game to reflect the player’s view.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/02/27/Daily-Update-2016-02-27/#disqus_thread</comments>
     </item>
     
   </channel>
