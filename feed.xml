@@ -8,8 +8,32 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Sun, 20 Mar 2016 03:45:28 GMT</pubDate>
+    <pubDate>Mon, 21 Mar 2016 07:06:47 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.03.19</title>
+      <link>http://timberjaw.github.io/2016/03/19/Daily-Update-2016-03-19/</link>
+      <guid>http://timberjaw.github.io/2016/03/19/Daily-Update-2016-03-19/</guid>
+      <pubDate>Sat, 19 Mar 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Busy day, small update.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added verbiage for passages from hot springs: back to
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Busy day, small update.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added verbiage for passages from hot springs: back to path and down to lair.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/03/19/Daily-Update-2016-03-19/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.03.18</title>
@@ -458,30 +482,6 @@ LunarLocale {
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/02/29/Daily-Update-2016-02-29/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.02.28</title>
-      <link>http://timberjaw.github.io/2016/02/28/Daily-Update-2016-02-28/</link>
-      <guid>http://timberjaw.github.io/2016/02/28/Daily-Update-2016-02-28/</guid>
-      <pubDate>Sun, 28 Feb 2016 08:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Fixed bug with text rules with multiple text items.&lt;/li&gt;
-&lt;li&gt;Tried to set up a Twitt
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Fixed bug with text rules with multiple text items.&lt;/li&gt;
-&lt;li&gt;Tried to set up a Twitter for the rainbow sword, but the good names were taken. Oh well.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/02/28/Daily-Update-2016-02-28/#disqus_thread</comments>
     </item>
     
   </channel>
