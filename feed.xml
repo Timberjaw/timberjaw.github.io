@@ -8,8 +8,26 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Mon, 21 Mar 2016 07:06:47 GMT</pubDate>
+    <pubDate>Tue, 22 Mar 2016 05:22:40 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.03.20</title>
+      <link>http://timberjaw.github.io/2016/03/20/Daily-Update-2016-03-20/</link>
+      <guid>http://timberjaw.github.io/2016/03/20/Daily-Update-2016-03-20/</guid>
+      <pubDate>Sun, 20 Mar 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Think it’s ready for a technical playtest. Just gotta let it go.&lt;/p&gt;
+
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Think it’s ready for a technical playtest. Just gotta let it go.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/03/20/Daily-Update-2016-03-20/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.03.19</title>
@@ -463,25 +481,6 @@ LunarLocale {
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/03/01/House-Hunting-1/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.02.29</title>
-      <link>http://timberjaw.github.io/2016/02/29/Daily-Update-2016-02-29/</link>
-      <guid>http://timberjaw.github.io/2016/02/29/Daily-Update-2016-02-29/</guid>
-      <pubDate>Mon, 29 Feb 2016 08:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Leap day! Went out for some leap day festivities with friends.&lt;/p&gt;
-&lt;p&gt;Also learned a few things about managing subnets and cache clusters
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Leap day! Went out for some leap day festivities with friends.&lt;/p&gt;
-&lt;p&gt;Also learned a few things about managing subnets and cache clusters on AWS.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/02/29/Daily-Update-2016-02-29/#disqus_thread</comments>
     </item>
     
   </channel>
