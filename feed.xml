@@ -8,8 +8,59 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Wed, 23 Mar 2016 02:04:56 GMT</pubDate>
+    <pubDate>Wed, 23 Mar 2016 02:32:35 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.03.22</title>
+      <link>http://timberjaw.github.io/2016/03/22/Daily-Update-2016-03-22/</link>
+      <guid>http://timberjaw.github.io/2016/03/22/Daily-Update-2016-03-22/</guid>
+      <pubDate>Wed, 23 Mar 2016 02:32:35 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Notes from Technical Playtest 3.22:&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Unhandled_Actions&quot;&gt;&lt;a href=&quot;#Unhandled_Actions&quot; class=&quot;headerlink&quot; title
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Notes from Technical Playtest 3.22:&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Unhandled_Actions&quot;&gt;&lt;a href=&quot;#Unhandled_Actions&quot; class=&quot;headerlink&quot; title=&quot;Unhandled Actions&quot;&gt;&lt;/a&gt;Unhandled Actions&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Pick up ‘that sword’&lt;/li&gt;
+&lt;li&gt;Brandish sword / hold (wield) sword / swing sword&lt;/li&gt;
+&lt;li&gt;Slide down (hill slide)&lt;/li&gt;
+&lt;li&gt;Talk to Wyrmling&lt;/li&gt;
+&lt;li&gt;Talk to Troglodyte&lt;/li&gt;
+&lt;li&gt;Climb ladder / climb up&lt;/li&gt;
+&lt;li&gt;Fill bird feeder / feed birds&lt;/li&gt;
+&lt;li&gt;Follow sound (of water)&lt;/li&gt;
+&lt;li&gt;Read paper (scrap)&lt;/li&gt;
+&lt;li&gt;Talk to Jane / Jack&lt;/li&gt;
+&lt;li&gt;Smell berries / flowers&lt;/li&gt;
+&lt;li&gt;‘hello’ / ‘say hello’ / ‘talk’ (contextual actions without target)&lt;/li&gt;
+&lt;li&gt;‘go to location’&lt;/li&gt;
+&lt;li&gt;Enter cave (alias for n / in)&lt;/li&gt;
+&lt;li&gt;Look at hot spring&lt;/li&gt;
+&lt;li&gt;Go back&lt;/li&gt;
+&lt;li&gt;Climb vines&lt;/li&gt;
+&lt;li&gt;‘leave object’ (alias for drop)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Bugs&quot;&gt;&lt;a href=&quot;#Bugs&quot; class=&quot;headerlink&quot; title=&quot;Bugs&quot;&gt;&lt;/a&gt;Bugs&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Iron gate doesn’t prevent movement&lt;/li&gt;
+&lt;li&gt;Music stopping / resuming on its own&lt;/li&gt;
+&lt;li&gt;Immortal bird&lt;/li&gt;
+&lt;li&gt;Chest can’t be picked up and can be picked up&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;General_Comments_/_Issues&quot;&gt;&lt;a href=&quot;#General_Comments_/_Issues&quot; class=&quot;headerlink&quot; title=&quot;General Comments / Issues&quot;&gt;&lt;/a&gt;General Comments / Issues&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;GM output too slow in some cases&lt;/li&gt;
+&lt;li&gt;Object interactions don’t stand out enough&lt;/li&gt;
+&lt;li&gt;Telescope interaction non-obvious&lt;/li&gt;
+&lt;li&gt;Ask sword about X non-obvious&lt;/li&gt;
+&lt;li&gt;General lack of guidance&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/03/22/Daily-Update-2016-03-22/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.03.21</title>
@@ -468,24 +519,6 @@ LunarLocale {
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/03/03/Daily-Update-2016-03-03/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>9</title>
-      <link>http://timberjaw.github.io/2016/03/02/9/</link>
-      <guid>http://timberjaw.github.io/2016/03/02/9/</guid>
-      <pubDate>Thu, 03 Mar 2016 06:16:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;9 year anniversary today. Time flies when you’re having fun.&lt;/p&gt;
-
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;9 year anniversary today. Time flies when you’re having fun.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/03/02/9/#disqus_thread</comments>
     </item>
     
   </channel>
