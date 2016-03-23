@@ -60,6 +60,61 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-breaking-the-game-mods-hacks-and-cheats" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/24/breaking-the-game-mods-hacks-and-cheats/">Breaking the Game: Mods, Hacks, and Cheats</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/07/24/breaking-the-game-mods-hacks-and-cheats/">
+      <time datetime="2015-07-24T07:00:00.000Z" itemprop="datePublished">2015-07-24</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>StupidRPG is very, very modular. Most of the core functionality of the engine and the main campaign are implemented in modules. Examples of modules include: combat (fighting things), social (talking to things), containers (things that open and close), darkness (whether things are visible based on available light), etc. There are a few reasons for this structure:</p>
+<ul>
+<li>The engine is (mostly) reusable for a completely different type of text adventure</li>
+<li>The game/engine is relatively straightforward to mod</li>
+<li>I thought it would be a fun challenge</li>
+</ul>
+<p>Long-term, I’d like to expand SRPG to include some level of multiplayer. This has been a driving factor in the architecture of the ECS (Entity-Component-System) library. The ‘player’ is not particularly special in the architecture, by design. NPCs possess a similar ability to influence the game world/state, and Player 2 has little technical distinction from an NPC. By extension, within the context of the engine, the player is just another entity imposing its will on the game state. This is useful.</p>
+<p>SRPG has no protection against source modification. The game runs entirely in Javascript in the player’s browser. As such, it is very hackable, moddable, and breakable. This applies to both the singleplayer and multiplayer experience.</p>
+<p>I’m ok with this.</p>
+<p>I spent a bit of time with <a href="http://orteil.dashnet.org/cookieclicker/" target="_blank" rel="external">Cookie Clicker</a>. Hacker/cheater that I am, I eventually discovered the built-in variables and functions for unlocking content, maximizing stats, and generally breaking the game. This is Not A Problem in Cookie Clicker because the game is single player only. If you ‘ruin’ the experience, you’re only ruining it for yourself. I have the same mentality about SRPG, as I see only two valid use cases: playing alone, or playing with friends. In either case, if you want to mess with the engine or content, go nuts.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/07/24/breaking-the-game-mods-hacks-and-cheats/" data-id="cim47jnpv007ckwoh0qcaerz6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-stupidrpg-command-interrupts" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -124,7 +179,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/23/stupidrpg-command-interrupts/" data-id="cim2z7jdj003u8sohx55dwgaw" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/23/stupidrpg-command-interrupts/" data-id="cim47jnks003ukwohx5qvc99r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -177,7 +232,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/22/post-schedule/" data-id="cim2z7jf8004o8soh7ifx30mu" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/22/post-schedule/" data-id="cim47jnmb004okwoh36o5slhw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -226,7 +281,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/21/stupidrpg-the-gm/" data-id="cim2z7jco00308sohebzhcift" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/21/stupidrpg-the-gm/" data-id="cim47jnk10030kwoh5q1ftt75" class="article-share-link">Share</a>
       
       
     </footer>
@@ -285,7 +340,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/20/weekly-update-1/" data-id="cim2z7jb300238soh6x8u0rrm" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/20/weekly-update-1/" data-id="cim47jnip0023kwohr0x5nc3q" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -335,7 +390,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/19/dungeons-dragons/" data-id="cim2z7jgd005a8soh7bbao8k8" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/19/dungeons-dragons/" data-id="cim47jnne005akwohnyj5f5iw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -414,7 +469,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/18/stupidrpg-the-black-box/" data-id="cim2z7jcp00318sohvqye00d8" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/18/stupidrpg-the-black-box/" data-id="cim47jnk20031kwohjam9x2n6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -490,7 +545,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/17/tools-of-the-trade/" data-id="cim2z7jbn002a8sohdwtabaqa" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/17/tools-of-the-trade/" data-id="cim47jnj6002akwohddd844fe" class="article-share-link">Share</a>
       
       
     </footer>
@@ -578,7 +633,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/16/stupidrpg-dialogue-trees/" data-id="cim2z7jdi003s8sohog33s5to" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/16/stupidrpg-dialogue-trees/" data-id="cim47jnkr003skwohf0te4os4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -641,59 +696,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/15/so-im-making-a-video-game/" data-id="cim2z7jdy00458soh89mhgk14" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/15/so-im-making-a-video-game/" data-id="cim47jnl50045kwohek7q56ug" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-static-site-generators" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/15/static-site-generators/">Command Patterns &amp; Static Site Generators</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/07/15/static-site-generators/">
-      <time datetime="2015-07-15T07:00:00.000Z" itemprop="datePublished">2015-07-15</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>First off, a snippet from the language processor in StupidRPG. This section handles the command patterns the game can (attempt to) interpret.<br>Examples are included for my own benefit; it became difficult to keep track of how exactly each pattern might present itself within the game.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Pattern list</span></span><br><span class="line"><span class="comment">// Cannot start with a modifier</span></span><br><span class="line"><span class="comment">// In order of priority (highest to lowest):</span></span><br><span class="line">patterns = [</span><br><span class="line">  <span class="string">'VERB'</span>,                             <span class="comment">// inventory</span></span><br><span class="line">  <span class="string">'VERB NOUN'</span>,                        <span class="comment">// eat baby</span></span><br><span class="line">  <span class="string">'VERB MODIFIER'</span>,                    <span class="comment">// saunter west</span></span><br><span class="line">  <span class="string">'VERB MODIFIER NOUN'</span>,               <span class="comment">// get in closet</span></span><br><span class="line">  <span class="string">'VERB NOUN MODIFIER NOUN'</span>,          <span class="comment">// attack goblin with hammer</span></span><br><span class="line">  <span class="string">'VERB MODIFIER MODIFIER NOUN'</span>,      <span class="comment">// look north through telescope</span></span><br><span class="line">  <span class="string">'VERB MODIFIER NOUN MODIFIER NOUN'</span>, <span class="comment">// look at bob through telescope</span></span><br><span class="line">  <span class="comment">// Overflow patterns</span></span><br><span class="line">  <span class="string">'VERB MODIFIER NOUN MODIFIER TEXT'</span>, <span class="comment">// talk to goblin about greatest fears</span></span><br><span class="line">  <span class="string">'VERB MODIFIER MODIFIER TEXT'</span>,      <span class="comment">// look north through telescope saucily</span></span><br><span class="line">  <span class="string">'VERB NOUN MODIFIER TEXT'</span>,          <span class="comment">// ask bob about back pain</span></span><br><span class="line">  <span class="string">'VERB MODIFIER TEXT'</span>                <span class="comment">// talk about floops</span></span><br><span class="line">];</span><br></pre></td></tr></table></figure>
-<h2 id="Static_Site_Generators"><a href="#Static_Site_Generators" class="headerlink" title="Static Site Generators"></a>Static Site Generators</h2><p>In a nutshell, they seem a bit clunky. I’m currently trying out <a href="https://middlemanapp.com/" target="_blank" rel="external">Middleman</a>, which proved more straightforward to get set up than <a href="http://jekyllrb.com/" target="_blank" rel="external">Jekyll</a>.<br>In both cases, there is an unwelcome surplus of dependency-related issues, requiring specific (old) versions of Ruby and Python.<br>For hot new tech, these static site generators sure don’t play nice with other hot new tech.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/15/static-site-generators/" data-id="cim2z7jdu00428soh6rhh1uoh" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
-
     </footer>
   </div>
   
@@ -703,7 +708,7 @@
 
     
       <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/page/24/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="page-number" href="/page/24/">24</a><span class="page-number current">25</span>
+        <a class="extend prev" rel="prev" href="/page/24/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="page-number" href="/page/24/">24</a><span class="page-number current">25</span><a class="page-number" href="/page/26/">26</a><a class="extend next" rel="next" href="/page/26/">Next &raquo;</a>
       </nav>
     </section>
       

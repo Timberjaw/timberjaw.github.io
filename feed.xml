@@ -8,8 +8,31 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Tue, 22 Mar 2016 05:22:40 GMT</pubDate>
+    <pubDate>Wed, 23 Mar 2016 02:04:56 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.03.21</title>
+      <link>http://timberjaw.github.io/2016/03/21/Daily-Update-2016-03-21/</link>
+      <guid>http://timberjaw.github.io/2016/03/21/Daily-Update-2016-03-21/</guid>
+      <pubDate>Mon, 21 Mar 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Finished critical bug fixes and cleanup for technical playtest. Very strictly kept to only items that were breaking the game. It’s very d
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Finished critical bug fixes and cleanup for technical playtest. Very strictly kept to only items that were breaking the game. It’s very difficult not to get into bigger changes.&lt;/p&gt;
+&lt;p&gt;Notable changes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cleaned up bird output.&lt;/li&gt;
+&lt;li&gt;Added support for full HTML transcript saving (was previously cut off because output queue trims items as they disappear off the top).&lt;/li&gt;
+&lt;li&gt;Made it impossible to not have the rainbow sword.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/03/21/Daily-Update-2016-03-21/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.03.20</title>
@@ -463,24 +486,6 @@ LunarLocale {
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/03/02/9/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>House Hunting</title>
-      <link>http://timberjaw.github.io/2016/03/01/House-Hunting-1/</link>
-      <guid>http://timberjaw.github.io/2016/03/01/House-Hunting-1/</guid>
-      <pubDate>Tue, 01 Mar 2016 08:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Rough day. House purchase didn’t work out, back to hunting.&lt;/p&gt;
-
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Rough day. House purchase didn’t work out, back to hunting.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/03/01/House-Hunting-1/#disqus_thread</comments>
     </item>
     
   </channel>
