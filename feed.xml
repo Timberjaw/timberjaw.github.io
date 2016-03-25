@@ -8,8 +8,26 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Thu, 24 Mar 2016 05:54:38 GMT</pubDate>
+    <pubDate>Fri, 25 Mar 2016 23:38:13 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Out of Town</title>
+      <link>http://timberjaw.github.io/2016/03/24/Out-of-Town/</link>
+      <guid>http://timberjaw.github.io/2016/03/24/Out-of-Town/</guid>
+      <pubDate>Thu, 24 Mar 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Will be AFK until Sunday morning. I’ll be writing posts but won’t upload them until then. Friday, Saturday and Sunday will go up at the s
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Will be AFK until Sunday morning. I’ll be writing posts but won’t upload them until then. Friday, Saturday and Sunday will go up at the same time.&lt;/p&gt;
+&lt;p&gt;In related news, I’m aiming to have the second technical playtest build completed on Sunday. If that goes well I can get back into content creation to further flesh out the Prologue.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/03/24/Out-of-Town/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.03.23</title>
@@ -499,35 +517,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/03/05/Daily-Update-2016-03-05/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.03.04</title>
-      <link>http://timberjaw.github.io/2016/03/04/Daily-Update-2016-03-04/</link>
-      <guid>http://timberjaw.github.io/2016/03/04/Daily-Update-2016-03-04/</guid>
-      <pubDate>Fri, 04 Mar 2016 08:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Wrote up some details on moon locations, which use a different method of navigation (coordinate and distance-based). Requires some specia
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Wrote up some details on moon locations, which use a different method of navigation (coordinate and distance-based). Requires some special handling of boundaries and pathfinding (e.g. you can’t walk up a cliff).&lt;/p&gt;
-&lt;p&gt;Something like:&lt;/p&gt;
-&lt;pre&gt;
-LunarLocale {
-    int x, // Canonical X coordinate
-    int y, // Canonical Y coordinate
-    rect bounds, // Rectangle defining the bounds (size) of the locale
-    bool blocksMovement, // Whether the bounds block movement through it
-    int visibleRange, // How far away the locale is
-    bool fastTravelAllowed, // Whether the player can fast travel to the location
-    bool discovered, // Whether the player has discovered the location
-}
-&lt;/pre&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/03/04/Daily-Update-2016-03-04/#disqus_thread</comments>
     </item>
     
   </channel>
