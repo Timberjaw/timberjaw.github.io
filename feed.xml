@@ -8,8 +8,50 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Fri, 25 Mar 2016 23:38:13 GMT</pubDate>
+    <pubDate>Mon, 28 Mar 2016 00:37:35 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.03.26</title>
+      <link>http://timberjaw.github.io/2016/03/26/Daily-Update-2016-03-26/</link>
+      <guid>http://timberjaw.github.io/2016/03/26/Daily-Update-2016-03-26/</guid>
+      <pubDate>Sat, 26 Mar 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added smell support for locations.&lt;/li&gt;
+&lt;li&gt;Added smells for: blue flowers, brambles
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added smell support for locations.&lt;/li&gt;
+&lt;li&gt;Added smells for: blue flowers, brambles, ferns, spores, black box, musty cave, sawdust, spider, vines, dust, moss, bird, Bob, player, troglodyte, wyrmling, red berries.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/03/26/Daily-Update-2016-03-26/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Daily Update 2016.03.25</title>
+      <link>http://timberjaw.github.io/2016/03/25/Daily-Update-2016-03-25/</link>
+      <guid>http://timberjaw.github.io/2016/03/25/Daily-Update-2016-03-25/</guid>
+      <pubDate>Fri, 25 Mar 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Added a ‘smell’ command to SRPG, for those who like to dawdle and inspect the flowers.&lt;/p&gt;
+
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Added a ‘smell’ command to SRPG, for those who like to dawdle and inspect the flowers.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/03/25/Daily-Update-2016-03-25/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Out of Town</title>
@@ -481,42 +523,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/03/07/Daily-Update-2016-03-07/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.03.06</title>
-      <link>http://timberjaw.github.io/2016/03/06/Daily-Update-2016-03-06/</link>
-      <guid>http://timberjaw.github.io/2016/03/06/Daily-Update-2016-03-06/</guid>
-      <pubDate>Mon, 07 Mar 2016 05:51:06 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Mapped out the new, bridge-connected zones, which includes 18 new locations and a series of tests for the adventurer. They’ll need brains
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Mapped out the new, bridge-connected zones, which includes 18 new locations and a series of tests for the adventurer. They’ll need brains, brawn, and initiative, but not always where they expect.&lt;/p&gt;
-&lt;p&gt;There’s also a Spider Room, which is exactly what it sounds like.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/03/06/Daily-Update-2016-03-06/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.03.05</title>
-      <link>http://timberjaw.github.io/2016/03/05/Daily-Update-2016-03-05/</link>
-      <guid>http://timberjaw.github.io/2016/03/05/Daily-Update-2016-03-05/</guid>
-      <pubDate>Sat, 05 Mar 2016 08:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Working on an expansion for the starting area, involving a bridge that travels along a stream. Connected areas include an underground cha
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Working on an expansion for the starting area, involving a bridge that travels along a stream. Connected areas include an underground chasm and a series of other bridges.&lt;/p&gt;
-&lt;p&gt;Also added a couple lines for the sword.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/03/05/Daily-Update-2016-03-05/#disqus_thread</comments>
     </item>
     
   </channel>
