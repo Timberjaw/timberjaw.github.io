@@ -8,8 +8,36 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Mon, 28 Mar 2016 00:37:35 GMT</pubDate>
+    <pubDate>Tue, 29 Mar 2016 06:23:46 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.03.27</title>
+      <link>http://timberjaw.github.io/2016/03/27/Daily-Update-2016-03-27/</link>
+      <guid>http://timberjaw.github.io/2016/03/27/Daily-Update-2016-03-27/</guid>
+      <pubDate>Sun, 27 Mar 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added ‘that sword alias for sword.&lt;/li&gt;
+&lt;li&gt;Added ‘brandish’ verb to wave sword arou
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added ‘that sword alias for sword.&lt;/li&gt;
+&lt;li&gt;Added ‘brandish’ verb to wave sword around.&lt;/li&gt;
+&lt;li&gt;Added ‘slide down’ command in hill slide location.&lt;/li&gt;
+&lt;li&gt;Added climb [up/down] [object] verb.&lt;/li&gt;
+&lt;li&gt;Added ‘leave’ alias for ‘put down’.&lt;/li&gt;
+&lt;li&gt;Added ‘fill bird feeder’ rule.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/03/27/Daily-Update-2016-03-27/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.03.26</title>
@@ -503,26 +531,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/03/08/Daily-Update-2016-03-08/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.03.07</title>
-      <link>http://timberjaw.github.io/2016/03/07/Daily-Update-2016-03-07/</link>
-      <guid>http://timberjaw.github.io/2016/03/07/Daily-Update-2016-03-07/</guid>
-      <pubDate>Mon, 07 Mar 2016 08:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Here’s what I’ve got so far with the moving bridge.&lt;/p&gt;
-&lt;img src=&quot;/2016/03/07/Daily-Update-2016-03-07/Map-Bridge.png&quot; alt=&quot;A Map of Some 
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Here’s what I’ve got so far with the moving bridge.&lt;/p&gt;
-&lt;img src=&quot;/2016/03/07/Daily-Update-2016-03-07/Map-Bridge.png&quot; alt=&quot;A Map of Some Bridge&quot; title=&quot;A Map of Some Bridge&quot;&gt;
-&lt;p&gt;The GM doesn’t know it moves, but the sword does.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/03/07/Daily-Update-2016-03-07/#disqus_thread</comments>
     </item>
     
   </channel>
