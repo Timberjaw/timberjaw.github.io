@@ -8,8 +8,36 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Tue, 29 Mar 2016 06:23:46 GMT</pubDate>
+    <pubDate>Tue, 29 Mar 2016 22:33:31 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.03.28</title>
+      <link>http://timberjaw.github.io/2016/03/28/Daily-Update-2016-03-28/</link>
+      <guid>http://timberjaw.github.io/2016/03/28/Daily-Update-2016-03-28/</guid>
+      <pubDate>Mon, 28 Mar 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Signed on house, now we wait. We’ve been living in apartments for the last 10 years, so I’m pretty excited about this change.&lt;/p&gt;
+&lt;p&gt;In S
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Signed on house, now we wait. We’ve been living in apartments for the last 10 years, so I’m pretty excited about this change.&lt;/p&gt;
+&lt;p&gt;In SRPG news, I’m trying to figure out two new components: pathfinding and positional audio.&lt;/p&gt;
+&lt;h2 id=&quot;Positional_Audio&quot;&gt;&lt;a href=&quot;#Positional_Audio&quot; class=&quot;headerlink&quot; title=&quot;Positional Audio&quot;&gt;&lt;/a&gt;Positional Audio&lt;/h2&gt;&lt;p&gt;This is simply the propagation of sound (in text form, of course) from a location to nearby locations. I’ve implemented a couple cases by hand by embedding sound descriptions in each location. This approach isn’t very sustainable/flexible, however. Some sounds aren’t always active, and some regions have a large number of locations in hearing range.&lt;/p&gt;
+&lt;p&gt;Instead, I’d like to build something more dynamic. There are a couple options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a sound component, assign it to sound entities (like scenery) and make them ‘visible’ from each location. Pros: neatly fits into the current ECS; altering/disabling the sound only has to be done in one place. Cons: sound has to be manually linked to each location.&lt;/li&gt;
+&lt;li&gt;Assign coordinates to each location and actually calculate the sound falloff based on distance. Sounds emit at a specific coordinate. Pros: no hard linking of sounds to locations; easily handles altered sounds at multiple range increments. Cons: math?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I’m leaning toward the latter because it seems like overkill.&lt;/p&gt;
+&lt;h2 id=&quot;Pathfinding&quot;&gt;&lt;a href=&quot;#Pathfinding&quot; class=&quot;headerlink&quot; title=&quot;Pathfinding&quot;&gt;&lt;/a&gt;Pathfinding&lt;/h2&gt;&lt;p&gt;Right now there’s one creature that actually moves around: the bird. It follows a preset route with a couple cheats (basically teleporting when the player isn’t looking). This isn’t going to work well for NPCs that need more dynamic behaviors. For example, the Mayor needs to go to work in the morning, investigate a disturbance at the tavern at mid-day, and find time for a meal break before going home.&lt;/p&gt;
+&lt;p&gt;That means I need proper pathfinding. Fortunately, locations in the game already form a collection of linked nodes, and simple algorithms like A* should suffice. The NPC’s AI will select a destination, and on each tick they’ll move one step closer along the computed route. Things like doors and other barriers will pose a challenge.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/03/28/Daily-Update-2016-03-28/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.03.27</title>
@@ -20,14 +48,14 @@
       
         &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Added ‘that sword alias for sword.&lt;/li&gt;
-&lt;li&gt;Added ‘brandish’ verb to wave sword arou
+&lt;li&gt;Added ‘that sword’ alias for sword.&lt;/li&gt;
+&lt;li&gt;Added ‘brandish’ verb to wave sword aro
       
       </description>
       
       <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Added ‘that sword alias for sword.&lt;/li&gt;
+&lt;li&gt;Added ‘that sword’ alias for sword.&lt;/li&gt;
 &lt;li&gt;Added ‘brandish’ verb to wave sword around.&lt;/li&gt;
 &lt;li&gt;Added ‘slide down’ command in hill slide location.&lt;/li&gt;
 &lt;li&gt;Added climb [up/down] [object] verb.&lt;/li&gt;
@@ -506,31 +534,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/03/09/Daily-Update-2016-03-09/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.03.08</title>
-      <link>http://timberjaw.github.io/2016/03/08/Daily-Update-2016-03-08/</link>
-      <guid>http://timberjaw.github.io/2016/03/08/Daily-Update-2016-03-08/</guid>
-      <pubDate>Tue, 08 Mar 2016 08:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Lots of spoilers in this post. I’m going to quickly go through some of the new locations and their impact on the beginning of the game.&lt;/
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Lots of spoilers in this post. I’m going to quickly go through some of the new locations and their impact on the beginning of the game.&lt;/p&gt;
-&lt;h2 id=&quot;The_Bridge&quot;&gt;&lt;a href=&quot;#The_Bridge&quot; class=&quot;headerlink&quot; title=&quot;The Bridge&quot;&gt;&lt;/a&gt;The Bridge&lt;/h2&gt;&lt;p&gt;The bridge spans either one stream at all points, or many streams at single points. It’s left to the player to decide which interpretation they prefer. In either case, turning the wheel on the bridge causes it to shift location. The GM isn’t sure what to make of it.&lt;/p&gt;
-&lt;h2 id=&quot;Circle&quot;&gt;&lt;a href=&quot;#Circle&quot; class=&quot;headerlink&quot; title=&quot;Circle&quot;&gt;&lt;/a&gt;Circle&lt;/h2&gt;&lt;p&gt;A mysterious circle of flowers and mushrooms in the woods. Purpose unknown, probably some type of druid nonsense.&lt;/p&gt;
-&lt;h2 id=&quot;Alcove&quot;&gt;&lt;a href=&quot;#Alcove&quot; class=&quot;headerlink&quot; title=&quot;Alcove&quot;&gt;&lt;/a&gt;Alcove&lt;/h2&gt;&lt;p&gt;A small resting place carved into the rock at the entrance to the Underground. No one has used it in a long time. I’ll come back to that.&lt;/p&gt;
-&lt;h2 id=&quot;Pier__26amp_3B_The_Split&quot;&gt;&lt;a href=&quot;#Pier__26amp_3B_The_Split&quot; class=&quot;headerlink&quot; title=&quot;Pier &amp;amp; The Split&quot;&gt;&lt;/a&gt;Pier &amp;amp; The Split&lt;/h2&gt;&lt;p&gt;An ocean pier on a beach, overlooked by a cracked mountain. The stream flows from above and ends in the sea. I don’t have a good justification for the pier yet; just seemed like a change of pace.&lt;/p&gt;
-&lt;h2 id=&quot;Bridge_Ends&quot;&gt;&lt;a href=&quot;#Bridge_Ends&quot; class=&quot;headerlink&quot; title=&quot;Bridge Ends&quot;&gt;&lt;/a&gt;Bridge Ends&lt;/h2&gt;&lt;p&gt;When the wheel is turned too far, the bridge loops back on itself endlessly. Dizzying but harmless. Probably.&lt;/p&gt;
-&lt;h2 id=&quot;The_Underground&quot;&gt;&lt;a href=&quot;#The_Underground&quot; class=&quot;headerlink&quot; title=&quot;The Underground&quot;&gt;&lt;/a&gt;The Underground&lt;/h2&gt;&lt;p&gt;The underground is, I feel, something SRPG has been missing. Not a dungeon, exactly (though they’re staples of classic RPGs), but close. This area will tie into something later in the game, but I’ll leave that unspoiled for now.&lt;/p&gt;
-&lt;h2 id=&quot;Winding_Stair&quot;&gt;&lt;a href=&quot;#Winding_Stair&quot; class=&quot;headerlink&quot; title=&quot;Winding Stair&quot;&gt;&lt;/a&gt;Winding Stair&lt;/h2&gt;&lt;p&gt;I like Zork. Also stairs are a good way to go up and down.&lt;/p&gt;
-&lt;h2 id=&quot;Great_Hall&quot;&gt;&lt;a href=&quot;#Great_Hall&quot; class=&quot;headerlink&quot; title=&quot;Great Hall&quot;&gt;&lt;/a&gt;Great Hall&lt;/h2&gt;&lt;p&gt;An abandoned room for feasts and parties. Ruined tapestries and scattered tableware indicate a hasty retreat or looting. The hall connects the other three regions of the underground, each of which attempts to teach the player something. I’ll leave those locations for another day, since I only have a vague notion of where I’m going with this.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/03/08/Daily-Update-2016-03-08/#disqus_thread</comments>
     </item>
     
   </channel>
