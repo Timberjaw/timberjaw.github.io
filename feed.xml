@@ -8,8 +8,26 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Tue, 29 Mar 2016 22:33:31 GMT</pubDate>
+    <pubDate>Thu, 31 Mar 2016 00:14:46 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Bird Brained</title>
+      <link>http://timberjaw.github.io/2016/03/29/Bird-Brained/</link>
+      <guid>http://timberjaw.github.io/2016/03/29/Bird-Brained/</guid>
+      <pubDate>Tue, 29 Mar 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;img src=&quot;/2016/03/29/Bird-Brained/Bird-Brain.svg&quot; alt=&quot;The Bird&#39;s Brain&quot; title=&quot;The Bird&#39;s Brain&quot;&gt;
+
+      
+      </description>
+      
+      <content:encoded>&lt;img src=&quot;/2016/03/29/Bird-Brained/Bird-Brain.svg&quot; alt=&quot;The Bird&#39;s Brain&quot; title=&quot;The Bird&#39;s Brain&quot;&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/03/29/Bird-Brained/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.03.28</title>
@@ -516,24 +534,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/03/10/Daily-Update-2016-03-10/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.03.09</title>
-      <link>http://timberjaw.github.io/2016/03/09/Daily-Update-2016-03-09/</link>
-      <guid>http://timberjaw.github.io/2016/03/09/Daily-Update-2016-03-09/</guid>
-      <pubDate>Wed, 09 Mar 2016 08:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Finished an 8-month project at work today. Feels good.&lt;/p&gt;
-
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Finished an 8-month project at work today. Feels good.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/03/09/Daily-Update-2016-03-09/#disqus_thread</comments>
     </item>
     
   </channel>
