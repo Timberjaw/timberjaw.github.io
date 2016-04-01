@@ -60,6 +60,134 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-daily-update-264-2015" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/22/daily-update-264-2015/">Daily Update 264.2015</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/09/22/daily-update-264-2015/">
+      <time datetime="2015-09-22T07:00:00.000Z" itemprop="datePublished">2015-09-22</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><strong>Changes:</strong></p>
+<ul>
+<li>Tested various actions in the forest after the recent refactoring.</li>
+<li>Fixed <code>EAT</code> verb.</li>
+<li>Fixed <code>LOOK IN</code> verb.</li>
+</ul>
+<p><strong>Bugs &amp; Problems:</strong></p>
+<ul>
+<li>Nothing new</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/09/22/daily-update-264-2015/" data-id="cimhbfszs006u8kohnmhckqmg" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-weekly-update-10" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/21/weekly-update-10/">Weekly Update #10</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/09/21/weekly-update-10/">
+      <time datetime="2015-09-21T07:00:00.000Z" itemprop="datePublished">2015-09-21</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Lots of good stuff this week.</p>
+<p><strong>Changelog:</strong></p>
+<ul>
+<li>Added .attribute() handler for Rulebooks. Now I can check the actor (usually the player), location, region, etc attributes, including callback results, and use a variety of comparison operators.</li>
+<li>Fleshed out the Litterbug quest. It now has multiple objectives (some optional), all of which can be completed. The quest has two stages of completion, and appropriate checking for start/end conditions.</li>
+<li>Improved quest objective handling and output.</li>
+<li>Refactored all action (verb) handling to use a standardized data argument rather than an arg list. Has some downsides, but allows me to more easily pass new info to verb callbacks without doing a ton of extra refactoring work every time.</li>
+<li>Added ‘get in/on’ verb for containers/holders.</li>
+<li>Set hot springs to holder so you can go for a soak.</li>
+<li>Added handling for internal Rules (not triggered by user action) so I can apply the rulebook style to lots more things.</li>
+<li>Prototyped context dropdowns for command tags.</li>
+<li>Refactored Verb and Rule handling to chain better, use more consistent parameters and return values. Now uses a standard Action type with common parameters.</li>
+<li>Fixed dialogue trees not working for topics after the first</li>
+<li>Fixed onEnter/onLeave callbacks for Hill Slide and Musty Cave</li>
+</ul>
+<p><strong>Known Issues:</strong></p>
+<ul>
+<li>Nothing new</li>
+</ul>
+<p><strong>Next Up:</strong></p>
+<ul>
+<li>Test recent refactoring</li>
+<li>Add The Twins.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/09/21/weekly-update-10/" data-id="cimhbfssm00208kohqcxehtrx" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-daily-update-262-2015" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -102,7 +230,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/20/daily-update-262-2015/" data-id="cimfj4q2d006wj4oh3qyeqdae" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/20/daily-update-262-2015/" data-id="cimhbfszu006w8koh96w7k46m" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -172,7 +300,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/19/rule-chaining/" data-id="cimfj4pz3004gj4ohuopmsrt6" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/19/rule-chaining/" data-id="cimhbfsw6004g8koh3bcaiado" class="article-share-link">Share</a>
       
       
     </footer>
@@ -226,7 +354,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/18/daily-update-260-2015/" data-id="cimfj4q2e006yj4oh68qkr9wh" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/18/daily-update-260-2015/" data-id="cimhbfszw006y8koh42yayet7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -288,7 +416,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/17/internal-rules-rulebooks/" data-id="cimfj4q02004wj4ohezik5abs" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/17/internal-rules-rulebooks/" data-id="cimhbfsxc004w8koh1595tvmu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -347,7 +475,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/16/daily-update-258-2015/" data-id="cimfj4q2g0070j4oh30famhzn" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/16/daily-update-258-2015/" data-id="cimhbfszy00708kohwzgmmt0m" class="article-share-link">Share</a>
       
       
     </footer>
@@ -405,7 +533,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/15/daily-update-257-2015/" data-id="cimfj4q2h0071j4ohdav2w6fe" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/15/daily-update-257-2015/" data-id="cimhbft0000718koh6o801srk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -480,7 +608,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/14/weekly-update-9/" data-id="cimfj4pua000cj4ohzgoim3d9" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/14/weekly-update-9/" data-id="cimhbfsr4000c8kohp4dj6e35" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -603,131 +731,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/13/the-rulebook/" data-id="cimfj4pwo002fj4oh76nl0adp" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-daily-update-254-2015" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/12/daily-update-254-2015/">Daily Update 254.2015</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/09/12/daily-update-254-2015/">
-      <time datetime="2015-09-12T07:00:00.000Z" itemprop="datePublished">2015-09-12</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>More progress today.</p>
-<p><strong>Changes:</strong></p>
-<ul>
-<li>Switched to Open Sans for better font weight options</li>
-<li>Updated tag styles to include semibold, cursor style and hover</li>
-<li>Updated player output style to be more traditional</li>
-<li>Added a nifty background (experimental) with sunbeams and falling leaves</li>
-<li>Added a new Rule system. It’s expansive, so I’ll go over it in its own post.</li>
-<li>Cleaned up nametag helper to more closely match tag helper</li>
-<li>Added cursor styles for <code>LOOK</code> and <code>TAKE</code> tags</li>
-</ul>
-<p><strong>Bugs &amp; Problems:</strong></p>
-<ul>
-<li>Looking at an invalid thing while using a look alias results in odd output: “I understood everything up until ‘examine bird’” vs “I understood everything up until ‘bird’”. Worked around it with an onBadInput catch, but I’m not completely happy with it.</li>
-<li><p>Experimental background stuff is performance intensive. Should have an option during setup, or disable by default. Need to look into better solutions (canvas?) later rather than CSS/jQuery.</p>
-</li>
-<li><p>Nothing new</p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/12/daily-update-254-2015/" data-id="cimfj4q2i0072j4ohbptqk8cm" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-daily-update-253-2015" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/11/daily-update-253-2015/">Daily Update 253.2015</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/09/11/daily-update-253-2015/">
-      <time datetime="2015-09-11T07:00:00.000Z" itemprop="datePublished">2015-09-11</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>More progress today.</p>
-<p><strong>Changes:</strong></p>
-<ul>
-<li>Added descriptions for lair and wyrmling</li>
-<li>Added missing exit tags for all locations</li>
-<li>Made locationIs() check more flexible</li>
-<li>Fixed exit descriptions in dim clearing</li>
-<li>Fixed exit descriptions in east trail</li>
-<li>Fixed bird chirps not working</li>
-<li>Fixed wyrmling anger</li>
-</ul>
-<p><strong>Bugs &amp; Problems:</strong></p>
-<ul>
-<li>Nothing new</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/11/daily-update-253-2015/" data-id="cimfj4q2k0073j4ohg9vklbfn" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/13/the-rulebook/" data-id="cimhbfsth002f8koh26mdl8fq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -739,7 +743,7 @@
 
     
       <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/page/19/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="page-number" href="/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/page/21/">21</a><a class="page-number" href="/page/22/">22</a><span class="space">&hellip;</span><a class="page-number" href="/page/26/">26</a><a class="extend next" rel="next" href="/page/21/">Next &raquo;</a>
+        <a class="extend prev" rel="prev" href="/page/19/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="page-number" href="/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/page/21/">21</a><a class="page-number" href="/page/22/">22</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/">27</a><a class="extend next" rel="next" href="/page/21/">Next &raquo;</a>
       </nav>
     </section>
       

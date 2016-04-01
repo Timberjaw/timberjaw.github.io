@@ -8,8 +8,48 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Thu, 31 Mar 2016 00:14:46 GMT</pubDate>
+    <pubDate>Fri, 01 Apr 2016 06:14:54 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>House!</title>
+      <link>http://timberjaw.github.io/2016/03/31/House/</link>
+      <guid>http://timberjaw.github.io/2016/03/31/House/</guid>
+      <pubDate>Fri, 01 Apr 2016 06:14:54 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;We have a house now.&lt;/p&gt;
+&lt;p&gt;Weird.&lt;/p&gt;
+
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;We have a house now.&lt;/p&gt;
+&lt;p&gt;Weird.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/03/31/House/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Daily Update 2016.03.30</title>
+      <link>http://timberjaw.github.io/2016/03/30/Daily-Update-2016-03-30/</link>
+      <guid>http://timberjaw.github.io/2016/03/30/Daily-Update-2016-03-30/</guid>
+      <pubDate>Wed, 30 Mar 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Antsy about house closing tomorrow. Busy at work today.&lt;/p&gt;
+&lt;p&gt;Thinking about more advanced AI. The setup I’m using for the bird is about
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Antsy about house closing tomorrow. Busy at work today.&lt;/p&gt;
+&lt;p&gt;Thinking about more advanced AI. The setup I’m using for the bird is about as complex as I’d like to make it without a more robust system. Specifically, I want to get into a ‘hierarchy of needs’ for NPCs. Personal safety, physical needs (food, water, rest), commitments/obligations (job, duty), recreation (having a beer, talking to the player, going for a walk).&lt;/p&gt;
+&lt;p&gt;Might be overly ambitious.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/03/30/Daily-Update-2016-03-30/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Bird Brained</title>
@@ -476,64 +516,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/03/12/Daily-Update-2016-03-12/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Aggregation #28</title>
-      <link>http://timberjaw.github.io/2016/03/11/Aggregation-28/</link>
-      <guid>http://timberjaw.github.io/2016/03/11/Aggregation-28/</guid>
-      <pubDate>Fri, 11 Mar 2016 08:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added a sword line about the GM.&lt;/li&gt;
-&lt;li&gt;Added a 1-5 ‘rate this game’ command to gi
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added a sword line about the GM.&lt;/li&gt;
-&lt;li&gt;Added a 1-5 ‘rate this game’ command to give the GM some helpful feedback. Also renames the game to reflect the player’s view.&lt;/li&gt;
-&lt;li&gt;Fixed bug with text rules with multiple text items.&lt;/li&gt;
-&lt;li&gt;Tried to set up a Twitter for the rainbow sword, but the good names were taken. Oh well.&lt;/li&gt;
-&lt;li&gt;9-year anniversary!&lt;/li&gt;
-&lt;li&gt;Wrote up some details on moon locations, which use a different method of navigation (coordinate and distance-based). Requires some special handling of boundaries and pathfinding (e.g. you can’t walk up a cliff).&lt;/li&gt;
-&lt;li&gt;Mapped out the new, bridge-connected zones, which includes 18 new locations and a series of tests for the adventurer. They’ll need brains, brawn, and initiative, but not always where they expect.&lt;/li&gt;
-&lt;li&gt;Spider room.&lt;/li&gt;
-&lt;li&gt;Launched V5 of our main website at work.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/03/11/Aggregation-28/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.03.10</title>
-      <link>http://timberjaw.github.io/2016/03/10/Daily-Update-2016-03-10/</link>
-      <guid>http://timberjaw.github.io/2016/03/10/Daily-Update-2016-03-10/</guid>
-      <pubDate>Thu, 10 Mar 2016 08:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Another long work day, but things are coming together.&lt;/p&gt;
-&lt;p&gt;Unrelated notes (will make sense later):&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Time button&lt;/li&gt;
-&lt;li&gt;
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Another long work day, but things are coming together.&lt;/p&gt;
-&lt;p&gt;Unrelated notes (will make sense later):&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Time button&lt;/li&gt;
-&lt;li&gt;Illuminated text&lt;/li&gt;
-&lt;li&gt;Eyes in the dark&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/03/10/Daily-Update-2016-03-10/#disqus_thread</comments>
     </item>
     
   </channel>
