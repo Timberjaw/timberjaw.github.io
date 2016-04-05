@@ -8,8 +8,100 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Fri, 01 Apr 2016 06:14:54 GMT</pubDate>
+    <pubDate>Tue, 05 Apr 2016 20:06:35 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Moving Day, 2 of 2</title>
+      <link>http://timberjaw.github.io/2016/04/05/Moving-Day-2-of-2/</link>
+      <guid>http://timberjaw.github.io/2016/04/05/Moving-Day-2-of-2/</guid>
+      <pubDate>Tue, 05 Apr 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;All moved in today. Just need to change all our addresses, clean the old apartment, turn in the keys, get trash service going, etc.&lt;/p&gt;
+&lt;
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;All moved in today. Just need to change all our addresses, clean the old apartment, turn in the keys, get trash service going, etc.&lt;/p&gt;
+&lt;p&gt;Wasn’t able to get internet working until last night. The amplifier on the side of the house was missing its power connection, so we picked up a new amplifier and replaced it (as it seems to be impossible to purchase an AC adapter without the corresponding amplifier).&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/04/05/Moving-Day-2-of-2/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Daily Update 2016.04.04</title>
+      <link>http://timberjaw.github.io/2016/04/04/Daily-Update-2016-04-04/</link>
+      <guid>http://timberjaw.github.io/2016/04/04/Daily-Update-2016-04-04/</guid>
+      <pubDate>Mon, 04 Apr 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Post not found.&lt;/p&gt;
+
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Post not found.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/04/04/Daily-Update-2016-04-04/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Daily Update 2016.04.03</title>
+      <link>http://timberjaw.github.io/2016/04/03/Daily-Update-2016-04-03/</link>
+      <guid>http://timberjaw.github.io/2016/04/03/Daily-Update-2016-04-03/</guid>
+      <pubDate>Sun, 03 Apr 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Packing day today, no time for updates. Did manage to get the internet working, and everything’s packed up for the movers.&lt;/p&gt;
+
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Packing day today, no time for updates. Did manage to get the internet working, and everything’s packed up for the movers.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/04/03/Daily-Update-2016-04-03/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Moving Day, 1 of 2</title>
+      <link>http://timberjaw.github.io/2016/04/02/Moving-Day-1-of-2/</link>
+      <guid>http://timberjaw.github.io/2016/04/02/Moving-Day-1-of-2/</guid>
+      <pubDate>Sat, 02 Apr 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Moving (partially) today, no time for a real post. Supposed to get out internet switched over and essential items (bed, clothing, etc) mo
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Moving (partially) today, no time for a real post. Supposed to get out internet switched over and essential items (bed, clothing, etc) moved. The rest will follow soonish.&lt;/p&gt;
+&lt;p&gt;The house is big and full of echoes. It will shrink and quiet as we fill it.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/04/02/Moving-Day-1-of-2/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Fools</title>
+      <link>http://timberjaw.github.io/2016/04/01/Fools/</link>
+      <guid>http://timberjaw.github.io/2016/04/01/Fools/</guid>
+      <pubDate>Fri, 01 Apr 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;April Fools! No, really. I’m not trying to trick you into thinking it’s April Fools on some other day. There’s no chance I’m writing this
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;April Fools! No, really. I’m not trying to trick you into thinking it’s April Fools on some other day. There’s no chance I’m writing this retroactively on the 2nd while getting caught up with the dev journal.&lt;/p&gt;
+&lt;p&gt;It occurred to me earlier that the impact of AF has been severely diminished by the internet. Global, community-driven sites like reddit make it almost impossible for western audiences to be caught off-guard, since by the time it’s actually April 1st, the pranks have already been going on in other time zones for 8+ hours.&lt;/p&gt;
+&lt;p&gt;It also seems like a bit of a dead horse at this point, but now I’m just being crotchety.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/04/01/Fools/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>House!</title>
@@ -377,145 +469,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/03/17/Daily-Update-2016-03-17/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.03.16</title>
-      <link>http://timberjaw.github.io/2016/03/16/Daily-Update-2016-03-16/</link>
-      <guid>http://timberjaw.github.io/2016/03/16/Daily-Update-2016-03-16/</guid>
-      <pubDate>Wed, 16 Mar 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Got through about 40.3% of my to-do list for the long weekend. Reasonably happy about that given the unexpected number of pre-existing bu
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Got through about 40.3% of my to-do list for the long weekend. Reasonably happy about that given the unexpected number of pre-existing bugs I ran into. The prologue is feeling a bit more polished, but still needs a lot of love. I have a few known items to clean up, after which the next step is to have a couple people playtest and give feedback. In particular, I want to get transcripts from a couple play sessions so I can see exactly what everyone tried to do (whether it worked or not) and where they got stuck.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/03/16/Daily-Update-2016-03-16/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.03.15</title>
-      <link>http://timberjaw.github.io/2016/03/15/Daily-Update-2016-03-15/</link>
-      <guid>http://timberjaw.github.io/2016/03/15/Daily-Update-2016-03-15/</guid>
-      <pubDate>Wed, 16 Mar 2016 04:13:11 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Prettified quest outputs using box handler.&lt;/li&gt;
-&lt;li&gt;Made player input stand out mor
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Prettified quest outputs using box handler.&lt;/li&gt;
-&lt;li&gt;Made player input stand out more.&lt;/li&gt;
-&lt;li&gt;Fixed wyrmling onTick running twice (wasn’t checking System, wyrmling belongs to two).&lt;/li&gt;
-&lt;li&gt;Fixed bug where certain queued outputs wouldn’t get displayed until the beginning of the next tick.&lt;/li&gt;
-&lt;li&gt;Fixed “New Quest” output displaying before action output in some cases.&lt;/li&gt;
-&lt;li&gt;Cleaned up chamber sequence and ending.&lt;/li&gt;
-&lt;li&gt;Creepified black box entry.&lt;/li&gt;
-&lt;li&gt;Added visibility support for objects in multiple locations.&lt;/li&gt;
-&lt;li&gt;Improved key handling of action overrides on entities.&lt;/li&gt;
-&lt;li&gt;Added temperature feedback for hot springs.&lt;/li&gt;
-&lt;li&gt;Fixed internal rules with no output canceling other rules.&lt;/li&gt;
-&lt;li&gt;Fixed chamber entrance sequence not working.&lt;/li&gt;
-&lt;li&gt;Added prologue outro.&lt;/li&gt;
-&lt;li&gt;Cleaned up some sequence timings.&lt;/li&gt;
-&lt;li&gt;Improved handling of input area to make it more obvious when more text is incoming.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/03/15/Daily-Update-2016-03-15/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.03.14</title>
-      <link>http://timberjaw.github.io/2016/03/14/Daily-Update-2016-03-14/</link>
-      <guid>http://timberjaw.github.io/2016/03/14/Daily-Update-2016-03-14/</guid>
-      <pubDate>Mon, 14 Mar 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Pie day!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Significant refactoring of the NLP to use an action stack. Needed to
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Pie day!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Significant refactoring of the NLP to use an action stack. Needed to preserve original action data when an implicit action is triggered.&lt;/li&gt;
-&lt;li&gt;Got doors and locks working (mostly). Needs some visibility/accessibility work for the target location, since currently objects are only visible in their primary location.&lt;/li&gt;
-&lt;li&gt;Added thermal system to support ice key quest. Prologue is officially playable end-to-end in its current state.&lt;/li&gt;
-&lt;li&gt;Added list (array) support for ‘in location’ checks in rules.&lt;/li&gt;
-&lt;li&gt;Fixed combat actions to use new Action object.&lt;/li&gt;
-&lt;li&gt;Fixed open/close actions to use new Action object.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/03/14/Daily-Update-2016-03-14/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.03.13</title>
-      <link>http://timberjaw.github.io/2016/03/13/Daily-Update-2016-03-13/</link>
-      <guid>http://timberjaw.github.io/2016/03/13/Daily-Update-2016-03-13/</guid>
-      <pubDate>Sun, 13 Mar 2016 08:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added ‘put in’ command for containers.&lt;/li&gt;
-&lt;li&gt;Fixed several inventory bugs related
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added ‘put in’ command for containers.&lt;/li&gt;
-&lt;li&gt;Fixed several inventory bugs related to containers and locations.&lt;/li&gt;
-&lt;li&gt;Fixed being able to pick up objects you’re already holding.&lt;/li&gt;
-&lt;li&gt;Fixed ‘drop’ conflict (dropping an object on the ground vs dropping it in a container).&lt;/li&gt;
-&lt;li&gt;Wired up two riddles for the twins with success/failure states.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/03/13/Daily-Update-2016-03-13/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.03.12</title>
-      <link>http://timberjaw.github.io/2016/03/12/Daily-Update-2016-03-12/</link>
-      <guid>http://timberjaw.github.io/2016/03/12/Daily-Update-2016-03-12/</guid>
-      <pubDate>Sat, 12 Mar 2016 08:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;I have a 4-day weekend, and I want to make the most of it by using my extra days as “SRPG Work Days”. With that goal in mind, here’s my s
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;I have a 4-day weekend, and I want to make the most of it by using my extra days as “SRPG Work Days”. With that goal in mind, here’s my spoiler-filled to-do list:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Wire up riddle solutions for the twins. The first riddle and options are in place, but the solution process isn’t finalized. Needs to give appropriate response and make 2nd riddle available.&lt;/li&gt;
-&lt;li&gt;Place gate blocking access to the black box chamber. Getting through the gate is the final goal for the prologue. Need to finish ‘doors’ module for this, plus lock-and-key support.&lt;/li&gt;
-&lt;li&gt;Hook up time button and resultant temporal paradox.&lt;/li&gt;
-&lt;li&gt;Link up new locations and write descriptions for them.&lt;/li&gt;
-&lt;li&gt;Build ‘devices’ module with generic support for items that can be manipulated (pressed, turned, etc). Needed for wheel on bridge.&lt;/li&gt;
-&lt;li&gt;Dynamic rotation of the bridge wheel.&lt;/li&gt;
-&lt;li&gt;Improve quest reward output. It’s really bland right now.&lt;/li&gt;
-&lt;li&gt;Finish wiring up ice key puzzle mechanics. Needed to make gate accessible.&lt;/li&gt;
-&lt;li&gt;Add interlude/transition from Black Box to Act I. Most likely some communication from the sword.&lt;/li&gt;
-&lt;li&gt;(Low Priority) Work on basin puzzle. Optional usage during the prologue.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/03/12/Daily-Update-2016-03-12/#disqus_thread</comments>
     </item>
     
   </channel>

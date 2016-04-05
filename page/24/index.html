@@ -60,6 +60,284 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-stupidrpg-the-big-bad" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/18/stupidrpg-the-big-bad/">StupidRPG: The Big Bad</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/18/stupidrpg-the-big-bad/">
+      <time datetime="2015-08-18T07:00:00.000Z" itemprop="datePublished">2015-08-18</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Spoilers incoming.</p>
+<p>I’ll do a proper bio of the Big Bad later. For now I want to talk about the concept. Most RPG stories have a final boss, primary threat, etc. The final (usually) challenge for the players to overcome on their way to heroic victory. This usually involves a lot of setup, sometimes early in the campaign (as a distant threat the players can’t/shouldn’t address immediately).</p>
+<p>In the case of StupidRPG, the Big Bad is:</p>
+<div class="spoiler"><br>The mysterious Baron, actual name unknown. A relative newcomer to the local territories, the Baron has established a significant powerbase through various means. It’s not all bad, in the same way that the Industrial Revolution wasn’t all bad. The Baron’s motives are unclear, and though violence doesn’t seem to be off the table, outright slaughter doesn’t seem to be on it.<br></div>
+
+<p>In short, it might take a while before it becomes apparent whether the Baron is a real threat, or if this is one of those stories where the real challenge was overcoming inner conflict and achieving your full potential.</p>
+<p>Could be a bit of both.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/18/stupidrpg-the-big-bad/" data-id="cimnuwrce0032csohdeize367" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-weekly-update-5" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/17/weekly-update-5/">Weekly Update #5</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/17/weekly-update-5/">
+      <time datetime="2015-08-17T07:00:00.000Z" itemprop="datePublished">2015-08-17</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>More progress!</p>
+<p><strong>Changelog:</strong></p>
+<ul>
+<li>Added a bird. It flies around the map looking for food. Once it finds (and eats) something it likes, it will go find the Ranger and hang out with him.</li>
+<li>Worked on some AI handling style to support the bird behavior in a reasonably clean way.</li>
+<li>Added a bird feeder for the bird.</li>
+<li>Moved all BlackBox module content into sub-files broken down by type. Creatures, locations, items get their own files (module file was getting huge).</li>
+<li>Added a ‘local output’ function to supplement the output and GM output functions. Local output only displays if the originating entity is in the same location as the player. Lets me skip redundant code (i.e. having the entity itself check for locality before printing something).</li>
+<li>Added ECS.moveEntity function to simplify NPC movement.</li>
+<li>Added locationIs function to Thing component to simplify NPC location checking.</li>
+<li>Fixed NPCs executing during non-tick turns.</li>
+</ul>
+<p><strong>Known Issues:</strong></p>
+<ul>
+<li>Nothing new</li>
+</ul>
+<p><strong>Next Up:</strong></p>
+<ul>
+<li>Fill out Ranger Bob’s dialogue tree.</li>
+<li>Add The Twins.</li>
+<li>Litterbug quest.</li>
+<li>Feed the bird quest.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/17/weekly-update-5/" data-id="cimnuwr9r000rcsohf5f15bgz" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-feature-creep" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/16/feature-creep/">Feature Creep</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/16/feature-creep/">
+      <time datetime="2015-08-16T07:00:00.000Z" itemprop="datePublished">2015-08-16</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Many (most?) of my projects are marred by scope/feature creep. That is, the tendency to continually add features or expand the scope of the project after starting it. It’s a dangerous game. For my hobby projects, the size of the project tends to be inversely proportional to the likelihood of completion.</p>
+<p>For recent projects I’ve been vigilant about creep, as I’d like to actually finish a few things for once. My side project (Numenera power cards) was successfully finished and test printed, which is a nice morale boost. I have a couple tweaks to make on the coloring and font sizes, but the test went very well.</p>
+<p>SRPG is particularly open to creep. It’s a big project, has a lot of interlocking pieces, and is taking place over a long period of time. As such, I have to be very strict about not adding anything (or doing refactoring) that doesn’t absolutely need to be there to meet my milestone goals. Structured AI, callback improvements, more content, etc.</p>
+<p>So far, so good.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/16/feature-creep/" data-id="cimnuwrff0055csohj31xx7am" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-stupidrpg-bird-is-the-word" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/15/stupidrpg-bird-is-the-word/">StupidRPG: Bird is the Word</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/15/stupidrpg-bird-is-the-word/">
+      <time datetime="2015-08-15T07:00:00.000Z" itemprop="datePublished">2015-08-15</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Today I’m working on the first indepently-acting NPC: a bird. Pretty exciting, yeah? It flies around the map looking for food, avoiding unwelcome contact from the player, and (when no longer hungry), paying a visit to Ranger Bob.</p>
+<p>Its behavior will likely grow more complex over time, but as a proof of concept I’m pretty happy with how it’s working. I started with a basic outline of the bird’s possible actions and logic.</p>
+<p><div class="highlight-header">Behaviors</div><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The bird roams the Forest, chattering away and looking for food.&#10;&#10;Starting (Max) hunger is 100.&#10;    Reduced by 60 when eating.&#10;    Can go below 0.&#10;    Increased by 1 per turn.&#10;    &#10;General Behaviors&#10;    If the player tries to touch/take/hurt/socialize me, flee along loop&#10;&#10;Hungry Behaviors&#10;    Every turn, if the player is in the location, chirp&#10;    Every turn, if there is something edible in the location, try to eat it&#10;    Every 2nd turn, if there are no edibles in the location, move along loop&#10;    If the bird feeder is here, check it for food&#10;&#10;Full Behaviors (Hunger &#60;= 20)&#10;    Every turn, head toward ranger station&#10;    If I&#39;m at ranger station, sing</span><br></pre></td></tr></table></figure></p>
+<p>Next, I started putting together a set of functions to handle each of the bird’s actions: look for food, move along path, etc.</p>
+<p><div class="highlight-header">Actions</div><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">actions = &#123;</span><br><span class="line">  <span class="string">'_lookForFood'</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> things = <span class="keyword">this</span>.location().children;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> f <span class="keyword">in</span> things) &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"BIRD EYEBALLING "</span>+things[f].name);</span><br><span class="line">      <span class="keyword">if</span>(things[f].hasComponent(<span class="string">'edible'</span>)) &#123;</span><br><span class="line">        <span class="keyword">if</span>(things[f].nutrition &gt; <span class="number">0</span>) &#123;</span><br><span class="line">          queueLocalOutput(<span class="keyword">this</span>, <span class="string">"The bird pecks at the "</span> + things[f].name + <span class="string">" eagerly."</span>);</span><br><span class="line">          <span class="keyword">this</span>.hunger -= things[f].nutrition;</span><br><span class="line">          <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          queueLocalOutput(<span class="keyword">this</span>, <span class="string">"The bird pecks at the "</span> + things[f].name + <span class="string">" half-heartedly."</span>);</span><br><span class="line">          <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">'_moveAlongPath'</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> prev = <span class="keyword">this</span>.location().key;</span><br><span class="line">    <span class="keyword">var</span> next = <span class="keyword">this</span>.path[prev];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>._alertPlayerToMovement(prev,next);</span><br><span class="line"></span><br><span class="line">    ECS.moveEntity(<span class="keyword">this</span>, next);</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">'_alertPlayerToMovement'</span>:<span class="function"><span class="keyword">function</span>(<span class="params">prev,next</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(player.locationIs(prev)) &#123;</span><br><span class="line">      queueGMOutput(<span class="string">"The bird flits away toward "</span> + ECS.getEntity(next).name + <span class="string">"."</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(player.locationIs(next)) &#123;</span><br><span class="line">      queueGMOutput(<span class="string">"The bird flits in from "</span> + <span class="keyword">this</span>.location().name + <span class="string">"."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Finally, I put it together into some simple branching logic, executed on each game tick.</p>
+<p><div class="highlight-header">Bird Brain</div><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">// Look for food when hungry</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">this</span>._hungry())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(!<span class="keyword">this</span>._lookForFood()) &#123;</span><br><span class="line">            <span class="keyword">this</span>._moveAlongPath();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Head toward ranger station when full</span></span><br><span class="line">    <span class="keyword">if</span>(!<span class="keyword">this</span>.locationIs(<span class="string">'ranger-station'</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// Head to ranger station</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">this</span>.locationIs(<span class="string">'north-trail'</span>)) &#123;</span><br><span class="line">            <span class="keyword">this</span>._alertPlayerToMovement(<span class="string">'north-trail'</span>, <span class="string">'ranger-station'</span>);</span><br><span class="line">            ECS.moveEntity(<span class="keyword">this</span>, <span class="string">'ranger-station'</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>._moveAlongPath();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Sing at random</span></span><br><span class="line">    <span class="keyword">if</span>(random() &gt; <span class="number">0.75</span>) &#123;</span><br><span class="line">        queueLocalOutput(<span class="string">"The bird chirps a happy tune."</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Update hunger</span></span><br><span class="line">    <span class="keyword">this</span>.hunger++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>With these simple behaviors and extremely simple logic, the bird will roam the map, interacting dynamically with any food it encounters (stopping to sample it, and continuing to eat if it’s still hungry and the food is nutritious). Once full, it will make its way to see Ranger Bob, and serenade him until it gets hungry again.</p>
+<p>The code structure is a little clunky, and I’d like to turn it into something closer to a state machine, where the bird starts in one of a few states (<code>LOOKING_FOR_FOOD</code>, <code>LOOKING_FOR_BOB</code>, <code>SINGING</code>) and can then transition into other states. Managing AI via a state machine is a more scalable solution and will make it easier for me to assemble complex NPC behaviors.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/15/stupidrpg-bird-is-the-word/" data-id="cimnuwrd9003xcsohlww72xx1" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-the-grind" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/14/the-grind/">The Grind</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/14/the-grind/">
+      <time datetime="2015-08-14T07:00:00.000Z" itemprop="datePublished">2015-08-14</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Computer RPGs have a bad habit of padding their content to increase the game’s playtime. They have a bit of incentive to do so, as many players measure the game’s worth in part based on the number of hours they can sink into it. Some games justify the length, but more often in my experience, the game becomes a grind. Hack-and-slash or action RPGs are particularly common examples, but even more plot-heavy RPGs like Final Fantasy VII or Mass Effect are guilty of this.</p>
+<p>Random encounters, same-y enemies, and arbitrary objectives (Collect 30 Wolf Pelts) tend to leave me feeling burnt out (YMMV). Action RPGs try to keep things fresh by varying up the locations, periodically introducing new enemies (often location-themed), and tossing in the occasional puzzle or unique side quest. It’s a distraction (a welcome one) from the otherwise repetitive gameplay.</p>
+<p>For StupidRPG, I’m aiming for roughly a 4-hour playtime. Even that length may be excessive; I’m not confident in my ability to keep a modern gaming audience interested in a text-based game for several hours, at least not without moving in more of a MUD direction. The exact amount of time isn’t important to me right now, however. What’s more important is the amount of unique, quality content. SRPG is more about interesting text than increasingly large numbers.</p>
+<p>I have a lot of work to do.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/14/the-grind/" data-id="cimnuwrbj002jcsohggmo1zks" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-stupidrpg-milestones" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -125,7 +403,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/13/stupidrpg-milestones/" data-id="cimhbfsuj003e8kohd33radwz" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/13/stupidrpg-milestones/" data-id="cimnuwrcu003ecsohgth2sjt1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -174,7 +452,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/11/licensing-and-copyright/" data-id="cimhbfsxb004v8koh2q2zq9ft" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/11/licensing-and-copyright/" data-id="cimnuwrf4004vcsohetkq0q20" class="article-share-link">Share</a>
       
       
     </footer>
@@ -232,7 +510,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/11/stupidrpg-game-ticks/" data-id="cimhbfsuo003m8kohtqvgn10u" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/11/stupidrpg-game-ticks/" data-id="cimnuwrcu003mcsoh38c060aq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -295,7 +573,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/10/weekly-update-4/" data-id="cimhbfsrj000u8kohpiterfdm" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/10/weekly-update-4/" data-id="cimnuwr9r000ucsohffeju4s5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -346,309 +624,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/09/replay-value-something-new-from-something-old/" data-id="cimhbfswa004j8kohtchlzche" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/09/replay-value-something-new-from-something-old/" data-id="cimnuwree004jcsohncu8k7ne" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-stupidrpg-output-queue" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/08/stupidrpg-output-queue/">StupidRPG: Output Queue</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/08/08/stupidrpg-output-queue/">
-      <time datetime="2015-08-08T07:00:00.000Z" itemprop="datePublished">2015-08-08</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Input queue, output queue, callback queue…SRPG has all kinds of queues. The output queue is a fun one. On the basic side, it handles the process of outputting text to the browser (paragraphs generated by the player’s action). It does a few more interesting things as well.</p>
-<h2 id="Timing"><a href="#Timing" class="headerlink" title="Timing"></a>Timing</h2><p>Why a queue? Why not just output all the text immediately. Two reasons: screen management and dramatic timing.</p>
-<p><strong>Screen Management</strong></p>
-<p>Being a browser game, the dimensions (width and height) of the window in which it’s played are not known to me at design time. In particular, I don’t know how many lines of text will fit on the screen vertically. The output queue lets me ‘pause’ the flow of text when room runs out, and prompt the user to press a key to continue. You might recognize this feature from the classic Infocom games.</p>
-<p><strong>Dramatic Timing</strong></p>
-<p>This one is more fun. Not all text has to be drawn to the screen at the same speed. Pauses can be inserted between text items at will. This is particularly useful when outputting narration or dialogue, in which moments of hesitation or consideration by the GM or NPCs will make the output feel more lifelike.</p>
-<h2 id="Effects"><a href="#Effects" class="headerlink" title="Effects"></a>Effects</h2><p>I haven’t made use of this concept yet, but the output queue also allows for the inclusion of special effects down the road. For example, a typewriter output effect, backspacing to erase a typo by the GM, and so forth. Something to look forward to for the next time I don’t have pressing bugs to deal with.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/08/stupidrpg-output-queue/" data-id="cimhbfsuf00388koh89e237qv" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-wish-list-multiplayer" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/07/wish-list-multiplayer/">Wish List: Multiplayer</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/08/07/wish-list-multiplayer/">
-      <time datetime="2015-08-07T07:00:00.000Z" itemprop="datePublished">2015-08-07</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>One of my many pie-in-the-sky goals for StupidRPG is networked multiplayer. I have absolutely no hands-on experience with network programming (browser or otherwise), so it’s toward the bottom of the priority list. I do know a little bit about websockets and a moderate amount about databases.</p>
-<p>The engine for SRPG was built with future multiplayer in mind (sort of). Actions usually enter the queue from local input, but that’s not a requirement. I’ve already shown examples of input being added via test functions and via previous input (an action triggering another action). Handling a remotely-entered command (and appropriate context, such as the remote player entity) doesn’t pose an architectural problem. There are, however, many design challenges to overcome to make multiplayer work in a plot-driven, turn-based RPG. I’ll talk about a few problems and concepts I’ve been considering.</p>
-<h2 id="Problem_3A_Whose_Turn_Is_It_3F"><a href="#Problem_3A_Whose_Turn_Is_It_3F" class="headerlink" title="Problem: Whose Turn Is It?"></a>Problem: Whose Turn Is It?</h2><p>In short, for the game to work as-is, it needs to remain purely turn based and synchronous. Players take turns inputting commands, then the engine distributes the commands to the other players. For common actions like moving around, opening doors, and picking up objects, this is no problem. There are a few cases where it gets tricky though:</p>
-<ul>
-<li>Command interrupts (these need to be contextual per-player)</li>
-<li>Dialogue trees (does P2 have to wait for P1 to finish an entire conversation before they can take an action?)</li>
-<li>No-tick actions</li>
-<li>Guided segments like the intro</li>
-</ul>
-<p>I have solutions in mind for some of these. No-tick actions (which I’ll talk more about in another post) don’t need to be synchronized between players. This means P1 can look at their inventory while P2 is taking their turn, for example.</p>
-<p>Thinking more broadly, I’ll need to develop a method for flagging synchronous/asynchronous sections (in addition to no-tick actions). Synchronous actions can only be done on your turn, while asynchronous actions can be done at any time.</p>
-<h2 id="Problem_3A_Gameplay"><a href="#Problem_3A_Gameplay" class="headerlink" title="Problem: Gameplay"></a>Problem: Gameplay</h2><p>This ties in to the previous problem a bit (particularly the handling of dialogue trees), but it’s a more fundamental set of questions. In short, what does Player 2 do? Are they another fully-fledged individual just like Player 1? Are they a sidekick of some type? Are they present for the duration of the game’s plot? Do I need to build separate puzzles and gameplay elements for the solo and multiplayer modes?</p>
-<h2 id="Concept_3A_Act_IV_Multiplayer"><a href="#Concept_3A_Act_IV_Multiplayer" class="headerlink" title="Concept: Act IV Multiplayer"></a>Concept: Act IV Multiplayer</h2><p>Traditional multiplayer aside, another concept I’m considering is to only introduce multiplayer at the end of the game’s story. Essentially, the campaign would wrap up and then the game would turn into a more open world with multiple players. Might be overly ambitious, and for a new player who wants to play with a friend, they have a lot of content to get through first.</p>
-<h2 id="Concept_3A_Asymmetric_Multiplayer"><a href="#Concept_3A_Asymmetric_Multiplayer" class="headerlink" title="Concept: Asymmetric Multiplayer"></a>Concept: Asymmetric Multiplayer</h2><p>Lastly, I’m looking at asymmetric play. Instead of having both players exist as equals in the storyline, the second would have a different experience entirely (sidekick, animal, etc). Some Wii U games use this type of play for the 5th player, allowing them to assist the other players from outside the regular mode. This is just as ambitious as the Act IV concept, as it needs a lot of extra content and coding to be meaningful.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/07/wish-list-multiplayer/" data-id="cimhbfsqx00098koh5pjt94xi" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wishlist/">wishlist</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-save-load-undo" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/06/save-load-undo/">StupidRPG: Save, Load, &amp; Undo</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/08/06/save-load-undo/">
-      <time datetime="2015-08-06T07:00:00.000Z" itemprop="datePublished">2015-08-06</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Most text adventures (that I’ve played, at least) don’t feature the auto-save ‘checkpoints’ common in modern videogames. They do include <code>SAVE</code> and <code>LOAD</code> commands which work exactly as you’d expect, but they also typically provide another command for state management: <code>UNDO</code>.</p>
-<p>In a singleplayer, turn-based game, <code>UNDO</code> is a pretty straightforward feature to implement. There are a few different approaches, but I’ve elected to leverage the savestate functionality for efficiency’s sake. More on that in a bit.</p>
-<h2 id="SAVE"><a href="#SAVE" class="headerlink" title="SAVE"></a><code>SAVE</code></h2><p>The save command in SRPG is handled primarily by the ECS. Since <em>Everything is an Entity</em>, I can simply loop through all the entities, building a new object which can be stored in JSON format. From there, it can be saved in the browser’s local storage or downloaded to the user’s computer.</p>
-<p>Not every piece of data on an object is needed for savestate. Most callbacks don’t change once they’re set, and many object attributes are static as well. Accordingly, each Component can specify the persistent attributes that should be included in the save process. For example, the Living component specifies that the HP attribute should be saved.</p>
-<h2 id="LOAD"><a href="#LOAD" class="headerlink" title="LOAD"></a><code>LOAD</code></h2><p>Loading works exactly as you’d expect: saving in reverse. The JSON data is read back and the entity attributes are re-applied to the live versions.</p>
-<h2 id="UNDO"><a href="#UNDO" class="headerlink" title="UNDO"></a><code>UNDO</code></h2><p>Undo is a combination of an internal save (before each action, save the current state) and load, allowing the player to jump back in time just as if they had manually saved and loaded. Effectively, it’s an automated Quick Save feature. Supporting additional steps of undo is possible, at the cost of additional memory and CPU time.</p>
-<p>Because <code>UNDO</code> is a verb just like any other in the game, there are some interesting opportunities for integration into the mechanics and story. That’s a surprise for another day, though.</p>
-<h2 id="Next_Steps"><a href="#Next_Steps" class="headerlink" title="Next Steps"></a>Next Steps</h2><p>There are a few shortcomings of the current model:</p>
-<ul>
-<li>Saving multiple levels of undo is not cost efficient. I need to do better profiling of the memory consumption of the game.</li>
-<li>Much of the saved data is not actually changed from the base entity state. I could reduce the size of the save files by only saving attributes that have actually changed, but that means adding more tracking code.</li>
-<li>Some circumstances need special handling. For example, what happens if the player uses <code>UNDO</code> directly after <code>SAVE</code>?</li>
-<li>Entities have to be uniquely identified in order for loading to work properly. This isn’t currently a problem, but could become one in the future with dynamically generated entities.</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/06/save-load-undo/" data-id="cimhbfsw3004d8kohddwtnu0m" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-testing-a-text-adventure" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/05/testing-a-text-adventure/">Testing a Text Adventure</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/08/05/testing-a-text-adventure/">
-      <time datetime="2015-08-05T07:00:00.000Z" itemprop="datePublished">2015-08-05</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Testing is an important component of any software project, and games are no exception. Javascript is easy enough to unit test for core functionality, but the genre of SRPG offers an interesting opportunity for automated game-aware testing.</p>
-<p>All input in the game is simply text, and the game engine already has an ‘input queue’ capable of handling multiple commands in sequence. This feature is already being used for one simple test process, to get me back to a particular state in the game after making changes. It can be taken further, however.</p>
-<p>Random events in SRPG are handled with a seeded random number generator, meaning that given the same seed and same inputs, all random effects in the game will happen in the same way. That means I can save a transcript (sequence of inputs) and a seed, then play them back and check the output. This is a natural place to automate tests.</p>
-<p>My current plan is to develop tests that specify:</p>
-<ul>
-<li>Starting state (optional, used to shortcut to later portions of the game before testing something specific)</li>
-<li>Random seed</li>
-<li>Input sequence</li>
-<li>Test callback</li>
-</ul>
-<p>If/when the input sequence concludes, the callback is run to check for certain elements. For example, checking the last text output, or looking at an attribute of a particular object.</p>
-<p>Helpful tests could include:</p>
-<ul>
-<li>Intro process works (race/class selection)</li>
-<li>Movement works (starting area)</li>
-<li>Checking inventory works</li>
-</ul>
-<p>During each build, I can run all the tests to get an idea of the health of the game code, and find out immediately if my most recent changes have broken anything.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/05/testing-a-text-adventure/" data-id="cimhbfstu002n8kohlq8527ix" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/testing/">testing</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-stupidrpg-tutorial-or-not-tutorial" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/04/stupidrpg-tutorial-or-not-tutorial/">StupidRPG: Tutorial or not Tutorial</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/08/04/stupidrpg-tutorial-or-not-tutorial/">
-      <time datetime="2015-08-04T07:00:00.000Z" itemprop="datePublished">2015-08-04</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>One of the open questions I’m contemplating about the design of SRPG is the inclusion (and nature) of a tutorial. I want the game to be reasonably accessible to people unfamiliar with text adventure conventions, but I don’t want an obtrusive starting tutorial. I’m considering a three-part tutorial: implicit, explicit, and help.</p>
-<h2 id="Explicit_Tutorial"><a href="#Explicit_Tutorial" class="headerlink" title="Explicit Tutorial"></a>Explicit Tutorial</h2><p>In an explicit tutorial, the player knows they are being taught how to play. The tutorial gives instructions and advice, like:</p>
-<blockquote>Navigation in StupidRPG is performed using cardinal directions (like on a compass), along with context-specific movement like up and down. To proceed to the next area, type <code>NORTH</code> or <code>N</code>, then press enter.</blockquote>
-
-<p>While helpful, this information is not well-integrated into the game, and is only of interest to complete novices. More experienced players will likely want to skip the tutorial.</p>
-<p>If I include an explicit tutorial, it will likely be opt-in (i.e. the player will be prompted to start the tutorial if desired).</p>
-<h2 id="Implicit_Tutorial"><a href="#Implicit_Tutorial" class="headerlink" title="Implicit Tutorial"></a>Implicit Tutorial</h2><p>An implicit tutorial is more appealing to me, as it’s fully integrated into the game (and story). If done well, the player might not even notice that they’re being guided through the early portions of the game. The first level in Super Mario Bros provides a <a href="https://www.youtube.com/watch?v=ZH2wGpEZVgE" target="_blank" rel="external">great example</a> of an implicit tutorial.</p>
-<p>While I can’t (probably) teach the player something as basic as <em>how</em> to enter a command via implicit means, I can definitely guide them into certain actions that give greater insight into the game mechanics. For example, in the first area of the game, an item on the ground is described to the player. Loot hoarders that they are, most players will attempt to acquire it (via <code>TAKE OBJECT</code>, <code>PICK UP OBJECT</code>, etc). The first area also has only one exit, forcing the player to learn a basic movement command to progress.</p>
-<p>I haven’t discussed Command Tags much previously. Command tags take advantage of the game’s HTML output by creating clickable, highlighted links in the game’s text. This is mostly intended as a utility, allowing the player to simply click on objects, people, and scenery to interact with them rather than typing out a command. The default action for command tags is <code>LOOK AT (OBJECT)</code>. When a command tag is clicked, the associated input (which is <strong>always</strong> a text command that they player could have typed themselves) is echoed back and executed. That is, the player sees the command that was executed. If they’re paying attention, they just learned how to use the <code>LOOK</code> command.</p>
-<h2 id="Help"><a href="#Help" class="headerlink" title="Help"></a>Help</h2><p>Lastly, I plan on including a help menu (accessible via a link or by typing <code>HELP</code>). The menu will include a general overview of interacting with the game, as well as specific instructions for core commands (<code>MOVE</code>, <code>LOOK</code>, <code>TAKE</code>, <code>INVENTORY</code>, etc). A hint guide might be a nice future addition as well.</p>
-<h2 id="Putting_it_All_Together"><a href="#Putting_it_All_Together" class="headerlink" title="Putting it All Together"></a>Putting it All Together</h2><p>There are opportunities for combining these instructional elements. For example, if the very first command the player enters is not understood, they can be prompted to take the tutorial or view the help menu.</p>
-<p>Right now I’m focused on the implicit tutorial (which I believe is the most valuable), followed by the help menu (which acts as a nice reference even for experienced players). The explicit tutorial is unlikely to get time devoted to it until later in playtesting.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/04/stupidrpg-tutorial-or-not-tutorial/" data-id="cimhbfstz002u8koht6n8g7k0" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
-
     </footer>
   </div>
   

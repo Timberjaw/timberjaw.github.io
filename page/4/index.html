@@ -60,6 +60,250 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-Daily-Update-2016-03-06" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/06/Daily-Update-2016-03-06/">Daily Update 2016.03.06</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2016/03/06/Daily-Update-2016-03-06/">
+      <time datetime="2016-03-07T05:51:06.000Z" itemprop="datePublished">2016-03-06</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Mapped out the new, bridge-connected zones, which includes 18 new locations and a series of tests for the adventurer. They’ll need brains, brawn, and initiative, but not always where they expect.</p>
+<p>There’s also a Spider Room, which is exactly what it sounds like.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2016/03/06/Daily-Update-2016-03-06/" data-id="cimnuwrjf008qcsoh4irx5n5m" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-Daily-Update-2016-03-05" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/05/Daily-Update-2016-03-05/">Daily Update 2016.03.05</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2016/03/05/Daily-Update-2016-03-05/">
+      <time datetime="2016-03-05T08:00:00.000Z" itemprop="datePublished">2016-03-05</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Working on an expansion for the starting area, involving a bridge that travels along a stream. Connected areas include an underground chasm and a series of other bridges.</p>
+<p>Also added a couple lines for the sword.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2016/03/05/Daily-Update-2016-03-05/" data-id="cimnuwrjf008rcsohe4mxe5ko" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-Daily-Update-2016-03-04" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/04/Daily-Update-2016-03-04/">Daily Update 2016.03.04</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2016/03/04/Daily-Update-2016-03-04/">
+      <time datetime="2016-03-04T08:00:00.000Z" itemprop="datePublished">2016-03-04</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Wrote up some details on moon locations, which use a different method of navigation (coordinate and distance-based). Requires some special handling of boundaries and pathfinding (e.g. you can’t walk up a cliff).</p>
+<p>Something like:</p>
+<pre>
+LunarLocale {
+    int x, // Canonical X coordinate
+    int y, // Canonical Y coordinate
+    rect bounds, // Rectangle defining the bounds (size) of the locale
+    bool blocksMovement, // Whether the bounds block movement through it
+    int visibleRange, // How far away the locale is
+    bool fastTravelAllowed, // Whether the player can fast travel to the location
+    bool discovered, // Whether the player has discovered the location
+}
+</pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2016/03/04/Daily-Update-2016-03-04/" data-id="cimnuwrjf008scsohubtm94ci" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-Daily-Update-2016-03-03" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/03/Daily-Update-2016-03-03/">Daily Update 2016.03.03</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2016/03/03/Daily-Update-2016-03-03/">
+      <time datetime="2016-03-03T08:00:00.000Z" itemprop="datePublished">2016-03-03</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Learned about installing PostgreSQL extensions today. Needed to do some fuzzy string matching (I’ve previously used SOUNDEX for this). Ended up going with metaphone(), which is more flexible on precision, and also converts normal text into something reminiscient of the Swedish Chef.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2016/03/03/Daily-Update-2016-03-03/" data-id="cimnuwrjf008tcsohjpc87bm1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-9" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/02/9/">9</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2016/03/02/9/">
+      <time datetime="2016-03-03T06:16:00.000Z" itemprop="datePublished">2016-03-02</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>9 year anniversary today. Time flies when you’re having fun.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2016/03/02/9/" data-id="cimnuwrm100a7csohpaidmq7g" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-House-Hunting-1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -95,7 +339,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/03/01/House-Hunting-1/" data-id="cimhbft13007w8koh3vr9p0gs" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/03/01/House-Hunting-1/" data-id="cimnuwrij007ycsohr7rwfzvy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -142,7 +386,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/02/29/Daily-Update-2016-02-29/" data-id="cimhbft23008p8kohw00glvcj" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/02/29/Daily-Update-2016-02-29/" data-id="cimnuwrjv008ucsohvhfxug64" class="article-share-link">Share</a>
       
       
     </footer>
@@ -192,7 +436,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/02/28/Daily-Update-2016-02-28/" data-id="cimhbft25008q8kohc9jxqxwh" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/02/28/Daily-Update-2016-02-28/" data-id="cimnuwrjv008vcsohq8j8p6k0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -242,7 +486,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/02/27/Daily-Update-2016-02-27/" data-id="cimhbft26008r8koh0e1i68zg" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/02/27/Daily-Update-2016-02-27/" data-id="cimnuwrjv008wcsoh1nxyb5xq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -294,237 +538,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/02/26/Aggregation-27/" data-id="cimhbft47009x8kohkljnj3gu" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-Daily-Update-2016-02-25" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/25/Daily-Update-2016-02-25/">Daily Update 2016.02.25</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2016/02/25/Daily-Update-2016-02-25/">
-      <time datetime="2016-02-26T02:43:30.000Z" itemprop="datePublished">2016-02-25</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <img src="/2016/02/25/Daily-Update-2016-02-25/Map-ActIII.png" alt="Map of final area" title="Map of final area">
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/02/25/Daily-Update-2016-02-25/" data-id="cimhbft27008s8koh6jvikwby" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-Daily-Update-2016-02-24" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/24/Daily-Update-2016-02-24/">Daily Update 2016.02.24</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2016/02/24/Daily-Update-2016-02-24/">
-      <time datetime="2016-02-25T05:04:30.000Z" itemprop="datePublished">2016-02-24</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <img src="/2016/02/24/Daily-Update-2016-02-24/Map-ActII.png" alt="Map of third area" title="Map of third area">
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/02/24/Daily-Update-2016-02-24/" data-id="cimhbft2c008t8kohch58t4pm" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-Daily-Update-2016-02-23" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/23/Daily-Update-2016-02-23/">Daily Update 2016.02.23</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2016/02/23/Daily-Update-2016-02-23/">
-      <time datetime="2016-02-24T02:40:08.000Z" itemprop="datePublished">2016-02-23</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <img src="/2016/02/23/Daily-Update-2016-02-23/Map-ActI.png" alt="Map of second area" title="Map of second area">
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/02/23/Daily-Update-2016-02-23/" data-id="cimhbft2k008u8kohek1es1g3" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-Daily-Update-2016-02-22" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/22/Daily-Update-2016-02-22/">Daily Update 2016.02.22</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2016/02/22/Daily-Update-2016-02-22/">
-      <time datetime="2016-02-23T02:40:08.000Z" itemprop="datePublished">2016-02-22</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <img src="/2016/02/22/Daily-Update-2016-02-22/Map-BlackBox.png" alt="Map of first area" title="Map of first area">
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/02/22/Daily-Update-2016-02-22/" data-id="cimhbft2p008v8kohoch1yvzt" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-Daily-Update-2016-02-21" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/21/Daily-Update-2016-02-21/">Daily Update 2016.02.21</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2016/02/21/Daily-Update-2016-02-21/">
-      <time datetime="2016-02-21T08:00:00.000Z" itemprop="datePublished">2016-02-21</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Caught up on The Walking Dead and did some packing. Good stuff.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/02/21/Daily-Update-2016-02-21/" data-id="cimhbft2t008w8koh4lrxddsd" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/02/26/Aggregation-27/" data-id="cimnuwrll00a2csohpawkd6b7" class="article-share-link">Share</a>
       
       
     </footer>

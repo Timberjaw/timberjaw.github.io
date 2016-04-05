@@ -60,6 +60,277 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-weekly-update-18" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/16/weekly-update-18/">Weekly Update #18</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/11/16/weekly-update-18/">
+      <time datetime="2015-11-16T08:00:00.000Z" itemprop="datePublished">2015-11-16</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><strong>Changes:</strong></p>
+<ul>
+<li>Wyrmling temperature increases if angry, up to a maximum of 400K.</li>
+<li>Pools temperature increases to match Wyrmling temperature.</li>
+<li>Magic ice cube won’t melt below boiling temperature.</li>
+<li>Player can’t enter pools if too hot.</li>
+<li>Added Air locations and scenery for Act I.</li>
+</ul>
+<p><strong>Bugs &amp; Problems:</strong></p>
+<ul>
+<li>Nothing new</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/11/16/weekly-update-18/" data-id="cimnuwra7001ccsoh6gd17jdd" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-rule-specificity" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/15/rule-specificity/">Rule Specificity</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/11/15/rule-specificity/">
+      <time datetime="2015-11-15T08:00:00.000Z" itemprop="datePublished">2015-11-15</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>I have a problem with the SRPG rulebook that I’ve been intentionally ignoring while there are still only a few rules. Namely, specificity. The situation is similar to that of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity" target="_blank" rel="external">CSS specificity</a>.</p>
+<p>Right now, Rules are checked in the order they were added, which has the side effect of making overlapping rules effectively random in order. That said, the Rule system is marginally resistant to the randomness, as multiple rules can apply to an action and can stack outputs (or cancel execution entirely).</p>
+<p>In the interest of making the process more predictable, I’m working on a plan for calculating specificity of Rules, and executing them in order from most specific (‘rule for walking north from dim clearing while the door is locked and the player has the key’) to least specific (‘rule for walking while the player has the key’).</p>
+<p>There are some implementation details to work out with the weighting (assuming I don’t go with a naive approach based simply on the number of conditionals). The ‘callback’ conditionals are especially tricky, as they can conceal additional conditionals within their custom code. The ability to directly assign a boosted specificity score might be useful (similar to the bad-practice !important keyword in CSS), but I’d like to avoid it if possible.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/11/15/rule-specificity/" data-id="cimnuwrea004fcsohr53ruua1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-daily-update-317-2015" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/14/daily-update-317-2015/">Daily Update 317.2015</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/11/14/daily-update-317-2015/">
+      <time datetime="2015-11-14T08:00:00.000Z" itemprop="datePublished">2015-11-14</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><strong>Changes:</strong></p>
+<ul>
+<li>Added Air locations and scenery for Act I.</li>
+</ul>
+<p><strong>Bugs &amp; Problems:</strong></p>
+<ul>
+<li>Nothing new.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/11/14/daily-update-317-2015/" data-id="cimnuwrgd005zcsohpyrqqaa0" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg-update/">stupidrpg,update</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-editables-draggables" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/13/editables-draggables/">Editables &amp;amp; Draggables</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/11/13/editables-draggables/">
+      <time datetime="2015-11-13T08:00:00.000Z" itemprop="datePublished">2015-11-13</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Going back a bit to the “writing-based puzzles” concepts, I think it would be fun to have inline-editable and draggable elements in the world. Not necessarily on a meta level (e.g. dragging a giant boulder out of the gameplay area to remove it from the game), but for tactile puzzle solving. It could be particularly useful for mobile users (more touch, less type).</p>
+<p>Examples:</p>
+<ul>
+<li>Flipping an On/Off toggle on a device.</li>
+<li>Dragging a “key” text onto a “lock” text.</li>
+<li>Filling a flask with water by dragging the text onto yourself.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/11/13/editables-draggables/" data-id="cimnuwrfi0059csoh5kj1gtjk" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-faction-list" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/12/faction-list/">Faction List</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/11/12/faction-list/">
+      <time datetime="2015-11-12T08:00:00.000Z" itemprop="datePublished">2015-11-12</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Followup to the previous faction post. I have a list of factions I think will establish a good starting point:</p>
+<ul>
+<li>Human (most characters in the game; by default, not fond of goblins)</li>
+<li>Goblin (not fond of humans)</li>
+<li>Aethernaut (don’t like the Baron)</li>
+<li>Villager (aware of the Baron)</li>
+<li>Living (afraid of Undead)</li>
+<li>Undead (want to kill the Living)</li>
+<li>Guard (will fight Undead)</li>
+<li>Beast (by default, wary of everyone else)</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/11/12/faction-list/" data-id="cimnuwrfh0057csoh0hs6skkp" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-daily-update-314-2015" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -105,7 +376,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/11/11/daily-update-314-2015/" data-id="cimhbfsz000628kohghorm6f8" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/11/11/daily-update-314-2015/" data-id="cimnuwrgd0062csohfe3alf3g" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg-update/">stupidrpg,update</a></li></ul>
@@ -159,7 +430,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/11/10/factions/" data-id="cimhbfsxp00568koh4tqvlak3" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/11/10/factions/" data-id="cimnuwrfg0056csoh3iwpgww6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -212,7 +483,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/11/09/weekly-update-17/" data-id="cimhbfss1001f8koh9wlwvj8l" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/11/09/weekly-update-17/" data-id="cimnuwra7001fcsohbu79gfqk" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -266,7 +537,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/11/08/til-2/" data-id="cimhbfste002d8koh2ommfy14" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/11/08/til-2/" data-id="cimnuwrbj002dcsoht9i2x9oa" class="article-share-link">Share</a>
       
       
     </footer>
@@ -333,263 +604,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/11/07/d-and-d-prep/" data-id="cimhbft0500748kohau9lhcg5" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/11/07/d-and-d-prep/" data-id="cimnuwrho0074csohmlgum8ku" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-til" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/06/til/">TIL</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/11/06/til/">
-      <time datetime="2015-11-06T08:00:00.000Z" itemprop="datePublished">2015-11-06</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Today I Learned:</p>
-<ul>
-<li>XML Sitemaps (something search engines use to more quickly scan a website for content) have a limit of 50,000 items per file. <strong>But</strong>…you can nest files (i.e. include them from other files), which makes me wonder why that limit is there. Makes it a hassle to generate sitemaps, that’s for sure.</li>
-<li>I’m not good at Rocket League. That said, I got a compliment for my weird-but-effective methods.</li>
-<li>Invoker is one of the most boring Dota heroes to watch.</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/11/06/til/" data-id="cimhbfstb002b8kohgf4ghygm" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-daily-update-308-2015" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/05/daily-update-308-2015/">Daily Update 308.2015</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/11/05/daily-update-308-2015/">
-      <time datetime="2015-11-05T08:00:00.000Z" itemprop="datePublished">2015-11-05</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p><strong>Changes:</strong></p>
-<ul>
-<li>Added a ‘Cheat’ module for debug commands. First command is a teleport command to jump around the world. Should speed up certain types of testing.</li>
-</ul>
-<p><strong>Bugs &amp; Problems:</strong></p>
-<ul>
-<li>Nothing new.</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/11/05/daily-update-308-2015/" data-id="cimhbfsz100648kohhjzvw9j3" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-source" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/04/source/">Source</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/11/04/source/">
-      <time datetime="2015-11-04T08:00:00.000Z" itemprop="datePublished">2015-11-04</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Expanded my GitHub a bit today. Uploaded the current SRPG source (more as a backup than anything else), along with a couple older projects (like my GM Calculator).</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/11/04/source/" data-id="cimhbfsvf00448kohf5aqaxnr" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-high-stakes" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/03/high-stakes/">High Stakes</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/11/03/high-stakes/">
-      <time datetime="2015-11-03T08:00:00.000Z" itemprop="datePublished">2015-11-03</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>I think the stakes are too low in SRPG. The player is advancing through the game, solving puzzles and overcoming challenges, but with little to motivate them. There’s a slim possibility of death at a couple points, but it’s easily recoverable.</p>
-<p>Something needs to be done about this.</p>
-<p>I’m considering a few ideas for penalties due to failure, separate from total failure states. Injuries, losing equipment, etc. Something to keep the player focused on the ramifications of their decisions.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/11/03/high-stakes/" data-id="cimhbfsxg004z8koh373vvr7r" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-weekly-update-16" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/02/weekly-update-16/">Weekly Update #16</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/11/02/weekly-update-16/">
-      <time datetime="2015-11-02T08:00:00.000Z" itemprop="datePublished">2015-11-02</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p><strong>Changes:</strong></p>
-<ul>
-<li>Worked through some elemental mechanic concepts.</li>
-<li>Made a rough map of the prologue.</li>
-</ul>
-<p><strong>Bugs &amp; Problems:</strong></p>
-<ul>
-<li>Nothing new</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/11/02/weekly-update-16/" data-id="cimhbfss3001i8koht39bpegz" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
-
     </footer>
   </div>
   
