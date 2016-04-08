@@ -8,8 +8,56 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Tue, 05 Apr 2016 20:06:35 GMT</pubDate>
+    <pubDate>Fri, 08 Apr 2016 05:14:28 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.04.07</title>
+      <link>http://timberjaw.github.io/2016/04/07/Daily-Update-2016-04-07/</link>
+      <guid>http://timberjaw.github.io/2016/04/07/Daily-Update-2016-04-07/</guid>
+      <pubDate>Fri, 08 Apr 2016 05:14:28 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sword now greets player when first picked up.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;On a related note, quest
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sword now greets player when first picked up.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;On a related note, quest output is a bit too…much. In particular, simple quests will show the objective complete and quest complete output immediately, which looks kinda goofy. Should make it a little smarter so it only displays the quest complete output (or combines the two).&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/04/07/Daily-Update-2016-04-07/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Daily Update 2016.04.06</title>
+      <link>http://timberjaw.github.io/2016/04/06/Daily-Update-2016-04-06/</link>
+      <guid>http://timberjaw.github.io/2016/04/06/Daily-Update-2016-04-06/</guid>
+      <pubDate>Wed, 06 Apr 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Replaced old GM description with something more appropriate to its current character
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Replaced old GM description with something more appropriate to its current character.&lt;/li&gt;
+&lt;li&gt;Updated the transcript output to include styles and framing for easier reading and review.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/04/06/Daily-Update-2016-04-06/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Moving Day, 2 of 2</title>
@@ -417,58 +465,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/03/19/Daily-Update-2016-03-19/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.03.18</title>
-      <link>http://timberjaw.github.io/2016/03/18/Daily-Update-2016-03-18/</link>
-      <guid>http://timberjaw.github.io/2016/03/18/Daily-Update-2016-03-18/</guid>
-      <pubDate>Fri, 18 Mar 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Altered bird behavior to more directly telegraph what the bird wants.&lt;/li&gt;
-&lt;li&gt;Bird 
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Altered bird behavior to more directly telegraph what the bird wants.&lt;/li&gt;
-&lt;li&gt;Bird now returns to the feeder any time the player is there.&lt;/li&gt;
-&lt;li&gt;Added aliases and tags to draw the player’s attention to the feeder.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/03/18/Daily-Update-2016-03-18/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.03.17</title>
-      <link>http://timberjaw.github.io/2016/03/17/Daily-Update-2016-03-17/</link>
-      <guid>http://timberjaw.github.io/2016/03/17/Daily-Update-2016-03-17/</guid>
-      <pubDate>Thu, 17 Mar 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Weekend goals:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Clean up bird feeder segment of ice key puzzle.&lt;/li&gt;
-&lt;li&gt;Give the player more guidance for their overall goal
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Weekend goals:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Clean up bird feeder segment of ice key puzzle.&lt;/li&gt;
-&lt;li&gt;Give the player more guidance for their overall goal and steps along the way.&lt;/li&gt;
-&lt;li&gt;Properly link lair to hot springs location (they’re invisibly linked right now).&lt;/li&gt;
-&lt;li&gt;General bug fixing to get Prologue ready for playtesting.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This small round of playtesting is intended to be somewhat high-level. Is the game fun? Are the objectives clear? Are reasonable commands understood by the game?&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/03/17/Daily-Update-2016-03-17/#disqus_thread</comments>
     </item>
     
   </channel>

@@ -60,6 +60,130 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-rule-chaining" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/19/rule-chaining/">Rule Chaining</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/09/19/rule-chaining/">
+      <time datetime="2015-09-19T07:00:00.000Z" itemprop="datePublished">2015-09-19</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>I’m putting some thought into refactoring the Rules handling a little bit. I have two goals: 1) making the process of modifying/replacing action output more elegant, and 2) supporting rule chaining (allowing multiple Rules to modify the same output).</p>
+<p>Right now a Rule returns text, along with a constant which specifies whether the Rule cancels the action, replaces the action, does nothing, or appends to the action’s output. However, I’ve already done the groundwork for Rules that happen before or after the action is handled. The idea is that I can have rules like:</p>
+<ul>
+<li>Before Rule: Instead of Walking North from Dim Clearing while Actor is stuck in Bear Trap, say “You can’t move. You are stuck in a bear trap.”</li>
+<li>After Rule: After Walking North from Dim Clearing, say “Something clangs loudly behind you.”</li>
+</ul>
+<p>The first Rule cancels the regular action processing, whereas the second merely adds to the output. This approach renders the “append” rule handling moot. Instead, I’d like to create some kind of Action object, which is created before the first Rules are processed. It would look something like:</p>
+<p></p><h3 class="highlight-header">Action Object</h3><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> action = &#123;</span><br><span class="line">    <span class="string">'actor'</span>:player,</span><br><span class="line">    <span class="string">'action'</span>:input,</span><br><span class="line">    <span class="string">'output'</span>:<span class="string">''</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p></p>
+<p>This object would be passed to each rule in sequence, where it might be modified (primarily the output field). It can be prepended, appended, replaced entirely, etc. The resulting object is passed to the next rule, and so on until all rules have been processed or a rule has cancelled the action.</p>
+<p>The full flow would look like:</p>
+<ol>
+<li>Run ‘Before’ rules</li>
+<li>If action is not canceled, run Verb processing and append to Action output</li>
+<li>If action is not canceled, run ‘After’ rules</li>
+<li>Return Action object</li>
+</ol>
+<p>Note that the After rules cannot cancel the action. It’s too late. They can still prepend, append, or change the output.</p>
+<p>Lastly, this makes me think certain rules will need broken into two rules (Before and After), which I’d like to streamline. Could expand the understand() rule builder to have before() and after() methods (effectively generating two rules in one overall block), but I don’t know if that’s really worthwhile (vs just generating two rules one after the other). Probably not.</p>
+<p>Open questions:</p>
+<ul>
+<li>Is there a need for a Rule to not cancel the action entirely, but cancel any remaining rules in the current rule group?</li>
+<li>Is there a need for a Rule to cancel Verb processing but not cancel After rules?</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/09/19/rule-chaining/" data-id="cimr9d0h0004gbcohzapqm7bg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-daily-update-260-2015" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/18/daily-update-260-2015/">Daily Update&amp;#58; 260.2015</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/09/18/daily-update-260-2015/">
+      <time datetime="2015-09-18T07:00:00.000Z" itemprop="datePublished">2015-09-18</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><strong>Changes:</strong></p>
+<ul>
+<li>Prototyped context dropdowns for command tags.</li>
+</ul>
+<p><strong>Bugs &amp; Problems:</strong></p>
+<ul>
+<li>Not really a problem, but I need to add a descriptive layer for when the player is inside something.</li>
+<li>Need to figure out a good way to populate the dropdowns (probably something rule based so modules can add entries to tags, but that also requires rules to chain nicely). Not a trivial problem, but one that if I solve it for command tags, it will also be useful elsewhere.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/09/18/daily-update-260-2015/" data-id="cimr9d0le006ybcoholmh4dfp" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-internal-rules-rulebooks" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -109,7 +233,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/17/internal-rules-rulebooks/" data-id="cimnuwrf5004wcsohbq8xgag1" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/17/internal-rules-rulebooks/" data-id="cimr9d0i7004wbcoht6fuu55r" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -168,7 +292,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/16/daily-update-258-2015/" data-id="cimnuwrh80070csohbkci569p" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/16/daily-update-258-2015/" data-id="cimr9d0lh0070bcohk2wvwj1t" class="article-share-link">Share</a>
       
       
     </footer>
@@ -226,7 +350,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/15/daily-update-257-2015/" data-id="cimnuwrh80071csohbxjodfdf" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/15/daily-update-257-2015/" data-id="cimr9d0lk0071bcoh9mtgzhnn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -301,7 +425,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/14/weekly-update-9/" data-id="cimnuwr9c000ccsohvi2x44qs" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/14/weekly-update-9/" data-id="cimr9d0aa000cbcohy0v4w9mx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -424,7 +548,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/13/the-rulebook/" data-id="cimnuwrbj002fcsoh0bmx7mbe" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/13/the-rulebook/" data-id="cimr9d0dh002fbcohl32shs3c" class="article-share-link">Share</a>
       
       
     </footer>
@@ -488,7 +612,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/12/daily-update-254-2015/" data-id="cimnuwrh80072csohdtgnx1qb" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/12/daily-update-254-2015/" data-id="cimr9d0lm0072bcohbqkygmgv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -548,7 +672,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/11/daily-update-253-2015/" data-id="cimnuwrh80073csohph3bpmwi" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/11/daily-update-253-2015/" data-id="cimr9d0lo0073bcoh4xs1h5dr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -609,111 +733,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/10/update-and-bugs/" data-id="cimnuwrb30027csohf2ugps83" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/10/update-and-bugs/" data-id="cimr9d0cz0027bcohxhf2tx1z" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-getting-serious" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/09/getting-serious/">Getting Serious</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/09/09/getting-serious/">
-      <time datetime="2015-09-09T07:00:00.000Z" itemprop="datePublished">2015-09-09</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Today I did the thing I said yesterday I’d do today. My new goal is to do that today almost every day.</p>
-<p>I’m coming up on 60 posts to this dev journal; so far I haven’t missed a day, and I’m pretty pleased about that. What I’m not pleased with is my progress on the game itself, planning and dreaming aside. So I’m setting an additional goal: writing code for StupidRPG 5 days out of every 7. It doesn’t have to be a lot, but something needs to be happening on a continual basis.</p>
-<p>My schedule is now:</p>
-<ul>
-<li>Dev Journal: Every Day</li>
-<li>Coding: 5 days a Week</li>
-</ul>
-<p>Today I added the Temperature module and the Thermal component. It’s work in progress. I started by adding temperatures to the Player (warmish), the hot springs (hot), and the glowing orb (lukewarm). Temperatures can be optionally displayed in room descriptions. I also need to add a System to handle Thermal objects, since they can fluctuate in temperature and change the temperature of other objects.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/09/getting-serious/" data-id="cimnuwrfb0052csohalb9ddfq" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-stupidrpg-temperature" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/08/stupidrpg-temperature/">StupidRPG: Temperature</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/09/08/stupidrpg-temperature/">
-      <time datetime="2015-09-08T07:00:00.000Z" itemprop="datePublished">2015-09-08</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>I’ve decided to add a Temperature component to the game. It will initially be used for a challenge related to the hot springs, but may have other interesting uses later on. With this component I’ll be able to create puzzles with thermal elements, make things like ovens, or add dynamic NPC behaviors based on the current temperature (seeking out warmth, for example).</p>
-<p>First up: adding a thermometer to the game.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/08/stupidrpg-temperature/" data-id="cimnuwrce0034csoh35u86drg" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
-
     </footer>
   </div>
   
