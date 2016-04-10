@@ -8,8 +8,29 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Fri, 08 Apr 2016 05:14:28 GMT</pubDate>
+    <pubDate>Sun, 10 Apr 2016 06:28:32 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.04.08</title>
+      <link>http://timberjaw.github.io/2016/04/08/Daily-Update-2016-04-08/</link>
+      <guid>http://timberjaw.github.io/2016/04/08/Daily-Update-2016-04-08/</guid>
+      <pubDate>Fri, 08 Apr 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;No work on SRPG today.&lt;/p&gt;
+&lt;p&gt;Turned 30 recently, so that’s kind of novel. Seems pretty good so far.&lt;/p&gt;
+&lt;p&gt;Each number in today’s date i
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;No work on SRPG today.&lt;/p&gt;
+&lt;p&gt;Turned 30 recently, so that’s kind of novel. Seems pretty good so far.&lt;/p&gt;
+&lt;p&gt;Each number in today’s date is divisible by 4. I thought that was interesting but I guess there are 21 days this year matching that criteria (7 each in April, August and December).&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/04/08/Daily-Update-2016-04-08/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.04.07</title>
@@ -441,30 +462,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/03/20/Daily-Update-2016-03-20/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.03.19</title>
-      <link>http://timberjaw.github.io/2016/03/19/Daily-Update-2016-03-19/</link>
-      <guid>http://timberjaw.github.io/2016/03/19/Daily-Update-2016-03-19/</guid>
-      <pubDate>Sat, 19 Mar 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Busy day, small update.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added verbiage for passages from hot springs: back to
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Busy day, small update.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added verbiage for passages from hot springs: back to path and down to lair.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/03/19/Daily-Update-2016-03-19/#disqus_thread</comments>
     </item>
     
   </channel>
