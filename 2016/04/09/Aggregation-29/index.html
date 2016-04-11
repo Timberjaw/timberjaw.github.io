@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Aggregation #29 | TIMBERTECH</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Changes &amp;amp; Updates:
+
+Added ‘put in’ command for containers.
+Fixed several inventory bugs related to containers and locations.
+Fixed being able to pick up objects you’re already holding.
+Fixed ‘drop">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Aggregation #29">
+<meta property="og:url" content="http://timberjaw.github.io/2016/04/09/Aggregation-29/index.html">
+<meta property="og:site_name" content="TIMBERTECH">
+<meta property="og:description" content="Changes &amp;amp; Updates:
+
+Added ‘put in’ command for containers.
+Fixed several inventory bugs related to containers and locations.
+Fixed being able to pick up objects you’re already holding.
+Fixed ‘drop">
+<meta property="og:updated_time" content="2016-04-11T03:59:45.632Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Aggregation #29">
+<meta name="twitter:description" content="Changes &amp;amp; Updates:
+
+Added ‘put in’ command for containers.
+Fixed several inventory bugs related to containers and locations.
+Fixed being able to pick up objects you’re already holding.
+Fixed ‘drop">
+  
+  
+  
+ <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" type="text/css">
+  
+
+  
+
+  
+</head>
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="/" id="logo"><span class="site-title">TIMBERTECH</span></a>
+      <span class="site-subtitle">DATA COLLECTOR MK IV</span>
+      <nav id="main-nav">
+        
+      </nav>
+      
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tr>
+        
+        <td>
+          
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://timberjaw.github.io"></form>
+          
+        </td>
+      </tr>
+    </table>
+  </div>
+</header>
+
+    <div class="outer">
+      
+      <section id="main"><article id="post-Aggregation-29" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Aggregation #29
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2016/04/09/Aggregation-29/">
+      <time datetime="2016-04-09T07:00:00.000Z" itemprop="datePublished">2016-04-09</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><strong>Changes &amp; Updates:</strong></p>
+<ul>
+<li>Added ‘put in’ command for containers.</li>
+<li>Fixed several inventory bugs related to containers and locations.</li>
+<li>Fixed being able to pick up objects you’re already holding.</li>
+<li>Fixed ‘drop’ conflict (dropping an object on the ground vs dropping it in a container).</li>
+<li>Wired up two riddles for the twins with success/failure states.</li>
+<li>Significant refactoring of the NLP to use an action stack. Needed to preserve original action data when an implicit action is triggered.</li>
+<li>Got doors and locks working (mostly). Needs some visibility/accessibility work for the target location, since currently objects are only visible in their primary location.</li>
+<li>Added thermal system to support ice key quest. Prologue is officially playable end-to-end in its current state.</li>
+<li>Added list (array) support for ‘in location’ checks in rules.</li>
+<li>Fixed combat actions to use new Action object.</li>
+<li>Fixed open/close actions to use new Action object.</li>
+<li>Prettified quest outputs using box handler.</li>
+<li>Made player input stand out more.</li>
+<li>Fixed wyrmling onTick running twice (wasn’t checking System, wyrmling belongs to two).</li>
+<li>Fixed bug where certain queued outputs wouldn’t get displayed until the beginning of the next tick.</li>
+<li>Fixed “New Quest” output displaying before action output in some cases.</li>
+<li>Cleaned up chamber sequence and ending.</li>
+<li>Creepified black box entry.</li>
+<li>Added visibility support for objects in multiple locations.</li>
+<li>Improved key handling of action overrides on entities.</li>
+<li>Added temperature feedback for hot springs.</li>
+<li>Fixed internal rules with no output canceling other rules.</li>
+<li>Fixed chamber entrance sequence not working.</li>
+<li>Added prologue outro.</li>
+<li>Cleaned up some sequence timings.</li>
+<li>Improved handling of input area to make it more obvious when more text is incoming.</li>
+<li>Altered bird behavior to more directly telegraph what the bird wants.</li>
+<li>Bird now returns to the feeder any time the player is there.</li>
+<li>Added aliases and tags to draw the player’s attention to the feeder.</li>
+<li>Added verbiage for passages from hot springs: back to path and down to lair.</li>
+<li>Cleaned up bird output.</li>
+<li>Added support for full HTML transcript saving (was previously cut off because output queue trims items as they disappear off the top).</li>
+<li>Made it impossible to not have the rainbow sword.</li>
+<li>Added a ‘smell’ command to SRPG, for those who like to dawdle and inspect the flowers.</li>
+<li>Added smell support for locations.</li>
+<li>Added smells for: blue flowers, brambles, ferns, spores, black box, musty cave, sawdust, spider, vines, dust, moss, bird, Bob, player, troglodyte, wyrmling, red berries.</li>
+<li>Added ‘that sword’ alias for sword.</li>
+<li>Added ‘brandish’ verb to wave sword around.</li>
+<li>Added ‘slide down’ command in hill slide location.</li>
+<li>Added climb [up/down] [object] verb.</li>
+<li>Added ‘leave’ alias for ‘put down’.</li>
+<li>Added ‘fill bird feeder’ rule.</li>
+<li>Replaced old GM description with something more appropriate to its current character.</li>
+<li>Updated the transcript output to include styles and framing for easier reading and review.</li>
+<li>Sword now greets player when first picked up.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2016/04/09/Aggregation-29/" data-id="cimvh0i5t00a41goh3mdf7ox4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/04/08/Daily-Update-2016-04-08/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Daily Update 2016.04.08</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+</section>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Steven Richards<br>
+    </div>
+  </div>
+</footer>
+    
+
+
+
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

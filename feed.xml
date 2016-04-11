@@ -8,8 +8,75 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Sun, 10 Apr 2016 06:28:32 GMT</pubDate>
+    <pubDate>Mon, 11 Apr 2016 03:59:45 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Aggregation #29</title>
+      <link>http://timberjaw.github.io/2016/04/09/Aggregation-29/</link>
+      <guid>http://timberjaw.github.io/2016/04/09/Aggregation-29/</guid>
+      <pubDate>Sat, 09 Apr 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added ‘put in’ command for containers.&lt;/li&gt;
+&lt;li&gt;Fixed several inventory bugs related
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added ‘put in’ command for containers.&lt;/li&gt;
+&lt;li&gt;Fixed several inventory bugs related to containers and locations.&lt;/li&gt;
+&lt;li&gt;Fixed being able to pick up objects you’re already holding.&lt;/li&gt;
+&lt;li&gt;Fixed ‘drop’ conflict (dropping an object on the ground vs dropping it in a container).&lt;/li&gt;
+&lt;li&gt;Wired up two riddles for the twins with success/failure states.&lt;/li&gt;
+&lt;li&gt;Significant refactoring of the NLP to use an action stack. Needed to preserve original action data when an implicit action is triggered.&lt;/li&gt;
+&lt;li&gt;Got doors and locks working (mostly). Needs some visibility/accessibility work for the target location, since currently objects are only visible in their primary location.&lt;/li&gt;
+&lt;li&gt;Added thermal system to support ice key quest. Prologue is officially playable end-to-end in its current state.&lt;/li&gt;
+&lt;li&gt;Added list (array) support for ‘in location’ checks in rules.&lt;/li&gt;
+&lt;li&gt;Fixed combat actions to use new Action object.&lt;/li&gt;
+&lt;li&gt;Fixed open/close actions to use new Action object.&lt;/li&gt;
+&lt;li&gt;Prettified quest outputs using box handler.&lt;/li&gt;
+&lt;li&gt;Made player input stand out more.&lt;/li&gt;
+&lt;li&gt;Fixed wyrmling onTick running twice (wasn’t checking System, wyrmling belongs to two).&lt;/li&gt;
+&lt;li&gt;Fixed bug where certain queued outputs wouldn’t get displayed until the beginning of the next tick.&lt;/li&gt;
+&lt;li&gt;Fixed “New Quest” output displaying before action output in some cases.&lt;/li&gt;
+&lt;li&gt;Cleaned up chamber sequence and ending.&lt;/li&gt;
+&lt;li&gt;Creepified black box entry.&lt;/li&gt;
+&lt;li&gt;Added visibility support for objects in multiple locations.&lt;/li&gt;
+&lt;li&gt;Improved key handling of action overrides on entities.&lt;/li&gt;
+&lt;li&gt;Added temperature feedback for hot springs.&lt;/li&gt;
+&lt;li&gt;Fixed internal rules with no output canceling other rules.&lt;/li&gt;
+&lt;li&gt;Fixed chamber entrance sequence not working.&lt;/li&gt;
+&lt;li&gt;Added prologue outro.&lt;/li&gt;
+&lt;li&gt;Cleaned up some sequence timings.&lt;/li&gt;
+&lt;li&gt;Improved handling of input area to make it more obvious when more text is incoming.&lt;/li&gt;
+&lt;li&gt;Altered bird behavior to more directly telegraph what the bird wants.&lt;/li&gt;
+&lt;li&gt;Bird now returns to the feeder any time the player is there.&lt;/li&gt;
+&lt;li&gt;Added aliases and tags to draw the player’s attention to the feeder.&lt;/li&gt;
+&lt;li&gt;Added verbiage for passages from hot springs: back to path and down to lair.&lt;/li&gt;
+&lt;li&gt;Cleaned up bird output.&lt;/li&gt;
+&lt;li&gt;Added support for full HTML transcript saving (was previously cut off because output queue trims items as they disappear off the top).&lt;/li&gt;
+&lt;li&gt;Made it impossible to not have the rainbow sword.&lt;/li&gt;
+&lt;li&gt;Added a ‘smell’ command to SRPG, for those who like to dawdle and inspect the flowers.&lt;/li&gt;
+&lt;li&gt;Added smell support for locations.&lt;/li&gt;
+&lt;li&gt;Added smells for: blue flowers, brambles, ferns, spores, black box, musty cave, sawdust, spider, vines, dust, moss, bird, Bob, player, troglodyte, wyrmling, red berries.&lt;/li&gt;
+&lt;li&gt;Added ‘that sword’ alias for sword.&lt;/li&gt;
+&lt;li&gt;Added ‘brandish’ verb to wave sword around.&lt;/li&gt;
+&lt;li&gt;Added ‘slide down’ command in hill slide location.&lt;/li&gt;
+&lt;li&gt;Added climb [up/down] [object] verb.&lt;/li&gt;
+&lt;li&gt;Added ‘leave’ alias for ‘put down’.&lt;/li&gt;
+&lt;li&gt;Added ‘fill bird feeder’ rule.&lt;/li&gt;
+&lt;li&gt;Replaced old GM description with something more appropriate to its current character.&lt;/li&gt;
+&lt;li&gt;Updated the transcript output to include styles and framing for easier reading and review.&lt;/li&gt;
+&lt;li&gt;Sword now greets player when first picked up.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/04/09/Aggregation-29/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.04.08</title>
@@ -444,24 +511,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/03/21/Daily-Update-2016-03-21/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.03.20</title>
-      <link>http://timberjaw.github.io/2016/03/20/Daily-Update-2016-03-20/</link>
-      <guid>http://timberjaw.github.io/2016/03/20/Daily-Update-2016-03-20/</guid>
-      <pubDate>Sun, 20 Mar 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Think it’s ready for a technical playtest. Just gotta let it go.&lt;/p&gt;
-
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Think it’s ready for a technical playtest. Just gotta let it go.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/03/20/Daily-Update-2016-03-20/#disqus_thread</comments>
     </item>
     
   </channel>
