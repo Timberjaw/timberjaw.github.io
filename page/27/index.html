@@ -60,6 +60,176 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-with-graphics-sound" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/26/with-graphics-sound/">With Graphics &amp; Sound</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/07/26/with-graphics-sound/">
+      <time datetime="2015-07-26T07:00:00.000Z" itemprop="datePublished">2015-07-26</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Short post today. I’d like to give a quick overview of the ‘graphics and sound’ portion of the statement ‘StupidRPG is a text adventure with graphics and sound.’</p>
+<h2 id="Sound"><a href="#Sound" class="headerlink" title="Sound"></a>Sound</h2><p>I’m the least musically-inclined person I’ve ever met, so I made the wise choice of marrying a composer. Sound in SRPG includes soundscapes (background noises) and music (the stuff with notes and whatnot). Sound/music can be optionally enabled during the intro portion of the game, and plays via an HTML5 audio element. Music can be cued by entering a new region or by triggering a specific event. Each track can provide settings for volume, looping, and closed captions.</p>
+<h2 id="Graphics"><a href="#Graphics" class="headerlink" title="Graphics"></a>Graphics</h2><p>This part is still up in the air, but it’s a definite goal for the game. In particular, I’d like to make use of the empty sidebar areas for some nice ambient/background art, varied per location/region. Highlighting key items and NPCs graphically would be a nice addition as well. One of the nice things about the way the engine is built is that actions/input can be triggered from anywhere (for example, clicking on a bush in the sidebar could trigger the <code>LOOK AT BUSH</code> action).</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/07/26/with-graphics-sound/" data-id="cimyfrcqu00085kohahrwn228" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-stupidrpg-natural-language-processing" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/25/stupidrpg-natural-language-processing/">StupidRPG: Natural Language Processing</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/07/25/stupidrpg-natural-language-processing/">
+      <time datetime="2015-07-25T07:00:00.000Z" itemprop="datePublished">2015-07-25</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Language parsing is hard. The parser in SRPG took me a couple months to get working the way I wanted, and it’s a very simple parser compared to others I’ve seen. I’ve previously listed the command patterns (or sentence patterns) SRPG can understand; the list has grown gradually during the course of SRPG’s development, but at this point it’s unlikely to change much prior to the first release. It covers 99% of the patterns I’m interested in supporting. </p>
+<p>This will be a long, moderately-technical post.</p>
+<p><div class="highlight-header">Pattern List Reference</div><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Pattern list</span></span><br><span class="line"><span class="comment">// Cannot start with a modifier</span></span><br><span class="line"><span class="comment">// In order of priority (highest to lowest):</span></span><br><span class="line"><span class="string">'patterns'</span> = [</span><br><span class="line">    <span class="string">'VERB'</span>,						        <span class="comment">// inventory</span></span><br><span class="line">    <span class="string">'VERB NOUN'</span>, 				        <span class="comment">// eat baby</span></span><br><span class="line">    <span class="string">'VERB MODIFIER'</span>,			        <span class="comment">// saunter west</span></span><br><span class="line">    <span class="string">'VERB MODIFIER NOUN'</span>,		        <span class="comment">// get in closet</span></span><br><span class="line">    <span class="string">'VERB NOUN MODIFIER NOUN'</span>,	        <span class="comment">// attack goblin with hammer</span></span><br><span class="line">    <span class="string">'VERB MODIFIER MODIFIER NOUN'</span>,      <span class="comment">// look north through telescope</span></span><br><span class="line">    <span class="string">'VERB MODIFIER NOUN MODIFIER NOUN'</span>, <span class="comment">// look at bob through telescope</span></span><br><span class="line">    <span class="comment">// Overflow patterns</span></span><br><span class="line">    <span class="string">'VERB MODIFIER NOUN MODIFIER TEXT'</span>, <span class="comment">// talk to goblin about greatest fears</span></span><br><span class="line">    <span class="string">'VERB MODIFIER MODIFIER TEXT'</span>,      <span class="comment">// look north through telescope saucily</span></span><br><span class="line">    <span class="string">'VERB NOUN MODIFIER TEXT'</span>,          <span class="comment">// ask bob about back pain</span></span><br><span class="line">    <span class="string">'VERB MODIFIER TEXT'</span>                <span class="comment">// talk about floops</span></span><br><span class="line">];</span><br></pre></td></tr></table></figure></p>
+<p>Patterns are only the tip of the iceberg though. A lot of work goes on behind the scenes to convert arbitrary text from the player into a meaningful action within the game. The end result functions similarly to a lexer/parser in that it processes a string via a set of grammar rules. The parser performs the following steps:</p>
+<ol>
+<li>Do basic sanitization (e.g. remove extra whitespace).</li>
+<li>If a command interrupt is set, give it a chance to take over.</li>
+<li>For each pattern, do:</li>
+<li><ul>
+<li>Convert the input string to lowercase for easier parsing.</li>
+</ul>
+</li>
+<li><ul>
+<li>Break the new string into tokens (words).</li>
+</ul>
+</li>
+<li><ul>
+<li>Do sanity checks.</li>
+</ul>
+</li>
+<li><ul>
+<li>For each token in the pattern, try to match to the next available command token(s).</li>
+</ul>
+</li>
+<li>If no VERB was matched, return an error. All commands have to contain a verb.</li>
+<li>If a portion of the input wasn’t matched, return an error.</li>
+<li>Apply filter restrictions (more on that later), and return an error if the filters fail.</li>
+<li>Dispatch the action to the relevant object or verb.</li>
+</ol>
+<p>Some steps are more significant than others. I’ll go over the more important/interesting ones in detail.</p>
+<h2 id="Pattern_Loop__28Step_3_29"><a href="#Pattern_Loop__28Step_3_29" class="headerlink" title="Pattern Loop (Step 3)"></a>Pattern Loop (Step 3)</h2><p>The pattern loop compares each command pattern to the input tokens. Most of the work is done in steps 6-7, but before the process gets there, the input string is segmented and a couple checks are performed. Notably, if the number of input tokens is less than the number of pattern tokens, it skips to the next pattern without doing any more (wasted) work. If a <code>halt</code> has been triggered by the token matching, the pattern processing will stop rather than continuing to the next pattern.</p>
+<h2 id="Token_Matching__28Steps_6-7_29"><a href="#Token_Matching__28Steps_6-7_29" class="headerlink" title="Token Matching (Steps 6-7)"></a>Token Matching (Steps 6-7)</h2><p>For each token in the pattern, the NLP attempts to match as many of the input tokens as possible.</p>
+<p>Here’s a simple example: <code>GO NORTH</code>. This is going to match the <code>VERB MODIFIER</code> pattern (the third pattern). First, however, the NLP will try to use the first pattern, <code>VERB</code>. It will look for a verb called ‘go north’, and upon failing to find one, it will continue to the next pattern: <code>VERB NOUN</code>. This time it will successfully match the verb ‘go’, but it will fail on the second pattern token, <code>NOUN</code>, after failing to find an <strong>object</strong> called ‘north’. Finally, it will get to the third pattern: <code>VERB MODIFIER</code>. As in the 2nd attempt, it will match the verb ‘go’, and then match the modifier ‘north’ (available for the ‘go’ verb).</p>
+<p>Longer input strings take a lot more work. Keep in mind that the NLP will always try to match as much text as possible in each step. A long command like <code>LOOK AT THE MOON THROUGH THE TELESCOPE</code> will end up making the following comparisons for the command pattern <code>VERB NOUN MODIFIER NOUN</code>:</p>
+<ul>
+<li>Is ‘look at the moon through the telescope’ a verb? <strong>No</strong></li>
+<li>Is ‘look at the moon through the’ a verb? <strong>No</strong></li>
+<li>Is ‘look at the moon through’ a verb? <strong>No</strong></li>
+<li>Is ‘look at the moon’ a verb? <strong>No</strong></li>
+<li>Is ‘look at the’ a verb? <strong>No</strong></li>
+<li>Is ‘look at’ a verb? <strong>Yes!</strong></li>
+<li>Is ‘the moon through the telescope’ a noun? <strong>No</strong></li>
+<li>Is ‘the moon through the’ a noun? <strong>No</strong></li>
+<li>Is ‘the moon through’ a noun? <strong>No</strong></li>
+<li>Is ‘the moon’ a noun? <strong>Yes!</strong></li>
+<li>Is ‘through the telescope’ a modifier? <strong>No</strong></li>
+<li>Is ‘through the’ a modifier? <strong>No</strong></li>
+<li>Is ‘through’ a modifier? <strong>Yes!</strong></li>
+<li>Is ‘the telescope’ a noun? <strong>Yes!</strong></li>
+</ul>
+<p>If you’re feeling cross-eyed, don’t worry, that’s perfectly normal.</p>
+<p>The verb matching function is listed below. The functions for matching verbs, nouns, and modifiers all work in basically the same way. They get a subset of the provided tokens, starting with all of the tokens, and shrink the set until they get a match or run out of tokens.</p>
+<p><div class="highlight-header">NLP.matchVerb()</div><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'matchVerb'</span> = <span class="function"><span class="keyword">function</span>(<span class="params">string</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> tokens = string.split(<span class="string">' '</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Loop through token list, try to parse longest first (most tokens)</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = tokens.length; i &gt; <span class="number">0</span>; i--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">var</span> verb = tokens.slice(<span class="number">0</span>, i).join(<span class="string">' '</span>);</span><br><span class="line">        <span class="keyword">var</span> action = ECS.getAction(verb);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(action != <span class="literal">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> &#123;<span class="string">'match'</span>:action,<span class="string">'string'</span>:tokens.slice(i).join(<span class="string">' '</span>)&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="string">'match'</span>:<span class="literal">null</span>,<span class="string">'string'</span>:string&#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>On line 8, the function asks the ECS for a verb with the given alias. Most verbs have multiple aliases. Here’s the list for the ‘look’ command: <code>‘aliases’:[‘look’,’l’,’look at’,’peer’,’glance’,’inspect’,’examine’,’x’]</code>.</p>
+<p>If a verb was found, the match is returned in two parts: 1) the verb object, and 2) the unmatched remainder of the text. In the above example sequence, matchVerb would return ‘the moon through the telescope’ along with the ‘look’ verb.</p>
+<p>Eventually, the NLP matches all the input tokens or determines that not all tokens can be matched. The latter case leads into step 9.</p>
+<h2 id="Partial_Comprehension__28Step_9_29"><a href="#Partial_Comprehension__28Step_9_29" class="headerlink" title="Partial Comprehension (Step 9)"></a>Partial Comprehension (Step 9)</h2><p>Good feedback is important in the input processor. It should always be as clear as possible to the player why a command failed, so they can resolve it with minimal fuss. Let’s look at two examples:</p>
+<ul>
+<li><code>EAT THE CAMEL</code></li>
+<li><code>GO NORTH WHILE CARTWHEELING</code></li>
+</ul>
+<p>The first example is handled by the NLP directly. A generic response is provided, because the verb ‘eat’ was understood, but ‘the camel’ wasn’t identified as an object. The response will be: <code>I understood everything up until ‘the camel’. You want to eat, plus something.</code></p>
+<p>Ok, that’s a good start. The phrasing is a little clunky in this context (probably in most contexts, honestly), but it gets the message across. The player should probably verify that there is indeed a camel in the current location. We can do better though. The NLP allows verbs to specify their own callback for handling failed inputs.</p>
+<p>The second example uses the ‘move’ verb (‘go’ is an alias for ‘move’, and ‘north’ is one of the available modifiers). Entering the command above will produce this response, custom-tailored by the verb itself: <code>I understand you want to go somewhere, but I don’t know how to go (while cartwheeling).</code></p>
+<p>Better.</p>
+<h2 id="Filters__28Step_10_29"><a href="#Filters__28Step_10_29" class="headerlink" title="Filters (Step 10)"></a>Filters (Step 10)</h2><p>I’ll have to save a more thorough discussion of Filters for another post. The basic idea is that the NLP’s parsing can be interrupted if certain conditions are met. For example, the <code>LOOK</code> and <code>TAKE</code> verbs have a ‘darkness’ filter applied to them. If the current location is dark, the filter fails (canceling the action).</p>
+<h2 id="Dispatching_Actions__28Step_11_29"><a href="#Dispatching_Actions__28Step_11_29" class="headerlink" title="Dispatching Actions (Step 11)"></a>Dispatching Actions (Step 11)</h2><p>Alright. Tokens are parsed, command patterns attempted, filters passed. We’ve got a verb, nouns (maybe), modifiers (maybe). Time to actually trigger the command. If we parsed any nouns, we also decide which one is the target and try to hand control off to it. In general, most actions in the game can be customized per-object. If the object doesn’t provide a callback for the verb, or the object’s callback declined to handle the action, control is instead handled to the verb’s default callback.</p>
+<p>In either case, an object containing the matched noun(s), matched modifier(s), and the full input string, is passed to the callback.</p>
+<p>That’s it. The NLP’s job is done.</p>
+<h2 id="Areas_for_Improvement"><a href="#Areas_for_Improvement" class="headerlink" title="Areas for Improvement"></a>Areas for Improvement</h2><p>I don’t plan on doing any major refactoring of the NLP in the near future. I’ve already spent more time on it than I should, and it handles pretty much every type of <em>useful</em> command I can think of right now. That said, it has a few notable shortcomings and areas for improvement.</p>
+<p><strong>Precedence:</strong> if the player enters a command like <code>TALK ABOUT SELF</code> (which matches the very last command pattern in the list), the NLP will first attempt to match the command against every other pattern in the list. It’s designed to ‘fail fast’ if the string can’t possibly match the current pattern, but it still feels a bit inefficient to me. I can’t justify more time tinkering with it right now, as it works fine I haven’t identified any performance issues. Just a feeling there’s probably a better way.</p>
+<p><strong>Action Targets:</strong> currently, the NLP interprets the first noun matched as the target of the action. This leads to problems with commands like <code>LOOK THROUGH TELESCOPE AT BOB</code> vs. <code>LOOK AT BOB THROUGH TELESCOPE</code>, which will interpret the telescope and Bob as the target of the command, respectively. When control is passed to the telescope (first case), the command works fine. When control is passed to Bob (second case), the action will fail (or at least not give the expected result). This is a tricky one to fix.</p>
+<p><strong>Disambiguation:</strong> the NLP does not currently perform disambiguation when two objects have similar or identical names. The classic Infocom games display a message like “<code>Do you mean the red ball or the blue ball?</code>“ and then interpret the player’s next input as a clarification. Hmm, that sounds a lot like a command interrupt…</p>
+<p><strong>Complex Identifiers:</strong> once again, the Infocom parser has some cool tricks. For certain verbs, it allows lists of objects to be parsed (useful for picking up multiple items, for example). Advanced cases like <code>TAKE ALL EXCEPT HAMMER AND SCREWDRIVER</code> are understood. Raw text and numbers can also be used mid-input, whereas in SRPG any non-standard text is handled in the ‘overflow’, which always comes at the end of the input string.</p>
+<p>I could go on, but at this point I’m just listing all the really smart things Infocom and Inform do that SRPG doesn’t.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/07/25/stupidrpg-natural-language-processing/" data-id="cimyfrcu6003a5kohfpkf9ou6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nlp/">nlp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-breaking-the-game-mods-hacks-and-cheats" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -104,7 +274,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/24/breaking-the-game-mods-hacks-and-cheats/" data-id="cimx3l5oq007cvooh9e0lw80g" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/24/breaking-the-game-mods-hacks-and-cheats/" data-id="cimyfrczw007c5kohpmzil6pl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -179,7 +349,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/23/stupidrpg-command-interrupts/" data-id="cimx3l5iz003uvoohyk125qjo" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/23/stupidrpg-command-interrupts/" data-id="cimyfrcuv003u5koh240q15s0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -232,7 +402,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/22/post-schedule/" data-id="cimx3l5ko004ovoohnraje3po" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/22/post-schedule/" data-id="cimyfrcwd004o5kohczbyde79" class="article-share-link">Share</a>
       
       
     </footer>
@@ -281,7 +451,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/21/stupidrpg-the-gm/" data-id="cimx3l5if0030voohc0jnmdly" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/21/stupidrpg-the-gm/" data-id="cimyfrctw00305kohxrit79ke" class="article-share-link">Share</a>
       
       
     </footer>
@@ -340,7 +510,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/20/weekly-update-1/" data-id="cimx3l5gr0023voohmlorieb8" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/20/weekly-update-1/" data-id="cimyfrcsm00235kohydui8d6u" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -390,7 +560,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/19/dungeons-dragons/" data-id="cimx3l5ly005avoohv2fg9814" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/19/dungeons-dragons/" data-id="cimyfrcxe005a5kohc1i748sh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -469,7 +639,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/18/stupidrpg-the-black-box/" data-id="cimx3l5if0031voohjg9rlrrn" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/18/stupidrpg-the-black-box/" data-id="cimyfrctw00315kohzhkv6xdz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -545,149 +715,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/17/tools-of-the-trade/" data-id="cimx3l5hb002avoohd3g5c8q2" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/17/tools-of-the-trade/" data-id="cimyfrct7002a5kohwbbqaqmq" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-stupidrpg-dialogue-trees" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/16/stupidrpg-dialogue-trees/">StupidRPG Dialogue Trees</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/07/16/stupidrpg-dialogue-trees/">
-      <time datetime="2015-07-16T07:00:00.000Z" itemprop="datePublished">2015-07-16</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>A game like StupidRPG wouldn’t be complete without extensive NPC interaction. It’s a crucial part of the roleplaying experience the game is inspired by. The world of text adventures and computer RPGs offer many different ways of handling this. I considered several options, each of which has pros and cons. In the end, I tried to take the pieces I liked from multiple styles. This is a non-exhaustive list of the methods I considered.</p>
-<h2 id="Dialogue_Tree"><a href="#Dialogue_Tree" class="headerlink" title="Dialogue Tree"></a>Dialogue Tree</h2><p>Popular in computer RPGs and adventure games, dialogue trees are basically directed graphs. Each dialogue option is a ‘node’ that can connect to a semi-arbitrary number of additional nodes. Significant depth is supported, particularly when alternate nodes are locked behind prerequesites (for example: possessing a certain item, meeting a certain NPC, or meeting alignment requirements). This style of NPC interaction has carried into modern games (pretty much any BioWare game, for starters), with a couple tweaks.</p>
-<p><strong>Pros:</strong></p>
-<ul>
-<li>Conversations of varying complexity supported</li>
-<li>Easy to set up conversational ‘rabbit holes’ which eventually loop back to a root node</li>
-<li>Easy to ‘gate’ nodes or chains of nodes behind situational requirements</li>
-</ul>
-<p><strong>Cons:</strong></p>
-<ul>
-<li>Rigidly defines what can be talked about and when</li>
-<li>Player’s dialogue may not match their conceptualization based on the presented (simplified) dialogue text</li>
-</ul>
-<h2 id="Glossary_/_Dictionary"><a href="#Glossary_/_Dictionary" class="headerlink" title="Glossary / Dictionary"></a>Glossary / Dictionary</h2><p>Commonly seen in classic adventure games and text adventures, where the player can <code>ASK SUSAN ABOUT KOBOLDS</code> or drag an inventory item onto a character to learn more about it.</p>
-<p><strong>Pros:</strong></p>
-<ul>
-<li>Very user-driven, somewhat freeform</li>
-<li>Allows for hidden interactions / easter eggs</li>
-</ul>
-<p><strong>Cons:</strong></p>
-<ul>
-<li>Inevitably motivates the player to attempt every possible combination of item/topic with each NPC</li>
-<li>Each interaction is isolated from the rest (lack of continuity)</li>
-</ul>
-<h2 id="Commands__26amp_3B_Parsing"><a href="#Commands__26amp_3B_Parsing" class="headerlink" title="Commands &amp; Parsing"></a>Commands &amp; Parsing</h2><p>Low-tech as they are, some text adventures allow the player to give directions to NPCs, such as <code>GARY, GO NORTH AND EAT CAKE</code>. It’s not as complicated as it sounds; once you’ve identified the target of the command, the rest is identical to parsing a normal instruction from the player. I haven’t seen an example of more advanced parsing (e.g. <code>TELL GARY HIS FACE IS BAD</code>), but if such a thing exists, kudos.</p>
-<p><strong>Pros:</strong></p>
-<ul>
-<li>Situationally useful feature when dealing with friendly NPCs</li>
-</ul>
-<p><strong>Cons:</strong></p>
-<ul>
-<li>More complex text parsing is really hard</li>
-</ul>
-<h2 id="The_StupidRPG_Way"><a href="#The_StupidRPG_Way" class="headerlink" title="The StupidRPG Way"></a>The StupidRPG Way</h2><p>I settled on a combination of the first two options, with the third a distant goal if I find a use for it. In SRPG, a command like <code>TALK TO THE OGRES</code> generally initiates a dialogue tree (if one is available). Each node has:</p>
-<ul>
-<li>Text (actually a callback, in case more complex text generation or other triggers are needed)</li>
-<li>(Optional) Restrictions (e.g. this node is only available if the player previously fought the minotaur)</li>
-<li>(Optional) A visibility setting (default is visible, some nodes may be hidden for reasons other than access restrictions)</li>
-<li>(Optional) A node list (nodes available from this point in the conversation)</li>
-<li>(Optional) A list of keywords (more on that in a second)</li>
-</ul>
-<p>The second option comes into play with a list of topics each NPC can discuss. These are actually tree nodes, but the player can shortcut to them via commands like <code>ASK ELLEN ABOUT DIVORCE</code>.</p>
-<p>As indicated in a previous post, the SRPG parser allows for a variety of command patterns, including patterns with ‘overflow’ text (i.e. arbitrary text only understood by a particular command or object). One of the neat things about that is the ability to define custom parsing behaviors for specific NPCs or types of NPCs. For example, a town guard might respond poorly to the (non-standard syntax) statement: <code>SAY &#39;GO LICK A BEAR&#39; TO CAPTAIN ROTH</code>. The sky’s the limit, really.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/16/stupidrpg-dialogue-trees/" data-id="cimx3l5iz003svoohai8hw3gk" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-static-site-generators" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/15/static-site-generators/">Command Patterns &amp; Static Site Generators</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/07/15/static-site-generators/">
-      <time datetime="2015-07-15T07:00:00.000Z" itemprop="datePublished">2015-07-15</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>First off, a snippet from the language processor in StupidRPG. This section handles the command patterns the game can (attempt to) interpret.<br>Examples are included for my own benefit; it became difficult to keep track of how exactly each pattern might present itself within the game.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Pattern list</span></span><br><span class="line"><span class="comment">// Cannot start with a modifier</span></span><br><span class="line"><span class="comment">// In order of priority (highest to lowest):</span></span><br><span class="line">patterns = [</span><br><span class="line">  <span class="string">'VERB'</span>,                             <span class="comment">// inventory</span></span><br><span class="line">  <span class="string">'VERB NOUN'</span>,                        <span class="comment">// eat baby</span></span><br><span class="line">  <span class="string">'VERB MODIFIER'</span>,                    <span class="comment">// saunter west</span></span><br><span class="line">  <span class="string">'VERB MODIFIER NOUN'</span>,               <span class="comment">// get in closet</span></span><br><span class="line">  <span class="string">'VERB NOUN MODIFIER NOUN'</span>,          <span class="comment">// attack goblin with hammer</span></span><br><span class="line">  <span class="string">'VERB MODIFIER MODIFIER NOUN'</span>,      <span class="comment">// look north through telescope</span></span><br><span class="line">  <span class="string">'VERB MODIFIER NOUN MODIFIER NOUN'</span>, <span class="comment">// look at bob through telescope</span></span><br><span class="line">  <span class="comment">// Overflow patterns</span></span><br><span class="line">  <span class="string">'VERB MODIFIER NOUN MODIFIER TEXT'</span>, <span class="comment">// talk to goblin about greatest fears</span></span><br><span class="line">  <span class="string">'VERB MODIFIER MODIFIER TEXT'</span>,      <span class="comment">// look north through telescope saucily</span></span><br><span class="line">  <span class="string">'VERB NOUN MODIFIER TEXT'</span>,          <span class="comment">// ask bob about back pain</span></span><br><span class="line">  <span class="string">'VERB MODIFIER TEXT'</span>                <span class="comment">// talk about floops</span></span><br><span class="line">];</span><br></pre></td></tr></table></figure>
-<h2 id="Static_Site_Generators"><a href="#Static_Site_Generators" class="headerlink" title="Static Site Generators"></a>Static Site Generators</h2><p>In a nutshell, they seem a bit clunky. I’m currently trying out <a href="https://middlemanapp.com/" target="_blank" rel="external">Middleman</a>, which proved more straightforward to get set up than <a href="http://jekyllrb.com/" target="_blank" rel="external">Jekyll</a>.<br>In both cases, there is an unwelcome surplus of dependency-related issues, requiring specific (old) versions of Ruby and Python.<br>For hot new tech, these static site generators sure don’t play nice with other hot new tech.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/15/static-site-generators/" data-id="cimx3l5j90042voohkkh8cis6" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
-
     </footer>
   </div>
   

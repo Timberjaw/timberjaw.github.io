@@ -60,6 +60,127 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-What-Has-It-Got-In-Its-Pockets" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/02/What-Has-It-Got-In-Its-Pockets/">What Has It Got In Its Pockets?</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2016/02/02/What-Has-It-Got-In-Its-Pockets/">
+      <time datetime="2016-02-03T04:42:43.000Z" itemprop="datePublished">2016-02-02</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Some notes for inventories. The SRPG inventory is very rudimentary right now (a simple list of objects held by the player). I need something a bit more robust, supporting the following feature set:</p>
+<ul>
+<li>Concrete (held object) vs abstract (character traits)</li>
+<li>Visible (e.g. a hat being worn) vs concealed (e.g. a ring in a pocket)</li>
+<li>Accessibility restriction (object held by another creature can be seen but not touched, at least not without social repercussions)</li>
+</ul>
+<p><strong>Abstract Inventory</strong></p>
+<p>This includes anything a creature (including the player) could be said to ‘have’, but isn’t a physical object. Hit points, gumption, parents, etc.</p>
+<p><strong>Concealed Objects</strong></p>
+<p>I made a post a while back about inventory/equipment slots (swords are held, hats are worn on the head, and so forth). Concealment follows the normal container rules. That is, a backpack would be an opaque openable container: objects inside are visible when it’s open, but hidden when it’s closed. Pants with pockets would behave similarly.</p>
+<p><strong>Accessibility</strong></p>
+<p>Touching other people’s belongings is rude, especially when its on their person. Not sure if this should simply be blocked by default or if it should lead to more interesting (but more difficult to develop) social responses.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2016/02/02/What-Has-It-Got-In-Its-Pockets/" data-id="cimyfrd00007f5koh5ypxflek" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-Aggregation-25" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/01/Aggregation-25/">Aggregation #25</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2016/02/01/Aggregation-25/">
+      <time datetime="2016-02-01T08:00:00.000Z" itemprop="datePublished">2016-02-01</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><strong>Changes &amp; Updates:</strong></p>
+<ul>
+<li>Added get/set methods for entities to make it easier to check for values without being sure the key exists on the object.</li>
+<li>Made the bird sad if it can’t get at the bird feeder.</li>
+<li>Bird is happy if the player helps with the bird feeder problem.</li>
+<li>Moved magic ice cube to bird feeder.</li>
+<li>Unblock feeder when ice cube is removed.</li>
+<li>Added telescope descriptions for various objects the player might be interested in getting a closer look at.</li>
+<li>Decided to make the sword much chattier (possibly even replacing the hint system). For starters, I gave it dialogue responses for: destiny, eternity, the black box, the player, the magic ice cube, the ice key, the red berries, the scrap of paper, the litter, the glowing orb, the bird feeder, the bird, the jack, the jane, the ranger bob, the troglodyte, the wyrmling, the telescope, the structure, the gold coin, the moon, the hawk, the observer, the unicorn musk, the counterfeit seal, the steel-toed boots, the magic wand and the treasure chest.</li>
+<li>Arrays of multiple text matches are now allowed for the .text() method for Rules.</li>
+<li>Added the introductory monologue for the Twins.</li>
+<li>Added the introductory argument between the Twins and the GM.</li>
+<li>Added the first riddle.</li>
+<li>Assembled the first draft of the Observer’s introductory dialogue.</li>
+<li>Wrote up key responses for the Observer regarding the Baron, the aethernauts, the station, and so forth. He’s a chatty old fellow.</li>
+<li>Wrote sword dialogue for the void, the aethernauts, the station, Pete the dog, the moon, the stars, the space suit, the pod, and the rover.</li>
+<li>Added sword entries for: the cabin, the town, the inn, the twins (again), the cemetery, the gravekeeper, the (SPOILER), the elevator, the baron’s lair, and the baron.</li>
+<li>Settled on some conventions for the sword’s mode of speech.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2016/02/01/Aggregation-25/" data-id="cimyfrd4a00ab5kohmr7xm1ew" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-Daily-Update-2016-01-31" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -99,7 +220,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/01/31/Daily-Update-2016-01-31/" data-id="cimx3l5sb009lvoohd57h2d42" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/01/31/Daily-Update-2016-01-31/" data-id="cimyfrd3d009n5koh1hvmn3ac" class="article-share-link">Share</a>
       
       
     </footer>
@@ -149,7 +270,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/01/30/Daily-Update-2016-01-30/" data-id="cimx3l5sd009mvooh5qxompxd" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/01/30/Daily-Update-2016-01-30/" data-id="cimyfrd3e009o5kohnfrjr7z1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -196,7 +317,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/01/29/Paperwork/" data-id="cimx3l5p9007nvoohjs5x6xrw" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/01/29/Paperwork/" data-id="cimyfrd0b007n5kohljswcfsh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -250,7 +371,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/01/28/Writing-Dialogue/" data-id="cimx3l5ou007evooh37dzuiio" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/01/28/Writing-Dialogue/" data-id="cimyfrczz007e5kohuekdvbpa" class="article-share-link">Share</a>
       
       
     </footer>
@@ -300,7 +421,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/01/27/Daily-Update-2016-01-27/" data-id="cimx3l5se009nvooh75zjflbt" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/01/27/Daily-Update-2016-01-27/" data-id="cimyfrd3f009p5kohapltzwas" class="article-share-link">Share</a>
       
       
     </footer>
@@ -352,7 +473,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/01/26/Daily-Update-2016-01-26/" data-id="cimx3l5sf009ovoohgxuihnzt" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/01/26/Daily-Update-2016-01-26/" data-id="cimyfrd3g009q5kohnwn7owy0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -401,7 +522,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/01/25/Daily-Update-2016-01-25/" data-id="cimx3l5sg009pvooh3trkf985" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/01/25/Daily-Update-2016-01-25/" data-id="cimyfrd3h009r5kohipoqltt5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -454,102 +575,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/01/24/Recent-Influences/" data-id="cimx3l5p8007mvoohfsd3oajd" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-Daily-Update-2016-01-23" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/23/Daily-Update-2016-01-23/">Daily Update 2016.01.23</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2016/01/23/Daily-Update-2016-01-23/">
-      <time datetime="2016-01-23T08:00:00.000Z" itemprop="datePublished">2016-01-23</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p><strong>Changes &amp; Updates:</strong></p>
-<ul>
-<li>Came across some story elements in another game that are similar to something I’ve plotted in SRPG. That’s always awkward. I think they’re different enough though.</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/01/23/Daily-Update-2016-01-23/" data-id="cimx3l5sh009qvoohsymojqdw" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-Daily-Update-2016-01-22" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/22/Daily-Update-2016-01-22/">Daily Update 2016.01.22</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2016/01/22/Daily-Update-2016-01-22/">
-      <time datetime="2016-01-22T08:00:00.000Z" itemprop="datePublished">2016-01-22</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Might have found our new house today.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/01/22/Daily-Update-2016-01-22/" data-id="cimx3l5si009rvooh4umd6112" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/01/24/Recent-Influences/" data-id="cimyfrd0a007m5kohttbab2p0" class="article-share-link">Share</a>
       
       
     </footer>
