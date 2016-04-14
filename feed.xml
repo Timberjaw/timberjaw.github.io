@@ -8,8 +8,32 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Wed, 13 Apr 2016 05:48:01 GMT</pubDate>
+    <pubDate>Thu, 14 Apr 2016 07:29:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.04.13</title>
+      <link>http://timberjaw.github.io/2016/04/13/Daily-Update-2016-04-13/</link>
+      <guid>http://timberjaw.github.io/2016/04/13/Daily-Update-2016-04-13/</guid>
+      <pubDate>Wed, 13 Apr 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Installed conditional expression helper for Handlebars.&lt;/li&gt;
+&lt;li&gt;Added contextual br
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Installed conditional expression helper for Handlebars.&lt;/li&gt;
+&lt;li&gt;Added contextual bridge descriptions to vary by position (forest, underground, coast, void). Descriptions don’t make it very clear what’s happening, but the action of turning the wheel will.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/04/13/Daily-Update-2016-04-13/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.04.12</title>
@@ -465,24 +489,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/03/25/Daily-Update-2016-03-25/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Out of Town</title>
-      <link>http://timberjaw.github.io/2016/03/24/Out-of-Town/</link>
-      <guid>http://timberjaw.github.io/2016/03/24/Out-of-Town/</guid>
-      <pubDate>Thu, 24 Mar 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Will be AFK until Sunday morning. I’ll be writing posts but won’t upload them until then. Friday, Saturday and Sunday will go up at the s
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Will be AFK until Sunday morning. I’ll be writing posts but won’t upload them until then. Friday, Saturday and Sunday will go up at the same time.&lt;/p&gt;
-&lt;p&gt;In related news, I’m aiming to have the second technical playtest build completed on Sunday. If that goes well I can get back into content creation to further flesh out the Prologue.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/03/24/Out-of-Town/#disqus_thread</comments>
     </item>
     
   </channel>
