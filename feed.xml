@@ -8,8 +8,34 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Thu, 14 Apr 2016 07:29:00 GMT</pubDate>
+    <pubDate>Fri, 15 Apr 2016 04:57:07 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.04.14</title>
+      <link>http://timberjaw.github.io/2016/04/14/Daily-Update-2016-04-14/</link>
+      <guid>http://timberjaw.github.io/2016/04/14/Daily-Update-2016-04-14/</guid>
+      <pubDate>Fri, 15 Apr 2016 04:57:07 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added wheel to bridge.&lt;/li&gt;
+&lt;li&gt;Stubbed in wheel behavior.&lt;/li&gt;
+&lt;/ul&gt;
+
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added wheel to bridge.&lt;/li&gt;
+&lt;li&gt;Stubbed in wheel behavior.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/04/14/Daily-Update-2016-04-14/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.04.13</title>
@@ -471,24 +497,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/03/26/Daily-Update-2016-03-26/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.03.25</title>
-      <link>http://timberjaw.github.io/2016/03/25/Daily-Update-2016-03-25/</link>
-      <guid>http://timberjaw.github.io/2016/03/25/Daily-Update-2016-03-25/</guid>
-      <pubDate>Fri, 25 Mar 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Added a ‘smell’ command to SRPG, for those who like to dawdle and inspect the flowers.&lt;/p&gt;
-
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Added a ‘smell’ command to SRPG, for those who like to dawdle and inspect the flowers.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/03/25/Daily-Update-2016-03-25/#disqus_thread</comments>
     </item>
     
   </channel>
