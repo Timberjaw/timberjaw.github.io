@@ -8,8 +8,31 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Sun, 17 Apr 2016 00:49:24 GMT</pubDate>
+    <pubDate>Sun, 17 Apr 2016 06:38:36 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.04.16</title>
+      <link>http://timberjaw.github.io/2016/04/16/Daily-Update-2016-04-16/</link>
+      <guid>http://timberjaw.github.io/2016/04/16/Daily-Update-2016-04-16/</guid>
+      <pubDate>Sun, 17 Apr 2016 06:38:36 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added Devices module. Includes the device component and verbs for activating/rotatin
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added Devices module. Includes the device component and verbs for activating/rotating/manipulating. Devices can have a set of ‘states’ (on/off, rotational position, etc). By default, a device will cycle through the available states when triggered.&lt;/li&gt;
+&lt;li&gt;Wheel on bridge is now a device.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/04/16/Daily-Update-2016-04-16/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.04.15</title>
@@ -471,34 +494,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/03/28/Daily-Update-2016-03-28/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.03.27</title>
-      <link>http://timberjaw.github.io/2016/03/27/Daily-Update-2016-03-27/</link>
-      <guid>http://timberjaw.github.io/2016/03/27/Daily-Update-2016-03-27/</guid>
-      <pubDate>Sun, 27 Mar 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added ‘that sword’ alias for sword.&lt;/li&gt;
-&lt;li&gt;Added ‘brandish’ verb to wave sword aro
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added ‘that sword’ alias for sword.&lt;/li&gt;
-&lt;li&gt;Added ‘brandish’ verb to wave sword around.&lt;/li&gt;
-&lt;li&gt;Added ‘slide down’ command in hill slide location.&lt;/li&gt;
-&lt;li&gt;Added climb [up/down] [object] verb.&lt;/li&gt;
-&lt;li&gt;Added ‘leave’ alias for ‘put down’.&lt;/li&gt;
-&lt;li&gt;Added ‘fill bird feeder’ rule.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/03/27/Daily-Update-2016-03-27/#disqus_thread</comments>
     </item>
     
   </channel>

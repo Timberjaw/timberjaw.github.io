@@ -60,6 +60,67 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-weekly-update-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/20/weekly-update-1/">Weekly Update #1</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/07/20/weekly-update-1/">
+      <time datetime="2015-07-20T07:00:00.000Z" itemprop="datePublished">2015-07-20</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Paying off some technical debt in this update. The scale of the JS source files is getting to a point where I need to restructure as a sanity saver. There’s more cleanup to be done, but I’ve significantly restructured the folders for both JS and CSS files, and created a build script to automate the process.</p>
+<p>I also noticed some unexpected engine-breaking bugs when I first loaded up the game again. I need to either not leave work half-finished, or leave notes for myself.</p>
+<p><strong>Changelog:</strong></p>
+<ul>
+<li>Restructured JS to use a preprocessor (<a href="https://larsjung.de/wepp/" target="_blank" rel="external">WEPP</a>)</li>
+<li>Restructured CSS to use a preprocessor (<a href="http://sass-lang.com/" target="_blank" rel="external">SASS</a>)</li>
+<li>Added a build script to 1) bake the JS files down to: engine.js and game.js; and 2) update the page CSS</li>
+<li>Added a function to dynamically reload/switch the CSS themes (which means in the future I can add an in-game command to change the theme)</li>
+<li>Fixed a couple NLP bugs related to half-finished work from a while back</li>
+</ul>
+<p><strong>Known Issues:</strong></p>
+<ul>
+<li>Dialogue node callbacks aren’t working right. Need more testing and refinement of the callbacks and may need some refactoring of the dialogue tree feature in general.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/07/20/weekly-update-1/" data-id="cin47cit60023qwoh5qcfiylb" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-dungeons-dragons" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -97,7 +158,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/19/dungeons-dragons/" data-id="cin3uuu16005ag0ohrjo2wr1i" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/19/dungeons-dragons/" data-id="cin47ciz1005aqwohuz9epadh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -176,7 +237,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/18/stupidrpg-the-black-box/" data-id="cin3uutx20031g0ohtvb7if75" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/18/stupidrpg-the-black-box/" data-id="cin47civ40031qwohiyzbmmob" class="article-share-link">Share</a>
       
       
     </footer>
@@ -252,7 +313,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/17/tools-of-the-trade/" data-id="cin3uutvk002ag0ohc8php58r" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/17/tools-of-the-trade/" data-id="cin47ciu1002aqwohar984pl4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -340,7 +401,57 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/16/stupidrpg-dialogue-trees/" data-id="cin3uutyc003sg0ohm1q8dtcl" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/16/stupidrpg-dialogue-trees/" data-id="cin47civx003sqwoho27ze7mc" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-static-site-generators" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/15/static-site-generators/">Command Patterns &amp; Static Site Generators</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/07/15/static-site-generators/">
+      <time datetime="2015-07-15T07:00:00.000Z" itemprop="datePublished">2015-07-15</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>First off, a snippet from the language processor in StupidRPG. This section handles the command patterns the game can (attempt to) interpret.<br>Examples are included for my own benefit; it became difficult to keep track of how exactly each pattern might present itself within the game.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Pattern list</span></span><br><span class="line"><span class="comment">// Cannot start with a modifier</span></span><br><span class="line"><span class="comment">// In order of priority (highest to lowest):</span></span><br><span class="line">patterns = [</span><br><span class="line">  <span class="string">'VERB'</span>,                             <span class="comment">// inventory</span></span><br><span class="line">  <span class="string">'VERB NOUN'</span>,                        <span class="comment">// eat baby</span></span><br><span class="line">  <span class="string">'VERB MODIFIER'</span>,                    <span class="comment">// saunter west</span></span><br><span class="line">  <span class="string">'VERB MODIFIER NOUN'</span>,               <span class="comment">// get in closet</span></span><br><span class="line">  <span class="string">'VERB NOUN MODIFIER NOUN'</span>,          <span class="comment">// attack goblin with hammer</span></span><br><span class="line">  <span class="string">'VERB MODIFIER MODIFIER NOUN'</span>,      <span class="comment">// look north through telescope</span></span><br><span class="line">  <span class="string">'VERB MODIFIER NOUN MODIFIER NOUN'</span>, <span class="comment">// look at bob through telescope</span></span><br><span class="line">  <span class="comment">// Overflow patterns</span></span><br><span class="line">  <span class="string">'VERB MODIFIER NOUN MODIFIER TEXT'</span>, <span class="comment">// talk to goblin about greatest fears</span></span><br><span class="line">  <span class="string">'VERB MODIFIER MODIFIER TEXT'</span>,      <span class="comment">// look north through telescope saucily</span></span><br><span class="line">  <span class="string">'VERB NOUN MODIFIER TEXT'</span>,          <span class="comment">// ask bob about back pain</span></span><br><span class="line">  <span class="string">'VERB MODIFIER TEXT'</span>                <span class="comment">// talk about floops</span></span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+<h2 id="Static_Site_Generators"><a href="#Static_Site_Generators" class="headerlink" title="Static Site Generators"></a>Static Site Generators</h2><p>In a nutshell, they seem a bit clunky. I’m currently trying out <a href="https://middlemanapp.com/" target="_blank" rel="external">Middleman</a>, which proved more straightforward to get set up than <a href="http://jekyllrb.com/" target="_blank" rel="external">Jekyll</a>.<br>In both cases, there is an unwelcome surplus of dependency-related issues, requiring specific (old) versions of Ruby and Python.<br>For hot new tech, these static site generators sure don’t play nice with other hot new tech.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/07/15/static-site-generators/" data-id="cin47ciw80042qwoh4g8tf70a" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -403,59 +514,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/15/so-im-making-a-video-game/" data-id="cin3uutyp0045g0ohrw10d4wz" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/15/so-im-making-a-video-game/" data-id="cin47ciwd0045qwohqvj7rmau" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-static-site-generators" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/15/static-site-generators/">Command Patterns &amp; Static Site Generators</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/07/15/static-site-generators/">
-      <time datetime="2015-07-15T07:00:00.000Z" itemprop="datePublished">2015-07-15</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>First off, a snippet from the language processor in StupidRPG. This section handles the command patterns the game can (attempt to) interpret.<br>Examples are included for my own benefit; it became difficult to keep track of how exactly each pattern might present itself within the game.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Pattern list</span></span><br><span class="line"><span class="comment">// Cannot start with a modifier</span></span><br><span class="line"><span class="comment">// In order of priority (highest to lowest):</span></span><br><span class="line">patterns = [</span><br><span class="line">  <span class="string">'VERB'</span>,                             <span class="comment">// inventory</span></span><br><span class="line">  <span class="string">'VERB NOUN'</span>,                        <span class="comment">// eat baby</span></span><br><span class="line">  <span class="string">'VERB MODIFIER'</span>,                    <span class="comment">// saunter west</span></span><br><span class="line">  <span class="string">'VERB MODIFIER NOUN'</span>,               <span class="comment">// get in closet</span></span><br><span class="line">  <span class="string">'VERB NOUN MODIFIER NOUN'</span>,          <span class="comment">// attack goblin with hammer</span></span><br><span class="line">  <span class="string">'VERB MODIFIER MODIFIER NOUN'</span>,      <span class="comment">// look north through telescope</span></span><br><span class="line">  <span class="string">'VERB MODIFIER NOUN MODIFIER NOUN'</span>, <span class="comment">// look at bob through telescope</span></span><br><span class="line">  <span class="comment">// Overflow patterns</span></span><br><span class="line">  <span class="string">'VERB MODIFIER NOUN MODIFIER TEXT'</span>, <span class="comment">// talk to goblin about greatest fears</span></span><br><span class="line">  <span class="string">'VERB MODIFIER MODIFIER TEXT'</span>,      <span class="comment">// look north through telescope saucily</span></span><br><span class="line">  <span class="string">'VERB NOUN MODIFIER TEXT'</span>,          <span class="comment">// ask bob about back pain</span></span><br><span class="line">  <span class="string">'VERB MODIFIER TEXT'</span>                <span class="comment">// talk about floops</span></span><br><span class="line">];</span><br></pre></td></tr></table></figure>
-<h2 id="Static_Site_Generators"><a href="#Static_Site_Generators" class="headerlink" title="Static Site Generators"></a>Static Site Generators</h2><p>In a nutshell, they seem a bit clunky. I’m currently trying out <a href="https://middlemanapp.com/" target="_blank" rel="external">Middleman</a>, which proved more straightforward to get set up than <a href="http://jekyllrb.com/" target="_blank" rel="external">Jekyll</a>.<br>In both cases, there is an unwelcome surplus of dependency-related issues, requiring specific (old) versions of Ruby and Python.<br>For hot new tech, these static site generators sure don’t play nice with other hot new tech.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/15/static-site-generators/" data-id="cin3uutyk0042g0ohu1dfslln" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
-
     </footer>
   </div>
   
