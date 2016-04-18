@@ -8,8 +8,35 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Sun, 17 Apr 2016 06:38:36 GMT</pubDate>
+    <pubDate>Mon, 18 Apr 2016 07:32:50 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Office Plans</title>
+      <link>http://timberjaw.github.io/2016/04/18/Office-Plans/</link>
+      <guid>http://timberjaw.github.io/2016/04/18/Office-Plans/</guid>
+      <pubDate>Mon, 18 Apr 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Now that I (finally) have my own home office, it’s time to start thinking about what to do with it. Here’s what it currently looks like, 
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Now that I (finally) have my own home office, it’s time to start thinking about what to do with it. Here’s what it currently looks like, sans moving clutter.&lt;/p&gt;
+&lt;img src=&quot;/2016/04/18/Office-Plans/Office-1.png&quot; alt=&quot;Office Now&quot; title=&quot;Office Now&quot;&gt;
+&lt;p&gt;I have a few changes in mind:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add a dry erase board (probably glass) next to the desk.&lt;/li&gt;
+&lt;li&gt;Add a second desk for additional work space.&lt;/li&gt;
+&lt;li&gt;Tear out carpet and replace with wood.&lt;/li&gt;
+&lt;li&gt;Thinkin’ chair.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Something like this:&lt;/p&gt;
+&lt;img src=&quot;/2016/04/18/Office-Plans/Office-2.png&quot; alt=&quot;Office Later&quot; title=&quot;Office Later&quot;&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/04/18/Office-Plans/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.04.16</title>
@@ -466,34 +493,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/03/29/Bird-Brained/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.03.28</title>
-      <link>http://timberjaw.github.io/2016/03/28/Daily-Update-2016-03-28/</link>
-      <guid>http://timberjaw.github.io/2016/03/28/Daily-Update-2016-03-28/</guid>
-      <pubDate>Mon, 28 Mar 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Signed on house, now we wait. We’ve been living in apartments for the last 10 years, so I’m pretty excited about this change.&lt;/p&gt;
-&lt;p&gt;In S
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Signed on house, now we wait. We’ve been living in apartments for the last 10 years, so I’m pretty excited about this change.&lt;/p&gt;
-&lt;p&gt;In SRPG news, I’m trying to figure out two new components: pathfinding and positional audio.&lt;/p&gt;
-&lt;h2 id=&quot;Positional_Audio&quot;&gt;&lt;a href=&quot;#Positional_Audio&quot; class=&quot;headerlink&quot; title=&quot;Positional Audio&quot;&gt;&lt;/a&gt;Positional Audio&lt;/h2&gt;&lt;p&gt;This is simply the propagation of sound (in text form, of course) from a location to nearby locations. I’ve implemented a couple cases by hand by embedding sound descriptions in each location. This approach isn’t very sustainable/flexible, however. Some sounds aren’t always active, and some regions have a large number of locations in hearing range.&lt;/p&gt;
-&lt;p&gt;Instead, I’d like to build something more dynamic. There are a couple options:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Create a sound component, assign it to sound entities (like scenery) and make them ‘visible’ from each location. Pros: neatly fits into the current ECS; altering/disabling the sound only has to be done in one place. Cons: sound has to be manually linked to each location.&lt;/li&gt;
-&lt;li&gt;Assign coordinates to each location and actually calculate the sound falloff based on distance. Sounds emit at a specific coordinate. Pros: no hard linking of sounds to locations; easily handles altered sounds at multiple range increments. Cons: math?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I’m leaning toward the latter because it seems like overkill.&lt;/p&gt;
-&lt;h2 id=&quot;Pathfinding&quot;&gt;&lt;a href=&quot;#Pathfinding&quot; class=&quot;headerlink&quot; title=&quot;Pathfinding&quot;&gt;&lt;/a&gt;Pathfinding&lt;/h2&gt;&lt;p&gt;Right now there’s one creature that actually moves around: the bird. It follows a preset route with a couple cheats (basically teleporting when the player isn’t looking). This isn’t going to work well for NPCs that need more dynamic behaviors. For example, the Mayor needs to go to work in the morning, investigate a disturbance at the tavern at mid-day, and find time for a meal break before going home.&lt;/p&gt;
-&lt;p&gt;That means I need proper pathfinding. Fortunately, locations in the game already form a collection of linked nodes, and simple algorithms like A* should suffice. The NPC’s AI will select a destination, and on each tick they’ll move one step closer along the computed route. Things like doors and other barriers will pose a challenge.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/03/28/Daily-Update-2016-03-28/#disqus_thread</comments>
     </item>
     
   </channel>
