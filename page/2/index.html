@@ -60,6 +60,99 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-Aggregation-29" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/09/Aggregation-29/">Aggregation #29</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2016/04/09/Aggregation-29/">
+      <time datetime="2016-04-09T07:00:00.000Z" itemprop="datePublished">2016-04-09</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><strong>Changes &amp; Updates:</strong></p>
+<ul>
+<li>Added ‘put in’ command for containers.</li>
+<li>Fixed several inventory bugs related to containers and locations.</li>
+<li>Fixed being able to pick up objects you’re already holding.</li>
+<li>Fixed ‘drop’ conflict (dropping an object on the ground vs dropping it in a container).</li>
+<li>Wired up two riddles for the twins with success/failure states.</li>
+<li>Significant refactoring of the NLP to use an action stack. Needed to preserve original action data when an implicit action is triggered.</li>
+<li>Got doors and locks working (mostly). Needs some visibility/accessibility work for the target location, since currently objects are only visible in their primary location.</li>
+<li>Added thermal system to support ice key quest. Prologue is officially playable end-to-end in its current state.</li>
+<li>Added list (array) support for ‘in location’ checks in rules.</li>
+<li>Fixed combat actions to use new Action object.</li>
+<li>Fixed open/close actions to use new Action object.</li>
+<li>Prettified quest outputs using box handler.</li>
+<li>Made player input stand out more.</li>
+<li>Fixed wyrmling onTick running twice (wasn’t checking System, wyrmling belongs to two).</li>
+<li>Fixed bug where certain queued outputs wouldn’t get displayed until the beginning of the next tick.</li>
+<li>Fixed “New Quest” output displaying before action output in some cases.</li>
+<li>Cleaned up chamber sequence and ending.</li>
+<li>Creepified black box entry.</li>
+<li>Added visibility support for objects in multiple locations.</li>
+<li>Improved key handling of action overrides on entities.</li>
+<li>Added temperature feedback for hot springs.</li>
+<li>Fixed internal rules with no output canceling other rules.</li>
+<li>Fixed chamber entrance sequence not working.</li>
+<li>Added prologue outro.</li>
+<li>Cleaned up some sequence timings.</li>
+<li>Improved handling of input area to make it more obvious when more text is incoming.</li>
+<li>Altered bird behavior to more directly telegraph what the bird wants.</li>
+<li>Bird now returns to the feeder any time the player is there.</li>
+<li>Added aliases and tags to draw the player’s attention to the feeder.</li>
+<li>Added verbiage for passages from hot springs: back to path and down to lair.</li>
+<li>Cleaned up bird output.</li>
+<li>Added support for full HTML transcript saving (was previously cut off because output queue trims items as they disappear off the top).</li>
+<li>Made it impossible to not have the rainbow sword.</li>
+<li>Added a ‘smell’ command to SRPG, for those who like to dawdle and inspect the flowers.</li>
+<li>Added smell support for locations.</li>
+<li>Added smells for: blue flowers, brambles, ferns, spores, black box, musty cave, sawdust, spider, vines, dust, moss, bird, Bob, player, troglodyte, wyrmling, red berries.</li>
+<li>Added ‘that sword’ alias for sword.</li>
+<li>Added ‘brandish’ verb to wave sword around.</li>
+<li>Added ‘slide down’ command in hill slide location.</li>
+<li>Added climb [up/down] [object] verb.</li>
+<li>Added ‘leave’ alias for ‘put down’.</li>
+<li>Added ‘fill bird feeder’ rule.</li>
+<li>Replaced old GM description with something more appropriate to its current character.</li>
+<li>Updated the transcript output to include styles and framing for easier reading and review.</li>
+<li>Sword now greets player when first picked up.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2016/04/09/Aggregation-29/" data-id="cin9mxo4z00ae8oohbkxpowbi" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-Daily-Update-2016-04-08" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -97,7 +190,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/04/08/Daily-Update-2016-04-08/" data-id="cin6z2gee008c04ohp2ikz16p" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/04/08/Daily-Update-2016-04-08/" data-id="cin9mxo1l008d8oohpx7psq3t" class="article-share-link">Share</a>
       
       
     </footer>
@@ -147,7 +240,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/04/07/Daily-Update-2016-04-07/" data-id="cin6z2gef008d04oh6o8b57hu" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/04/07/Daily-Update-2016-04-07/" data-id="cin9mxo1n008e8oohgh50zi86" class="article-share-link">Share</a>
       
       
     </footer>
@@ -197,7 +290,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/04/06/Daily-Update-2016-04-06/" data-id="cin6z2geg008e04ohkwicufva" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/04/06/Daily-Update-2016-04-06/" data-id="cin9mxo1o008f8oohgqksbebm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -244,7 +337,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/04/05/Moving-Day-2-of-2/" data-id="cin6z2gdn007t04ohpsbi0m7v" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/04/05/Moving-Day-2-of-2/" data-id="cin9mxo0m007t8oohhzozb7fa" class="article-share-link">Share</a>
       
       
     </footer>
@@ -290,7 +383,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/04/04/Daily-Update-2016-04-04/" data-id="cin6z2gei008f04oh6omlypvs" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/04/04/Daily-Update-2016-04-04/" data-id="cin9mxo1p008g8oohg1pndaum" class="article-share-link">Share</a>
       
       
     </footer>
@@ -336,7 +429,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/04/03/Daily-Update-2016-04-03/" data-id="cin6z2gej008g04ohk07cr66u" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/04/03/Daily-Update-2016-04-03/" data-id="cin9mxo1q008h8oohkcbe88x7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -383,7 +476,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/04/02/Moving-Day-1-of-2/" data-id="cin6z2gdo007u04ohbhb9f8lr" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/04/02/Moving-Day-1-of-2/" data-id="cin9mxo0m007u8ooh594traiu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -431,7 +524,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/04/01/Fools/" data-id="cin6z2ge3008304ohm7zjjeen" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/04/01/Fools/" data-id="cin9mxo1600838oohhsoxcglp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -478,55 +571,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/03/31/House/" data-id="cin6z2gdt007y04ohcvfm5x4t" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-Daily-Update-2016-03-30" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/30/Daily-Update-2016-03-30/">Daily Update 2016.03.30</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2016/03/30/Daily-Update-2016-03-30/">
-      <time datetime="2016-03-30T07:00:00.000Z" itemprop="datePublished">2016-03-30</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Antsy about house closing tomorrow. Busy at work today.</p>
-<p>Thinking about more advanced AI. The setup I’m using for the bird is about as complex as I’d like to make it without a more robust system. Specifically, I want to get into a ‘hierarchy of needs’ for NPCs. Personal safety, physical needs (food, water, rest), commitments/obligations (job, duty), recreation (having a beer, talking to the player, going for a walk).</p>
-<p>Might be overly ambitious.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/03/30/Daily-Update-2016-03-30/" data-id="cin6z2gek008h04oh6d5cxxem" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/03/31/House/" data-id="cin9mxo0m007y8oohcvp8v87v" class="article-share-link">Share</a>
       
       
     </footer>

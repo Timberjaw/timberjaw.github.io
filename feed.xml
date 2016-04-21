@@ -8,8 +8,32 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Tue, 19 Apr 2016 05:10:37 GMT</pubDate>
+    <pubDate>Thu, 21 Apr 2016 01:54:17 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.04.19</title>
+      <link>http://timberjaw.github.io/2016/04/19/Daily-Update-2016-04-19/</link>
+      <guid>http://timberjaw.github.io/2016/04/19/Daily-Update-2016-04-19/</guid>
+      <pubDate>Tue, 19 Apr 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Finished writing the manual. First draft, anyway. Time to flipbook it.&lt;/li&gt;
+&lt;/ul&gt;
+
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Finished writing the manual. First draft, anyway. Time to flipbook it.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/04/19/Daily-Update-2016-04-19/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>The Manual</title>
@@ -601,26 +625,6 @@ TABLE OF CONTENTS
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/03/31/House/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.03.30</title>
-      <link>http://timberjaw.github.io/2016/03/30/Daily-Update-2016-03-30/</link>
-      <guid>http://timberjaw.github.io/2016/03/30/Daily-Update-2016-03-30/</guid>
-      <pubDate>Wed, 30 Mar 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Antsy about house closing tomorrow. Busy at work today.&lt;/p&gt;
-&lt;p&gt;Thinking about more advanced AI. The setup I’m using for the bird is about
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Antsy about house closing tomorrow. Busy at work today.&lt;/p&gt;
-&lt;p&gt;Thinking about more advanced AI. The setup I’m using for the bird is about as complex as I’d like to make it without a more robust system. Specifically, I want to get into a ‘hierarchy of needs’ for NPCs. Personal safety, physical needs (food, water, rest), commitments/obligations (job, duty), recreation (having a beer, talking to the player, going for a walk).&lt;/p&gt;
-&lt;p&gt;Might be overly ambitious.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/03/30/Daily-Update-2016-03-30/#disqus_thread</comments>
     </item>
     
   </channel>
