@@ -8,8 +8,31 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Thu, 21 Apr 2016 01:54:17 GMT</pubDate>
+    <pubDate>Fri, 22 Apr 2016 04:59:22 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.04.20</title>
+      <link>http://timberjaw.github.io/2016/04/20/Daily-Update-2016-04-20/</link>
+      <guid>http://timberjaw.github.io/2016/04/20/Daily-Update-2016-04-20/</guid>
+      <pubDate>Wed, 20 Apr 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Wrote up an expanded quest/puzzle line for the prologue, incorporating new areas (br
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Wrote up an expanded quest/puzzle line for the prologue, incorporating new areas (bridge, underground), the basin puzzle, and the Black Box objective. I think it will tie everything together into a more satisfying, game-like experience.&lt;/li&gt;
+&lt;li&gt;Did more research on page-flipping. Looks like it’s going to be a hassle to get it the way I want.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/04/20/Daily-Update-2016-04-20/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.04.19</title>
@@ -605,26 +628,6 @@ TABLE OF CONTENTS
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/04/01/Fools/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>House!</title>
-      <link>http://timberjaw.github.io/2016/03/31/House/</link>
-      <guid>http://timberjaw.github.io/2016/03/31/House/</guid>
-      <pubDate>Fri, 01 Apr 2016 06:14:54 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;We have a house now.&lt;/p&gt;
-&lt;p&gt;Weird.&lt;/p&gt;
-
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;We have a house now.&lt;/p&gt;
-&lt;p&gt;Weird.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/03/31/House/#disqus_thread</comments>
     </item>
     
   </channel>
