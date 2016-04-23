@@ -8,8 +8,30 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Fri, 22 Apr 2016 04:59:22 GMT</pubDate>
+    <pubDate>Sat, 23 Apr 2016 10:03:57 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.04.21</title>
+      <link>http://timberjaw.github.io/2016/04/21/Daily-Update-2016-04-21/</link>
+      <guid>http://timberjaw.github.io/2016/04/21/Daily-Update-2016-04-21/</guid>
+      <pubDate>Thu, 21 Apr 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Helping a friend build a character creator for their homebrew RPG. Hopefully I can s
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Helping a friend build a character creator for their homebrew RPG. Hopefully I can share that soon. It’s pretty neat.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/04/21/Daily-Update-2016-04-21/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.04.20</title>
@@ -609,25 +631,6 @@ TABLE OF CONTENTS
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/04/02/Moving-Day-1-of-2/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Fools</title>
-      <link>http://timberjaw.github.io/2016/04/01/Fools/</link>
-      <guid>http://timberjaw.github.io/2016/04/01/Fools/</guid>
-      <pubDate>Fri, 01 Apr 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;April Fools! No, really. I’m not trying to trick you into thinking it’s April Fools on some other day. There’s no chance I’m writing this
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;April Fools! No, really. I’m not trying to trick you into thinking it’s April Fools on some other day. There’s no chance I’m writing this retroactively on the 2nd while getting caught up with the dev journal.&lt;/p&gt;
-&lt;p&gt;It occurred to me earlier that the impact of AF has been severely diminished by the internet. Global, community-driven sites like reddit make it almost impossible for western audiences to be caught off-guard, since by the time it’s actually April 1st, the pranks have already been going on in other time zones for 8+ hours.&lt;/p&gt;
-&lt;p&gt;It also seems like a bit of a dead horse at this point, but now I’m just being crotchety.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/04/01/Fools/#disqus_thread</comments>
     </item>
     
   </channel>
