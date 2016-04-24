@@ -8,8 +8,33 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Sat, 23 Apr 2016 10:03:57 GMT</pubDate>
+    <pubDate>Sun, 24 Apr 2016 08:05:10 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.04.22</title>
+      <link>http://timberjaw.github.io/2016/04/22/Daily-Update-2016-04-22/</link>
+      <guid>http://timberjaw.github.io/2016/04/22/Daily-Update-2016-04-22/</guid>
+      <pubDate>Fri, 22 Apr 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;More work on the character creator. All steps working.&lt;/li&gt;
+&lt;li&gt;Added mobile support
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;More work on the character creator. All steps working.&lt;/li&gt;
+&lt;li&gt;Added mobile support for character creator.&lt;/li&gt;
+&lt;li&gt;Fixed some bugs.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/04/22/Daily-Update-2016-04-22/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.04.21</title>
@@ -613,24 +638,6 @@ TABLE OF CONTENTS
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/04/03/Daily-Update-2016-04-03/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Moving Day, 1 of 2</title>
-      <link>http://timberjaw.github.io/2016/04/02/Moving-Day-1-of-2/</link>
-      <guid>http://timberjaw.github.io/2016/04/02/Moving-Day-1-of-2/</guid>
-      <pubDate>Sat, 02 Apr 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Moving (partially) today, no time for a real post. Supposed to get out internet switched over and essential items (bed, clothing, etc) mo
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Moving (partially) today, no time for a real post. Supposed to get out internet switched over and essential items (bed, clothing, etc) moved. The rest will follow soonish.&lt;/p&gt;
-&lt;p&gt;The house is big and full of echoes. It will shrink and quiet as we fill it.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/04/02/Moving-Day-1-of-2/#disqus_thread</comments>
     </item>
     
   </channel>
