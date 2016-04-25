@@ -60,6 +60,63 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-context-menus" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/26/context-menus/">Context Menus</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/09/26/context-menus/">
+      <time datetime="2015-09-26T07:00:00.000Z" itemprop="datePublished">2015-09-26</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>One of my many lofty goals for StupidRPG is the idea that it could be successfully completed using only the mouse (or touch, on mobile). This presents a number of challenges because I don’t want to compromise the textual nature of the output (i.e. I don’t want to clutter the output with a ton of available actions). Context menus are my first attempt at solving this problem. Text-input players can ignore them entirely (treat them as non-interactive text just like the rest).</p>
+<h2 id="What_is_a_Context_Menu_3F"><a href="#What_is_a_Context_Menu_3F" class="headerlink" title="What is a Context Menu?"></a>What is a Context Menu?</h2><p>It’s a little dropdown thingy that opens from clickable command tags (highlighted bits of text that perform an action when clicked). Generally speaking, clicking on a compass direction will move the player in that direction, and clicking an object or NPC will <code>LOOK AT</code> the object or NPC. Context menus allow for more actions to be available for each tag.</p>
+<h2 id="How_do_they_work_3F"><a href="#How_do_they_work_3F" class="headerlink" title="How do they work?"></a>How do they work?</h2><p>On the technical side, not every tag has context actions. Context actions are globally registered with the Entity prototype, which runs a bit of code each time a tag is generated to see which actions are suitable. Right now I have four actions defined:</p>
+<ol>
+<li><code>LOOK</code>: Always available (if an object is being mentioned in a description, the player can obviously see it).</li>
+<li><code>TAKE</code>: Available if the Entity can be taken (there’s already a flag for that).</li>
+<li><code>EAT</code>: Available if the Entity has the ‘Edible’ component.</li>
+<li><code>TALK TO</code>: Available if the Entity has the ‘Living’ component and has a Conversation object.</li>
+</ol>
+<p>New actions can be added to the Entity prototype from anywhere (so modules can add new context actions).</p>
+<h2 id="What_u2019s_next_3F_What_u2019s_missing_3F"><a href="#What_u2019s_next_3F_What_u2019s_missing_3F" class="headerlink" title="What’s next? What’s missing?"></a>What’s next? What’s missing?</h2><p>Next up I’d like to add the ability for Entities to specify unique, arbitrary context actions (not shared with other Entities). This is a pretty easy task and will let me vary up the dropdowns (and expose some unique interactions and features the player might not be aware of).</p>
+<p>The mobile problem: the context menu opens on hover. Hover is not well supported on mobile (some newer phones and tablets optionally support it). Switching to click will make behavior inconsistent because it’s not visually obvious which tags are simple click tags and which also have a menu. Could switch to tap on mobile and make all tags have a context menu (some with only 1 option). Requires an extra click but the behavior is more predictable.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/09/26/context-menus/" data-id="cingmx2o8007574ohs7g7i28m" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-daily-update-267-2015" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -104,7 +161,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/25/daily-update-267-2015/" data-id="cinfhawb7006obkohcox29jdp" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/25/daily-update-267-2015/" data-id="cingmx2np006o74oh49d4hz0o" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -164,7 +221,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/24/daily-update-266-2015/" data-id="cinfhawb9006qbkoh0yeb3igz" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/24/daily-update-266-2015/" data-id="cingmx2nr006q74oht9n6qw3h" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -221,7 +278,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/23/daily-update-265-2015/" data-id="cinfhawba006sbkohr3o9fm0q" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/23/daily-update-265-2015/" data-id="cingmx2nt006s74ohckgqiy9r" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -278,7 +335,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/22/daily-update-264-2015/" data-id="cinfhawbb006ubkoh2trdkqq8" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/22/daily-update-264-2015/" data-id="cingmx2nu006u74ohkpoz1zz9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -349,7 +406,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/21/weekly-update-10/" data-id="cinfhaw4n0020bkohr73brleb" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/21/weekly-update-10/" data-id="cingmx2ge002074ohy3oxp1wt" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -404,7 +461,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/20/daily-update-262-2015/" data-id="cinfhawbd006wbkohdxcksokm" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/20/daily-update-262-2015/" data-id="cingmx2nw006w74ohow2zf7zt" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -474,7 +531,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/19/rule-chaining/" data-id="cinfhaw7t004gbkoh0732vtea" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/19/rule-chaining/" data-id="cingmx2k2004g74oh7s5izmi7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -528,7 +585,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/18/daily-update-260-2015/" data-id="cinfhawbe006ybkohdfchsjhg" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/18/daily-update-260-2015/" data-id="cingmx2nx006y74oh0z5v0x16" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -590,68 +647,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/17/internal-rules-rulebooks/" data-id="cinfhaw8o004wbkoh3a947bzc" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/17/internal-rules-rulebooks/" data-id="cingmx2l2004w74ohc2y9hkkh" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-daily-update-258-2015" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/16/daily-update-258-2015/">Daily Update 258.2015</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/09/16/daily-update-258-2015/">
-      <time datetime="2015-09-16T07:00:00.000Z" itemprop="datePublished">2015-09-16</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Did a lot of refactoring today.</p>
-<p><strong>Changes:</strong></p>
-<ul>
-<li>Refactored all action (verb) handling to use a standardized data argument rather than an arg list. Has some downsides, but allows me to more easily pass new info to verb callbacks without doing a ton of extra refactoring work every time.</li>
-<li>Added ‘get in/on’ verb for containers/holders.</li>
-<li>Set hot springs to holder so you can go for a soak.</li>
-<li>Added handling for internal Rules (not triggered by user action) so I can apply the rulebook style to lots more things.</li>
-</ul>
-<p><strong>Bugs &amp; Problems:</strong></p>
-<ul>
-<li>Nothing new</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/16/daily-update-258-2015/" data-id="cinfhawbh0070bkohb7gdhowr" class="article-share-link">Share</a>
-      
-      
     </footer>
   </div>
   

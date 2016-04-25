@@ -8,8 +8,47 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Mon, 25 Apr 2016 04:03:17 GMT</pubDate>
+    <pubDate>Mon, 25 Apr 2016 23:28:02 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Aggregation #30</title>
+      <link>http://timberjaw.github.io/2016/04/24/Aggregation-30/</link>
+      <guid>http://timberjaw.github.io/2016/04/24/Aggregation-30/</guid>
+      <pubDate>Sun, 24 Apr 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added fallback for ‘say hi’ / ‘say hello’ without explicit target.&lt;/li&gt;
+&lt;li&gt;Added br
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added fallback for ‘say hi’ / ‘say hello’ without explicit target.&lt;/li&gt;
+&lt;li&gt;Added bridge, bridge, bridge, bridge, and bridge locations.&lt;/li&gt;
+&lt;li&gt;Added placeholders for alcove, split, pier, and circle locations.&lt;/li&gt;
+&lt;li&gt;Linked and added short descriptions for: circle, alcove, pier, and split locations. Can always get back to the bridge from these, but can only get to them from the bridge when configured correctly.&lt;/li&gt;
+&lt;li&gt;Added item placeholders: bedroll (in alcove), wheel (on bridge), mushrooms/flowers (in circle).&lt;/li&gt;
+&lt;li&gt;Installed conditional expression helper for Handlebars.&lt;/li&gt;
+&lt;li&gt;Added contextual bridge descriptions to vary by position (forest, underground, coast, void). Descriptions don’t make it very clear what’s happening, but the action of turning the wheel will.&lt;/li&gt;
+&lt;li&gt;Added wheel to bridge.&lt;/li&gt;
+&lt;li&gt;Stubbed in wheel behavior.&lt;/li&gt;
+&lt;li&gt;Added taxes module.&lt;/li&gt;
+&lt;li&gt;Added &lt;code&gt;PAY TAXES&lt;/code&gt; command.&lt;/li&gt;
+&lt;li&gt;Added Devices module. Includes the device component and verbs for activating/rotating/manipulating. Devices can have a set of ‘states’ (on/off, rotational position, etc). By default, a device will cycle through the available states when triggered.&lt;/li&gt;
+&lt;li&gt;Wheel on bridge is now a device.&lt;/li&gt;
+&lt;li&gt;Designed my future office.&lt;/li&gt;
+&lt;li&gt;Wrote an introductory manual for the game.&lt;/li&gt;
+&lt;li&gt;Wrote up an expanded quest/puzzle line for the prologue, incorporating new areas (bridge, underground), the basin puzzle, and the Black Box objective. I think it will tie everything together into a more satisfying, game-like experience.&lt;/li&gt;
+&lt;li&gt;Made a character creator for a pen-and-paper RPG.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/04/24/Aggregation-30/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.04.23</title>
@@ -621,24 +660,6 @@ TABLE OF CONTENTS
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/04/05/Moving-Day-2-of-2/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.04.04</title>
-      <link>http://timberjaw.github.io/2016/04/04/Daily-Update-2016-04-04/</link>
-      <guid>http://timberjaw.github.io/2016/04/04/Daily-Update-2016-04-04/</guid>
-      <pubDate>Mon, 04 Apr 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Post not found.&lt;/p&gt;
-
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Post not found.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/04/04/Daily-Update-2016-04-04/#disqus_thread</comments>
     </item>
     
   </channel>
