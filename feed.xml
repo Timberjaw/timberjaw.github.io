@@ -8,8 +8,27 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Sun, 24 Apr 2016 08:05:10 GMT</pubDate>
+    <pubDate>Mon, 25 Apr 2016 04:03:17 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.04.23</title>
+      <link>http://timberjaw.github.io/2016/04/23/Daily-Update-2016-04-23/</link>
+      <guid>http://timberjaw.github.io/2016/04/23/Daily-Update-2016-04-23/</guid>
+      <pubDate>Sat, 23 Apr 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Finished the &lt;a href=&quot;http://tabletopsociety.com/files/dumdums/cc&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Dum-Dums &amp;amp; Dragons Character Creato
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Finished the &lt;a href=&quot;http://tabletopsociety.com/files/dumdums/cc&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Dum-Dums &amp;amp; Dragons Character Creator&lt;/a&gt;. It’s for a friend’s RPG project and was a lot of fun to make.&lt;/p&gt;
+&lt;p&gt;It’s responsive, mobile friendly (only tested on Android since that’s what I have) and supports saving/loading characters via Web Storage (the first time I’ve used that, actually).&lt;/p&gt;
+&lt;p&gt;For the most part it pulls from simple lists of options with direct effects on the character’s stats and abilities, but there were a few edge cases to deal with as well. Simple enough project that I was able to spare the time for presentation and added features, which is nice because I learned a couple new things about media/print queries and local storage.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/04/23/Daily-Update-2016-04-23/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.04.22</title>
@@ -620,24 +639,6 @@ TABLE OF CONTENTS
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/04/04/Daily-Update-2016-04-04/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.04.03</title>
-      <link>http://timberjaw.github.io/2016/04/03/Daily-Update-2016-04-03/</link>
-      <guid>http://timberjaw.github.io/2016/04/03/Daily-Update-2016-04-03/</guid>
-      <pubDate>Sun, 03 Apr 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Packing day today, no time for updates. Did manage to get the internet working, and everything’s packed up for the movers.&lt;/p&gt;
-
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Packing day today, no time for updates. Did manage to get the internet working, and everything’s packed up for the movers.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/04/03/Daily-Update-2016-04-03/#disqus_thread</comments>
     </item>
     
   </channel>
