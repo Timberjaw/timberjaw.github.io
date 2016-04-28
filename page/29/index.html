@@ -60,6 +60,116 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-stupidrpg-the-gm" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/21/stupidrpg-the-gm/">StupidRPG: The GM</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/07/21/stupidrpg-the-gm/">
+      <time datetime="2015-07-21T07:00:00.000Z" itemprop="datePublished">2015-07-21</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>I’ve mentioned the GM a couple times so far, but I haven’t really gone into detail about what, who, or why the GM is in the game. In storytelling terms, the GM is an <a href="https://en.wikipedia.org/wiki/Unreliable_narrator" target="_blank" rel="external">unreliable narrator</a>. In mechanical terms, the GM is an NPC with meta-abilities. <a href="http://www.stanleyparable.com/" target="_blank" rel="external">The Stanley Parable</a> provides an excellent example of an unreliable narrator in a video game.</p>
+<p>In SRPG, for the most part, the GM narrates the events of the game and provides some level of commentary on the player’s choices. Ostensibly, the GM (as in D&amp;D or other pen-and-paper RPGs) is responsible for the creation and organization of locations, characters, enemies, events, and so on. This particular GM, however, is both unprepared and over-invested, leading (probably) to clashes with the player, other NPCs, the world, and the game mechanics themselves.</p>
+<p>It’s unclear at this point whether the player should consider the GM a friend, an enemy, or a force of nature. Something I need to sort out as the storyline continues. I also need to be careful, as breaking the 4th wall is bordering on a trope at this point. It’s integral to the structure of SRPG, so it has to be done right.</p>
+<div class="spoiler"><br><b>GM:</b> The twins lean forward eagerly, excited at the prospect of delivering their latest riddle.<br><br><b>The Twins:</b> We’re not twins.<br><br><b>GM:</b> Oh. I thought…<br><br><b>The Left Twin:</b> You could have asked, you know. Just because two people like to stand in front of a gate and pose riddles in unison doesn’t mean they’re twins.<br><br><b>GM:</b> Sorry?<br><br><b>The Right Twin:</b> You didn’t even ask our names. You’re still calling us twins in your script. ‘Left Twin’ and ‘Right Twin’. Wow.<br><br><b>GM:</b> What should I call you, then?<br><br><b>The Left Twin:</b> My name is Jane<br><br><b>The Right Twin:</b> And I’m Jack<br><br><b>GM:</b> Ok…Jack and Jane, who are not related, lean forward eagerly, excited at the prospect&mdash;<br><br><b>Jack:</b> Seriously? We’re brother and sister, we’re just not twins. What are the odds two complete strangers named Jack and Jane would be doing this?<br><br><b>GM:</b> Fine. I don’t actually care. The two J’s have a riddle.<br><br></div>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/07/21/stupidrpg-the-gm/" data-id="cinjxgdc20030mwohfdrjnwok" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-weekly-update-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/20/weekly-update-1/">Weekly Update #1</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/07/20/weekly-update-1/">
+      <time datetime="2015-07-20T07:00:00.000Z" itemprop="datePublished">2015-07-20</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Paying off some technical debt in this update. The scale of the JS source files is getting to a point where I need to restructure as a sanity saver. There’s more cleanup to be done, but I’ve significantly restructured the folders for both JS and CSS files, and created a build script to automate the process.</p>
+<p>I also noticed some unexpected engine-breaking bugs when I first loaded up the game again. I need to either not leave work half-finished, or leave notes for myself.</p>
+<p><strong>Changelog:</strong></p>
+<ul>
+<li>Restructured JS to use a preprocessor (<a href="https://larsjung.de/wepp/" target="_blank" rel="external">WEPP</a>)</li>
+<li>Restructured CSS to use a preprocessor (<a href="http://sass-lang.com/" target="_blank" rel="external">SASS</a>)</li>
+<li>Added a build script to 1) bake the JS files down to: engine.js and game.js; and 2) update the page CSS</li>
+<li>Added a function to dynamically reload/switch the CSS themes (which means in the future I can add an in-game command to change the theme)</li>
+<li>Fixed a couple NLP bugs related to half-finished work from a while back</li>
+</ul>
+<p><strong>Known Issues:</strong></p>
+<ul>
+<li>Dialogue node callbacks aren’t working right. Need more testing and refinement of the callbacks and may need some refactoring of the dialogue tree feature in general.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/07/20/weekly-update-1/" data-id="cinjxgdaj0023mwoh68xwevbp" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-dungeons-dragons" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -97,7 +207,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/19/dungeons-dragons/" data-id="cinicy1cg005awkoh0zbcpf3s" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/19/dungeons-dragons/" data-id="cinjxgdfe005amwohchp9i6qr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -176,7 +286,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/18/stupidrpg-the-black-box/" data-id="cinicy17z0031wkohs5wvozio" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/18/stupidrpg-the-black-box/" data-id="cinjxgdc30031mwoh39qc0ujl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -252,7 +362,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/17/tools-of-the-trade/" data-id="cinicy16v002awkohs3czmzsi" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/17/tools-of-the-trade/" data-id="cinjxgdb9002amwohg100esyl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -340,7 +450,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/16/stupidrpg-dialogue-trees/" data-id="cinicy19d003swkoh13onco5h" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/16/stupidrpg-dialogue-trees/" data-id="cinjxgdcu003smwohea1nuec3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -390,7 +500,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/15/static-site-generators/" data-id="cinicy19p0042wkohj6vm1omg" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/15/static-site-generators/" data-id="cinjxgdd30042mwoh1525zdr3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -453,7 +563,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/15/so-im-making-a-video-game/" data-id="cinicy19u0045wkoh2kysvz7o" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/15/so-im-making-a-video-game/" data-id="cinjxgdd70045mwohmewa1qpn" class="article-share-link">Share</a>
       
       
     </footer>
