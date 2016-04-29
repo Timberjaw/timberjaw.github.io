@@ -8,8 +8,33 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Thu, 28 Apr 2016 06:33:54 GMT</pubDate>
+    <pubDate>Fri, 29 Apr 2016 04:04:32 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>The Egg Machine</title>
+      <link>http://timberjaw.github.io/2016/04/28/The-Egg-Machine/</link>
+      <guid>http://timberjaw.github.io/2016/04/28/The-Egg-Machine/</guid>
+      <pubDate>Fri, 29 Apr 2016 04:04:32 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Warning: this post is going to get real weird real quick. It will make more sense if you’ve ever played Numenera, where things like this 
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Warning: this post is going to get real weird real quick. It will make more sense if you’ve ever played Numenera, where things like this happen all the time.&lt;/p&gt;
+&lt;h2 id=&quot;The_First_Machine&quot;&gt;&lt;a href=&quot;#The_First_Machine&quot; class=&quot;headerlink&quot; title=&quot;The First Machine&quot;&gt;&lt;/a&gt;The First Machine&lt;/h2&gt;&lt;p&gt;The egg machine is a massive cylindrical machine, made of an unknown transparent material and filled with vaguely egg-shaped containers (translucent). In front of the machine are three empty containers. A button on the front of the machine will raise the tops of the containers, allowing a person-sized person to get inside. Pressing the button again will close them. The containers block sound and prevent anything but a fuzzy glimpse of the creature inside.&lt;/p&gt;
+&lt;p&gt;Nearby is a giant bowl filled with oversized tokens (maybe a couple feet in diameter). These can be fed into a coin slot on the front of the machine, which when turned… Combines traits of the egged characters and releases a new egg, from which emerges… One of those foam blob toys that turns into a dinosaur or whatever when it gets wet. Roughly human-sized, it will grow to much larger proportions when soaked. Movement and head are controlled by one character, while each arm is controlled by one of the remaining two.&lt;/p&gt;
+&lt;h2 id=&quot;Where_it_Gets_Weird&quot;&gt;&lt;a href=&quot;#Where_it_Gets_Weird&quot; class=&quot;headerlink&quot; title=&quot;Where it Gets Weird&quot;&gt;&lt;/a&gt;Where it Gets Weird&lt;/h2&gt;&lt;p&gt;This is where it gets weird. On top of the egg machine is a platform, and on that platform is a giant claw machine. The newly-spawned foam golem (controlled by the 3 characters trapped in their egg pods) can climb up to that platform and operate the machine.&lt;/p&gt;
+&lt;p&gt;This is where it gets weirder. On the 2nd platform there are two oversized stuffed rabbits into which the remaining two characters can climb. Once sealed inside, they will spawn as a new creature within the claw machine. They are unable to move until the foam golem rescues them with the claw.&lt;/p&gt;
+&lt;p&gt;Lastly, the foam golem (about 50’ tall) and the stuffed golem (about 12’ tall) have to team up to reach a hatch in the ceiling (about 100’ above the claw machine). The preferred method is for the foam golem to throw the stuffed golem. Once the hatch is opened, a ladder will descend and the pair can climb out.&lt;/p&gt;
+&lt;h2 id=&quot;Where_it_Gets_Complicated&quot;&gt;&lt;a href=&quot;#Where_it_Gets_Complicated&quot; class=&quot;headerlink&quot; title=&quot;Where it Gets Complicated&quot;&gt;&lt;/a&gt;Where it Gets Complicated&lt;/h2&gt;&lt;p&gt;Each combination (of 3 and 2 characters respectively) results in unique traits for the spawned golems. This gives 10 outcomes for the first creature and 10 corresponding outcomes for the second creature. Something like:&lt;/p&gt;
+&lt;p&gt;ABC + DE, ABD + CE, ABE + CD, ACD + BE, ACE + BD, ADE + BC, BCD + AE, BCE + AD, BDE + AC, CDE + AB.&lt;/p&gt;
+&lt;p&gt;In the interest of not completely baffling the players, I’m leaning toward these combos being largely cosmetic.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/04/28/The-Egg-Machine/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.04.27</title>
@@ -646,27 +671,6 @@ TABLE OF CONTENTS
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/04/09/Aggregation-29/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.04.08</title>
-      <link>http://timberjaw.github.io/2016/04/08/Daily-Update-2016-04-08/</link>
-      <guid>http://timberjaw.github.io/2016/04/08/Daily-Update-2016-04-08/</guid>
-      <pubDate>Fri, 08 Apr 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;No work on SRPG today.&lt;/p&gt;
-&lt;p&gt;Turned 30 recently, so that’s kind of novel. Seems pretty good so far.&lt;/p&gt;
-&lt;p&gt;Each number in today’s date i
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;No work on SRPG today.&lt;/p&gt;
-&lt;p&gt;Turned 30 recently, so that’s kind of novel. Seems pretty good so far.&lt;/p&gt;
-&lt;p&gt;Each number in today’s date is divisible by 4. I thought that was interesting but I guess there are 21 days this year matching that criteria (7 each in April, August and December).&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/04/08/Daily-Update-2016-04-08/#disqus_thread</comments>
     </item>
     
   </channel>

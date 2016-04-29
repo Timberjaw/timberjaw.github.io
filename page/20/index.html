@@ -60,6 +60,79 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-card-builder" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/20/card-builder/">Card Builder</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/10/20/card-builder/">
+      <time datetime="2015-10-20T07:00:00.000Z" itemprop="datePublished">2015-10-20</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>I’m starting another side project; I have one at a time (other than SRPG) allotted as a way of learning new tech and getting a mental break from other things. This one is related to the previous Numenera card generator. I’d like to generalize the concept into a broader ‘card builder’ tool.</p>
+<p><strong>Technology:</strong></p>
+<ul>
+<li>C#: I’m pretty comfortable with the language, and it’s one of my favorites.</li>
+<li>OpenGL (probably OpenTK) for rendering: I have just a tiny bit of exposure to OpenGL and wouldn’t mind a bit more, plus it should be easier to do certain image manipulation/text rendering tasks. Assuming OpenGL / OpenTK can do what I need, namely: 1) solid font rendering with text wrapping, 2) dynamic texture generation, and 3) saving a dynamic texture to disk in a standard file format at high resolution.</li>
+<li>GTK or WinForms/WPF depending on whether cross-platform functionality is important. Might be fun to learn GTK.</li>
+<li>Visual Studio or MonoDevelop for coding: I have VS experience and it’s a great IDE. Some OpenTK tasks may be easier in MonoDevelop however.</li>
+</ul>
+<p><strong>Goals &amp; Features:</strong></p>
+<ul>
+<li>Define card templates with field variables (e.g. title, description, cost), field placement, and image background layer. Templates can be saved to some kind of text-based config for reuse.</li>
+<li>Visually add/edit/remove template fields, with control for text wrapping, fonts and font styles, alignment, etc.</li>
+<li>Import values from disk to populate templates. CSV import as default type.</li>
+<li>Live editing of template with values loaded (onscreen cards should update to match template).</li>
+<li>Export of single card or all cards with resolution and file type options, including print-ready (300dpi+).</li>
+</ul>
+<p><strong>Nice-to-Haves:</strong></p>
+<ul>
+<li>3D card preview with backs.</li>
+<li>Save/open groups of templates as presets. e.g. D&amp;D 5E Spell Cards, Numenera Power Cards, etc.</li>
+<li>Text formats are defined sensibly enough that they can be edited directly outside of the interface.</li>
+<li>Card searching/filtering.</li>
+<li>XLSX import.</li>
+</ul>
+<p><strong>Need-to-Think-Abouts:</strong></p>
+<ul>
+<li>Dynamically sized/placed elements (for example, the Numenera generator automatically places a colored bar with text directly below a variable-sized text block).</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/10/20/card-builder/" data-id="cinl8hyjb0077ioohvriy75wk" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-weekly-update-14" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -103,7 +176,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/19/weekly-update-14/" data-id="cinjxgda0001omwohcp1t8da0" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/19/weekly-update-14/" data-id="cinl8hy8x001nioohkjizyh1y" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -151,7 +224,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/18/resume/" data-id="cinjxgddz004imwohh0w2gsvl" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/18/resume/" data-id="cinl8hyff004hioohcpdx16fl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -201,7 +274,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/17/the-aethernauts/" data-id="cinjxgdbp002lmwohfwcbs2l0" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/17/the-aethernauts/" data-id="cinl8hych002kioohadaugq8r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -254,7 +327,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/16/writing-to-victory-part-3/" data-id="cinjxgd8f0003mwoht6r65ieu" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/16/writing-to-victory-part-3/" data-id="cinl8hy7e0002iooh9jqnoj0h" class="article-share-link">Share</a>
       
       
     </footer>
@@ -305,7 +378,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/15/writing-to-victory-part-2/" data-id="cinjxgd8h0004mwohnyu9onsk" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/15/writing-to-victory-part-2/" data-id="cinl8hy7f0003iooh4753ymkg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -358,7 +431,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/14/writing-to-victory/" data-id="cinjxgd8e0002mwohizghgc3d" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/14/writing-to-victory/" data-id="cinl8hy7c0001ioohzifwlbjw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -412,7 +485,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/13/daily-update-285-2015/" data-id="cinjxgdgn0065mwohgwzxix8j" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/13/daily-update-285-2015/" data-id="cinl8hyi40064ioohn0r4z1k9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -467,7 +540,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/12/weekly-update-13/" data-id="cinjxgda5001rmwohc0a4wmok" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/12/weekly-update-13/" data-id="cinl8hy8z001qiooh6tzkauyx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -520,68 +593,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/11/rpg-postmortem-1/" data-id="cinjxgddx004hmwoh5a6ikdw7" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-challenge-types" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/10/challenge-types/">Challenge Types</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/10/10/challenge-types/">
-      <time datetime="2015-10-10T07:00:00.000Z" itemprop="datePublished">2015-10-10</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>I feel the need to classify the challenges in SRPG a bit. I don’t want to wear out the player with too much mechanical repetition (e.g. 5 fetch quests in a row). I use the term ‘challenge’ as a broad container for all manner of Quests and Puzzles. They can have some overlap, of course.</p>
-<p><strong>Types of Challenges:</strong></p>
-<ul>
-<li><p>Task: the most straightforward type of challenge. The player is presented with some kind of objective, like collecting all the litter in the forest. There’s no puzzle to solve, and the mechanical complexity is minimal. There’s nothing to ‘figure out’. Task-type quests are used to track progress rather than measure skill.</p>
-</li>
-<li><p><a href="http://tvtropes.org/pmwiki/pmwiki.php/Main/YouCantGetYeFlask" target="_blank" rel="external">Guess the Verb</a>: this one comes from a common text adventure trope, where the challenge is figuring out not what to do, or even how to do it, but exactly what command the game will accept ti achieve the desired goal. I don’t want SRPG to have any of these, with the possible exception of some kind of optional meta-quest.</p>
-</li>
-<li><p>What to Do: I need a better name for this. It’s not quite a puzzle. A <em>What to Do</em> is a challenge where the objective is clear, but the player may not immediately know how to get there. The answer usually becomes obvious once the player has all the necessary information, requiring few logical leaps. For example, spotting a key hanging from a high branch out of reach, then discovering a chainsaw in a nearby toolshed. This is a slightly more involved version of the Task type.</p>
-</li>
-<li><p>Mechanical: the first type I consider a puzzle. Like a <em>What to Do</em> challenge, the end goal may be obvious (getting through a door which can only be opened by pressing two buttons in different rooms simultaneously), and the relevant mechanics may be understood (using a time machine to summon clones of yourself who perform a limited number of actions before disappearing), but there’s a bit of thought required to determine the appropriate sequence of steps (summon clone A two turns ago, walk west, press button, summon clone B three turns ago, walk east, walk east, press button, walk north). Mechanical puzzles should have a short iteration time (to avoid lengthy, frustrating trial and error) and allow the player to experiment with the relevant mechanics.</p>
-</li>
-<li><p>Mindbender: to be used sparingly in mandatory quests, these puzzles require some degree of lateral/creative thinking. While most of the puzzles in the game will be mechanical in nature, many of them will have alternative solutions for players who think outside the box.</p>
-</li>
-<li><p>Timed: again, to be used sparingly. Timed challenges in text adventures (in my experience) are rarely fun, especially when the player fails and has to repeat them.</p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/10/challenge-types/" data-id="cinjxgdho0077mwoh97pn4mtw" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/11/rpg-postmortem-1/" data-id="cinl8hyfe004gioohxccmeygv" class="article-share-link">Share</a>
       
       
     </footer>
