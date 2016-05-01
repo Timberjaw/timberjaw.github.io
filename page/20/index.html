@@ -60,6 +60,55 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-card-builder-part-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/22/card-builder-part-2/">Card Builder, Part 2</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/10/22/card-builder-part-2/">
+      <time datetime="2015-10-22T07:00:00.000Z" itemprop="datePublished">2015-10-22</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Some more notes about the Card Builder side project. I’m likely going to use JSON for the template files and preset groups. It’s a format most developers/nerds are familiar with, and it’s easy to edit directly.</p>
+<p>The template schema will look something like:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">version</span>":<span class="value"><span class="number">1</span></span>,</span><br><span class="line">  "<span class="attribute">name</span>":<span class="value"><span class="string">"Sample Template"</span></span>,</span><br><span class="line">  "<span class="attribute">elements</span>":<span class="value">[</span><br><span class="line">    &#123;</span><br><span class="line">      "<span class="attribute">type</span>":<span class="value"><span class="string">"text"</span></span>,</span><br><span class="line">      "<span class="attribute">children</span>":<span class="value">[]</span>,</span><br><span class="line">      "<span class="attribute">position</span>":<span class="value">[<span class="number">20</span>,<span class="number">100</span>]</span>,</span><br><span class="line">      "<span class="attribute">size</span>":<span class="value">[<span class="number">400</span>,<span class="string">"auto"</span>]</span>,</span><br><span class="line">      "<span class="attribute">width</span>":<span class="value"><span class="string">"100%"</span></span>,</span><br><span class="line">      "<span class="attribute">value</span>":<span class="value">&#123;</span><br><span class="line">        "<span class="attribute">type</span>":<span class="value"><span class="string">"static"</span></span>,</span><br><span class="line">        "<span class="attribute">data</span>":<span class="value"><span class="string">"Foo Bar"</span></span>,</span><br><span class="line">        "<span class="attribute">wrap</span>":<span class="value"><span class="literal">true</span></span><br><span class="line">      </span>&#125;</span>,</span><br><span class="line">      "<span class="attribute">style</span>":<span class="value">&#123;</span><br><span class="line">        "<span class="attribute">font-size</span>":<span class="value"><span class="string">"12px"</span></span>,</span><br><span class="line">        "<span class="attribute">font-weight</span>":<span class="value"><span class="string">"bold"</span></span><br><span class="line">      </span>&#125;</span><br><span class="line">    </span>&#125;</span><br><span class="line">  ]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<p>I’m not completely sold on this idea. A part of me wonders if it makes more sense to skip OpenGL entirely and do this in an embedded browser (or web app) to gain the benefits of CSS for styling/positioning, rather than building my own layout rules. It would probably be easier, but I would learn less from the project.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/10/22/card-builder-part-2/" data-id="cinodwh9o007am0oheh6sgvmm" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-the-martian" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -95,7 +144,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/21/the-martian/" data-id="cino2bio7002ha4ohdny53qe5" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/21/the-martian/" data-id="cinodwh38002hm0ohm0hurb8p" class="article-share-link">Share</a>
       
       
     </footer>
@@ -168,7 +217,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/20/card-builder/" data-id="cino2bivm0078a4oh3ifztazv" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/20/card-builder/" data-id="cinodwh9m0078m0oh1qp4ypuh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -222,7 +271,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/19/weekly-update-14/" data-id="cino2bimj001oa4ohbn418z0c" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/19/weekly-update-14/" data-id="cinodwh1t001om0ohmf0yqcm8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -270,7 +319,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/18/resume/" data-id="cino2birh004ia4ohhib303a2" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/18/resume/" data-id="cinodwh5j004im0ohfs192anz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -320,7 +369,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/17/the-aethernauts/" data-id="cino2biod002la4oh45afuuxh" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/17/the-aethernauts/" data-id="cinodwh3e002lm0ohqayzu41g" class="article-share-link">Share</a>
       
       
     </footer>
@@ -373,7 +422,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/16/writing-to-victory-part-3/" data-id="cino2bik80003a4ohxxptitgd" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/16/writing-to-victory-part-3/" data-id="cinodwh000003m0ohz5hflvdh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -424,7 +473,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/15/writing-to-victory-part-2/" data-id="cino2bika0004a4ohxjajcb5i" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/15/writing-to-victory-part-2/" data-id="cinodwh020004m0ohn6jitbz9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -477,7 +526,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/14/writing-to-victory/" data-id="cino2bik70002a4ohsfdv898o" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/14/writing-to-victory/" data-id="cinodwgzy0002m0ohcvl9eell" class="article-share-link">Share</a>
       
       
     </footer>
@@ -531,66 +580,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/13/daily-update-285-2015/" data-id="cino2biug0065a4oh2cf43ilv" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/10/13/daily-update-285-2015/" data-id="cinodwh8d0065m0ohnsthr638" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-weekly-update-13" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/12/weekly-update-13/">Weekly Update #13</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/10/12/weekly-update-13/">
-      <time datetime="2015-10-12T07:00:00.000Z" itemprop="datePublished">2015-10-12</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Too busy at work to get much done this last week.</p>
-<p><strong>Changes:</strong></p>
-<ul>
-<li>Added a magic ice cube.</li>
-<li>Added an icy key.</li>
-</ul>
-<p><strong>Bugs &amp; Problems:</strong></p>
-<ul>
-<li>Nothing new.</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/10/12/weekly-update-13/" data-id="cino2bimp001ra4oh5zmg0p6y" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
-
     </footer>
   </div>
   
@@ -600,7 +592,7 @@
 
     
       <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/page/19/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="page-number" href="/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/page/21/">21</a><a class="page-number" href="/page/22/">22</a><span class="space">&hellip;</span><a class="page-number" href="/page/29/">29</a><a class="extend next" rel="next" href="/page/21/">Next &raquo;</a>
+        <a class="extend prev" rel="prev" href="/page/19/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="page-number" href="/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/page/21/">21</a><a class="page-number" href="/page/22/">22</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/">30</a><a class="extend next" rel="next" href="/page/21/">Next &raquo;</a>
       </nav>
     </section>
       
