@@ -8,8 +8,56 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Sun, 01 May 2016 04:12:57 GMT</pubDate>
+    <pubDate>Tue, 03 May 2016 01:43:38 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.05.02</title>
+      <link>http://timberjaw.github.io/2016/05/02/Daily-Update-2016-05-02/</link>
+      <guid>http://timberjaw.github.io/2016/05/02/Daily-Update-2016-05-02/</guid>
+      <pubDate>Tue, 03 May 2016 01:43:38 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added short descriptions for most of the forest locations.&lt;/li&gt;
+&lt;li&gt;Added short desc
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added short descriptions for most of the forest locations.&lt;/li&gt;
+&lt;li&gt;Added short descriptions for the outpost scenery.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/05/02/Daily-Update-2016-05-02/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Daily Update 2016.05.01</title>
+      <link>http://timberjaw.github.io/2016/05/01/Daily-Update-2016-05-01/</link>
+      <guid>http://timberjaw.github.io/2016/05/01/Daily-Update-2016-05-01/</guid>
+      <pubDate>Sun, 01 May 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added a &lt;code&gt;GRIND&lt;/code&gt; verb to grind for XP.&lt;/li&gt;
+&lt;/ul&gt;
+
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added a &lt;code&gt;GRIND&lt;/code&gt; verb to grind for XP.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/05/01/Daily-Update-2016-05-01/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.04.29</title>
@@ -569,54 +617,6 @@ TABLE OF CONTENTS
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/04/13/Daily-Update-2016-04-13/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.04.12</title>
-      <link>http://timberjaw.github.io/2016/04/12/Daily-Update-2016-04-12/</link>
-      <guid>http://timberjaw.github.io/2016/04/12/Daily-Update-2016-04-12/</guid>
-      <pubDate>Wed, 13 Apr 2016 05:48:01 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Linked and added short descriptions for: circle, alcove, pier, and split locations. 
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Linked and added short descriptions for: circle, alcove, pier, and split locations. Can always get back to the bridge from these, but can only get to them from the bridge when configured correctly.&lt;/li&gt;
-&lt;li&gt;Added item placeholders: bedroll (in alcove), wheel (on bridge), mushrooms/flowers (in circle).&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/04/12/Daily-Update-2016-04-12/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.04.11</title>
-      <link>http://timberjaw.github.io/2016/04/11/Daily-Update-2016-04-11/</link>
-      <guid>http://timberjaw.github.io/2016/04/11/Daily-Update-2016-04-11/</guid>
-      <pubDate>Mon, 11 Apr 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added bridge, bridge, bridge, bridge, and bridge locations.&lt;/li&gt;
-&lt;li&gt;Added placehold
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added bridge, bridge, bridge, bridge, and bridge locations.&lt;/li&gt;
-&lt;li&gt;Added placeholders for alcove, split, pier, and circle locations.&lt;/li&gt;
-&lt;li&gt;Remembered I was supposed to add support for the &lt;code&gt;VERBOSE&lt;/code&gt; command, which will allow for terse descriptions of places the player has already seen. I don’t think it’s fully wired up, and I certainly haven’t been adding those descriptions as I go. Oops.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/04/11/Daily-Update-2016-04-11/#disqus_thread</comments>
     </item>
     
   </channel>
