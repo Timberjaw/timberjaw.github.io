@@ -8,8 +8,57 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Tue, 03 May 2016 01:43:38 GMT</pubDate>
+    <pubDate>Thu, 05 May 2016 00:58:49 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.05.04</title>
+      <link>http://timberjaw.github.io/2016/05/04/Daily-Update-2016-05-04/</link>
+      <guid>http://timberjaw.github.io/2016/05/04/Daily-Update-2016-05-04/</guid>
+      <pubDate>Thu, 05 May 2016 00:58:49 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added short descriptions for: South Trail, West Trail.&lt;/li&gt;
+&lt;li&gt;Updated my Minecraft
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added short descriptions for: South Trail, West Trail.&lt;/li&gt;
+&lt;li&gt;Updated my Minecraft server (been procrastinating on that for a while).&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/05/04/Daily-Update-2016-05-04/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Daily Update 2016.05.03</title>
+      <link>http://timberjaw.github.io/2016/05/03/Daily-Update-2016-05-03/</link>
+      <guid>http://timberjaw.github.io/2016/05/03/Daily-Update-2016-05-03/</guid>
+      <pubDate>Tue, 03 May 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added short descriptions for locations: Ranger Station Base.&lt;/li&gt;
+&lt;li&gt;Added short de
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added short descriptions for locations: Ranger Station Base.&lt;/li&gt;
+&lt;li&gt;Added short descriptions for things: starting items, telescope, wooden structure, litter, berries, ice cube.&lt;/li&gt;
+&lt;li&gt;Added short descriptions for creatures: troglodyte, Jane, Jack, Ranger Bob, player, bird.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/05/03/Daily-Update-2016-05-03/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.05.02</title>
@@ -567,56 +616,6 @@ TABLE OF CONTENTS
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/04/15/Daily-Update-2016-04-15/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.04.14</title>
-      <link>http://timberjaw.github.io/2016/04/14/Daily-Update-2016-04-14/</link>
-      <guid>http://timberjaw.github.io/2016/04/14/Daily-Update-2016-04-14/</guid>
-      <pubDate>Fri, 15 Apr 2016 04:57:07 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added wheel to bridge.&lt;/li&gt;
-&lt;li&gt;Stubbed in wheel behavior.&lt;/li&gt;
-&lt;/ul&gt;
-
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added wheel to bridge.&lt;/li&gt;
-&lt;li&gt;Stubbed in wheel behavior.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/04/14/Daily-Update-2016-04-14/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.04.13</title>
-      <link>http://timberjaw.github.io/2016/04/13/Daily-Update-2016-04-13/</link>
-      <guid>http://timberjaw.github.io/2016/04/13/Daily-Update-2016-04-13/</guid>
-      <pubDate>Wed, 13 Apr 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Installed conditional expression helper for Handlebars.&lt;/li&gt;
-&lt;li&gt;Added contextual br
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Installed conditional expression helper for Handlebars.&lt;/li&gt;
-&lt;li&gt;Added contextual bridge descriptions to vary by position (forest, underground, coast, void). Descriptions don’t make it very clear what’s happening, but the action of turning the wheel will.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/04/13/Daily-Update-2016-04-13/#disqus_thread</comments>
     </item>
     
   </channel>
