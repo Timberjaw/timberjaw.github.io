@@ -8,8 +8,26 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Thu, 05 May 2016 00:58:49 GMT</pubDate>
+    <pubDate>Fri, 06 May 2016 23:09:05 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Delay</title>
+      <link>http://timberjaw.github.io/2016/05/06/Delay/</link>
+      <guid>http://timberjaw.github.io/2016/05/06/Delay/</guid>
+      <pubDate>Fri, 06 May 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Will be too busy over the weekend to update as scheduled. Will get caught up Sunday or Monday.&lt;/p&gt;
+
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Will be too busy over the weekend to update as scheduled. Will get caught up Sunday or Monday.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/05/06/Delay/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.05.04</title>
@@ -590,32 +608,6 @@ TABLE OF CONTENTS
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/04/16/Daily-Update-2016-04-16/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.04.15</title>
-      <link>http://timberjaw.github.io/2016/04/15/Daily-Update-2016-04-15/</link>
-      <guid>http://timberjaw.github.io/2016/04/15/Daily-Update-2016-04-15/</guid>
-      <pubDate>Fri, 15 Apr 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added taxes module.&lt;/li&gt;
-&lt;li&gt;Added &lt;code&gt;PAY TAXES&lt;/code&gt; command.&lt;/li&gt;
-&lt;/ul&gt;
-
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added taxes module.&lt;/li&gt;
-&lt;li&gt;Added &lt;code&gt;PAY TAXES&lt;/code&gt; command.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/04/15/Daily-Update-2016-04-15/#disqus_thread</comments>
     </item>
     
   </channel>
