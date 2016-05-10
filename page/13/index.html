@@ -60,6 +60,162 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-Streamlining" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/08/Streamlining/">Streamlining</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2016/01/08/Streamlining/">
+      <time datetime="2016-01-09T07:11:14.000Z" itemprop="datePublished">2016-01-08</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>As I transition from engine construction to content creation, I’m finding it a bit cumbersome. Take for example the frequent task of adding small, inconsequential items and scenery, where I just need a name, some accepted identifiers, and a block of descriptive text. Here’s what that process looks like now:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ecs.e(<span class="string">'shiny-trinket'</span>, [<span class="string">'thing'</span>], &#123;</span><br><span class="line">    <span class="string">'name'</span>:<span class="string">'shiny trinket'</span>,</span><br><span class="line">    <span class="string">'nouns'</span>:[<span class="string">'trinket'</span>,<span class="string">'shiny trinket'</span>],</span><br><span class="line">    <span class="string">'spawn'</span>:<span class="string">'dim-clearing'</span>,</span><br><span class="line">    <span class="string">'descriptions'</span>:&#123;</span><br><span class="line">        <span class="string">'default'</span>:<span class="string">"A shiny locket, someone's discarded knick-knack. It's empty."</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>I think I can do better with some helper functions/macros. When approaching problems like this, I like to work in reverse: writing the code I want to work, then writing the necessary functions and support structures to make it actually run. The target code I want is something like this:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">item(<span class="string">'shiny trinket'</span>, <span class="string">"A shiny locket, someone's discarded knick-knack. It's empty."</span>)</span><br></pre></td></tr></table></figure>
+<p>This is mostly suitable for barebones items and scenery, where the player doesn’t interact with the entity beyond looking at it and possibly picking it up. Note that the location of the object isn’t specified; the intention is that it’s inferred from context (a bit of a dangerous game, but an idea I’m exploring). The function would work like so:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">item</span>(<span class="params">name, description</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> item_key = getKeyFromName(name);</span><br><span class="line">    <span class="keyword">var</span> parent = getParentFromContext();</span><br><span class="line">    ecs.e(item_key, &#123;</span><br><span class="line">        <span class="string">'name'</span>:name,</span><br><span class="line">        <span class="string">'nouns'</span>:[name],</span><br><span class="line">        <span class="string">'spawn'</span>:parent,</span><br><span class="line">        <span class="string">'descriptions'</span>:&#123;</span><br><span class="line">            <span class="string">'default'</span>:description</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>This got me thinking, though. For the Rulebook system, I built an ORM-style “query builder” of sorts, which uses method chaining to allow expressive creation of rules. Something similar could work for item creation, and support the above trinket example with added flexibility. See:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">item(<span class="string">'shiny trinket'</span>, <span class="string">"A shiny locket, someone's discarded knick-knack. It's empty."</span>)</span><br><span class="line">    .alias(<span class="string">'trinket'</span>)</span><br><span class="line">    .at(<span class="string">'dim-clearing'</span>)</span><br><span class="line">    .done()</span><br></pre></td></tr></table></figure>
+<p>Again, this is mainly intended for simple items. For more complex items and scenery, the current style would be preferred.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2016/01/08/Streamlining/" data-id="cio0ql56w007m5wohcj3s9ddx" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-Daily-Update-2016-01-07" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/07/Daily-Update-2016-01-07/">Daily Update 2016.01.07</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2016/01/07/Daily-Update-2016-01-07/">
+      <time datetime="2016-01-07T23:10:30.000Z" itemprop="datePublished">2016-01-07</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><strong>Updates &amp; Changes:</strong></p>
+<ul>
+<li>Gave the troglodyte a locket.</li>
+<li>Updated cave description.</li>
+<li>Added a big tree.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2016/01/07/Daily-Update-2016-01-07/" data-id="cio0ql5ce00ar5woh3apjpx6l" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-Daily-Update-2016-01-06" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/06/Daily-Update-2016-01-06/">Daily Update 2016.01.06</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2016/01/06/Daily-Update-2016-01-06/">
+      <time datetime="2016-01-06T23:10:20.000Z" itemprop="datePublished">2016-01-06</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><strong>Updates &amp; Changes:</strong></p>
+<ul>
+<li>Removed canyon east. Canyon center now connects directly to waterfall base.</li>
+<li>Added description for canyon west.</li>
+<li>Descriptions terse. Need more word.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2016/01/06/Daily-Update-2016-01-06/" data-id="cio0ql5cf00as5wohfzu5zrub" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-Daily-Update-2016-01-05" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -100,7 +256,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/01/05/Daily-Update-2016-01-05/" data-id="cinwc2upb00aqbwoh5w8gi218" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/01/05/Daily-Update-2016-01-05/" data-id="cio0ql5cg00at5wohywn34zuq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -151,7 +307,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/01/04/Weekly-Update-23/" data-id="cinwc2uk4007hbwoh8vq2wopz" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/01/04/Weekly-Update-23/" data-id="cio0ql56o007h5woh8hef57rx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -205,7 +361,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/01/03/Daily-Update-2016-01-03/" data-id="cinwc2upc00arbwohzhgelpkf" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/01/03/Daily-Update-2016-01-03/" data-id="cio0ql5ch00au5wohw78joy1b" class="article-share-link">Share</a>
       
       
     </footer>
@@ -252,7 +408,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/01/02/A-New-Year/" data-id="cinwc2upp00b0bwoheqgw71o0" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/01/02/A-New-Year/" data-id="cio0ql5cu00b35woh4279g10a" class="article-share-link">Share</a>
       
       
     </footer>
@@ -301,7 +457,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/01/02/2015-Recap/" data-id="cinwc2uad0000bwohhraytrem" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/01/02/2015-Recap/" data-id="cio0ql5cx00b55wohe22j41nf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -350,7 +506,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/01/02/Darksiders/" data-id="cinwc2ukz0086bwohp039u6b3" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/01/02/Darksiders/" data-id="cio0ql58200865wohhe99yuj5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -397,154 +553,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/12/30/New-Years-Eve-Eve/" data-id="cinwc2ukk007tbwohsui6k0lk" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-Resolution" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/29/Resolution/">Resolution</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/12/29/Resolution/">
-      <time datetime="2015-12-29T22:08:06.000Z" itemprop="datePublished">2015-12-29</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Today I resolve to be more resolute. Starting tomorrow.</p>
-<p>I kid, but this is my biggest regret of 2015. Leaving things for tomorrow when I’m absolutely certain I could do them today. That’s why my New Year’s resolution is a bit early; I already know what needs to be done, so there’s no reason to wait.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/12/29/Resolution/" data-id="cinwc2uk4007nbwoh2dqtuqw8" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-Weekly-Update-22" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/28/Weekly-Update-22/">Weekly Update #22</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/12/28/Weekly-Update-22/">
-      <time datetime="2015-12-28T09:49:25.000Z" itemprop="datePublished">2015-12-28</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p><strong>Changes &amp; Updates:</strong></p>
-<ul>
-<li>Switched from Middleman to Hexo</li>
-<li>Trialed some SRPG ideas in Numenera</li>
-</ul>
-<p><strong>Bugs &amp; Problems:</strong></p>
-<ul>
-<li>Nothing new</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/12/28/Weekly-Update-22/" data-id="cinwc2uk4007ibwoh7bhb0u9r" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-Homecoming" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/27/Homecoming/">Homecoming</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/12/27/Homecoming/">
-      <time datetime="2015-12-27T08:00:00.000Z" itemprop="datePublished">2015-12-27</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Drove home. Decided to replace Middleman with Hexo. Seems much faster and cleaner so far. Unfortunately, it uses different date and filename formats, so I have to do a bunch of manual cleanup. You’ll notice the site looks a bit different now.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/12/27/Homecoming/" data-id="cinwc2ukz0082bwohgf6k9x26" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/12/30/New-Years-Eve-Eve/" data-id="cio0ql579007t5woh70qegh12" class="article-share-link">Share</a>
       
       
     </footer>

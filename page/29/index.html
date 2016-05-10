@@ -60,6 +60,194 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-stupidrpg-callbacks" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/01/stupidrpg-callbacks/">StupidRPG: Callbacks</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/01/stupidrpg-callbacks/">
+      <time datetime="2015-08-01T07:00:00.000Z" itemprop="datePublished">2015-08-01</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Callbacks are functions on an object, typically executed based on an event somewhere in the game. For example, each time a game ‘tick’ occurs, an AI callback is triggered on every living thing (allowing them to move, attack, or take other actions). SRPG has a couple types of callbacks, which I hope to consolidate in future refactoring.</p>
+<h2 id="Callback_Types"><a href="#Callback_Types" class="headerlink" title="Callback Types"></a>Callback Types</h2><p>The current callback behavior is slightly convoluted, due to changes mid-development. Initially, each object could only have one callback of a given name, which proved to be too limiting. It meant that I couldn’t stack callbacks to allow objects to inherit behaviors <em>and</em> expand on them.</p>
+<p>The quick solution to this was to use an array of functions, and instead of setting the callback directly, add it to the end of the array. This works fine for the most part, but the code feels a bit clunky for more advanced use cases, and due to the mix of new code and old code, I have to perform several additional checks before executing callbacks.</p>
+<h2 id="Refactoring"><a href="#Refactoring" class="headerlink" title="Refactoring"></a>Refactoring</h2><p>One of my refactoring tasks is to clean up the callbacks in a few ways:</p>
+<ul>
+<li>Create a Callback prototype which all callbacks inherit from</li>
+<li>Standardize all object callback fields to use an array (no direct references to single callbacks)</li>
+<li>Standardize callback return values to let the caller know definitively how/whether the callback was handled</li>
+</ul>
+<p>Reorganizing will allow me to add more advanced callback functionality as well, such as specifying event filters for callbacks, prioritizing callbacks, and allowing callbacks to cancel events entirely (not allowing other callbacks to run).</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/01/stupidrpg-callbacks/" data-id="cio0ql50p003v5wohx2go6y8v" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-side-project-power-cards" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/31/side-project-power-cards/">Side Project: Power Cards</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/07/31/side-project-power-cards/">
+      <time datetime="2015-07-31T07:00:00.000Z" itemprop="datePublished">2015-07-31</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>One of the many shortcomings of my technology toolkit is C++. I’ve tinkered with it here and there over the years, but the vast majority of my time and energy has gone into easier languages such as C#, Java, and PHP. I set out to rectify that recently by 1) borrowing a copy of <a href="http://amzn.com/0201889544" target="_blank" rel="external">The C++ Programming Language</a> from a generous friend, and 2) diving into a hands-on project well beyond my capabilities. If learning by beating your head against a compiler was a valid way of learning programming, I’d be a Computer Science professor.</p>
+<h2 id="The_Project"><a href="#The_Project" class="headerlink" title="The Project"></a>The Project</h2><p>I currently GM two systems: Dungeons &amp; Dragons 5th Edition, and <a href="http://www.numenera.com/" target="_blank" rel="external">Numenera</a> (a more recent system by former D&amp;D designer Monte Cook). For D&amp;D, Wizards of the Coast had a set of “power cards” produced for every spell in the game. They’re standard playing card size, excellent quality (sturdy and laminated), and big time-savers at the table, especially for newer players or anyone with an inordinate number of spells (hello Wizard!). For most spells it’s no longer necessary to look them up in the rulebook (a few have too much information to fit on a card).</p>
+<p>Numenera doesn’t have power cards. Maybe they’ll get around to it at some point (they’ve released card decks for random items and XP). In the meantime, it seemed like a fun project. The basic idea is:</p>
+<ol>
+<li>Copy the powers (Esoteries for the Nano type/class, Tricks of the Trade for Jacks, and Fighting Moves for Glaives) from the source book(s).</li>
+<li>Organize the powers in Excel (separating fields for character type, power tier, title, description, cost and so forth).</li>
+<li>Export to CSV.</li>
+<li>Import the CSV in my C++ program, loop through the entries and output nicely-formatted card images using ImageMagick.</li>
+<li>Print the cards, either on cardstock at home or via a print service / shop.</li>
+</ol>
+<h2 id="Step_One_3A_Learn_C++"><a href="#Step_One_3A_Learn_C++" class="headerlink" title="Step One: Learn C++"></a>Step One: Learn C++</h2><p>This process will continue through every other step and beyond. C++ requires more attention to things like memory management, use of references/pointers, and in general has a less friendly syntax than a language like C#. I have several blocks of code that work for reasons still unknown to me, and several things I tried previously failed to work due to equally mysterious causes.</p>
+<h2 id="Step_Two_3A_Learn_ImageMagick"><a href="#Step_Two_3A_Learn_ImageMagick" class="headerlink" title="Step Two: Learn ImageMagick"></a>Step Two: Learn ImageMagick</h2><p>I spent way more time on this step than I should have. Most of it can be explained by my inexperience with C++ (and with native Windows development), but it <em>seems</em> like there are a few areas where ImageMagick’s actual behavior doesn’t match its documentation. I eventually got it compiled and working with my program (while learning a lot about lib files and DLL loading along the way).</p>
+<p>Once I had the library working, drawing elements to an image and saving it was surprisingly easy. Working with text, however, is another story. Among other issues, ImageMagick doesn’t seem to have built-in support for text wrapping. Since I need to write decent-sized chunks of text and I don’t feel like using a monospaced font, I ended up writing what may be the worst text wrapping function of all time.</p>
+<h2 id="Step_Three_3A_Write_the_Worst_Text-Wrapping_Function_of_All_Time"><a href="#Step_Three_3A_Write_the_Worst_Text-Wrapping_Function_of_All_Time" class="headerlink" title="Step Three: Write the Worst Text-Wrapping Function of All Time"></a>Step Three: Write the Worst Text-Wrapping Function of All Time</h2><p>Ok. So there’s no built-in text wrapping. There’s also no built-in way to measure the size of a piece of text. I <em>think</em> there’s a non-ImageMagick way to get the font data that would let me do that, but at this point my head is already full of too much other new information. So I decided to work around the issue using only ImageMagick’s functionality and plain C++. I noticed that when drawing text, you can specify a background color, which will draw a colored rectangle behind the text. You can also sample pixels from anywhere in the image, which turns out to be pretty handy.</p>
+<p>Here’s how the text wrap works:</p>
+<ul>
+<li>Set the background color AND the text color to red</li>
+<li>Write the text onto a temp image</li>
+<li>Get a pixel at the right side of the image</li>
+<li>If the pixel is red, the text is too long to fit on the line</li>
+<li>Cut a word from the end of the text and try again</li>
+<li>If it’s stupid but it works, it’s not stupid</li>
+</ul>
+<p>I did perform some optimizations, as this turned out to be (predictably) slow with longer strings. In particular, I picked a semi-arbitrary character count that I think is unlikely to ever fit on a single line, and I only write/check that amount of text at a time. If I have 800 characters of text to write, chances are no more than about 50 characters will fit on each line (for the font size and image size I’m using). This reduces the number of failed attempts for each line considerably. Each time I write a line, I get the next ~50 characters, move down to the next line and continue.</p>
+<p>The function currently lacks a few features (some more important than others):</p>
+<ul>
+<li>Doesn’t handle overflow off the bottom of the image</li>
+<li>Doesn’t minimize wasted space at ends of lines (e.g. sometimes it might be better to leave a larger gap at the end of one line to use the next few more optimally)</li>
+<li>Only handles left or right alignment; I’d like to have the text justified</li>
+</ul>
+<h2 id="Step_4_3A_Tidy_Up_and_Print_21"><a href="#Step_4_3A_Tidy_Up_and_Print_21" class="headerlink" title="Step 4: Tidy Up and Print!"></a>Step 4: Tidy Up and Print!</h2><p>With the basic functionality working, I put some time into cleaning up the output, designing some card backs, and doing general cleanup. I’m almost ready to print the actual cards.</p>
+<img src="/2015/07/31/side-project-power-cards/ExampleCard.png" alt="Example card" title="Example card">
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/07/31/side-project-power-cards/" data-id="cio0ql51r00485woh6r2ygm9a" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cplusplus/">cplusplus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/numenera/">numenera</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-stupidrpg-the-rpg" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/30/stupidrpg-the-rpg/">StupidRPG: The RPG</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/07/30/stupidrpg-the-rpg/">
+      <time datetime="2015-07-30T07:00:00.000Z" itemprop="datePublished">2015-07-30</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>There are many different types of RPGs, and many different types of players. StupidRPG is based on my own experiences and preferences, so there are a few elements I’m prioritizing above the rest in the game.  Here’s a small selection of the most significant items.</p>
+<h2 id="Self-Expression_/_Player_Agency"><a href="#Self-Expression_/_Player_Agency" class="headerlink" title="Self-Expression / Player Agency"></a>Self-Expression / Player Agency</h2><p>Most RPGs give the player a lot of options for how they build their character and interact with the world. In essence, the player feels as if the events of the game are being influenced by their actions (i.e. they are not simply triggering the next pre-scripted segment). Pen-and-paper RPGs offer the most freedom in this regard, but computer RPGs can offer a great deal of player agency as well.</p>
+<h2 id="Races__26amp_3B_Classes"><a href="#Races__26amp_3B_Classes" class="headerlink" title="Races &amp; Classes"></a>Races &amp; Classes</h2><p>Race and/or class selection are mainstays of traditional RPGs; one of the first steps in customizing your character and dictating your role in the game. Effects are sometimes mechanical, sometimes merely flavor.</p>
+<h2 id="Quests"><a href="#Quests" class="headerlink" title="Quests"></a>Quests</h2><p>Quests are ubiquitous in computer RPGs (and common, though often in a more abstract way, in pen-and-paper games). They’re an easy way to give the player direction, track their progress, and offer rewards for specific actions in the world. Plus, what RPG would be complete without an obnoxious fetch quest?</p>
+<h2 id="Leveling_Up"><a href="#Leveling_Up" class="headerlink" title="Leveling Up"></a>Leveling Up</h2><p>Becoming more powerful is another nigh-universal trait of RPGs, and StupidRPG is no different. While the game (probably) won’t have XP, it will have a leveling mechanism to expand the player’s capabilities. Whether this means a skill tree, static upgrades, or something else, I’m not yet sure.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/07/30/stupidrpg-the-rpg/" data-id="cio0ql4zq002y5wohla44q1jv" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-bio-ranger-bob" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -104,7 +292,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/29/bio-ranger-bob/" data-id="cinwc2uk4007dbwoh948j4wca" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/29/bio-ranger-bob/" data-id="cio0ql56i007d5wohxznu9v4c" class="article-share-link">Share</a>
       
       
     </footer>
@@ -187,7 +375,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/28/stupidrpg-everything-is-an-entity/" data-id="cinwc2uf4003qbwohtacz1lky" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/28/stupidrpg-everything-is-an-entity/" data-id="cio0ql50l003q5wohrwao3wso" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -243,7 +431,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/27/weekly-update-2/" data-id="cinwc2uc90016bwohqzuss3cp" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/27/weekly-update-2/" data-id="cio0ql4x700165wohgj7h91n8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -293,7 +481,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/26/with-graphics-sound/" data-id="cinwc2ubc0008bwoh8rod2po0" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/26/with-graphics-sound/" data-id="cio0ql4w800085woh545866u4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -413,7 +601,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/25/stupidrpg-natural-language-processing/" data-id="cinwc2ueq003abwohv0k65agi" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/25/stupidrpg-natural-language-processing/" data-id="cio0ql504003a5woh088wd74u" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nlp/">nlp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -470,7 +658,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/24/breaking-the-game-mods-hacks-and-cheats/" data-id="cinwc2uk4007cbwohrdk6s46a" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/24/breaking-the-game-mods-hacks-and-cheats/" data-id="cio0ql56g007c5wohn2n9rbuu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -545,172 +733,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/23/stupidrpg-command-interrupts/" data-id="cinwc2uf8003ubwohbiy3tewp" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/23/stupidrpg-command-interrupts/" data-id="cio0ql50o003u5woh7ft3zmvi" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-post-schedule" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/22/post-schedule/">Post Schedule</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/07/22/post-schedule/">
-      <time datetime="2015-07-22T07:00:00.000Z" itemprop="datePublished">2015-07-22</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>The overall goal of this journal is not so much to document my dev progress as it is to <em>encourage</em> my dev progress. The basic idea is that if I have to publish a post every day, I’m also forced to actually work on the game at least semi-regularly. Otherwise I’ll run out of things to talk about. We’ll see how that goes.</p>
-<p>My planned post schedule looks something like this:</p>
-<ul>
-<li>Monday: Weekly Update (actual work done on the game in the last week)</li>
-<li>Tue/Thu/Sat: StupidRPG post (discussion of a component within the game)</li>
-<li>Wed/Fri/Sun: General post (technical/writing discussion not directly related to SRPG)</li>
-</ul>
-<p>Other than the Weekly Update, I’ll shuffle things around as needed.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/22/post-schedule/" data-id="cinwc2ugj004obwoh8ex20bvp" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-stupidrpg-the-gm" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/21/stupidrpg-the-gm/">StupidRPG: The GM</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/07/21/stupidrpg-the-gm/">
-      <time datetime="2015-07-21T07:00:00.000Z" itemprop="datePublished">2015-07-21</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>I’ve mentioned the GM a couple times so far, but I haven’t really gone into detail about what, who, or why the GM is in the game. In storytelling terms, the GM is an <a href="https://en.wikipedia.org/wiki/Unreliable_narrator" target="_blank" rel="external">unreliable narrator</a>. In mechanical terms, the GM is an NPC with meta-abilities. <a href="http://www.stanleyparable.com/" target="_blank" rel="external">The Stanley Parable</a> provides an excellent example of an unreliable narrator in a video game.</p>
-<p>In SRPG, for the most part, the GM narrates the events of the game and provides some level of commentary on the player’s choices. Ostensibly, the GM (as in D&amp;D or other pen-and-paper RPGs) is responsible for the creation and organization of locations, characters, enemies, events, and so on. This particular GM, however, is both unprepared and over-invested, leading (probably) to clashes with the player, other NPCs, the world, and the game mechanics themselves.</p>
-<p>It’s unclear at this point whether the player should consider the GM a friend, an enemy, or a force of nature. Something I need to sort out as the storyline continues. I also need to be careful, as breaking the 4th wall is bordering on a trope at this point. It’s integral to the structure of SRPG, so it has to be done right.</p>
-<div class="spoiler"><br><b>GM:</b> The twins lean forward eagerly, excited at the prospect of delivering their latest riddle.<br><br><b>The Twins:</b> We’re not twins.<br><br><b>GM:</b> Oh. I thought…<br><br><b>The Left Twin:</b> You could have asked, you know. Just because two people like to stand in front of a gate and pose riddles in unison doesn’t mean they’re twins.<br><br><b>GM:</b> Sorry?<br><br><b>The Right Twin:</b> You didn’t even ask our names. You’re still calling us twins in your script. ‘Left Twin’ and ‘Right Twin’. Wow.<br><br><b>GM:</b> What should I call you, then?<br><br><b>The Left Twin:</b> My name is Jane<br><br><b>The Right Twin:</b> And I’m Jack<br><br><b>GM:</b> Ok…Jack and Jane, who are not related, lean forward eagerly, excited at the prospect&mdash;<br><br><b>Jack:</b> Seriously? We’re brother and sister, we’re just not twins. What are the odds two complete strangers named Jack and Jane would be doing this?<br><br><b>GM:</b> Fine. I don’t actually care. The two J’s have a riddle.<br><br></div>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/21/stupidrpg-the-gm/" data-id="cinwc2ueg0030bwoh4pg803f8" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-weekly-update-1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/20/weekly-update-1/">Weekly Update #1</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/07/20/weekly-update-1/">
-      <time datetime="2015-07-20T07:00:00.000Z" itemprop="datePublished">2015-07-20</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Paying off some technical debt in this update. The scale of the JS source files is getting to a point where I need to restructure as a sanity saver. There’s more cleanup to be done, but I’ve significantly restructured the folders for both JS and CSS files, and created a build script to automate the process.</p>
-<p>I also noticed some unexpected engine-breaking bugs when I first loaded up the game again. I need to either not leave work half-finished, or leave notes for myself.</p>
-<p><strong>Changelog:</strong></p>
-<ul>
-<li>Restructured JS to use a preprocessor (<a href="https://larsjung.de/wepp/" target="_blank" rel="external">WEPP</a>)</li>
-<li>Restructured CSS to use a preprocessor (<a href="http://sass-lang.com/" target="_blank" rel="external">SASS</a>)</li>
-<li>Added a build script to 1) bake the JS files down to: engine.js and game.js; and 2) update the page CSS</li>
-<li>Added a function to dynamically reload/switch the CSS themes (which means in the future I can add an in-game command to change the theme)</li>
-<li>Fixed a couple NLP bugs related to half-finished work from a while back</li>
-</ul>
-<p><strong>Known Issues:</strong></p>
-<ul>
-<li>Dialogue node callbacks aren’t working right. Need more testing and refinement of the callbacks and may need some refactoring of the dialogue tree feature in general.</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/20/weekly-update-1/" data-id="cinwc2uco0023bwoh2nuvkd3d" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
-
     </footer>
   </div>
   
