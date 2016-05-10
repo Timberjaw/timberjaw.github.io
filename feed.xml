@@ -8,8 +8,31 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Tue, 10 May 2016 01:06:17 GMT</pubDate>
+    <pubDate>Tue, 10 May 2016 02:01:53 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.05.09</title>
+      <link>http://timberjaw.github.io/2016/05/09/Daily-Update-2016-05-09/</link>
+      <guid>http://timberjaw.github.io/2016/05/09/Daily-Update-2016-05-09/</guid>
+      <pubDate>Tue, 10 May 2016 02:01:53 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Stubbed out and connected locations (with short descriptions): Winding Stair, Great 
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Stubbed out and connected locations (with short descriptions): Winding Stair, Great Hall, Library, Wine Cellar, Good Wine Cellar, Chalice Room, Treasury, Vault, Bedchamber, Armory, Scary Tunnel, Spider Room, Goblin Pit, Bottom of Goblin Pit, Ogre Cage.&lt;/li&gt;
+&lt;li&gt;Assigned underground rooms to three challenge paths: Trial of Dedication, Trial of Friendship, and Trial of Naps. Not sure about the dedication trial.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/05/09/Daily-Update-2016-05-09/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.05.08</title>
@@ -461,30 +484,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/04/20/Daily-Update-2016-04-20/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.04.19</title>
-      <link>http://timberjaw.github.io/2016/04/19/Daily-Update-2016-04-19/</link>
-      <guid>http://timberjaw.github.io/2016/04/19/Daily-Update-2016-04-19/</guid>
-      <pubDate>Tue, 19 Apr 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Finished writing the manual. First draft, anyway. Time to flipbook it.&lt;/li&gt;
-&lt;/ul&gt;
-
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Finished writing the manual. First draft, anyway. Time to flipbook it.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/04/19/Daily-Update-2016-04-19/#disqus_thread</comments>
     </item>
     
   </channel>
