@@ -8,8 +8,27 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Tue, 10 May 2016 02:01:53 GMT</pubDate>
+    <pubDate>Thu, 12 May 2016 00:46:17 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.05.10</title>
+      <link>http://timberjaw.github.io/2016/05/10/Daily-Update-2016-05-10/</link>
+      <guid>http://timberjaw.github.io/2016/05/10/Daily-Update-2016-05-10/</guid>
+      <pubDate>Tue, 10 May 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;h2 id=&quot;Trial_of_Friendship&quot;&gt;&lt;a href=&quot;#Trial_of_Friendship&quot; class=&quot;headerlink&quot; title=&quot;Trial of Friendship&quot;&gt;&lt;/a&gt;Trial of Friendship&lt;/h2&gt;&lt;p&gt;Ch
+      
+      </description>
+      
+      <content:encoded>&lt;h2 id=&quot;Trial_of_Friendship&quot;&gt;&lt;a href=&quot;#Trial_of_Friendship&quot; class=&quot;headerlink&quot; title=&quot;Trial of Friendship&quot;&gt;&lt;/a&gt;Trial of Friendship&lt;/h2&gt;&lt;p&gt;Choosing friends is best done with care. In this trial, the player must pass through a series of monster-laden rooms to acquire an artifact of value. One of those oh-so-rare moments in life where violence doesn’t immediately solve the problem. Befriend the spiders, the ogre, the goblins, or perhaps…all of them?&lt;/p&gt;
+&lt;h2 id=&quot;Trial_of_Naps&quot;&gt;&lt;a href=&quot;#Trial_of_Naps&quot; class=&quot;headerlink&quot; title=&quot;Trial of Naps&quot;&gt;&lt;/a&gt;Trial of Naps&lt;/h2&gt;&lt;p&gt;The player finds the diary of a wealthy (now likely dead) individual whose treasury is cursed, its contents accessible only in their dreams. Every time they sleep, a little bit more is gone.&lt;/p&gt;
+&lt;h2 id=&quot;Trial_of_Blood&quot;&gt;&lt;a href=&quot;#Trial_of_Blood&quot; class=&quot;headerlink&quot; title=&quot;Trial of Blood&quot;&gt;&lt;/a&gt;Trial of Blood&lt;/h2&gt;&lt;p&gt;The library is a gateway to forbidden knowledge and also a wine cellar.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/05/10/Daily-Update-2016-05-10/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.05.09</title>
@@ -461,29 +480,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/04/21/Daily-Update-2016-04-21/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.04.20</title>
-      <link>http://timberjaw.github.io/2016/04/20/Daily-Update-2016-04-20/</link>
-      <guid>http://timberjaw.github.io/2016/04/20/Daily-Update-2016-04-20/</guid>
-      <pubDate>Wed, 20 Apr 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Wrote up an expanded quest/puzzle line for the prologue, incorporating new areas (br
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Wrote up an expanded quest/puzzle line for the prologue, incorporating new areas (bridge, underground), the basin puzzle, and the Black Box objective. I think it will tie everything together into a more satisfying, game-like experience.&lt;/li&gt;
-&lt;li&gt;Did more research on page-flipping. Looks like it’s going to be a hassle to get it the way I want.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/04/20/Daily-Update-2016-04-20/#disqus_thread</comments>
     </item>
     
   </channel>
