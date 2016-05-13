@@ -60,6 +60,127 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-the-rulebook" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/13/the-rulebook/">The Rulebook</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/09/13/the-rulebook/">
+      <time datetime="2015-09-13T07:00:00.000Z" itemprop="datePublished">2015-09-13</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Yesterday I mentioned a new system for building ‘rules’, whatever that means. Now I’ll go over whatever that means.</p>
+<p>I’ve previously covered a couple pieces of functionality for handling special cases: Command Interrupts and Filters. Both are useful (and will stick around in some capacity), but had a few notable shortcomings.</p>
+<h2 id="The_Problems"><a href="#The_Problems" class="headerlink" title="The Problems"></a>The Problems</h2><ol>
+<li>Filters: Complex Setup, Unintuitive</li>
+</ol>
+<p>Filters let me do things like blocking items inside Containers from vision (unless the container is open), as well as adding implicit actions (such as opening a door when trying to move in a direction). Very useful, but the code for it looks like this:</p>
+<p><div class="highlight-header">Add container restrictions on LOOK and TAKE actions</div><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> f = <span class="function"><span class="keyword">function</span>(<span class="params">args</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(args.nouns.length &gt; <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">var</span> obj = args.nouns[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">if</span>(obj.parent != <span class="literal">null</span></span><br><span class="line">           &amp;&amp; obj.parent.hasComponent(<span class="string">'container'</span>)</span><br><span class="line">           &amp;&amp; !obj.parent.isOpen)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(!obj.parent.isTransparent)</span><br><span class="line">            &#123;</span><br><span class="line">                queueOutput(<span class="string">"&#123;&#123;gm&#125;&#125;&lt;p&gt;You can't see any such thing.&lt;/p&gt;"</span>);</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            queueOutput(<span class="string">"&lt;p&gt;(first opening the "</span>+getNameTag(obj.parent)+<span class="string">")&lt;/p&gt;"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>It’s a decent chunk of code, and while it’s not that hard to follow, I think I can do better.</p>
+<ol>
+<li>Command Interrupts: Limited Use</li>
+</ol>
+<p>Command Interrupts are handy for things like menus, snarky one-off responses, easter eggs and the like. Generally they only happen once, and they happen instead of regular verb processing. Nothing particularly wrong with them, but they don’t have the versatility I was looking for.</p>
+<h2 id="The_Use_Case_2C_Part_1"><a href="#The_Use_Case_2C_Part_1" class="headerlink" title="The Use Case, Part 1"></a>The Use Case, Part 1</h2><p>Examples:</p>
+<ol>
+<li>Warning the player that the area they’re in is too hot/cold (happens after verb processing, doesn’t prevent any actions).</li>
+<li>Adding a new command (<em>not</em> a verb), <code>WANDER AIMLESSLY</code>, which can be used anywhere within the Forest region.</li>
+<li>Preventing the player from accidentally (or intentionally) leaving behind a crucial item in a place they can’t get back to.</li>
+</ol>
+<p>I’ll explain the solution to this problem, and then come back to these examples.</p>
+<h2 id="The_Rulebook"><a href="#The_Rulebook" class="headerlink" title="The Rulebook"></a>The Rulebook</h2><p>The Rulebook is loosely modeled after Inform 7, like many things in the engine. In Inform 7, you can write a statement like:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Instead of punching the goblin:&#10;  say &#34;That seems unlikely to achieve anything.&#34;;&#10;  stop the action.</span><br></pre></td></tr></table></figure>
+<p>This is part of their Rule system, which handles Instead, Before, After, and many other types of rules, which they group into Rulebooks.</p>
+<p>Mine’s a bit simpler for now, but is structured in such a way that I can add new capabilities to it over time (and Modules can add capabilities/rules, of course).</p>
+<p>The SRPG Rules can handle:</p>
+<ul>
+<li>Action checks (raw text, Verb matching, regex, or callback)</li>
+<li>Location and Region restrictions (only apply the rule if the actor is in the set of locations/regions)</li>
+<li>Arbitrary filters (callbacks)</li>
+<li>Canceling, Prepending, or Appending to regular Verbs</li>
+</ul>
+<p>I’d also like to add some simple attribute checking, to avoid the need for callbacks in most filters. One of the end goals is to minimize the amount of custom code written for rules, in favor of a more expressive style for which the Rulebook generates the appropriate code automatically.</p>
+<p>Rules use chaining (each function/method returns the object), similar to how many ORMs implement querying. Most of the chained functions resolve into filters, which are grouped together by type and processed in blocks (for example, Location filters are resolved together).</p>
+<h2 id="Use_Cases_2C_Part_2"><a href="#Use_Cases_2C_Part_2" class="headerlink" title="Use Cases, Part 2"></a>Use Cases, Part 2</h2><p>Let’s get back to the 3 examples listed above.</p>
+<h3 id="Warning_the_Player_they_are_going_to_Die"><a href="#Warning_the_Player_they_are_going_to_Die" class="headerlink" title="Warning the Player they are going to Die"></a>Warning the Player they are going to Die</h3><p>I’ll show the code for this Rule, then explain in detail what each step does. I’m pretending for the moment that the “simple attribute checking” element is already in place.</p>
+<p><div class="highlight-header">The Dangerous Temperature Rules</div><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">understand(<span class="string">'dangerously hot rule'</span>)</span><br><span class="line">.attribute(<span class="string">'location.temperature'</span>, <span class="string">'&gt;'</span>, <span class="number">325</span>)</span><br><span class="line">.append(<span class="string">"This area is dangerously hot. Best not stick around."</span>)</span><br><span class="line">.start();</span><br><span class="line"></span><br><span class="line">understand(<span class="string">'dangerously cold rule'</span>)</span><br><span class="line">.attribute(<span class="string">'location.temperature'</span>, <span class="string">'&lt;'</span>, <span class="number">275</span>)</span><br><span class="line">.append(<span class="string">"This area is dangerously cold. Best not stick around."</span>)</span><br><span class="line">.start();</span><br></pre></td></tr></table></figure></p>
+<p>Now the explanation:</p>
+<ul>
+<li>Line 1: Define a new named rule (the name isn’t important)</li>
+<li>Line 2: Only apply this rule of the temperature of the actor’s location is greater than 325K</li>
+<li>Line 3: If all the filters for this rule have been matched, output the given string <em>after</em> regular verb processing.</li>
+<li>Line 4: Register the Rule with the Rulebook.</li>
+<li>Lines 6-9: Same as 1-3, but for cold instead instead of hot.</li>
+</ul>
+<h3 id="Wandering_Aimlessly"><a href="#Wandering_Aimlessly" class="headerlink" title="Wandering Aimlessly"></a>Wandering Aimlessly</h3><p>Next up is the first Rule actually in the game. Any time the player is in the Forest, they can choose to <code>WANDER AIMLESSLY</code>. This is not an actual Verb, but the command is intercepted by the Rule (similar to how a command interrupt would).</p>
+<p><div class="highlight-header">The Wandering Aimlessly Rule</div><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">understand(<span class="string">'rule for wandering aimlessly'</span>)</span><br><span class="line">  .text(<span class="string">'wander aimlessly'</span>)</span><br><span class="line">  .inRegion(<span class="string">'forest'</span>)</span><br><span class="line">  .as(</span><br><span class="line">    <span class="string">"You wander for a bit and find yourself right back where you started."</span>,</span><br><span class="line">    Rulebook.ACTION_CANCEL</span><br><span class="line">  )</span><br><span class="line">  .start();</span><br></pre></td></tr></table></figure></p>
+<p>Explanation:</p>
+<ul>
+<li>Line 2: Match exact text from the actor (not case-sensitive though)</li>
+<li>Line 3: Only apply this Rule in Locations that are part of the Forest Region.</li>
+<li>Line 4: If all filters are met:</li>
+<li>Line 5: Queue a response</li>
+<li>Line 6: Cancel the default action (i.e. ignore any verb that might have matched this action)</li>
+</ul>
+<h3 id="Don_u2019t_Forget_Your_Keys"><a href="#Don_u2019t_Forget_Your_Keys" class="headerlink" title="Don’t Forget Your Keys"></a>Don’t Forget Your Keys</h3><p>Lastly, here’s a rule to prevent the player from accidentally leaving the Rainbow Sword behind on a hill.</p>
+<p><div class="highlight-header">The Remember Your Sword Rule</div><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">understand(<span class="string">'remember your sword rule'</span>)</span><br><span class="line">  .verb(<span class="string">'move'</span>)</span><br><span class="line">  .modifier(<span class="string">'down'</span>)</span><br><span class="line">  .in(<span class="string">'hill-slide'</span>)</span><br><span class="line">  .attribute(<span class="string">'actor.inventory'</span>, <span class="string">'!contains'</span>, <span class="string">'rainbow-sword'</span>)</span><br><span class="line">  .as(</span><br><span class="line">    <span class="string">"You won't be able to come back up. Don't forget your sword!"</span>,</span><br><span class="line">    Rulebook.ACTION_CANCEL</span><br><span class="line">  )</span><br><span class="line">  .until(<span class="function"><span class="keyword">function</span>(<span class="params">actor</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> actor.locationIs(<span class="string">'north-trail'</span>);</span><br><span class="line">  &#125;)</span><br><span class="line">  .start();</span><br></pre></td></tr></table></figure></p>
+<p>Explanation:</p>
+<ul>
+<li>Line 2: Match any instance of the movement verb (which could be <code>WALK</code>, <code>RUN</code>, <code>E</code>, etc)</li>
+<li>Line 3: Only match if the verb has a specific modifier (in this case, the actor is trying to move down)</li>
+<li>Line 4: Only apply if the actor is in the Hill Slide location.</li>
+<li>Line 5: Only apply if the actor’s inventory does not contain the rainbow sword.</li>
+<li>Line 6: If all filters are met, warn the actor and cancel the action.</li>
+<li>Line 10: Only apply this Rule until this condition is met. In this case, the Rule is permanently removed once the actor moves from Hill Slide down to the North Trail.</li>
+</ul>
+<h2 id="Next_Up"><a href="#Next_Up" class="headerlink" title="Next Up"></a>Next Up</h2><p>I have a bunch of Rule functions I need to add, including some I’ve cheated by using in these examples. I say ‘cheated’, but they are achievable in the current system by using while() callbacks (it’s just more verbose).</p>
+<ol>
+<li>attribute(a, operator, value)</li>
+<li>modifier(m), modifier(callback)</li>
+<li>unless(callback)</li>
+<li>on(target)</li>
+</ol>
+<p>With all that in place, I think I could rewrite the container restriction from the top of this post to be less verbose/unwieldy. Something like:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">understand(<span class="string">'container interaction rule'</span>)</span><br><span class="line">  .verb(<span class="string">'look'</span>)</span><br><span class="line">  .verb(<span class="string">'take'</span>)</span><br><span class="line">  .attribute(<span class="string">'target.parent.components'</span>, <span class="string">'contains'</span>, <span class="string">'container'</span>)</span><br><span class="line">  .attribute(<span class="string">'target.parent.isOpen'</span>, <span class="string">'='</span>, <span class="literal">false</span>)</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span>(<span class="params">actor,action</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(action.target.parent.isTransparent) &#123;</span><br><span class="line">      queueOutput(<span class="string">"(first opening the "</span>+getNameTag(action.target.parent)+<span class="string">")"</span>);</span><br><span class="line">      <span class="keyword">return</span> Rulebook.ACTION_NONE;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      queueGMOutput(<span class="string">"You can't see any such thing."</span>);</span><br><span class="line">      <span class="keyword">return</span> Rulebook.ACTION_CANCEL;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  .start();</span><br></pre></td></tr></table></figure>
+<p>I also need to put some thought into cases like the dangerous temperature example above. I suspect that it will get triggered even if the action being taken is <em>leaving</em> a cold/hot area, due to the order in which verbs and appending occur.</p>
+<p>Lastly, I’d like to build in the capacity for ‘meta filters’. In Inform, you can define (for example) a set of behaviors as ‘embarrassing’, and then reference the ‘embarrassing’ trait in other rules.</p>
+<p>I’m pretty happy with how the Rulebook is working so far, but I know there’s a lot more I can do with it.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/09/13/the-rulebook/" data-id="cio5fwz6i002f0goh6k5gozq8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-daily-update-254-2015" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -113,7 +234,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/12/daily-update-254-2015/" data-id="cio3kr3x80072m8ohnitvt9b2" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/12/daily-update-254-2015/" data-id="cio5fwzcq00720goha8kvzkda" class="article-share-link">Share</a>
       
       
     </footer>
@@ -173,7 +294,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/11/daily-update-253-2015/" data-id="cio3kr3x90073m8oh6dg252oi" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/11/daily-update-253-2015/" data-id="cio5fwzcr00730gohj2eez0fs" class="article-share-link">Share</a>
       
       
     </footer>
@@ -234,7 +355,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/10/update-and-bugs/" data-id="cio3kr3r10027m8ohphm4q4ki" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/10/update-and-bugs/" data-id="cio5fwz6600270gohdqv9hxlj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -287,7 +408,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/09/getting-serious/" data-id="cio3kr3uw0052m8oh7p1wbbpi" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/09/getting-serious/" data-id="cio5fwza800520gohybrvslg8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -334,7 +455,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/08/stupidrpg-temperature/" data-id="cio3kr3sb0034m8ohbfctvrml" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/08/stupidrpg-temperature/" data-id="cio5fwz7700340gohh8bdc145" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -397,7 +518,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/07/weekly-update-8/" data-id="cio3kr3pa000hm8ohfwporkor" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/07/weekly-update-8/" data-id="cio5fwz4a000h0gohwn3melhr" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -445,7 +566,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/06/busy/" data-id="cio3kr3xi007bm8ohfbtpe9d1" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/06/busy/" data-id="cio5fwzd0007b0gohsmknfl19" class="article-share-link">Share</a>
       
       
     </footer>
@@ -494,7 +615,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/05/stupidrpg-versioning/" data-id="cio3kr3rz002sm8ohwmq27e27" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/05/stupidrpg-versioning/" data-id="cio5fwz6y002s0gohdrkykj4s" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -543,68 +664,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/04/you-cant-kill-everyone/" data-id="cio3kr3og0001m8ohdv0q2lrh" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/04/you-cant-kill-everyone/" data-id="cio5fwz3n00010gohdtz8ba8f" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-stupidrpg-filters" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/03/stupidrpg-filters/">StupidRPG: Filters</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/09/03/stupidrpg-filters/">
-      <time datetime="2015-09-03T07:00:00.000Z" itemprop="datePublished">2015-09-03</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>A filter is a piece of code that runs <em>before</em> an action, to determine whether it should be allowed or modified. The first use of this feature is a filter for taking objects from containers. If the container is closed (something the <code>TAKE</code> verb has no knowledge of), the container filter makes sure execution doesn’t continue (and an appropriate response is generated).</p>
-<p>It’s a valuable feature, but a bit rough around the edges.</p>
-<h2 id="Filters_Now"><a href="#Filters_Now" class="headerlink" title="Filters Now"></a>Filters Now</h2><ul>
-<li>Easy to set up, works fine for simple cases</li>
-<li>Behavior for multiple filters is undefined (that’s bad)</li>
-</ul>
-<h2 id="Filters_Later"><a href="#Filters_Later" class="headerlink" title="Filters Later"></a>Filters Later</h2><p>I need to expand the feature set to handle more complex situations. Primarily:</p>
-<ul>
-<li>More advanced feature constraints (e.g. “filter for <code>TAKE</code> from a container in the Cave”). Right now a filter runs for all actions matching the given verb.</li>
-<li>Handling of multiple filters in a predictable way. I don’t have a firm solution for this yet. The simplest way to handle it is a prioritized list, but the relative priority of two filters isn’t necessarily the same in all situations.</li>
-</ul>
-<p>There are also a couple use cases I’ve been considering, for which filters <em>might</em> be applicable. For example, setting a rule for an action like “when entering the Cave while holding food” would be a challenge in the current system.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/03/stupidrpg-filters/" data-id="cio3kr3ss003om8oh6vztngbq" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
-
     </footer>
   </div>
   

@@ -60,6 +60,65 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-stupidrpg-filters" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/03/stupidrpg-filters/">StupidRPG: Filters</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/09/03/stupidrpg-filters/">
+      <time datetime="2015-09-03T07:00:00.000Z" itemprop="datePublished">2015-09-03</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>A filter is a piece of code that runs <em>before</em> an action, to determine whether it should be allowed or modified. The first use of this feature is a filter for taking objects from containers. If the container is closed (something the <code>TAKE</code> verb has no knowledge of), the container filter makes sure execution doesn’t continue (and an appropriate response is generated).</p>
+<p>It’s a valuable feature, but a bit rough around the edges.</p>
+<h2 id="Filters_Now"><a href="#Filters_Now" class="headerlink" title="Filters Now"></a>Filters Now</h2><ul>
+<li>Easy to set up, works fine for simple cases</li>
+<li>Behavior for multiple filters is undefined (that’s bad)</li>
+</ul>
+<h2 id="Filters_Later"><a href="#Filters_Later" class="headerlink" title="Filters Later"></a>Filters Later</h2><p>I need to expand the feature set to handle more complex situations. Primarily:</p>
+<ul>
+<li>More advanced feature constraints (e.g. “filter for <code>TAKE</code> from a container in the Cave”). Right now a filter runs for all actions matching the given verb.</li>
+<li>Handling of multiple filters in a predictable way. I don’t have a firm solution for this yet. The simplest way to handle it is a prioritized list, but the relative priority of two filters isn’t necessarily the same in all situations.</li>
+</ul>
+<p>There are also a couple use cases I’ve been considering, for which filters <em>might</em> be applicable. For example, setting a rule for an action like “when entering the Cave while holding food” would be a challenge in the current system.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/09/03/stupidrpg-filters/" data-id="cio5fwz7s003o0gohoxjcv6sh" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-profiling" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -97,7 +156,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/02/profiling/" data-id="cio3kr3u3004mm8oh7z6t9kzt" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/02/profiling/" data-id="cio5fwz97004m0gohh30vkcbn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -164,7 +223,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/01/stupidrpg-putting-the-prelude-together/" data-id="cio3kr3sc0036m8ohqyken0qq" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/01/stupidrpg-putting-the-prelude-together/" data-id="cio5fwz7900360gohrq6irki6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -228,7 +287,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/31/weekly-update-7/" data-id="cio3kr3pc000km8oh4tes30g8" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/31/weekly-update-7/" data-id="cio5fwz4c000k0goh947sqfpm" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -282,7 +341,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/30/reading-list-update/" data-id="cio3kr3u1004lm8ohs00xo1hp" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/30/reading-list-update/" data-id="cio5fwz95004l0gohpdvyihvj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -335,7 +394,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/29/stupidrpg-always-two-there-are/" data-id="cio3kr3t1003zm8ohk6ldqh3g" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/29/stupidrpg-always-two-there-are/" data-id="cio5fwz82003z0gohukom3ym5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -385,7 +444,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/28/metagame/" data-id="cio3kr3u7004qm8ohgdswxky5" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/28/metagame/" data-id="cio5fwz9c004q0gohkamb9n6g" class="article-share-link">Share</a>
       
       
     </footer>
@@ -442,7 +501,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/27/stupidrpg-wandering/" data-id="cio3kr3ry002qm8ohruf4p492" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/27/stupidrpg-wandering/" data-id="cio5fwz6x002q0gohsy84wz96" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -497,7 +556,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/26/tutorial-quest/" data-id="cio3kr3r30028m8ohm89ld7vw" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/26/tutorial-quest/" data-id="cio5fwz6800280gohl8l3azxb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -546,86 +605,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/25/stupidrpg-hot-springs/" data-id="cio3kr3so003km8ohlan0bk4z" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/25/stupidrpg-hot-springs/" data-id="cio5fwz7m003k0gohk150sise" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-weekly-update-6" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/24/weekly-update-6/">Weekly Update #6</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/08/24/weekly-update-6/">
-      <time datetime="2015-08-24T07:00:00.000Z" itemprop="datePublished">2015-08-24</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Things!</p>
-<p><strong>Changelog:</strong></p>
-<ul>
-<li>Added ‘empty’ template helper to change printing of container descriptions based on whether they have anything inside.</li>
-<li>Added ‘when’ template helper to allow conditionals other than true/false.</li>
-<li>Added ‘nothing’ component for abstract objects (like a hole).</li>
-<li>Added ‘part’ component for objects attached to other objects.</li>
-<li>Added <code>LOOK IN</code> verb to look inside containers.</li>
-<li>Added <code>MUSIC</code> verb to toggle music on/off.</li>
-<li>Added <code>THEME</code> verb to switch between visual themes on the fly.</li>
-<li>Added Quests module and QuestObjective functionality.</li>
-<li>Added <code>QUESTS</code> verb to show quest/objective status.</li>
-<li>Added litterbug quest (not completed).</li>
-<li>Added bird feeder for litterbug quest.</li>
-<li>Added ‘litter’ component for litterbug quest.</li>
-<li>Updated description process to include object reference (for easier description logic and templating).</li>
-<li>Disabled game ticks for: music, inventory, credits, help, save/load, and quit commands.</li>
-<li>Fixed missing regions for forest locations.</li>
-</ul>
-<p><strong>Known Issues:</strong></p>
-<ul>
-<li>Nothing new</li>
-</ul>
-<p><strong>Next Up:</strong></p>
-<ul>
-<li>Fill out Ranger Bob’s dialogue tree.</li>
-<li>Add The Twins.</li>
-<li>Wrap up litterbug quest</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/24/weekly-update-6/" data-id="cio3kr3pf000nm8ohiqff6rrx" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/object-Object/">[object Object]</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
 
     </footer>
   </div>

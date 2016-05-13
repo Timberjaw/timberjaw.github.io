@@ -8,8 +8,30 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Thu, 12 May 2016 00:46:17 GMT</pubDate>
+    <pubDate>Fri, 13 May 2016 08:06:23 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.05.11</title>
+      <link>http://timberjaw.github.io/2016/05/11/Daily-Update-2016-05-11/</link>
+      <guid>http://timberjaw.github.io/2016/05/11/Daily-Update-2016-05-11/</guid>
+      <pubDate>Wed, 11 May 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Stubbed items and scenery for: armory, bedchamber, goblin pit, bottom of goblin pit,
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Stubbed items and scenery for: armory, bedchamber, goblin pit, bottom of goblin pit, chalice room, ogre cage, wine cellar, good wine cellar, great hall, library, treasury, spider room, scary tunnel, vault, winding stair.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/05/11/Daily-Update-2016-05-11/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.05.10</title>
@@ -458,28 +480,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/04/22/Daily-Update-2016-04-22/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.04.21</title>
-      <link>http://timberjaw.github.io/2016/04/21/Daily-Update-2016-04-21/</link>
-      <guid>http://timberjaw.github.io/2016/04/21/Daily-Update-2016-04-21/</guid>
-      <pubDate>Thu, 21 Apr 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Helping a friend build a character creator for their homebrew RPG. Hopefully I can s
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Helping a friend build a character creator for their homebrew RPG. Hopefully I can share that soon. It’s pretty neat.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/04/21/Daily-Update-2016-04-21/#disqus_thread</comments>
     </item>
     
   </channel>
