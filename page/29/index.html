@@ -60,6 +60,67 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-save-load-undo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/06/save-load-undo/">StupidRPG: Save, Load, &amp; Undo</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/06/save-load-undo/">
+      <time datetime="2015-08-06T07:00:00.000Z" itemprop="datePublished">2015-08-06</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Most text adventures (that I’ve played, at least) don’t feature the auto-save ‘checkpoints’ common in modern videogames. They do include <code>SAVE</code> and <code>LOAD</code> commands which work exactly as you’d expect, but they also typically provide another command for state management: <code>UNDO</code>.</p>
+<p>In a singleplayer, turn-based game, <code>UNDO</code> is a pretty straightforward feature to implement. There are a few different approaches, but I’ve elected to leverage the savestate functionality for efficiency’s sake. More on that in a bit.</p>
+<h2 id="SAVE"><a href="#SAVE" class="headerlink" title="SAVE"></a><code>SAVE</code></h2><p>The save command in SRPG is handled primarily by the ECS. Since <em>Everything is an Entity</em>, I can simply loop through all the entities, building a new object which can be stored in JSON format. From there, it can be saved in the browser’s local storage or downloaded to the user’s computer.</p>
+<p>Not every piece of data on an object is needed for savestate. Most callbacks don’t change once they’re set, and many object attributes are static as well. Accordingly, each Component can specify the persistent attributes that should be included in the save process. For example, the Living component specifies that the HP attribute should be saved.</p>
+<h2 id="LOAD"><a href="#LOAD" class="headerlink" title="LOAD"></a><code>LOAD</code></h2><p>Loading works exactly as you’d expect: saving in reverse. The JSON data is read back and the entity attributes are re-applied to the live versions.</p>
+<h2 id="UNDO"><a href="#UNDO" class="headerlink" title="UNDO"></a><code>UNDO</code></h2><p>Undo is a combination of an internal save (before each action, save the current state) and load, allowing the player to jump back in time just as if they had manually saved and loaded. Effectively, it’s an automated Quick Save feature. Supporting additional steps of undo is possible, at the cost of additional memory and CPU time.</p>
+<p>Because <code>UNDO</code> is a verb just like any other in the game, there are some interesting opportunities for integration into the mechanics and story. That’s a surprise for another day, though.</p>
+<h2 id="Next_Steps"><a href="#Next_Steps" class="headerlink" title="Next Steps"></a>Next Steps</h2><p>There are a few shortcomings of the current model:</p>
+<ul>
+<li>Saving multiple levels of undo is not cost efficient. I need to do better profiling of the memory consumption of the game.</li>
+<li>Much of the saved data is not actually changed from the base entity state. I could reduce the size of the save files by only saving attributes that have actually changed, but that means adding more tracking code.</li>
+<li>Some circumstances need special handling. For example, what happens if the player uses <code>UNDO</code> directly after <code>SAVE</code>?</li>
+<li>Entities have to be uniquely identified in order for loading to work properly. This isn’t currently a problem, but could become one in the future with dynamically generated entities.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/06/save-load-undo/" data-id="cio6z4umz004dw0oh8se637rv" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-testing-a-text-adventure" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -112,7 +173,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/05/testing-a-text-adventure/" data-id="cio6y52tf002n80oh2r2rx36o" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/05/testing-a-text-adventure/" data-id="cio6z4ukr002nw0ohfswzb62m" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/testing/">testing</a></li></ul>
@@ -171,7 +232,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/04/stupidrpg-tutorial-or-not-tutorial/" data-id="cio6y52tk002u80oht4vqnzbo" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/04/stupidrpg-tutorial-or-not-tutorial/" data-id="cio6z4ukw002uw0oh0zdaqhrj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -228,7 +289,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/03/weekly-update-3/" data-id="cio6y52qu000x80oh9h1wqpfg" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/03/weekly-update-3/" data-id="cio6z4uii000xw0ohhzc79llt" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -282,7 +343,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/02/reading-list/" data-id="cio6y52vr004k80ohqqp4jodu" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/02/reading-list/" data-id="cio6z4un8004kw0ohcazbpb2j" class="article-share-link">Share</a>
       
       
     </footer>
@@ -337,7 +398,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/01/stupidrpg-callbacks/" data-id="cio6y52uk003v80ohlfz1nk2u" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/08/01/stupidrpg-callbacks/" data-id="cio6z4um3003vw0ohy24x600k" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -416,7 +477,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/31/side-project-power-cards/" data-id="cio6y52vb004880oh2yiakg0t" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/31/side-project-power-cards/" data-id="cio6z4ums0048w0oh7htxgl4m" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cplusplus/">cplusplus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/numenera/">numenera</a></li></ul>
@@ -468,7 +529,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/30/stupidrpg-the-rpg/" data-id="cio6y52to002y80ohou7pwgol" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/30/stupidrpg-the-rpg/" data-id="cio6z4ul0002yw0ohvat1i5wh" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -525,7 +586,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/29/bio-ranger-bob/" data-id="cio6y5300007d80oh92zieghh" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/29/bio-ranger-bob/" data-id="cio6z4ur6007dw0oh28b09afa" class="article-share-link">Share</a>
       
       
     </footer>
@@ -608,66 +669,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/28/stupidrpg-everything-is-an-entity/" data-id="cio6y52uh003q80oh6l2ojxqv" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/28/stupidrpg-everything-is-an-entity/" data-id="cio6z4uly003qw0oh7iii552q" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-weekly-update-2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/27/weekly-update-2/">Weekly Update #2</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/07/27/weekly-update-2/">
-      <time datetime="2015-07-27T07:00:00.000Z" itemprop="datePublished">2015-07-27</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Stuck on that dialogue node issue. Very odd behavior where multiple dialogue trees (one per NPC) are interfering with each other. Haven’t been able to resolve it yet.</p>
-<p><strong>Changelog:</strong></p>
-<ul>
-<li>Started refactoring the dialogue node callbacks. Current code is hard to debug.</li>
-</ul>
-<p><strong>Known Issues:</strong></p>
-<ul>
-<li>Dialogue node callbacks aren’t working right. Need to refactor.</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/27/weekly-update-2/" data-id="cio6y52r1001680ohmnrqyc7a" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
 
     </footer>
   </div>

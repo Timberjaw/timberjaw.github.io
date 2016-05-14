@@ -8,8 +8,34 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Sat, 14 May 2016 09:19:39 GMT</pubDate>
+    <pubDate>Sat, 14 May 2016 09:52:14 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.05.13</title>
+      <link>http://timberjaw.github.io/2016/05/13/Daily-Update-2016-05-13/</link>
+      <guid>http://timberjaw.github.io/2016/05/13/Daily-Update-2016-05-13/</guid>
+      <pubDate>Fri, 13 May 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;blockquote&gt;&lt;p&gt;TREASURY&lt;br&gt;Piles of gold coins and assorted gems sprawl across an opulent chamber. More than you could carry, even if you ha
+      
+      </description>
+      
+      <content:encoded>&lt;blockquote&gt;&lt;p&gt;TREASURY&lt;br&gt;Piles of gold coins and assorted gems sprawl across an opulent chamber. More than you could carry, even if you had somewhere to carry it to. An unassuming mannequin sits in the corner, shrouded in a dark green cloak and adorned with a diamond crown. A locked door bars the way south. The great hall lies behind you to the north.&lt;/p&gt;
+&lt;p&gt;&gt; take coins&lt;br&gt;There are too many. You’d need a wheelbarrow and a bank account to handle a cache of this magnitude.&lt;/p&gt;
+&lt;p&gt;&gt; smell coins&lt;br&gt;I’m not sure what to tell you. If you have a change jar somewhere in your house, go take a whiff. It smells like that. And by that I mean sweat and an assortment of illicit drugs.&lt;/p&gt;
+&lt;p&gt;&gt; go south&lt;br&gt;You are prevented from traveling south due to your inability to walk through solid objects. It’s one of the weak spots on your otherwise impressive resume.&lt;/p&gt;
+&lt;p&gt;&gt; eat treasure&lt;br&gt;You bite down on a coin and learn that it’s both 1) solid gold, and 2) disgusting. Someone has clearly spent a lot of time rubbing their grubby fingers all over this treasure trove.&lt;/p&gt;
+&lt;p&gt;&gt; go south&lt;br&gt;That’s the sort of can-do attitude that built the pyramids, but you still can’t phase through the door.&lt;/p&gt;
+&lt;p&gt;&gt; take all&lt;br&gt;You take the diamond crown and the green cloak.&lt;/p&gt;
+&lt;p&gt;&gt; wear crown&lt;br&gt;You put the crown on your head. You feel very confident and also very pretty.&lt;/p&gt;
+&lt;p&gt;&gt; wear cloak&lt;br&gt;You throw the cloak over your shoulders and tie it around your throat. It adds an aura of mystery to your already dashing appearance. If you find a mask you could pretend to be the Phantom of the Opera. If you don’t find a mask you could pretend to be a hobbit hiding from Sauron.&lt;/p&gt;
+&lt;/blockquote&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/05/13/Daily-Update-2016-05-13/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.05.12</title>
@@ -469,25 +495,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/04/24/Aggregation-30/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.04.23</title>
-      <link>http://timberjaw.github.io/2016/04/23/Daily-Update-2016-04-23/</link>
-      <guid>http://timberjaw.github.io/2016/04/23/Daily-Update-2016-04-23/</guid>
-      <pubDate>Sat, 23 Apr 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Finished the &lt;a href=&quot;http://tabletopsociety.com/files/dumdums/cc&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Dum-Dums &amp;amp; Dragons Character Creato
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Finished the &lt;a href=&quot;http://tabletopsociety.com/files/dumdums/cc&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Dum-Dums &amp;amp; Dragons Character Creator&lt;/a&gt;. It’s for a friend’s RPG project and was a lot of fun to make.&lt;/p&gt;
-&lt;p&gt;It’s responsive, mobile friendly (only tested on Android since that’s what I have) and supports saving/loading characters via Web Storage (the first time I’ve used that, actually).&lt;/p&gt;
-&lt;p&gt;For the most part it pulls from simple lists of options with direct effects on the character’s stats and abilities, but there were a few edge cases to deal with as well. Simple enough project that I was able to spare the time for presentation and added features, which is nice because I learned a couple new things about media/print queries and local storage.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/04/23/Daily-Update-2016-04-23/#disqus_thread</comments>
     </item>
     
   </channel>
