@@ -8,8 +8,41 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Fri, 13 May 2016 08:06:23 GMT</pubDate>
+    <pubDate>Sat, 14 May 2016 09:19:39 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.05.12</title>
+      <link>http://timberjaw.github.io/2016/05/12/Daily-Update-2016-05-12/</link>
+      <guid>http://timberjaw.github.io/2016/05/12/Daily-Update-2016-05-12/</guid>
+      <pubDate>Thu, 12 May 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;blockquote&gt;&lt;p&gt;GM: You descend the stairs, careful not to trip and break your neck. The steps are not particularly slippery, but better safe
+      
+      </description>
+      
+      <content:encoded>&lt;blockquote&gt;&lt;p&gt;GM: You descend the stairs, careful not to trip and break your neck. The steps are not particularly slippery, but better safe than sorry. You won’t make the history books if you die here.&lt;/p&gt;
+&lt;p&gt;GREAT HALL&lt;br&gt;Marble pillars line a sprawling rectangular chamber. The tiled mosaic floor depicts an abstract collection of geometric shapes and lines. A high vaulted ceiling contains a lovely depicition of cracked stone. Open doorways lead east and west, while an ornate gilded door stands steadfastly to the south. The winding stairs climb up to the north.&lt;/p&gt;
+&lt;p&gt;&gt; look at stairs&lt;/p&gt;
+&lt;p&gt;I mean, they don’t literally climb, they’re stationary, but ‘climb’ is a multi-purpose word that can act as a verb or as an innate trait of an object.&lt;/p&gt;
+&lt;p&gt;&gt; look at mosaic&lt;/p&gt;
+&lt;p&gt;At first glance you’re inclined to dismiss it as a hackish attempt at art, but after a moment of consideration you decide to give it the benefit of the doubt. Art is tricky and you don’t want to look dumb in front of your friends. Maybe it was laid out by a famous tilist.&lt;/p&gt;
+&lt;p&gt;&gt; look at east doorway&lt;/p&gt;
+&lt;p&gt;It’s a doorway leading to the east.&lt;/p&gt;
+&lt;p&gt;&gt; smell east doorway&lt;/p&gt;
+&lt;p&gt;Kinda smells like spiders. That doesn’t bode well.&lt;/p&gt;
+&lt;p&gt;&gt; look at door&lt;/p&gt;
+&lt;p&gt;It’s a real fancy door, like a rich person would own. It tickles your adventuring spirit, because there’s probably money behind it.&lt;/p&gt;
+&lt;p&gt;&gt; go west&lt;/p&gt;
+&lt;p&gt;LIBRARY&lt;br&gt;Towering shelves covered in mouldering books clutter this otherwise inoffensive room. Most of the volumes seem too damaged by water, age, or dull subject material to be of any interest, but a few books seem intact and/or not completely boring. Like most rooms, this one has a floor, ceiling, some walls and a couple doorways. To the west is the great hall, while to the south is (judging by the smell) an alcoholic’s bucket list.&lt;/p&gt;
+&lt;p&gt;&gt; eat books&lt;/p&gt;
+&lt;p&gt;You devour a moldy book, hoping to gain some knowledge by osmosis. You’re not sure if it worked, but you are sure that you’re going to regret this decision.&lt;/p&gt;
+&lt;/blockquote&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/05/12/Daily-Update-2016-05-12/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.05.11</title>
@@ -455,31 +488,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/04/23/Daily-Update-2016-04-23/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.04.22</title>
-      <link>http://timberjaw.github.io/2016/04/22/Daily-Update-2016-04-22/</link>
-      <guid>http://timberjaw.github.io/2016/04/22/Daily-Update-2016-04-22/</guid>
-      <pubDate>Fri, 22 Apr 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;More work on the character creator. All steps working.&lt;/li&gt;
-&lt;li&gt;Added mobile support
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;More work on the character creator. All steps working.&lt;/li&gt;
-&lt;li&gt;Added mobile support for character creator.&lt;/li&gt;
-&lt;li&gt;Fixed some bugs.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/04/22/Daily-Update-2016-04-22/#disqus_thread</comments>
     </item>
     
   </channel>
