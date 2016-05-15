@@ -8,8 +8,53 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Sat, 14 May 2016 09:52:14 GMT</pubDate>
+    <pubDate>Sun, 15 May 2016 21:22:49 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Aggregation #31</title>
+      <link>http://timberjaw.github.io/2016/05/14/Aggregation-31/</link>
+      <guid>http://timberjaw.github.io/2016/05/14/Aggregation-31/</guid>
+      <pubDate>Sat, 14 May 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Designed a weird egg machine puzzle.&lt;/li&gt;
+&lt;li&gt;Added a &lt;code&gt;GRIND&lt;/code&gt; verb to gri
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Designed a weird egg machine puzzle.&lt;/li&gt;
+&lt;li&gt;Added a &lt;code&gt;GRIND&lt;/code&gt; verb to grind for XP.&lt;/li&gt;
+&lt;li&gt;Added short descriptions for most of the forest locations.&lt;/li&gt;
+&lt;li&gt;Added short descriptions for the outpost scenery.&lt;/li&gt;
+&lt;li&gt;Added short descriptions for locations: Ranger Station Base.&lt;/li&gt;
+&lt;li&gt;Added short descriptions for things: starting items, telescope, wooden structure, litter, berries, ice cube.&lt;/li&gt;
+&lt;li&gt;Added short descriptions for creatures: troglodyte, Jane, Jack, Ranger Bob, player, bird.&lt;/li&gt;
+&lt;li&gt;Added short descriptions for: South Trail, West Trail.&lt;/li&gt;
+&lt;li&gt;Updated my Minecraft server (been procrastinating on that for a while).&lt;/li&gt;
+&lt;li&gt;Went outside.&lt;/li&gt;
+&lt;li&gt;Added a bedroll to the alcove.&lt;/li&gt;
+&lt;li&gt;Fleshed out the Alcove.&lt;/li&gt;
+&lt;li&gt;Added description for Pier.&lt;/li&gt;
+&lt;li&gt;Wrote up NPC for pier, along with a tie-in to the Underground puzzle.&lt;/li&gt;
+&lt;li&gt;New items: rusty helmet, bottle of mystery liquid.&lt;/li&gt;
+&lt;li&gt;Added description for The Split.&lt;/li&gt;
+&lt;li&gt;Decided to move the rusty helmet to the Split and tie its presence there to the player’s previous actions in the Underground.&lt;/li&gt;
+&lt;li&gt;Added &lt;code&gt;WAIT&lt;/code&gt; verb.&lt;/li&gt;
+&lt;li&gt;Stubbed out and connected locations (with short descriptions): Winding Stair, Great Hall, Library, Wine Cellar, Good Wine Cellar, Chalice Room, Treasury, Vault, Bedchamber, Armory, Scary Tunnel, Spider Room, Goblin Pit, Bottom of Goblin Pit, Ogre Cage.&lt;/li&gt;
+&lt;li&gt;Assigned underground rooms to three challenge paths: Trial of Dedication, Trial of Friendship, and Trial of Naps. Not sure about the dedication trial.&lt;/li&gt;
+&lt;li&gt;Changed Trial of Dedication to Trial of Blood.&lt;/li&gt;
+&lt;li&gt;Stubbed items and scenery for: armory, bedchamber, goblin pit, bottom of goblin pit, chalice room, ogre cage, wine cellar, good wine cellar, great hall, library, treasury, spider room, scary tunnel, vault, winding stair.&lt;/li&gt;
+&lt;li&gt;Wrote two script segments for the Underground.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/05/14/Aggregation-31/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.05.13</title>
@@ -456,45 +501,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/04/25/Daily-Update-2016-04-25/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Aggregation #30</title>
-      <link>http://timberjaw.github.io/2016/04/24/Aggregation-30/</link>
-      <guid>http://timberjaw.github.io/2016/04/24/Aggregation-30/</guid>
-      <pubDate>Sun, 24 Apr 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added fallback for ‘say hi’ / ‘say hello’ without explicit target.&lt;/li&gt;
-&lt;li&gt;Added br
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added fallback for ‘say hi’ / ‘say hello’ without explicit target.&lt;/li&gt;
-&lt;li&gt;Added bridge, bridge, bridge, bridge, and bridge locations.&lt;/li&gt;
-&lt;li&gt;Added placeholders for alcove, split, pier, and circle locations.&lt;/li&gt;
-&lt;li&gt;Linked and added short descriptions for: circle, alcove, pier, and split locations. Can always get back to the bridge from these, but can only get to them from the bridge when configured correctly.&lt;/li&gt;
-&lt;li&gt;Added item placeholders: bedroll (in alcove), wheel (on bridge), mushrooms/flowers (in circle).&lt;/li&gt;
-&lt;li&gt;Installed conditional expression helper for Handlebars.&lt;/li&gt;
-&lt;li&gt;Added contextual bridge descriptions to vary by position (forest, underground, coast, void). Descriptions don’t make it very clear what’s happening, but the action of turning the wheel will.&lt;/li&gt;
-&lt;li&gt;Added wheel to bridge.&lt;/li&gt;
-&lt;li&gt;Stubbed in wheel behavior.&lt;/li&gt;
-&lt;li&gt;Added taxes module.&lt;/li&gt;
-&lt;li&gt;Added &lt;code&gt;PAY TAXES&lt;/code&gt; command.&lt;/li&gt;
-&lt;li&gt;Added Devices module. Includes the device component and verbs for activating/rotating/manipulating. Devices can have a set of ‘states’ (on/off, rotational position, etc). By default, a device will cycle through the available states when triggered.&lt;/li&gt;
-&lt;li&gt;Wheel on bridge is now a device.&lt;/li&gt;
-&lt;li&gt;Designed my future office.&lt;/li&gt;
-&lt;li&gt;Wrote an introductory manual for the game.&lt;/li&gt;
-&lt;li&gt;Wrote up an expanded quest/puzzle line for the prologue, incorporating new areas (bridge, underground), the basin puzzle, and the Black Box objective. I think it will tie everything together into a more satisfying, game-like experience.&lt;/li&gt;
-&lt;li&gt;Made a character creator for a pen-and-paper RPG.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/04/24/Aggregation-30/#disqus_thread</comments>
     </item>
     
   </channel>
