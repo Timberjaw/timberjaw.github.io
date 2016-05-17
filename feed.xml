@@ -8,8 +8,42 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Sun, 15 May 2016 21:22:49 GMT</pubDate>
+    <pubDate>Tue, 17 May 2016 06:44:51 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.05.15</title>
+      <link>http://timberjaw.github.io/2016/05/15/Daily-Update-2016-05-15/</link>
+      <guid>http://timberjaw.github.io/2016/05/15/Daily-Update-2016-05-15/</guid>
+      <pubDate>Sun, 15 May 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;With back-to-back Numenera and D&amp;amp;D sessions looming, it’s time for some serious prep.&lt;/p&gt;
+&lt;p&gt;Numenera goals:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Explore a m
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;With back-to-back Numenera and D&amp;amp;D sessions looming, it’s time for some serious prep.&lt;/p&gt;
+&lt;p&gt;Numenera goals:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Explore a mysterious bunker full of people whose faces make your brain bleed.&lt;/li&gt;
+&lt;li&gt;Figure out what’s going on with the moon-men.&lt;/li&gt;
+&lt;li&gt;Treasure. I’ve been stingy lately.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Relevance to SRPG: moderate (moon-men quest).&lt;/p&gt;
+&lt;p&gt;D&amp;amp;D goals:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Throw an intel-gathering mission masquerading as a fancy party. Try not to get outed as rebels. Possibly make new allies, almost certainly get some new plot hooks.&lt;/li&gt;
+&lt;li&gt;Introduce key NPCs.&lt;/li&gt;
+&lt;li&gt;Introduce key local threat.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Relevance to SRPG: low.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/05/15/Daily-Update-2016-05-15/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Aggregation #31</title>
@@ -481,26 +515,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/04/26/Daily-Update-2016-04-26/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.04.25</title>
-      <link>http://timberjaw.github.io/2016/04/25/Daily-Update-2016-04-25/</link>
-      <guid>http://timberjaw.github.io/2016/04/25/Daily-Update-2016-04-25/</guid>
-      <pubDate>Mon, 25 Apr 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Ran a Numenera on Sunday, which included a pure puzzle section (the first time I’ve done that, IIRC). It went reasonably well; I messed u
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Ran a Numenera on Sunday, which included a pure puzzle section (the first time I’ve done that, IIRC). It went reasonably well; I messed up on a couple details and had to quietly rework the puzzle logic in my head to make sure it was consistent. The altered version was a bit less intuitive than what I had originally planned. I think in the future I should find someone to help playtest puzzles before I give them to the players. It would be very frustrating to spend an hour in a session on what’s supposed to be a quick puzzle.&lt;/p&gt;
-&lt;p&gt;I’m rethinking the second puzzle, which involves some numeric manipulation that probably won’t be very interesting/accessible to some members of the group. One of the things I think the first puzzle did an OK job at was involving everyone in the party.&lt;/p&gt;
-&lt;p&gt;SRPG, of course, already has playtesting in the works, but this experience has gotten me thinking about the different types of minds that will be approaching the game, and how I can expose aspects of the puzzle to make the experience satisfying for them.&lt;/p&gt;
-&lt;p&gt;There are, of course, people out there who just hate puzzles, but I don’t think they’re my target demographic.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/04/25/Daily-Update-2016-04-25/#disqus_thread</comments>
     </item>
     
   </channel>
