@@ -8,8 +8,33 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Thu, 19 May 2016 05:32:48 GMT</pubDate>
+    <pubDate>Thu, 19 May 2016 05:45:51 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.05.17</title>
+      <link>http://timberjaw.github.io/2016/05/17/Daily-Update-2016-05-17/</link>
+      <guid>http://timberjaw.github.io/2016/05/17/Daily-Update-2016-05-17/</guid>
+      <pubDate>Tue, 17 May 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added full descriptions for bedchamber and bottom of goblin pit.&lt;/li&gt;
+&lt;li&gt;Alluded to
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added full descriptions for bedchamber and bottom of goblin pit.&lt;/li&gt;
+&lt;li&gt;Alluded to the pail of infinite sadness.&lt;/li&gt;
+&lt;li&gt;Alluded to the Shadowbeast.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/05/17/Daily-Update-2016-05-17/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.05.16</title>
@@ -485,41 +510,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/04/28/The-Egg-Machine/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.04.27</title>
-      <link>http://timberjaw.github.io/2016/04/27/Daily-Update-2016-04-27/</link>
-      <guid>http://timberjaw.github.io/2016/04/27/Daily-Update-2016-04-27/</guid>
-      <pubDate>Thu, 28 Apr 2016 06:33:54 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Continuing the previous post. Here’s an incomplete list of things the players (characters) can do in the game:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Move objects 
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Continuing the previous post. Here’s an incomplete list of things the players (characters) can do in the game:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Move objects around&lt;/li&gt;
-&lt;li&gt;Interact with objects (push buttons, type commands into a computer, cut an object in two, etc)&lt;/li&gt;
-&lt;li&gt;Talk to dead people&lt;/li&gt;
-&lt;li&gt;Jump really far&lt;/li&gt;
-&lt;li&gt;Repair things&lt;/li&gt;
-&lt;li&gt;Fight people and break things&lt;/li&gt;
-&lt;li&gt;Imprison and interrogate locals&lt;/li&gt;
-&lt;li&gt;See things that aren’t there&lt;/li&gt;
-&lt;li&gt;Communicate telepathically&lt;/li&gt;
-&lt;li&gt;Light things on fire&lt;/li&gt;
-&lt;li&gt;Breathe underwater&lt;/li&gt;
-&lt;li&gt;Steal everything&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Of those, the mechanics my players seem to enjoy the most are: stealing, fighting, interrogating, and lighting things on fire. The rest are mostly available to a single character. So, here’s what I have in mind:&lt;/p&gt;
-&lt;p&gt;Put the players in an plastic egg prize machine.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/04/27/Daily-Update-2016-04-27/#disqus_thread</comments>
     </item>
     
   </channel>
