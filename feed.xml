@@ -8,8 +8,32 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Tue, 17 May 2016 06:44:51 GMT</pubDate>
+    <pubDate>Thu, 19 May 2016 05:32:48 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.05.16</title>
+      <link>http://timberjaw.github.io/2016/05/16/Daily-Update-2016-05-16/</link>
+      <guid>http://timberjaw.github.io/2016/05/16/Daily-Update-2016-05-16/</guid>
+      <pubDate>Mon, 16 May 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added full descriptions for circle and armory.&lt;/li&gt;
+&lt;/ul&gt;
+
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added full descriptions for circle and armory.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/05/16/Daily-Update-2016-05-16/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.05.15</title>
@@ -496,25 +520,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/04/27/Daily-Update-2016-04-27/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.04.26</title>
-      <link>http://timberjaw.github.io/2016/04/26/Daily-Update-2016-04-26/</link>
-      <guid>http://timberjaw.github.io/2016/04/26/Daily-Update-2016-04-26/</guid>
-      <pubDate>Tue, 26 Apr 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Continuing yesterday’s thoughts about numeric puzzles. I don’t think it will be a fun puzzle at all, because not everyone in the group is
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Continuing yesterday’s thoughts about numeric puzzles. I don’t think it will be a fun puzzle at all, because not everyone in the group is interested in writing down a bunch of numbers and then doing an addition/subtraction graph to get a move solution. Honestly, even most people who like math probably wouldn’t find that fun.&lt;/p&gt;
-&lt;p&gt;Additionally, this puzzle doesn’t involve the characters, only the players. The specific skills and strengths of each character are irrelevant to the solution, as the only in-world interaction is pressing buttons. So it’s not fun, and it has no mechanical connection to the game. In SRPG terms, it’s like a puzzle that requires the player to interpolate RBG values. It’s not fun, it can be solved by rote, and it doesn’t leverage the text-based format of the game.&lt;/p&gt;
-&lt;p&gt;It’s easier to tell what’s bad than what’s good, unfortunately. As a first step, I’m going through the abilities of each character (and the general mechanics of the system) to see which ones are good candidates for interacting with the puzzle.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/04/26/Daily-Update-2016-04-26/#disqus_thread</comments>
     </item>
     
   </channel>
