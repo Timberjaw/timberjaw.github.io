@@ -8,8 +8,25 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Sat, 21 May 2016 07:38:13 GMT</pubDate>
+    <pubDate>Sun, 22 May 2016 08:01:29 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.05.20</title>
+      <link>http://timberjaw.github.io/2016/05/20/Daily-Update-2016-05-20/</link>
+      <guid>http://timberjaw.github.io/2016/05/20/Daily-Update-2016-05-20/</guid>
+      <pubDate>Fri, 20 May 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Finished Numenera prep. Lots of lunar exploration ideas to be trialed. Item drops won’t be relevant to SRPG, but aethernaut interactions 
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;Finished Numenera prep. Lots of lunar exploration ideas to be trialed. Item drops won’t be relevant to SRPG, but aethernaut interactions and general lunar navigation (and associated gravity/oxygen issues) will be.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/05/20/Daily-Update-2016-05-20/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.05.19</title>
@@ -491,24 +508,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/05/01/Daily-Update-2016-05-01/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.04.29</title>
-      <link>http://timberjaw.github.io/2016/04/30/Daily-Update-2016-04-29/</link>
-      <guid>http://timberjaw.github.io/2016/04/30/Daily-Update-2016-04-29/</guid>
-      <pubDate>Sun, 01 May 2016 04:12:57 GMT</pubDate>
-      <description>
-      
-        &lt;img src=&quot;/2016/04/30/Daily-Update-2016-04-29/Egg.png&quot; alt=&quot;The Egg Machine&quot; title=&quot;The Egg Machine&quot;&gt;
-
-      
-      </description>
-      
-      <content:encoded>&lt;img src=&quot;/2016/04/30/Daily-Update-2016-04-29/Egg.png&quot; alt=&quot;The Egg Machine&quot; title=&quot;The Egg Machine&quot;&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/04/30/Daily-Update-2016-04-29/#disqus_thread</comments>
     </item>
     
   </channel>
