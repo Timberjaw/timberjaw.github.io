@@ -8,8 +8,56 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Sun, 22 May 2016 08:01:29 GMT</pubDate>
+    <pubDate>Tue, 24 May 2016 08:06:59 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.05.22</title>
+      <link>http://timberjaw.github.io/2016/05/22/Daily-Update-2016-05-22/</link>
+      <guid>http://timberjaw.github.io/2016/05/22/Daily-Update-2016-05-22/</guid>
+      <pubDate>Sun, 22 May 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added full description for Great Hall.&lt;/li&gt;
+&lt;li&gt;Ran the first part of the aethernaut
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added full description for Great Hall.&lt;/li&gt;
+&lt;li&gt;Ran the first part of the aethernaut quest, including the canyon, viewing room and Observer.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/05/22/Daily-Update-2016-05-22/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Daily Update 2016.05.21</title>
+      <link>http://timberjaw.github.io/2016/05/21/Daily-Update-2016-05-21/</link>
+      <guid>http://timberjaw.github.io/2016/05/21/Daily-Update-2016-05-21/</guid>
+      <pubDate>Sat, 21 May 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added full descriptions for Goblin Pit, Wine Cellar, Good Wine Cellar.&lt;/li&gt;
+&lt;/ul&gt;
+
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added full descriptions for Goblin Pit, Wine Cellar, Good Wine Cellar.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/05/21/Daily-Update-2016-05-21/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.05.20</title>
@@ -460,54 +508,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/05/03/Daily-Update-2016-05-03/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.05.02</title>
-      <link>http://timberjaw.github.io/2016/05/02/Daily-Update-2016-05-02/</link>
-      <guid>http://timberjaw.github.io/2016/05/02/Daily-Update-2016-05-02/</guid>
-      <pubDate>Tue, 03 May 2016 01:43:38 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added short descriptions for most of the forest locations.&lt;/li&gt;
-&lt;li&gt;Added short desc
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added short descriptions for most of the forest locations.&lt;/li&gt;
-&lt;li&gt;Added short descriptions for the outpost scenery.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/05/02/Daily-Update-2016-05-02/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.05.01</title>
-      <link>http://timberjaw.github.io/2016/05/01/Daily-Update-2016-05-01/</link>
-      <guid>http://timberjaw.github.io/2016/05/01/Daily-Update-2016-05-01/</guid>
-      <pubDate>Sun, 01 May 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added a &lt;code&gt;GRIND&lt;/code&gt; verb to grind for XP.&lt;/li&gt;
-&lt;/ul&gt;
-
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added a &lt;code&gt;GRIND&lt;/code&gt; verb to grind for XP.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/05/01/Daily-Update-2016-05-01/#disqus_thread</comments>
     </item>
     
   </channel>
