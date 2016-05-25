@@ -8,8 +8,30 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Tue, 24 May 2016 08:06:59 GMT</pubDate>
+    <pubDate>Wed, 25 May 2016 02:11:24 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.05.23</title>
+      <link>http://timberjaw.github.io/2016/05/23/Daily-Update-2016-05-23/</link>
+      <guid>http://timberjaw.github.io/2016/05/23/Daily-Update-2016-05-23/</guid>
+      <pubDate>Mon, 23 May 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added full descriptions for Winding Stairs, Treasury, Ogre Cage, and Spider Room.&lt;/l
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added full descriptions for Winding Stairs, Treasury, Ogre Cage, and Spider Room.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/05/23/Daily-Update-2016-05-23/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.05.22</title>
@@ -483,31 +505,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/05/04/Daily-Update-2016-05-04/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.05.03</title>
-      <link>http://timberjaw.github.io/2016/05/03/Daily-Update-2016-05-03/</link>
-      <guid>http://timberjaw.github.io/2016/05/03/Daily-Update-2016-05-03/</guid>
-      <pubDate>Tue, 03 May 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added short descriptions for locations: Ranger Station Base.&lt;/li&gt;
-&lt;li&gt;Added short de
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added short descriptions for locations: Ranger Station Base.&lt;/li&gt;
-&lt;li&gt;Added short descriptions for things: starting items, telescope, wooden structure, litter, berries, ice cube.&lt;/li&gt;
-&lt;li&gt;Added short descriptions for creatures: troglodyte, Jane, Jack, Ranger Bob, player, bird.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/05/03/Daily-Update-2016-05-03/#disqus_thread</comments>
     </item>
     
   </channel>
