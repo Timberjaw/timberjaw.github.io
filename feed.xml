@@ -8,8 +8,51 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Wed, 25 May 2016 02:11:24 GMT</pubDate>
+    <pubDate>Fri, 27 May 2016 06:29:42 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Daily Update 2016.05.25</title>
+      <link>http://timberjaw.github.io/2016/05/25/Daily-Update-2016-05-25/</link>
+      <guid>http://timberjaw.github.io/2016/05/25/Daily-Update-2016-05-25/</guid>
+      <pubDate>Wed, 25 May 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;img src=&quot;/2016/05/25/Daily-Update-2016-05-25/Landing.png&quot; alt=&quot;SRPG Landing Page&quot; title=&quot;SRPG Landing Page&quot;&gt;
+
+      
+      </description>
+      
+      <content:encoded>&lt;img src=&quot;/2016/05/25/Daily-Update-2016-05-25/Landing.png&quot; alt=&quot;SRPG Landing Page&quot; title=&quot;SRPG Landing Page&quot;&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/05/25/Daily-Update-2016-05-25/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Daily Update 2016.05.24</title>
+      <link>http://timberjaw.github.io/2016/05/24/Daily-Update-2016-05-24/</link>
+      <guid>http://timberjaw.github.io/2016/05/24/Daily-Update-2016-05-24/</guid>
+      <pubDate>Tue, 24 May 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Repo cleanup (hadn’t committed in a long time)&lt;/li&gt;
+&lt;li&gt;Got a logo from a generous f
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Repo cleanup (hadn’t committed in a long time)&lt;/li&gt;
+&lt;li&gt;Got a logo from a generous friend.&lt;/li&gt;
+&lt;li&gt;Build a first draft of a landing page w/logo for the pre-launch display.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/05/24/Daily-Update-2016-05-24/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.05.23</title>
@@ -463,48 +506,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/05/06/Daily-Update-2016-05-06/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Delay</title>
-      <link>http://timberjaw.github.io/2016/05/05/Delay/</link>
-      <guid>http://timberjaw.github.io/2016/05/05/Delay/</guid>
-      <pubDate>Thu, 05 May 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Will be too busy over the weekend to update as scheduled. Will get caught up Sunday or Monday.&lt;/p&gt;
-
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Will be too busy over the weekend to update as scheduled. Will get caught up Sunday or Monday.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/05/05/Delay/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.05.04</title>
-      <link>http://timberjaw.github.io/2016/05/04/Daily-Update-2016-05-04/</link>
-      <guid>http://timberjaw.github.io/2016/05/04/Daily-Update-2016-05-04/</guid>
-      <pubDate>Thu, 05 May 2016 00:58:49 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added short descriptions for: South Trail, West Trail.&lt;/li&gt;
-&lt;li&gt;Updated my Minecraft
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added short descriptions for: South Trail, West Trail.&lt;/li&gt;
-&lt;li&gt;Updated my Minecraft server (been procrastinating on that for a while).&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/05/04/Daily-Update-2016-05-04/#disqus_thread</comments>
     </item>
     
   </channel>
