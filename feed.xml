@@ -8,8 +8,42 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Fri, 27 May 2016 06:29:42 GMT</pubDate>
+    <pubDate>Sat, 28 May 2016 10:47:40 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Aggregation #32</title>
+      <link>http://timberjaw.github.io/2016/05/26/Aggregation-32/</link>
+      <guid>http://timberjaw.github.io/2016/05/26/Aggregation-32/</guid>
+      <pubDate>Thu, 26 May 2016 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added full descriptions for circle and armory.&lt;/li&gt;
+&lt;li&gt;Added full descriptions for 
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added full descriptions for circle and armory.&lt;/li&gt;
+&lt;li&gt;Added full descriptions for bedchamber and bottom of goblin pit.&lt;/li&gt;
+&lt;li&gt;Alluded to the pail of infinite sadness.&lt;/li&gt;
+&lt;li&gt;Alluded to the Shadowbeast.&lt;/li&gt;
+&lt;li&gt;Added full description for chalice room.&lt;/li&gt;
+&lt;li&gt;Added full descriptions for Goblin Pit, Wine Cellar, Good Wine Cellar.&lt;/li&gt;
+&lt;li&gt;Added full description for Great Hall.&lt;/li&gt;
+&lt;li&gt;Ran the first part of the aethernaut quest, including the canyon, viewing room and Observer.&lt;/li&gt;
+&lt;li&gt;Added full descriptions for Winding Stairs, Treasury, Ogre Cage, and Spider Room.&lt;/li&gt;
+&lt;li&gt;Repo cleanup (hadn’t committed in a long time)&lt;/li&gt;
+&lt;li&gt;Got a logo from a generous friend.&lt;/li&gt;
+&lt;li&gt;Build a first draft of a landing page w/logo for the pre-launch display.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2016/05/26/Aggregation-32/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.05.25</title>
@@ -483,29 +517,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/05/07/Daily-Update-2016-05-07/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.05.06</title>
-      <link>http://timberjaw.github.io/2016/05/06/Daily-Update-2016-05-06/</link>
-      <guid>http://timberjaw.github.io/2016/05/06/Daily-Update-2016-05-06/</guid>
-      <pubDate>Fri, 06 May 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added a bedroll to the alcove. Seemed fitting since we’re leaving on a camping trip 
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;&lt;strong&gt;Changes &amp;amp; Updates:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Added a bedroll to the alcove. Seemed fitting since we’re leaving on a camping trip today.&lt;/li&gt;
-&lt;li&gt;Fleshed out the Alcove.&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/05/06/Daily-Update-2016-05-06/#disqus_thread</comments>
     </item>
     
   </channel>
