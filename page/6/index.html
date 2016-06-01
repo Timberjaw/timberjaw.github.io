@@ -60,6 +60,246 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-Daily-Update-2016-04-10" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/10/Daily-Update-2016-04-10/">Daily Update 2016.04.10</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2016/04/10/Daily-Update-2016-04-10/">
+      <time datetime="2016-04-10T07:00:00.000Z" itemprop="datePublished">2016-04-10</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><strong>Changes &amp; Updates:</strong></p>
+<ul>
+<li>Added fallback for ‘say hi’ / ‘say hello’ without explicit target.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2016/04/10/Daily-Update-2016-04-10/" data-id="ciowf21hm009efwohz8lrsxq9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-Aggregation-29" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/09/Aggregation-29/">Aggregation #29</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2016/04/09/Aggregation-29/">
+      <time datetime="2016-04-09T07:00:00.000Z" itemprop="datePublished">2016-04-09</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><strong>Changes &amp; Updates:</strong></p>
+<ul>
+<li>Added ‘put in’ command for containers.</li>
+<li>Fixed several inventory bugs related to containers and locations.</li>
+<li>Fixed being able to pick up objects you’re already holding.</li>
+<li>Fixed ‘drop’ conflict (dropping an object on the ground vs dropping it in a container).</li>
+<li>Wired up two riddles for the twins with success/failure states.</li>
+<li>Significant refactoring of the NLP to use an action stack. Needed to preserve original action data when an implicit action is triggered.</li>
+<li>Got doors and locks working (mostly). Needs some visibility/accessibility work for the target location, since currently objects are only visible in their primary location.</li>
+<li>Added thermal system to support ice key quest. Prologue is officially playable end-to-end in its current state.</li>
+<li>Added list (array) support for ‘in location’ checks in rules.</li>
+<li>Fixed combat actions to use new Action object.</li>
+<li>Fixed open/close actions to use new Action object.</li>
+<li>Prettified quest outputs using box handler.</li>
+<li>Made player input stand out more.</li>
+<li>Fixed wyrmling onTick running twice (wasn’t checking System, wyrmling belongs to two).</li>
+<li>Fixed bug where certain queued outputs wouldn’t get displayed until the beginning of the next tick.</li>
+<li>Fixed “New Quest” output displaying before action output in some cases.</li>
+<li>Cleaned up chamber sequence and ending.</li>
+<li>Creepified black box entry.</li>
+<li>Added visibility support for objects in multiple locations.</li>
+<li>Improved key handling of action overrides on entities.</li>
+<li>Added temperature feedback for hot springs.</li>
+<li>Fixed internal rules with no output canceling other rules.</li>
+<li>Fixed chamber entrance sequence not working.</li>
+<li>Added prologue outro.</li>
+<li>Cleaned up some sequence timings.</li>
+<li>Improved handling of input area to make it more obvious when more text is incoming.</li>
+<li>Altered bird behavior to more directly telegraph what the bird wants.</li>
+<li>Bird now returns to the feeder any time the player is there.</li>
+<li>Added aliases and tags to draw the player’s attention to the feeder.</li>
+<li>Added verbiage for passages from hot springs: back to path and down to lair.</li>
+<li>Cleaned up bird output.</li>
+<li>Added support for full HTML transcript saving (was previously cut off because output queue trims items as they disappear off the top).</li>
+<li>Made it impossible to not have the rainbow sword.</li>
+<li>Added a ‘smell’ command to SRPG, for those who like to dawdle and inspect the flowers.</li>
+<li>Added smell support for locations.</li>
+<li>Added smells for: blue flowers, brambles, ferns, spores, black box, musty cave, sawdust, spider, vines, dust, moss, bird, Bob, player, troglodyte, wyrmling, red berries.</li>
+<li>Added ‘that sword’ alias for sword.</li>
+<li>Added ‘brandish’ verb to wave sword around.</li>
+<li>Added ‘slide down’ command in hill slide location.</li>
+<li>Added climb [up/down] [object] verb.</li>
+<li>Added ‘leave’ alias for ‘put down’.</li>
+<li>Added ‘fill bird feeder’ rule.</li>
+<li>Replaced old GM description with something more appropriate to its current character.</li>
+<li>Updated the transcript output to include styles and framing for easier reading and review.</li>
+<li>Sword now greets player when first picked up.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2016/04/09/Aggregation-29/" data-id="ciowf21l500bjfwohgnesb471" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-Daily-Update-2016-04-08" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/08/Daily-Update-2016-04-08/">Daily Update 2016.04.08</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2016/04/08/Daily-Update-2016-04-08/">
+      <time datetime="2016-04-08T07:00:00.000Z" itemprop="datePublished">2016-04-08</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>No work on SRPG today.</p>
+<p>Turned 30 recently, so that’s kind of novel. Seems pretty good so far.</p>
+<p>Each number in today’s date is divisible by 4. I thought that was interesting but I guess there are 21 days this year matching that criteria (7 each in April, August and December).</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2016/04/08/Daily-Update-2016-04-08/" data-id="ciowf21hn009ffwoh5lyakn09" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-Daily-Update-2016-04-07" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/07/Daily-Update-2016-04-07/">Daily Update 2016.04.07</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2016/04/07/Daily-Update-2016-04-07/">
+      <time datetime="2016-04-08T05:14:28.000Z" itemprop="datePublished">2016-04-07</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><strong>Changes &amp; Updates:</strong></p>
+<ul>
+<li>Sword now greets player when first picked up.</li>
+</ul>
+<p>On a related note, quest output is a bit too…much. In particular, simple quests will show the objective complete and quest complete output immediately, which looks kinda goofy. Should make it a little smarter so it only displays the quest complete output (or combines the two).</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2016/04/07/Daily-Update-2016-04-07/" data-id="ciowf21ho009gfwoh0h5vwel2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-Daily-Update-2016-04-06" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -99,7 +339,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/04/06/Daily-Update-2016-04-06/" data-id="cior1adon009dowohoaqa8561" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/04/06/Daily-Update-2016-04-06/" data-id="ciowf21hq009hfwoh3nmq3owi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -146,7 +386,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/04/05/Moving-Day-2-of-2/" data-id="cior1admj007uowohlr9poska" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/04/05/Moving-Day-2-of-2/" data-id="ciowf21fc007ufwoh17b0gw3c" class="article-share-link">Share</a>
       
       
     </footer>
@@ -192,7 +432,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/04/04/Daily-Update-2016-04-04/" data-id="cior1adoo009eowohh0zcrks2" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/04/04/Daily-Update-2016-04-04/" data-id="ciowf21hr009ifwohq33ntd52" class="article-share-link">Share</a>
       
       
     </footer>
@@ -238,7 +478,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/04/03/Daily-Update-2016-04-03/" data-id="cior1adop009fowohnaep89m6" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/04/03/Daily-Update-2016-04-03/" data-id="ciowf21hs009jfwohae6ouq7b" class="article-share-link">Share</a>
       
       
     </footer>
@@ -285,7 +525,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/04/02/Moving-Day-1-of-2/" data-id="cior1admk007vowohvshjude9" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/04/02/Moving-Day-1-of-2/" data-id="ciowf21fe007vfwohuc8l4oad" class="article-share-link">Share</a>
       
       
     </footer>
@@ -333,204 +573,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/04/01/Fools/" data-id="cior1admu0084owohkt9kaalo" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-House" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/31/House/">House!</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2016/03/31/House/">
-      <time datetime="2016-04-01T06:14:54.000Z" itemprop="datePublished">2016-03-31</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>We have a house now.</p>
-<p>Weird.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/03/31/House/" data-id="cior1admp007zowohy4236077" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-Daily-Update-2016-03-30" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/30/Daily-Update-2016-03-30/">Daily Update 2016.03.30</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2016/03/30/Daily-Update-2016-03-30/">
-      <time datetime="2016-03-30T07:00:00.000Z" itemprop="datePublished">2016-03-30</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Antsy about house closing tomorrow. Busy at work today.</p>
-<p>Thinking about more advanced AI. The setup I’m using for the bird is about as complex as I’d like to make it without a more robust system. Specifically, I want to get into a ‘hierarchy of needs’ for NPCs. Personal safety, physical needs (food, water, rest), commitments/obligations (job, duty), recreation (having a beer, talking to the player, going for a walk).</p>
-<p>Might be overly ambitious.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/03/30/Daily-Update-2016-03-30/" data-id="cior1adoq009gowoh77w0d7rs" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-Bird-Brained" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/29/Bird-Brained/">Bird Brained</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2016/03/29/Bird-Brained/">
-      <time datetime="2016-03-29T07:00:00.000Z" itemprop="datePublished">2016-03-29</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <img src="/2016/03/29/Bird-Brained/Bird-Brain.svg" alt="The Bird's Brain" title="The Bird's Brain">
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/03/29/Bird-Brained/" data-id="cior1adru00bbowohldjz5nuw" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-Daily-Update-2016-03-28" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/28/Daily-Update-2016-03-28/">Daily Update 2016.03.28</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2016/03/28/Daily-Update-2016-03-28/">
-      <time datetime="2016-03-28T07:00:00.000Z" itemprop="datePublished">2016-03-28</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Signed on house, now we wait. We’ve been living in apartments for the last 10 years, so I’m pretty excited about this change.</p>
-<p>In SRPG news, I’m trying to figure out two new components: pathfinding and positional audio.</p>
-<h2 id="Positional_Audio"><a href="#Positional_Audio" class="headerlink" title="Positional Audio"></a>Positional Audio</h2><p>This is simply the propagation of sound (in text form, of course) from a location to nearby locations. I’ve implemented a couple cases by hand by embedding sound descriptions in each location. This approach isn’t very sustainable/flexible, however. Some sounds aren’t always active, and some regions have a large number of locations in hearing range.</p>
-<p>Instead, I’d like to build something more dynamic. There are a couple options:</p>
-<ul>
-<li>Create a sound component, assign it to sound entities (like scenery) and make them ‘visible’ from each location. Pros: neatly fits into the current ECS; altering/disabling the sound only has to be done in one place. Cons: sound has to be manually linked to each location.</li>
-<li>Assign coordinates to each location and actually calculate the sound falloff based on distance. Sounds emit at a specific coordinate. Pros: no hard linking of sounds to locations; easily handles altered sounds at multiple range increments. Cons: math?</li>
-</ul>
-<p>I’m leaning toward the latter because it seems like overkill.</p>
-<h2 id="Pathfinding"><a href="#Pathfinding" class="headerlink" title="Pathfinding"></a>Pathfinding</h2><p>Right now there’s one creature that actually moves around: the bird. It follows a preset route with a couple cheats (basically teleporting when the player isn’t looking). This isn’t going to work well for NPCs that need more dynamic behaviors. For example, the Mayor needs to go to work in the morning, investigate a disturbance at the tavern at mid-day, and find time for a meal break before going home.</p>
-<p>That means I need proper pathfinding. Fortunately, locations in the game already form a collection of linked nodes, and simple algorithms like A* should suffice. The NPC’s AI will select a destination, and on each tick they’ll move one step closer along the computed route. Things like doors and other barriers will pose a challenge.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/03/28/Daily-Update-2016-03-28/" data-id="cior1ador009howoh007kw27x" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/04/01/Fools/" data-id="ciowf21fq0084fwohytwdfx0i" class="article-share-link">Share</a>
       
       
     </footer>
@@ -542,7 +585,7 @@
 
     
       <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/32/">32</a><a class="extend next" rel="next" href="/page/7/">Next &raquo;</a>
+        <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/">33</a><a class="extend next" rel="next" href="/page/7/">Next &raquo;</a>
       </nav>
     </section>
       

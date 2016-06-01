@@ -60,6 +60,244 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-daily-update-254-2015" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/12/daily-update-254-2015/">Daily Update 254.2015</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/09/12/daily-update-254-2015/">
+      <time datetime="2015-09-12T07:00:00.000Z" itemprop="datePublished">2015-09-12</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>More progress today.</p>
+<p><strong>Changes:</strong></p>
+<ul>
+<li>Switched to Open Sans for better font weight options</li>
+<li>Updated tag styles to include semibold, cursor style and hover</li>
+<li>Updated player output style to be more traditional</li>
+<li>Added a nifty background (experimental) with sunbeams and falling leaves</li>
+<li>Added a new Rule system. It’s expansive, so I’ll go over it in its own post.</li>
+<li>Cleaned up nametag helper to more closely match tag helper</li>
+<li>Added cursor styles for <code>LOOK</code> and <code>TAKE</code> tags</li>
+</ul>
+<p><strong>Bugs &amp; Problems:</strong></p>
+<ul>
+<li>Looking at an invalid thing while using a look alias results in odd output: “I understood everything up until ‘examine bird’” vs “I understood everything up until ‘bird’”. Worked around it with an onBadInput catch, but I’m not completely happy with it.</li>
+<li><p>Experimental background stuff is performance intensive. Should have an option during setup, or disable by default. Need to look into better solutions (canvas?) later rather than CSS/jQuery.</p>
+</li>
+<li><p>Nothing new</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/09/12/daily-update-254-2015/" data-id="ciowf21e40072fwohnompk2fg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-daily-update-253-2015" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/11/daily-update-253-2015/">Daily Update 253.2015</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/09/11/daily-update-253-2015/">
+      <time datetime="2015-09-11T07:00:00.000Z" itemprop="datePublished">2015-09-11</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>More progress today.</p>
+<p><strong>Changes:</strong></p>
+<ul>
+<li>Added descriptions for lair and wyrmling</li>
+<li>Added missing exit tags for all locations</li>
+<li>Made locationIs() check more flexible</li>
+<li>Fixed exit descriptions in dim clearing</li>
+<li>Fixed exit descriptions in east trail</li>
+<li>Fixed bird chirps not working</li>
+<li>Fixed wyrmling anger</li>
+</ul>
+<p><strong>Bugs &amp; Problems:</strong></p>
+<ul>
+<li>Nothing new</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/09/11/daily-update-253-2015/" data-id="ciowf21e50073fwohwb9xotvd" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-update-and-bugs" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/10/update-and-bugs/">Update &amp; Bugs</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/09/10/update-and-bugs/">
+      <time datetime="2015-09-10T07:00:00.000Z" itemprop="datePublished">2015-09-10</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Made a bit of progress today, but I’m also running into a few bugs that are proving tricky to track down. As a followup to yesterday’s post, I’m going to relax the schedule on what I write about each day, with the exception of the Weekly Update. Still 7 days a week, 5 days coding, but the writing can be about whatever rather than alternating SRPG/Other.</p>
+<p>Spoilers below (really, it’s just going to be spoilers all the time from now on).</p>
+<p><strong>Changes:</strong></p>
+<ul>
+<li>Added Lair</li>
+<li>Added Wyrmling</li>
+<li>Added a couple dialogue options for Ranger Bob</li>
+<li>Added Ranger Bob’s twig</li>
+</ul>
+<p><strong>Bugs &amp; Problems:</strong></p>
+<ul>
+<li>Nested dialogue trees don’t seem to work quite right</li>
+<li>onEnter handlers for locations are super clunky</li>
+<li>Need a way to add visible/interactive items in other character’s inventories (for example, looking at a pipe being smoked by an NPC)</li>
+<li>Bird is roaming outside its area</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/09/10/update-and-bugs/" data-id="ciowf21780027fwohavr09yrp" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-getting-serious" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/09/getting-serious/">Getting Serious</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/09/09/getting-serious/">
+      <time datetime="2015-09-09T07:00:00.000Z" itemprop="datePublished">2015-09-09</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Today I did the thing I said yesterday I’d do today. My new goal is to do that today almost every day.</p>
+<p>I’m coming up on 60 posts to this dev journal; so far I haven’t missed a day, and I’m pretty pleased about that. What I’m not pleased with is my progress on the game itself, planning and dreaming aside. So I’m setting an additional goal: writing code for StupidRPG 5 days out of every 7. It doesn’t have to be a lot, but something needs to be happening on a continual basis.</p>
+<p>My schedule is now:</p>
+<ul>
+<li>Dev Journal: Every Day</li>
+<li>Coding: 5 days a Week</li>
+</ul>
+<p>Today I added the Temperature module and the Thermal component. It’s work in progress. I started by adding temperatures to the Player (warmish), the hot springs (hot), and the glowing orb (lukewarm). Temperatures can be optionally displayed in room descriptions. I also need to add a System to handle Thermal objects, since they can fluctuate in temperature and change the temperature of other objects.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/09/09/getting-serious/" data-id="ciowf21bk0052fwoh48u3y3y3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-stupidrpg-temperature" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -96,7 +334,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/08/stupidrpg-temperature/" data-id="cior1adfk0034owohsxrd76y5" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/08/stupidrpg-temperature/" data-id="ciowf218e0034fwoh5rndu3ym" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -159,7 +397,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/07/weekly-update-8/" data-id="cior1adc8000howohv06mpxl4" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/07/weekly-update-8/" data-id="ciowf2154000hfwohfb1hn855" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
@@ -207,7 +445,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/06/busy/" data-id="cior1adlf007bowohdhmfylzz" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/06/busy/" data-id="ciowf21ef007bfwohw8fselw2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -256,7 +494,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/05/stupidrpg-versioning/" data-id="cior1adf9002sowohf76isand" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/05/stupidrpg-versioning/" data-id="ciowf2181002sfwohlak77mzg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
@@ -305,7 +543,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/04/you-cant-kill-everyone/" data-id="cior1adbh0001owohfmy2h5z4" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/04/you-cant-kill-everyone/" data-id="ciowf214e0001fwohbryfm1lt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -362,244 +600,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/03/stupidrpg-filters/" data-id="cior1adg4003oowoh345zgynf" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/09/03/stupidrpg-filters/" data-id="ciowf218y003ofwoho65nz3tw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-profiling" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/02/profiling/">Profiling</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/09/02/profiling/">
-      <time datetime="2015-09-02T07:00:00.000Z" itemprop="datePublished">2015-09-02</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>The SRPG engine doesn’t have much built-in profiling (performance, memory usage, etc), and to be honest I don’t know much about profiling in Javascript. It’s one of the many low-priority items I need to research, so I’m making note of it here.</p>
-<p>The engine doesn’t currently prune unused/inactive objects, leading to some concern that it will scale poorly once more of the game is built (e.g. running NPC ticks for characters across the world, consuming memory by keeping locations that can no longer be accessed, etc).</p>
-<p>On the other hand, I don’t want to optimize prematurely. It’s possible the total size of the game won’t be big enough to cause problems on a decent computer.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/02/profiling/" data-id="cior1adhn004mowohu8eu4oxy" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-stupidrpg-putting-the-prelude-together" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/01/stupidrpg-putting-the-prelude-together/">StupidRPG: Putting the Prelude Together</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/09/01/stupidrpg-putting-the-prelude-together/">
-      <time datetime="2015-09-01T07:00:00.000Z" itemprop="datePublished">2015-09-01</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>The Black Box is getting close to complete, so I want to review my goals and make sure what I’ve built (am building) is right. This list is not exhaustive, but it’s a start.</p>
-<p>At the beginning of the prelude/prologue:</p>
-<ul>
-<li>Don’t assume the player knows how to play interactive fiction. Conventions may not be clear, some hand-holding may be required.</li>
-<li>The player has one or two utility items (wand, boots, notebook, etc).</li>
-<li>The player knows nothing about the story, the world, the tone, or the game mechanics.</li>
-</ul>
-<p>In the middle:</p>
-<ul>
-<li>The player is proficient at moving around the world, interacting with objects, and speaking to NPCs.</li>
-<li>The player has acquired additional items, such as the Rainbow Sword.</li>
-<li>The player has started one or more quests, and may have completed a side quest already.</li>
-<li>The tone of the game and the core mechanics are established. A small amount of worldbuilding has been done.</li>
-</ul>
-<p>At the end:</p>
-<ul>
-<li>The player has completed multiple quests and received rewards for them.</li>
-<li>The player has a general idea of what the overall story is about.</li>
-<li>The tone of the game is firmly established, but there will still be surprises.</li>
-<li>The player has interacted with multiple NPCs, who may be friends or enemies now based on the player’s actions.</li>
-<li>The player has had an opportunity to use at least one of their class/race traits.</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/09/01/stupidrpg-putting-the-prelude-together/" data-id="cior1adfn0036owohx6aw9e18" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-weekly-update-7" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/31/weekly-update-7/">Weekly Update #7</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/08/31/weekly-update-7/">
-      <time datetime="2015-08-31T07:00:00.000Z" itemprop="datePublished">2015-08-31</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Slow week. Haven’t had much free time.</p>
-<p><strong>Changelog:</strong></p>
-<ul>
-<li>Simplified and expanded some of the Prelude plot points</li>
-<li>Planned out a new character and some quest changes</li>
-</ul>
-<p><strong>Known Issues:</strong></p>
-<ul>
-<li>Nothing new</li>
-</ul>
-<p><strong>Next Up:</strong></p>
-<ul>
-<li>Fill out Ranger Bob’s dialogue tree.</li>
-<li>Add The Twins.</li>
-<li>Wrap up litterbug quest</li>
-<li>Fill in new character</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/31/weekly-update-7/" data-id="cior1adca000kowoh0v89elik" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-reading-list-update" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/30/reading-list-update/">Reading List Update</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/08/30/reading-list-update/">
-      <time datetime="2015-08-30T07:00:00.000Z" itemprop="datePublished">2015-08-30</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>I finished reading two books recently, one about the making of Karateka (a game I’ve never played, but by the developer of the original Prince of Persia, which I’ve also never played), and the other about game design in general.</p>
-<h2 id="Karateka"><a href="#Karateka" class="headerlink" title="Karateka"></a>Karateka</h2><p>This book was the inspiration for this dev journal, as it’s less of a “how I made a game” book and more of a “here is everything I wrote down as a teenager while making a game” book. A lot of it doesn’t have broader applicability to game development, but certain portions resonated with me. Especially the sections about motivation. It’s easy (sometimes) to know what you should do. It’s often harder to do it, for reasons that are both mystifying and frustrating.</p>
-<p>Motivation isn’t quite the right word. There seems to be a difference between being motivated and actually doing something. The latter is an ongoing challenge for me. Sometimes I find myself simply doing nothing, paralyzed not with indecision but with…? I’m working on it.</p>
-<h2 id="The_Art_of_Game_Design_3A_A_Book_of_Lenses"><a href="#The_Art_of_Game_Design_3A_A_Book_of_Lenses" class="headerlink" title="The Art of Game Design: A Book of Lenses"></a>The Art of Game Design: A Book of Lenses</h2><p>I just finished reading this, and I already feel like I need to re-read it. If a book can make you a better game designer, it’s this one. It doesn’t have all the answers, but it has a glut of food for thought. “A Book of Lenses” is a very apt description/subtitle: it provides many, many different ways of analyzing game design, based on psychology, storytelling conventions, logic, and dozens of other facets.</p>
-<p>This dev journal is mostly focused on the creation of StupidRPG (a game), but many of the lenses from <em>The Art of Game Design</em> are applicable to general software development. Understanding your audience, how they will use your product, and what you’re trying to accomplish are incredibly important. I wouldn’t hesitate to recommend this book to colleagues who have no interest in game development, but are involved in product development in some capacity.</p>
-<h2 id="Next_Up"><a href="#Next_Up" class="headerlink" title="Next Up"></a>Next Up</h2><p>I’ve started reading <em>Gödel, Escher, Bach: An Eternal Golden Braid</em>, by Douglas R. Hofstadter. The existence of this sentence makes me feel pretentious somehow. I don’t understand this book yet, beyond the shared concept of ‘loops’ in fields of mathematics, music, logic, etc. The book (a reprint) contains a lengthy forward which addresses (sort of) the intent and meaning of the work. The gist seems to be that most people misinterpret what it’s about. This seems reasonable; a piece of literature that took decades to produce is unlikely to be fully comprehended on first reading.</p>
-<p>On the plus side, it has a lot of interesting information about fugues, fractals, and other things starting with F.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/08/30/reading-list-update/" data-id="cior1adhl004lowohhdtwstby" class="article-share-link">Share</a>
-      
-      
     </footer>
   </div>
   
@@ -609,7 +614,7 @@
 
     
       <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/page/26/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><a class="page-number" href="/page/26/">26</a><span class="page-number current">27</span><a class="page-number" href="/page/28/">28</a><a class="page-number" href="/page/29/">29</a><span class="space">&hellip;</span><a class="page-number" href="/page/32/">32</a><a class="extend next" rel="next" href="/page/28/">Next &raquo;</a>
+        <a class="extend prev" rel="prev" href="/page/26/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><a class="page-number" href="/page/26/">26</a><span class="page-number current">27</span><a class="page-number" href="/page/28/">28</a><a class="page-number" href="/page/29/">29</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/">33</a><a class="extend next" rel="next" href="/page/28/">Next &raquo;</a>
       </nav>
     </section>
       
