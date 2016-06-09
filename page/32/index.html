@@ -60,6 +60,612 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-reading-list" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/02/reading-list/">Reading List</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/02/reading-list/">
+      <time datetime="2015-08-02T07:00:00.000Z" itemprop="datePublished">2015-08-02</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>As part of my programming adventures, I have several books I’m in the midst of reading to broaden my horizons:</p>
+<ul>
+<li><a href="http://amzn.com/0201889544" target="_blank" rel="external">The C++ Programming Language</a> by Bjarne Stroustrup</li>
+<li><a href="http://amzn.com/0123694965" target="_blank" rel="external">The Art of Game Design</a> by Jesse Schell</li>
+<li><a href="http://amzn.com/B00B7R87FU" target="_blank" rel="external">Creating Interactive Fiction With Inform 7</a> by Aaron A. Reed</li>
+<li><a href="http://amzn.com/0465026567" target="_blank" rel="external">Gödel, Escher, Bach: An Eternal Golden Braid</a> by Douglas R. Hofstadter</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/02/reading-list/" data-id="cip80lwqf004jugohakjwo4le" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-stupidrpg-callbacks" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/01/stupidrpg-callbacks/">StupidRPG: Callbacks</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/08/01/stupidrpg-callbacks/">
+      <time datetime="2015-08-01T07:00:00.000Z" itemprop="datePublished">2015-08-01</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Callbacks are functions on an object, typically executed based on an event somewhere in the game. For example, each time a game ‘tick’ occurs, an AI callback is triggered on every living thing (allowing them to move, attack, or take other actions). SRPG has a couple types of callbacks, which I hope to consolidate in future refactoring.</p>
+<h2 id="Callback_Types"><a href="#Callback_Types" class="headerlink" title="Callback Types"></a>Callback Types</h2><p>The current callback behavior is slightly convoluted, due to changes mid-development. Initially, each object could only have one callback of a given name, which proved to be too limiting. It meant that I couldn’t stack callbacks to allow objects to inherit behaviors <em>and</em> expand on them.</p>
+<p>The quick solution to this was to use an array of functions, and instead of setting the callback directly, add it to the end of the array. This works fine for the most part, but the code feels a bit clunky for more advanced use cases, and due to the mix of new code and old code, I have to perform several additional checks before executing callbacks.</p>
+<h2 id="Refactoring"><a href="#Refactoring" class="headerlink" title="Refactoring"></a>Refactoring</h2><p>One of my refactoring tasks is to clean up the callbacks in a few ways:</p>
+<ul>
+<li>Create a Callback prototype which all callbacks inherit from</li>
+<li>Standardize all object callback fields to use an array (no direct references to single callbacks)</li>
+<li>Standardize callback return values to let the caller know definitively how/whether the callback was handled</li>
+</ul>
+<p>Reorganizing will allow me to add more advanced callback functionality as well, such as specifying event filters for callbacks, prioritizing callbacks, and allowing callbacks to cancel events entirely (not allowing other callbacks to run).</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/08/01/stupidrpg-callbacks/" data-id="cip80lwoj003uugohd7kf8rb5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-side-project-power-cards" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/31/side-project-power-cards/">Side Project: Power Cards</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/07/31/side-project-power-cards/">
+      <time datetime="2015-07-31T07:00:00.000Z" itemprop="datePublished">2015-07-31</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>One of the many shortcomings of my technology toolkit is C++. I’ve tinkered with it here and there over the years, but the vast majority of my time and energy has gone into easier languages such as C#, Java, and PHP. I set out to rectify that recently by 1) borrowing a copy of <a href="http://amzn.com/0201889544" target="_blank" rel="external">The C++ Programming Language</a> from a generous friend, and 2) diving into a hands-on project well beyond my capabilities. If learning by beating your head against a compiler was a valid way of learning programming, I’d be a Computer Science professor.</p>
+<h2 id="The_Project"><a href="#The_Project" class="headerlink" title="The Project"></a>The Project</h2><p>I currently GM two systems: Dungeons &amp; Dragons 5th Edition, and <a href="http://www.numenera.com/" target="_blank" rel="external">Numenera</a> (a more recent system by former D&amp;D designer Monte Cook). For D&amp;D, Wizards of the Coast had a set of “power cards” produced for every spell in the game. They’re standard playing card size, excellent quality (sturdy and laminated), and big time-savers at the table, especially for newer players or anyone with an inordinate number of spells (hello Wizard!). For most spells it’s no longer necessary to look them up in the rulebook (a few have too much information to fit on a card).</p>
+<p>Numenera doesn’t have power cards. Maybe they’ll get around to it at some point (they’ve released card decks for random items and XP). In the meantime, it seemed like a fun project. The basic idea is:</p>
+<ol>
+<li>Copy the powers (Esoteries for the Nano type/class, Tricks of the Trade for Jacks, and Fighting Moves for Glaives) from the source book(s).</li>
+<li>Organize the powers in Excel (separating fields for character type, power tier, title, description, cost and so forth).</li>
+<li>Export to CSV.</li>
+<li>Import the CSV in my C++ program, loop through the entries and output nicely-formatted card images using ImageMagick.</li>
+<li>Print the cards, either on cardstock at home or via a print service / shop.</li>
+</ol>
+<h2 id="Step_One_3A_Learn_C++"><a href="#Step_One_3A_Learn_C++" class="headerlink" title="Step One: Learn C++"></a>Step One: Learn C++</h2><p>This process will continue through every other step and beyond. C++ requires more attention to things like memory management, use of references/pointers, and in general has a less friendly syntax than a language like C#. I have several blocks of code that work for reasons still unknown to me, and several things I tried previously failed to work due to equally mysterious causes.</p>
+<h2 id="Step_Two_3A_Learn_ImageMagick"><a href="#Step_Two_3A_Learn_ImageMagick" class="headerlink" title="Step Two: Learn ImageMagick"></a>Step Two: Learn ImageMagick</h2><p>I spent way more time on this step than I should have. Most of it can be explained by my inexperience with C++ (and with native Windows development), but it <em>seems</em> like there are a few areas where ImageMagick’s actual behavior doesn’t match its documentation. I eventually got it compiled and working with my program (while learning a lot about lib files and DLL loading along the way).</p>
+<p>Once I had the library working, drawing elements to an image and saving it was surprisingly easy. Working with text, however, is another story. Among other issues, ImageMagick doesn’t seem to have built-in support for text wrapping. Since I need to write decent-sized chunks of text and I don’t feel like using a monospaced font, I ended up writing what may be the worst text wrapping function of all time.</p>
+<h2 id="Step_Three_3A_Write_the_Worst_Text-Wrapping_Function_of_All_Time"><a href="#Step_Three_3A_Write_the_Worst_Text-Wrapping_Function_of_All_Time" class="headerlink" title="Step Three: Write the Worst Text-Wrapping Function of All Time"></a>Step Three: Write the Worst Text-Wrapping Function of All Time</h2><p>Ok. So there’s no built-in text wrapping. There’s also no built-in way to measure the size of a piece of text. I <em>think</em> there’s a non-ImageMagick way to get the font data that would let me do that, but at this point my head is already full of too much other new information. So I decided to work around the issue using only ImageMagick’s functionality and plain C++. I noticed that when drawing text, you can specify a background color, which will draw a colored rectangle behind the text. You can also sample pixels from anywhere in the image, which turns out to be pretty handy.</p>
+<p>Here’s how the text wrap works:</p>
+<ul>
+<li>Set the background color AND the text color to red</li>
+<li>Write the text onto a temp image</li>
+<li>Get a pixel at the right side of the image</li>
+<li>If the pixel is red, the text is too long to fit on the line</li>
+<li>Cut a word from the end of the text and try again</li>
+<li>If it’s stupid but it works, it’s not stupid</li>
+</ul>
+<p>I did perform some optimizations, as this turned out to be (predictably) slow with longer strings. In particular, I picked a semi-arbitrary character count that I think is unlikely to ever fit on a single line, and I only write/check that amount of text at a time. If I have 800 characters of text to write, chances are no more than about 50 characters will fit on each line (for the font size and image size I’m using). This reduces the number of failed attempts for each line considerably. Each time I write a line, I get the next ~50 characters, move down to the next line and continue.</p>
+<p>The function currently lacks a few features (some more important than others):</p>
+<ul>
+<li>Doesn’t handle overflow off the bottom of the image</li>
+<li>Doesn’t minimize wasted space at ends of lines (e.g. sometimes it might be better to leave a larger gap at the end of one line to use the next few more optimally)</li>
+<li>Only handles left or right alignment; I’d like to have the text justified</li>
+</ul>
+<h2 id="Step_4_3A_Tidy_Up_and_Print_21"><a href="#Step_4_3A_Tidy_Up_and_Print_21" class="headerlink" title="Step 4: Tidy Up and Print!"></a>Step 4: Tidy Up and Print!</h2><p>With the basic functionality working, I put some time into cleaning up the output, designing some card backs, and doing general cleanup. I’m almost ready to print the actual cards.</p>
+<img src="/2015/07/31/side-project-power-cards/ExampleCard.png" alt="Example card" title="Example card">
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/07/31/side-project-power-cards/" data-id="cip80lwpp0047ugoh6o5t68et" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cplusplus/">cplusplus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/numenera/">numenera</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-stupidrpg-the-rpg" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/30/stupidrpg-the-rpg/">StupidRPG: The RPG</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/07/30/stupidrpg-the-rpg/">
+      <time datetime="2015-07-30T07:00:00.000Z" itemprop="datePublished">2015-07-30</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>There are many different types of RPGs, and many different types of players. StupidRPG is based on my own experiences and preferences, so there are a few elements I’m prioritizing above the rest in the game.  Here’s a small selection of the most significant items.</p>
+<h2 id="Self-Expression_/_Player_Agency"><a href="#Self-Expression_/_Player_Agency" class="headerlink" title="Self-Expression / Player Agency"></a>Self-Expression / Player Agency</h2><p>Most RPGs give the player a lot of options for how they build their character and interact with the world. In essence, the player feels as if the events of the game are being influenced by their actions (i.e. they are not simply triggering the next pre-scripted segment). Pen-and-paper RPGs offer the most freedom in this regard, but computer RPGs can offer a great deal of player agency as well.</p>
+<h2 id="Races__26amp_3B_Classes"><a href="#Races__26amp_3B_Classes" class="headerlink" title="Races &amp; Classes"></a>Races &amp; Classes</h2><p>Race and/or class selection are mainstays of traditional RPGs; one of the first steps in customizing your character and dictating your role in the game. Effects are sometimes mechanical, sometimes merely flavor.</p>
+<h2 id="Quests"><a href="#Quests" class="headerlink" title="Quests"></a>Quests</h2><p>Quests are ubiquitous in computer RPGs (and common, though often in a more abstract way, in pen-and-paper games). They’re an easy way to give the player direction, track their progress, and offer rewards for specific actions in the world. Plus, what RPG would be complete without an obnoxious fetch quest?</p>
+<h2 id="Leveling_Up"><a href="#Leveling_Up" class="headerlink" title="Leveling Up"></a>Leveling Up</h2><p>Becoming more powerful is another nigh-universal trait of RPGs, and StupidRPG is no different. While the game (probably) won’t have XP, it will have a leveling mechanism to expand the player’s capabilities. Whether this means a skill tree, static upgrades, or something else, I’m not yet sure.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/07/30/stupidrpg-the-rpg/" data-id="cip80lwn4002xugohjg8r006p" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-bio-ranger-bob" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/29/bio-ranger-bob/">Bio: Ranger Bob</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/07/29/bio-ranger-bob/">
+      <time datetime="2015-07-29T07:00:00.000Z" itemprop="datePublished">2015-07-29</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <ul>
+<li><strong>Alignment:</strong> Lawful Good</li>
+<li><strong>Age:</strong> 51</li>
+<li><strong>Traits:</strong> Honest, curmudgeonly</li>
+<li><strong>Hobbies:</strong> Birdwatching, astronomy</li>
+</ul>
+<p>Ranger Bob is the watcher and protector of the Forest (the starting region in StupidRPG). He stands vigilant guard from his watchtower, venturing out only to resupply or to deal with emergencies (such as local teens violating curfew at the local hot springs). He doesn’t like to talk much, but for the right adventurer he’ll open up and offer bits of wisdom or general observations about the state of the world relative to the way things used to be.</p>
+<p>Bob, son of a baker and a seamstress, hails from the local town of Barony (née Torrensbürg). He has always had a deep affinity for nature, frequently sneaking past the city guards to venture into the deep woods as a child. As an adult, he took over the forest watch after the retirement of the venerable Ranger Karen.</p>
+<p>Ranger Bob says:</p>
+<blockquote>Hmph.</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/07/29/bio-ranger-bob/" data-id="cip80lwvz007cugohwqs1c9ed" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-stupidrpg-everything-is-an-entity" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/28/stupidrpg-everything-is-an-entity/">StupidRPG: Everything is an Entity</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/07/28/stupidrpg-everything-is-an-entity/">
+      <time datetime="2015-07-28T07:00:00.000Z" itemprop="datePublished">2015-07-28</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>The most basic element in SRPG is an Entity, which you can think of as a bag of stuff (where ‘stuff’ can mean a name, a list of things, references to other Entities, or functions). Items, locations, and NPCs are all Entities (plus more stuff).</p>
+<p>The basic entity definition (or prototype) looks like this:</p>
+<p><div class="highlight-header">ECS: Entity Prototype</div><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Entity = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.key = <span class="string">''</span>; <span class="comment">// Identifier</span></span><br><span class="line">	<span class="keyword">this</span>.parent = <span class="literal">null</span>; <span class="comment">// Parent entity</span></span><br><span class="line">	<span class="keyword">this</span>.children = []; <span class="comment">// Child entities</span></span><br><span class="line">	<span class="keyword">this</span>.components = []; <span class="comment">// Component list, for convenience / searching</span></span><br><span class="line">	<span class="keyword">this</span>.onComponentAdd = []; <span class="comment">// Add component callback</span></span><br><span class="line">	<span class="keyword">this</span>.tags = []; <span class="comment">// Tag list; generally the same as the component list</span></span><br><span class="line">	<span class="keyword">this</span>.persist = [<span class="string">'parent'</span>]; <span class="comment">// Raw attributes to persist</span></span><br><span class="line">	<span class="keyword">this</span>.persistActive = <span class="literal">true</span>; <span class="comment">// Save objects by default</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>Nothing super exciting here. The base entity mostly defines ‘housekeeping’ items: an identifier, references to parent and child entities, etc. I want to focus on Components right now, as that’s the most important part of ‘everything is an entity.’</p>
+<p>Functionality and data associated with game objects are defined by Components. You can think of a Component as a ‘type of thing’. Examples include Place (a location), Region (a group of Places), Living (an entity that is alive), Container (an object that holds other objects), and so forth. Most components correlate to some kind of real-world designation.</p>
+<p>The most basic Component is called Thing. When I said ‘everything is an entity,’ I could have instead said that ‘everything is a thing.’ A Thing, of course, is also an Entity, but as a Thing it has a variety of in-world properties.</p>
+<p>Things have a bunch of properties included by default, acting as the building blocks of item interaction in the game world:</p>
+<ul>
+<li>name (e.g. ‘blue flowers’)</li>
+<li>descriptions (a list of descriptions for different contexts)</li>
+<li>place (the current location of the thing)</li>
+<li>spawn (the starting location of the thing)</li>
+</ul>
+<p>There are a bunch of additional elements that make up a thing (mostly callback functions to handle basic behaviors: picking up and dropping the thing, adding more components to the thing, which data to save for the thing, etc). Certain basic items in the game don’t need any additional components, but most will have their interactivity and behaviors further expanded.</p>
+<p>For example, the Living component adds:</p>
+<ul>
+<li>hp (hit points)</li>
+<li>onTick (a callback function, run on each game ‘tick’, allowing the object to take actions)</li>
+<li>onHit (callback, run any time the object is attacked)</li>
+<li>onDeath (callback, run when the object’s HP is reduced to 0)</li>
+</ul>
+<h2 id="Example_3A_Containers"><a href="#Example_3A_Containers" class="headerlink" title="Example: Containers"></a>Example: Containers</h2><p>The Container component is a bit more advanced, as it is actually dependent on the Holder component. Components can specify a dependency list (meaning other component(s) the base object should also have). The Holder component specifies functionality used by both the Container (an object in which other objects can be placed) and Supporter (an object <em>on</em> which other objects can be placed) components.</p>
+<p>The Holder component specifies:</p>
+<ul>
+<li>capacity (how many objects can be held)</li>
+<li>isTransparent (whether the object can be seen through)</li>
+<li>canTakeFrom and canPutInto (whether things can currently be placed in/on the holder)</li>
+<li>inventory (a list of objects being held)</li>
+</ul>
+<p>The Container component adds:</p>
+<ul>
+<li>isOpen (whether the container is open)</li>
+<li>onOpen and onClose (callbacks, run when the container is opened/closed)</li>
+<li>onList (callback, overrides a basic Thing callback and controls how the object’s description is printed)</li>
+</ul>
+<p>The onList callback is particularly notable, as it changes based on the isTransparent property (from Holder) and the isOpen property (from Container). If the container is open <em>or</em> transparent, its contents are listed when the object is described. Otherwise, only the object itself is described.</p>
+<p>The Supporter component also has an onList callback, but it’s much simpler as it doesn’t need to pay attention to transparency or openness.</p>
+<h2 id="Component_Interactions"><a href="#Component_Interactions" class="headerlink" title="Component Interactions"></a>Component Interactions</h2><p>In general, there are no hard-coded restrictions on which components (or how many) can be applied to a particular entity. This has advantages (e.g. you can do interesting things like allowing a location to be alive and move around the world) and disadvantages (e.g. whatever happens when you add two components, each of which overrides the ‘onList’ behavior). Interactions can become complex or hard to predict. I was aware of this while building the system, and felt that the disadvantages could usually be worked around, while the advantages were particularly exciting to me.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/07/28/stupidrpg-everything-is-an-entity/" data-id="cip80lwob003pugoh89vpyubj" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-weekly-update-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/27/weekly-update-2/">Weekly Update #2</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/07/27/weekly-update-2/">
+      <time datetime="2015-07-27T07:00:00.000Z" itemprop="datePublished">2015-07-27</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Stuck on that dialogue node issue. Very odd behavior where multiple dialogue trees (one per NPC) are interfering with each other. Haven’t been able to resolve it yet.</p>
+<p><strong>Changelog:</strong></p>
+<ul>
+<li>Started refactoring the dialogue node callbacks. Current code is hard to debug.</li>
+</ul>
+<p><strong>Known Issues:</strong></p>
+<ul>
+<li>Dialogue node callbacks aren’t working right. Need to refactor.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/07/27/weekly-update-2/" data-id="cip80lwjj0015ugoh7atjlrho" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-with-graphics-sound" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/26/with-graphics-sound/">With Graphics &amp; Sound</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/07/26/with-graphics-sound/">
+      <time datetime="2015-07-26T07:00:00.000Z" itemprop="datePublished">2015-07-26</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Short post today. I’d like to give a quick overview of the ‘graphics and sound’ portion of the statement ‘StupidRPG is a text adventure with graphics and sound.’</p>
+<h2 id="Sound"><a href="#Sound" class="headerlink" title="Sound"></a>Sound</h2><p>I’m the least musically-inclined person I’ve ever met, so I made the wise choice of marrying a composer. Sound in SRPG includes soundscapes (background noises) and music (the stuff with notes and whatnot). Sound/music can be optionally enabled during the intro portion of the game, and plays via an HTML5 audio element. Music can be cued by entering a new region or by triggering a specific event. Each track can provide settings for volume, looping, and closed captions.</p>
+<h2 id="Graphics"><a href="#Graphics" class="headerlink" title="Graphics"></a>Graphics</h2><p>This part is still up in the air, but it’s a definite goal for the game. In particular, I’d like to make use of the empty sidebar areas for some nice ambient/background art, varied per location/region. Highlighting key items and NPCs graphically would be a nice addition as well. One of the nice things about the way the engine is built is that actions/input can be triggered from anywhere (for example, clicking on a bush in the sidebar could trigger the <code>LOOK AT BUSH</code> action).</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/07/26/with-graphics-sound/" data-id="cip80lwi70007ugohdy1ppbhz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-stupidrpg-natural-language-processing" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/25/stupidrpg-natural-language-processing/">StupidRPG: Natural Language Processing</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/07/25/stupidrpg-natural-language-processing/">
+      <time datetime="2015-07-25T07:00:00.000Z" itemprop="datePublished">2015-07-25</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Language parsing is hard. The parser in SRPG took me a couple months to get working the way I wanted, and it’s a very simple parser compared to others I’ve seen. I’ve previously listed the command patterns (or sentence patterns) SRPG can understand; the list has grown gradually during the course of SRPG’s development, but at this point it’s unlikely to change much prior to the first release. It covers 99% of the patterns I’m interested in supporting. </p>
+<p>This will be a long, moderately-technical post.</p>
+<p><div class="highlight-header">Pattern List Reference</div><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Pattern list</span></span><br><span class="line"><span class="comment">// Cannot start with a modifier</span></span><br><span class="line"><span class="comment">// In order of priority (highest to lowest):</span></span><br><span class="line"><span class="string">'patterns'</span> = [</span><br><span class="line">    <span class="string">'VERB'</span>,						        <span class="comment">// inventory</span></span><br><span class="line">    <span class="string">'VERB NOUN'</span>, 				        <span class="comment">// eat baby</span></span><br><span class="line">    <span class="string">'VERB MODIFIER'</span>,			        <span class="comment">// saunter west</span></span><br><span class="line">    <span class="string">'VERB MODIFIER NOUN'</span>,		        <span class="comment">// get in closet</span></span><br><span class="line">    <span class="string">'VERB NOUN MODIFIER NOUN'</span>,	        <span class="comment">// attack goblin with hammer</span></span><br><span class="line">    <span class="string">'VERB MODIFIER MODIFIER NOUN'</span>,      <span class="comment">// look north through telescope</span></span><br><span class="line">    <span class="string">'VERB MODIFIER NOUN MODIFIER NOUN'</span>, <span class="comment">// look at bob through telescope</span></span><br><span class="line">    <span class="comment">// Overflow patterns</span></span><br><span class="line">    <span class="string">'VERB MODIFIER NOUN MODIFIER TEXT'</span>, <span class="comment">// talk to goblin about greatest fears</span></span><br><span class="line">    <span class="string">'VERB MODIFIER MODIFIER TEXT'</span>,      <span class="comment">// look north through telescope saucily</span></span><br><span class="line">    <span class="string">'VERB NOUN MODIFIER TEXT'</span>,          <span class="comment">// ask bob about back pain</span></span><br><span class="line">    <span class="string">'VERB MODIFIER TEXT'</span>                <span class="comment">// talk about floops</span></span><br><span class="line">];</span><br></pre></td></tr></table></figure></p>
+<p>Patterns are only the tip of the iceberg though. A lot of work goes on behind the scenes to convert arbitrary text from the player into a meaningful action within the game. The end result functions similarly to a lexer/parser in that it processes a string via a set of grammar rules. The parser performs the following steps:</p>
+<ol>
+<li>Do basic sanitization (e.g. remove extra whitespace).</li>
+<li>If a command interrupt is set, give it a chance to take over.</li>
+<li>For each pattern, do:</li>
+<li><ul>
+<li>Convert the input string to lowercase for easier parsing.</li>
+</ul>
+</li>
+<li><ul>
+<li>Break the new string into tokens (words).</li>
+</ul>
+</li>
+<li><ul>
+<li>Do sanity checks.</li>
+</ul>
+</li>
+<li><ul>
+<li>For each token in the pattern, try to match to the next available command token(s).</li>
+</ul>
+</li>
+<li>If no VERB was matched, return an error. All commands have to contain a verb.</li>
+<li>If a portion of the input wasn’t matched, return an error.</li>
+<li>Apply filter restrictions (more on that later), and return an error if the filters fail.</li>
+<li>Dispatch the action to the relevant object or verb.</li>
+</ol>
+<p>Some steps are more significant than others. I’ll go over the more important/interesting ones in detail.</p>
+<h2 id="Pattern_Loop__28Step_3_29"><a href="#Pattern_Loop__28Step_3_29" class="headerlink" title="Pattern Loop (Step 3)"></a>Pattern Loop (Step 3)</h2><p>The pattern loop compares each command pattern to the input tokens. Most of the work is done in steps 6-7, but before the process gets there, the input string is segmented and a couple checks are performed. Notably, if the number of input tokens is less than the number of pattern tokens, it skips to the next pattern without doing any more (wasted) work. If a <code>halt</code> has been triggered by the token matching, the pattern processing will stop rather than continuing to the next pattern.</p>
+<h2 id="Token_Matching__28Steps_6-7_29"><a href="#Token_Matching__28Steps_6-7_29" class="headerlink" title="Token Matching (Steps 6-7)"></a>Token Matching (Steps 6-7)</h2><p>For each token in the pattern, the NLP attempts to match as many of the input tokens as possible.</p>
+<p>Here’s a simple example: <code>GO NORTH</code>. This is going to match the <code>VERB MODIFIER</code> pattern (the third pattern). First, however, the NLP will try to use the first pattern, <code>VERB</code>. It will look for a verb called ‘go north’, and upon failing to find one, it will continue to the next pattern: <code>VERB NOUN</code>. This time it will successfully match the verb ‘go’, but it will fail on the second pattern token, <code>NOUN</code>, after failing to find an <strong>object</strong> called ‘north’. Finally, it will get to the third pattern: <code>VERB MODIFIER</code>. As in the 2nd attempt, it will match the verb ‘go’, and then match the modifier ‘north’ (available for the ‘go’ verb).</p>
+<p>Longer input strings take a lot more work. Keep in mind that the NLP will always try to match as much text as possible in each step. A long command like <code>LOOK AT THE MOON THROUGH THE TELESCOPE</code> will end up making the following comparisons for the command pattern <code>VERB NOUN MODIFIER NOUN</code>:</p>
+<ul>
+<li>Is ‘look at the moon through the telescope’ a verb? <strong>No</strong></li>
+<li>Is ‘look at the moon through the’ a verb? <strong>No</strong></li>
+<li>Is ‘look at the moon through’ a verb? <strong>No</strong></li>
+<li>Is ‘look at the moon’ a verb? <strong>No</strong></li>
+<li>Is ‘look at the’ a verb? <strong>No</strong></li>
+<li>Is ‘look at’ a verb? <strong>Yes!</strong></li>
+<li>Is ‘the moon through the telescope’ a noun? <strong>No</strong></li>
+<li>Is ‘the moon through the’ a noun? <strong>No</strong></li>
+<li>Is ‘the moon through’ a noun? <strong>No</strong></li>
+<li>Is ‘the moon’ a noun? <strong>Yes!</strong></li>
+<li>Is ‘through the telescope’ a modifier? <strong>No</strong></li>
+<li>Is ‘through the’ a modifier? <strong>No</strong></li>
+<li>Is ‘through’ a modifier? <strong>Yes!</strong></li>
+<li>Is ‘the telescope’ a noun? <strong>Yes!</strong></li>
+</ul>
+<p>If you’re feeling cross-eyed, don’t worry, that’s perfectly normal.</p>
+<p>The verb matching function is listed below. The functions for matching verbs, nouns, and modifiers all work in basically the same way. They get a subset of the provided tokens, starting with all of the tokens, and shrink the set until they get a match or run out of tokens.</p>
+<p><div class="highlight-header">NLP.matchVerb()</div><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'matchVerb'</span> = <span class="function"><span class="keyword">function</span>(<span class="params">string</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> tokens = string.split(<span class="string">' '</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Loop through token list, try to parse longest first (most tokens)</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = tokens.length; i &gt; <span class="number">0</span>; i--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">var</span> verb = tokens.slice(<span class="number">0</span>, i).join(<span class="string">' '</span>);</span><br><span class="line">        <span class="keyword">var</span> action = ECS.getAction(verb);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(action != <span class="literal">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> &#123;<span class="string">'match'</span>:action,<span class="string">'string'</span>:tokens.slice(i).join(<span class="string">' '</span>)&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="string">'match'</span>:<span class="literal">null</span>,<span class="string">'string'</span>:string&#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>On line 8, the function asks the ECS for a verb with the given alias. Most verbs have multiple aliases. Here’s the list for the ‘look’ command: <code>‘aliases’:[‘look’,’l’,’look at’,’peer’,’glance’,’inspect’,’examine’,’x’]</code>.</p>
+<p>If a verb was found, the match is returned in two parts: 1) the verb object, and 2) the unmatched remainder of the text. In the above example sequence, matchVerb would return ‘the moon through the telescope’ along with the ‘look’ verb.</p>
+<p>Eventually, the NLP matches all the input tokens or determines that not all tokens can be matched. The latter case leads into step 9.</p>
+<h2 id="Partial_Comprehension__28Step_9_29"><a href="#Partial_Comprehension__28Step_9_29" class="headerlink" title="Partial Comprehension (Step 9)"></a>Partial Comprehension (Step 9)</h2><p>Good feedback is important in the input processor. It should always be as clear as possible to the player why a command failed, so they can resolve it with minimal fuss. Let’s look at two examples:</p>
+<ul>
+<li><code>EAT THE CAMEL</code></li>
+<li><code>GO NORTH WHILE CARTWHEELING</code></li>
+</ul>
+<p>The first example is handled by the NLP directly. A generic response is provided, because the verb ‘eat’ was understood, but ‘the camel’ wasn’t identified as an object. The response will be: <code>I understood everything up until ‘the camel’. You want to eat, plus something.</code></p>
+<p>Ok, that’s a good start. The phrasing is a little clunky in this context (probably in most contexts, honestly), but it gets the message across. The player should probably verify that there is indeed a camel in the current location. We can do better though. The NLP allows verbs to specify their own callback for handling failed inputs.</p>
+<p>The second example uses the ‘move’ verb (‘go’ is an alias for ‘move’, and ‘north’ is one of the available modifiers). Entering the command above will produce this response, custom-tailored by the verb itself: <code>I understand you want to go somewhere, but I don’t know how to go (while cartwheeling).</code></p>
+<p>Better.</p>
+<h2 id="Filters__28Step_10_29"><a href="#Filters__28Step_10_29" class="headerlink" title="Filters (Step 10)"></a>Filters (Step 10)</h2><p>I’ll have to save a more thorough discussion of Filters for another post. The basic idea is that the NLP’s parsing can be interrupted if certain conditions are met. For example, the <code>LOOK</code> and <code>TAKE</code> verbs have a ‘darkness’ filter applied to them. If the current location is dark, the filter fails (canceling the action).</p>
+<h2 id="Dispatching_Actions__28Step_11_29"><a href="#Dispatching_Actions__28Step_11_29" class="headerlink" title="Dispatching Actions (Step 11)"></a>Dispatching Actions (Step 11)</h2><p>Alright. Tokens are parsed, command patterns attempted, filters passed. We’ve got a verb, nouns (maybe), modifiers (maybe). Time to actually trigger the command. If we parsed any nouns, we also decide which one is the target and try to hand control off to it. In general, most actions in the game can be customized per-object. If the object doesn’t provide a callback for the verb, or the object’s callback declined to handle the action, control is instead handled to the verb’s default callback.</p>
+<p>In either case, an object containing the matched noun(s), matched modifier(s), and the full input string, is passed to the callback.</p>
+<p>That’s it. The NLP’s job is done.</p>
+<h2 id="Areas_for_Improvement"><a href="#Areas_for_Improvement" class="headerlink" title="Areas for Improvement"></a>Areas for Improvement</h2><p>I don’t plan on doing any major refactoring of the NLP in the near future. I’ve already spent more time on it than I should, and it handles pretty much every type of <em>useful</em> command I can think of right now. That said, it has a few notable shortcomings and areas for improvement.</p>
+<p><strong>Precedence:</strong> if the player enters a command like <code>TALK ABOUT SELF</code> (which matches the very last command pattern in the list), the NLP will first attempt to match the command against every other pattern in the list. It’s designed to ‘fail fast’ if the string can’t possibly match the current pattern, but it still feels a bit inefficient to me. I can’t justify more time tinkering with it right now, as it works fine I haven’t identified any performance issues. Just a feeling there’s probably a better way.</p>
+<p><strong>Action Targets:</strong> currently, the NLP interprets the first noun matched as the target of the action. This leads to problems with commands like <code>LOOK THROUGH TELESCOPE AT BOB</code> vs. <code>LOOK AT BOB THROUGH TELESCOPE</code>, which will interpret the telescope and Bob as the target of the command, respectively. When control is passed to the telescope (first case), the command works fine. When control is passed to Bob (second case), the action will fail (or at least not give the expected result). This is a tricky one to fix.</p>
+<p><strong>Disambiguation:</strong> the NLP does not currently perform disambiguation when two objects have similar or identical names. The classic Infocom games display a message like “<code>Do you mean the red ball or the blue ball?</code>“ and then interpret the player’s next input as a clarification. Hmm, that sounds a lot like a command interrupt…</p>
+<p><strong>Complex Identifiers:</strong> once again, the Infocom parser has some cool tricks. For certain verbs, it allows lists of objects to be parsed (useful for picking up multiple items, for example). Advanced cases like <code>TAKE ALL EXCEPT HAMMER AND SCREWDRIVER</code> are understood. Raw text and numbers can also be used mid-input, whereas in SRPG any non-standard text is handled in the ‘overflow’, which always comes at the end of the input string.</p>
+<p>I could go on, but at this point I’m just listing all the really smart things Infocom and Inform do that SRPG doesn’t.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2015/07/25/stupidrpg-natural-language-processing/" data-id="cip80lwnr0039ugohve7ydp22" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nlp/">nlp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-breaking-the-game-mods-hacks-and-cheats" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -104,599 +710,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/24/breaking-the-game-mods-hacks-and-cheats/" data-id="ciowf21eg007cfwoh0g11ykri" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-stupidrpg-command-interrupts" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/23/stupidrpg-command-interrupts/">StupidRPG: Command Interrupts</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/07/23/stupidrpg-command-interrupts/">
-      <time datetime="2015-07-23T07:00:00.000Z" itemprop="datePublished">2015-07-23</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>I’ll talk more about the language parser in SRPG in a future post, but I need to give a little context for this discussion. In the majority of cases, SRPG is a turn-based, player-driven game. The player enters a command, the game engine parses the command, and the game state is updated accordingly. During normal execution, the player’s input is matched to a ‘verb’ (an action handler) along with relevant nouns (objects/entities) and modifiers (cardinal directions, for example). Various command patterns are supported, from the basic <code>GO NORTH</code> (<code>VERB MODIFIER</code>) to the more complex <code>PUT BEER BOTTLE ON PEDESTAL</code> (<code>VERB NOUN MODIFIER NOUN</code>).</p>
-<p>This gives a lot of flexibility, but it’s missing support for a couple of use cases: 1) easter eggs; and 2) sass. As it turns out, the command interrupt feature has some less frivolous applications as well.</p>
-<h2 id="What_is_a_Command_Interrupt_3F"><a href="#What_is_a_Command_Interrupt_3F" class="headerlink" title="What is a Command Interrupt?"></a>What is a Command Interrupt?</h2><p>A command interrupt is a special callback that interrupts the regular flow of command processing. This allows for contextual, off-the-cuff responses from the player, along with aforementioned non-frivolous uses.</p>
-<p><strong>Example:</strong></p>
-<p><div class="spoiler"><br><b>GM:</b> Deep in the gloom, you see the fearsome troglodyte. You’re not sure how to describe it because you don’t remember what a troglodyte is.<br><br><b>Input:</b> yes i do<br><br><b>GM:</b> Oh, my mistake. It looks exactly like you expected a troglodyte to look.<br></div><br><br>Now let’s break down what’s happening here.</p>
-<h2 id="How_does_a_Command_Interrupt_work_3F"><a href="#How_does_a_Command_Interrupt_work_3F" class="headerlink" title="How does a Command Interrupt work?"></a>How does a Command Interrupt work?</h2><p>The game does not have a verb for ‘yes’ or ‘yes i do’. This is a special case, only available for the next action after the GM’s initial text. The code looks like this:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Describe troglodyte</span></span><br><span class="line">queueOutput(<span class="string">"&#123;&#123;gm&#125;&#125;&lt;p&gt;Deep in the gloom, you see the fearsome &#123;&#123;tag 'troglodyte' classes='object enemy' command='x troglodyte'&#125;&#125;. You're not sure how to describe it because you don't remember what a troglodyte is.&lt;/p&gt;"</span>);</span><br><span class="line">					</span><br><span class="line">NLP.interrupt(</span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="comment">/* Init */</span> &#125;,</span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params">string</span>)</span>&#123;</span><br><span class="line">        NLP.interrupt(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(string == <span class="string">"yes i do"</span>) &#123;</span><br><span class="line">            queueOutput(<span class="string">"&#123;&#123;gm&#125;&#125;&lt;p&gt;Oh, my mistake. It looks exactly like you expected a troglodyte to look.&lt;/p&gt;"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// Resume normal input</span></span><br><span class="line">            queueOutput(parse( NLP.parse(string), &#123;&#125; ));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<p>On line 1, the GM response is queued as normal.</p>
-<p>The fun stuff happens on line 4, where an interrupt is registered with the NLP (the Natural Language Processor). This tells the NLP that when the player enters their next command, control should first be handed to the interrupt. The interrupt acts autonomously, deciding whether it wants to handle the action or not.</p>
-<p>Line 5 is an optional initialization function triggered when the interrupt is queued. Without getting too far into the weeds, I’ll just say that multiple interrupts can be ‘stacked’. When one is completed (unregistered) the next is enabled.</p>
-<p>On line 7, the interrupt deregisters itself. If the player doesn’t immediately enter the response we’re looking for, we’re not going to give them another chance. Interrupts are given first priority until they deregister themselves (this is important because it lets us do more interesting things than simple one-off responses to snarky player text).</p>
-<p>On line 9, we check for the string we’re expecting. In this case, we’re looking for the player entering “yes i do” in response to the GM’s “you’re not sure how to describe it because you don’t remember what a troglodyte is”. If we matched the string, we queue an equally snarky response from the GM.</p>
-<p>If the string is not matched, we re-parse the command. Since we already de-registered the interrupt, the player’s input will be handled normally, and they will have no idea that there was a special response available.</p>
-<h2 id="Alternate_Uses"><a href="#Alternate_Uses" class="headerlink" title="Alternate Uses"></a>Alternate Uses</h2><p>Command interrupts were initially intended for use in easter eggs: special responses from the GM based on the player inputting non-standard commands in specific situations. As it turns out, however, there are better uses for the feature. I’ll cover three use cases:</p>
-<ul>
-<li>Raw text input</li>
-<li>Menu selections</li>
-<li>Dialogue trees</li>
-</ul>
-<h2 id="Raw_Text_Input"><a href="#Raw_Text_Input" class="headerlink" title="Raw Text Input"></a>Raw Text Input</h2><p>This is actually the first thing the player encounters when starting the game. The player is prompted for their name, and a command interrupt is used to capture the (arbitrary) text they entered. As usual, the interrupt can decide how to handle the player’s input, and whether to deregister itself or not.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ADD PLAYER NAME TO INTERRUPT QUEUE</span></span><br><span class="line">NLP.interrupt(</span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">// Leadup to player name input</span></span><br><span class="line">        queueOutput(<span class="string">"&#123;&#123;gm&#125;&#125;&lt;p&gt;You are an adventurer, but not a very good one. You are known as...&lt;/p&gt;"</span>, <span class="number">2000</span>);</span><br><span class="line">        queueOutput(<span class="string">"&#123;&#123;gm&#125;&#125;&lt;p&gt;Hmm.&lt;/p&gt;"</span>, <span class="number">1500</span>);</span><br><span class="line">        queueOutput(<span class="string">"&#123;&#123;gm&#125;&#125;&lt;p&gt;Who are you again?&lt;/p&gt;"</span>, <span class="number">1000</span>);</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params">string</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(string.length &gt; <span class="number">0</span>)&#123;</span><br><span class="line">            player.name = string;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        queueOutput(<span class="string">"&#123;&#123;gm&#125;&#125;&lt;p&gt;That name seems kind of...short. I'm not going to steal your identity, I promise.&lt;/p&gt;"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<p>This interrupt is a little more complex than the previous example. It has an initialization function (which prompts the player for their name), and it has a return value rather than manually deregistering itself. This communicates to the NLP whether the interrupt is done. If the interrupt returns false, it will be executed again on the player’s next input. This is useful because we want to make sure the player has entered valid input for their name. For now, we’re just checking for a non-empty string, but we could create more complex validation in the future.</p>
-<p>When we’re satisfied the player’s input is valid, the interrupt returns true, telling the NLP to continue (either to the next interrupt, or back to regular command processing).  During the SRPG intro segment, several interrupts are queued to capture the player’s name, race, class, gender, and preferences.</p>
-<h2 id="Menus"><a href="#Menus" class="headerlink" title="Menus"></a>Menus</h2><p>The first interrupt in SRPG is a simple text interrupt. The rest of the interrupts during the SRPG intro are menus. They present a list of options, and validate the player’s input against the available options before allowing them to continue.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ADD RACE MENU TO INTERRUPT QUEUE</span></span><br><span class="line">NLP.interrupt(</span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">// Build menu</span></span><br><span class="line">        <span class="keyword">var</span> menu = parse(<span class="string">"&#123;&#123;menu races&#125;&#125;"</span>, &#123;<span class="string">'races'</span>:shuffle(ECS.getData(<span class="string">'races'</span>))&#125;);</span><br><span class="line">        queueOutput(<span class="string">"&#123;&#123;gm&#125;&#125;&lt;p&gt;If you say so. Well, &#123;&#123;player.name&#125;&#125;, what manner of creature are you?&lt;/p&gt;"</span>+menu);</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params">string</span>)</span>&#123;</span><br><span class="line">        player.race = string;</span><br><span class="line">        disableLastMenu(string);</span><br><span class="line">        <span class="keyword">if</span>(ECS.isValidMenuOption(ECS.getData(<span class="string">'races'</span>), string)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        enableLastMenu();</span><br><span class="line">        queueOutput(<span class="string">"&#123;&#123;gm&#125;&#125;&lt;p&gt;That wasn't one of the options. Try again, you rebel.&lt;/p&gt;"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<p>Note the check on line 11, which validates the player’s input. If the input is invalid, the menu is displayed again. A fair bit of work is done on line 5 to build the menu output, which I’ll cover in another post. In general, a menu option includes some text, and a command to execute when the option is clicked.</p>
-<h2 id="Dialogue_Trees"><a href="#Dialogue_Trees" class="headerlink" title="Dialogue Trees"></a>Dialogue Trees</h2><p>Dialogue trees function similarly to menus, in that they present a clickable list of options that cannot be ‘escaped’ until certain criteria are established. You can think of a dialogue tree as a set of interlinked menus with more advanced command interrupt logic (to determine which menu options are currently available, and therefore which player inputs are currently valid). The code for handling dialogue trees is a bit too extensive to present here. When a conversation with an NPC is initiated, the Social module handles the process of finding the correct conversation nodes and setting NLP interrupts.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> conversation = <span class="keyword">this</span>;</span><br><span class="line">    <span class="keyword">var</span> nodes = <span class="keyword">this</span>.getCurrentNodes();</span><br><span class="line">    <span class="keyword">var</span> menu = [];</span><br><span class="line">    <span class="keyword">var</span> node = <span class="keyword">this</span>.currentNode;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> n <span class="keyword">in</span> nodes) &#123;</span><br><span class="line">        menu.push(&#123;<span class="string">'text'</span>: nodes[n].prompt, <span class="string">'command'</span>: nodes[n].key, <span class="string">'subtext'</span>: <span class="string">'&lt;small&gt;'</span>+(nodes[n].visited ? <span class="string">'(Visited)'</span> : <span class="string">''</span>)+<span class="string">'&lt;/small&gt;'</span>&#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    menu.push(&#123;<span class="string">'text'</span>:<span class="string">"&lt;i&gt;(EXIT)&lt;/i&gt;"</span>,<span class="string">'command'</span>:<span class="string">'exit'</span>,<span class="string">'subtext'</span>:<span class="string">"I'm done talking."</span>&#125;);</span><br><span class="line"></span><br><span class="line">    NLP.interrupt(</span><br><span class="line">        <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            node.callback();</span><br><span class="line">            queueOutput(parse(<span class="string">"&#123;&#123;menu options&#125;&#125;"</span>, &#123;<span class="string">'options'</span>:menu&#125;));</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="function"><span class="keyword">function</span>(<span class="params">string</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(string == <span class="string">'exit'</span> || conversation.doTopicNode(string)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            enableLastMenu();</span><br><span class="line">            queueOutput(<span class="string">"&#123;&#123;gm&#125;&#125;&lt;p&gt;There is no response.&lt;/p&gt;"</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>This general-purpose block of code populates a menu with dialogue options, then sets the interrupt. Within the interrupt, we check for valid player input (either selecting a dialogue option or exiting the tree) and process the selected node (if any). Lastly, if the input was invalid, we return an appropriate response (later on this will probably become a callback, so different NPCs can give different “no response” responses).</p>
-<p>Topic for tomorrow: the game is a mod of itself.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/23/stupidrpg-command-interrupts/" data-id="ciowf2194003ufwoh0zskigew" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-post-schedule" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/22/post-schedule/">Post Schedule</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/07/22/post-schedule/">
-      <time datetime="2015-07-22T07:00:00.000Z" itemprop="datePublished">2015-07-22</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>The overall goal of this journal is not so much to document my dev progress as it is to <em>encourage</em> my dev progress. The basic idea is that if I have to publish a post every day, I’m also forced to actually work on the game at least semi-regularly. Otherwise I’ll run out of things to talk about. We’ll see how that goes.</p>
-<p>My planned post schedule looks something like this:</p>
-<ul>
-<li>Monday: Weekly Update (actual work done on the game in the last week)</li>
-<li>Tue/Thu/Sat: StupidRPG post (discussion of a component within the game)</li>
-<li>Wed/Fri/Sun: General post (technical/writing discussion not directly related to SRPG)</li>
-</ul>
-<p>Other than the Weekly Update, I’ll shuffle things around as needed.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/22/post-schedule/" data-id="ciowf21am004ofwohle3o84u2" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-stupidrpg-the-gm" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/21/stupidrpg-the-gm/">StupidRPG: The GM</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/07/21/stupidrpg-the-gm/">
-      <time datetime="2015-07-21T07:00:00.000Z" itemprop="datePublished">2015-07-21</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>I’ve mentioned the GM a couple times so far, but I haven’t really gone into detail about what, who, or why the GM is in the game. In storytelling terms, the GM is an <a href="https://en.wikipedia.org/wiki/Unreliable_narrator" target="_blank" rel="external">unreliable narrator</a>. In mechanical terms, the GM is an NPC with meta-abilities. <a href="http://www.stanleyparable.com/" target="_blank" rel="external">The Stanley Parable</a> provides an excellent example of an unreliable narrator in a video game.</p>
-<p>In SRPG, for the most part, the GM narrates the events of the game and provides some level of commentary on the player’s choices. Ostensibly, the GM (as in D&amp;D or other pen-and-paper RPGs) is responsible for the creation and organization of locations, characters, enemies, events, and so on. This particular GM, however, is both unprepared and over-invested, leading (probably) to clashes with the player, other NPCs, the world, and the game mechanics themselves.</p>
-<p>It’s unclear at this point whether the player should consider the GM a friend, an enemy, or a force of nature. Something I need to sort out as the storyline continues. I also need to be careful, as breaking the 4th wall is bordering on a trope at this point. It’s integral to the structure of SRPG, so it has to be done right.</p>
-<div class="spoiler"><br><b>GM:</b> The twins lean forward eagerly, excited at the prospect of delivering their latest riddle.<br><br><b>The Twins:</b> We’re not twins.<br><br><b>GM:</b> Oh. I thought…<br><br><b>The Left Twin:</b> You could have asked, you know. Just because two people like to stand in front of a gate and pose riddles in unison doesn’t mean they’re twins.<br><br><b>GM:</b> Sorry?<br><br><b>The Right Twin:</b> You didn’t even ask our names. You’re still calling us twins in your script. ‘Left Twin’ and ‘Right Twin’. Wow.<br><br><b>GM:</b> What should I call you, then?<br><br><b>The Left Twin:</b> My name is Jane<br><br><b>The Right Twin:</b> And I’m Jack<br><br><b>GM:</b> Ok…Jack and Jane, who are not related, lean forward eagerly, excited at the prospect&mdash;<br><br><b>Jack:</b> Seriously? We’re brother and sister, we’re just not twins. What are the odds two complete strangers named Jack and Jane would be doing this?<br><br><b>GM:</b> Fine. I don’t actually care. The two J’s have a riddle.<br><br></div>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/21/stupidrpg-the-gm/" data-id="ciowf21880030fwoh8my3zxul" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-weekly-update-1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/20/weekly-update-1/">Weekly Update #1</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/07/20/weekly-update-1/">
-      <time datetime="2015-07-20T07:00:00.000Z" itemprop="datePublished">2015-07-20</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Paying off some technical debt in this update. The scale of the JS source files is getting to a point where I need to restructure as a sanity saver. There’s more cleanup to be done, but I’ve significantly restructured the folders for both JS and CSS files, and created a build script to automate the process.</p>
-<p>I also noticed some unexpected engine-breaking bugs when I first loaded up the game again. I need to either not leave work half-finished, or leave notes for myself.</p>
-<p><strong>Changelog:</strong></p>
-<ul>
-<li>Restructured JS to use a preprocessor (<a href="https://larsjung.de/wepp/" target="_blank" rel="external">WEPP</a>)</li>
-<li>Restructured CSS to use a preprocessor (<a href="http://sass-lang.com/" target="_blank" rel="external">SASS</a>)</li>
-<li>Added a build script to 1) bake the JS files down to: engine.js and game.js; and 2) update the page CSS</li>
-<li>Added a function to dynamically reload/switch the CSS themes (which means in the future I can add an in-game command to change the theme)</li>
-<li>Fixed a couple NLP bugs related to half-finished work from a while back</li>
-</ul>
-<p><strong>Known Issues:</strong></p>
-<ul>
-<li>Dialogue node callbacks aren’t working right. Need more testing and refinement of the callbacks and may need some refactoring of the dialogue tree feature in general.</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/20/weekly-update-1/" data-id="ciowf216w0023fwohr2z8szyz" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-dungeons-dragons" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/19/dungeons-dragons/">Dungeons &amp; Dragons</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/07/19/dungeons-dragons/">
-      <time datetime="2015-07-19T07:00:00.000Z" itemprop="datePublished">2015-07-19</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>The inspiration for StupidRPG comes from two primary sources: Zork (the original) and Dungeons &amp; Dragons (pick your favorite edition). D&amp;D has had an enormous (monstrous?) effect on the world of video games. Some of the top-rated computer RPGs are based directly on specific D&amp;D rulesets (Baldur’s Gate, Neverwinter Nights, Icewind Dale…ok mostly those three series), and Zork is pretty good too.</p>
-<p>I’ve been playing D&amp;D for 9 or 10 years, and GM’d my first game a while back. I first popped a Zork disk in a Commodore 64 closer to 20 years ago (I don’t remember when. It’s not important). Now that I’m all grown up, I’d like to blend the two. D&amp;D offers a freeform experience that is difficult to match in a video game. Fortunately, my goal is a bit simpler: making a fun adventure/RPG game, primarily communicated via text, in which the player and an inexperienced GM (I’ll get to that in a bit) attempt to make their way(s) in the world.</p>
-<p>The first game I ran (<em>The Burning Wheel</em>) didn’t go well. I had no idea what I was doing, and produced a tightly-scripted campaign that inevitably fell apart almost instantly. “No plan survives contact with the enemy.” Those mistakes and the many more that followed served both as education (toward becoming a better GM) and inspiration (for the GM character in SRPG). So it all turned out alright in the end.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/19/dungeons-dragons/" data-id="ciowf21bu005afwohe5gm4n0y" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-stupidrpg-the-black-box" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/18/stupidrpg-the-black-box/">StupidRPG: The Black Box</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/07/18/stupidrpg-the-black-box/">
-      <time datetime="2015-07-18T07:00:00.000Z" itemprop="datePublished">2015-07-18</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>SRPG is divided into four sections:</p>
-<ul>
-<li>Prologue: The Black Box</li>
-<li>Act I</li>
-<li>Act II</li>
-<li>Act III</li>
-</ul>
-<p>The prologue is the only part that exists right now. It acts as the test bed for the overall project, but over time it’s being refined into a playable introduction to the game. It’s currently called <a href="https://en.wikipedia.org/wiki/Black_box" target="_blank" rel="external">The Black Box</a>, but it could accurately be referred to as a ‘<a href="https://en.wikipedia.org/wiki/Vertical_slice" target="_blank" rel="external">vertical slice</a>‘ just as easily (though it doesn’t sound as cool, unless we’re talking about a swordfighting game). It has (or will have) all the core components of the overall game:</p>
-<ul>
-<li>Moving around</li>
-<li>Scenery</li>
-<li>NPCs</li>
-<li>Talking to NPCs (dialogue trees!)</li>
-<li>Murdering NPCs</li>
-<li>Riddles and puzzles (so the game takes more than 30 minutes)</li>
-<li>Containers (which can be opened/closed/locked/unlocked)</li>
-<li>Darkness / light</li>
-<li>Scripted segments</li>
-<li>The GM being a bit of a dummy (more on that later)</li>
-<li>Two years of on-again, off-again development to make a from-scratch text adventure engine that could have been immediately reproduced at any time by an out-of-the-box system known as Inform 7</li>
-</ul>
-<p>Engine development aside, the first part of a game is very important. It sets the tone, introduces key gameplay elements, and does a bunch of other stuff that game designers really value a lot. I have 3 goals for the SRPG prologue:</p>
-<ol>
-<li>The player is having fun</li>
-<li>The player is mildly confused</li>
-<li>The player is having fun</li>
-</ol>
-<p>Why two funs? Well, you can’t spell confused without funs.</p>
-<p>I also have two anti-goals for the SPRG prologue:</p>
-<ol>
-<li>The player should not feel like the experience is random nonsense</li>
-<li>The player should not not be having fun</li>
-</ol>
-<p>The distinction between mild confusion and random nonsense is important. The game has rules, the world within the game has rules. The rules may not be entirely static, but in general the player can expect their actions to have an effect on the world that roughly corresponds to their intent. As in a procedurally generated world, true randomness is not the end goal. <em>Interesting</em> randomness is more appealing.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/18/stupidrpg-the-black-box/" data-id="ciowf218a0031fwohoawo046z" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-tools-of-the-trade" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/17/tools-of-the-trade/">Tools of the Trade</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/07/17/tools-of-the-trade/">
-      <time datetime="2015-07-17T07:00:00.000Z" itemprop="datePublished">2015-07-17</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Tools I use for work and/or SRPG:</p>
-<h2 id="Operating_Systems"><a href="#Operating_Systems" class="headerlink" title="Operating Systems"></a>Operating Systems</h2><ul>
-<li>Windows 7</li>
-<li>Ubuntu</li>
-<li>CentOS</li>
-<li>Android</li>
-</ul>
-<h2 id="Languages__28ish_29"><a href="#Languages__28ish_29" class="headerlink" title="Languages (ish)"></a>Languages (ish)</h2><ul>
-<li>Javascript / jQuery</li>
-<li>SASS / CSS</li>
-<li>Ruby</li>
-<li>PHP</li>
-<li>SQL (My, Postgre)</li>
-</ul>
-<h2 id="Tools_2C_Frameworks_2C_Platforms"><a href="#Tools_2C_Frameworks_2C_Platforms" class="headerlink" title="Tools, Frameworks, Platforms"></a>Tools, Frameworks, Platforms</h2><ul>
-<li>AWS / OpsWorks / EC2 / RDS / CloudFront</li>
-<li>Programmer’s Notepad</li>
-<li>PHP Storm</li>
-<li>PuTTY</li>
-<li>GitHub</li>
-<li>Laravel, Kohana, Codeigniter</li>
-<li>Middleman</li>
-<li>Redis</li>
-<li>Vagrant</li>
-<li>ConEmu / CMDer</li>
-</ul>
-<h2 id="Not_for_work_or_SRPG"><a href="#Not_for_work_or_SRPG" class="headerlink" title="Not for work or SRPG"></a>Not for work or SRPG</h2><ul>
-<li>C#</li>
-<li>Java</li>
-<li>C++ (learning…)</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/17/tools-of-the-trade/" data-id="ciowf217e002afwoh4zruirst" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-stupidrpg-dialogue-trees" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/16/stupidrpg-dialogue-trees/">StupidRPG Dialogue Trees</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/07/16/stupidrpg-dialogue-trees/">
-      <time datetime="2015-07-16T07:00:00.000Z" itemprop="datePublished">2015-07-16</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>A game like StupidRPG wouldn’t be complete without extensive NPC interaction. It’s a crucial part of the roleplaying experience the game is inspired by. The world of text adventures and computer RPGs offer many different ways of handling this. I considered several options, each of which has pros and cons. In the end, I tried to take the pieces I liked from multiple styles. This is a non-exhaustive list of the methods I considered.</p>
-<h2 id="Dialogue_Tree"><a href="#Dialogue_Tree" class="headerlink" title="Dialogue Tree"></a>Dialogue Tree</h2><p>Popular in computer RPGs and adventure games, dialogue trees are basically directed graphs. Each dialogue option is a ‘node’ that can connect to a semi-arbitrary number of additional nodes. Significant depth is supported, particularly when alternate nodes are locked behind prerequesites (for example: possessing a certain item, meeting a certain NPC, or meeting alignment requirements). This style of NPC interaction has carried into modern games (pretty much any BioWare game, for starters), with a couple tweaks.</p>
-<p><strong>Pros:</strong></p>
-<ul>
-<li>Conversations of varying complexity supported</li>
-<li>Easy to set up conversational ‘rabbit holes’ which eventually loop back to a root node</li>
-<li>Easy to ‘gate’ nodes or chains of nodes behind situational requirements</li>
-</ul>
-<p><strong>Cons:</strong></p>
-<ul>
-<li>Rigidly defines what can be talked about and when</li>
-<li>Player’s dialogue may not match their conceptualization based on the presented (simplified) dialogue text</li>
-</ul>
-<h2 id="Glossary_/_Dictionary"><a href="#Glossary_/_Dictionary" class="headerlink" title="Glossary / Dictionary"></a>Glossary / Dictionary</h2><p>Commonly seen in classic adventure games and text adventures, where the player can <code>ASK SUSAN ABOUT KOBOLDS</code> or drag an inventory item onto a character to learn more about it.</p>
-<p><strong>Pros:</strong></p>
-<ul>
-<li>Very user-driven, somewhat freeform</li>
-<li>Allows for hidden interactions / easter eggs</li>
-</ul>
-<p><strong>Cons:</strong></p>
-<ul>
-<li>Inevitably motivates the player to attempt every possible combination of item/topic with each NPC</li>
-<li>Each interaction is isolated from the rest (lack of continuity)</li>
-</ul>
-<h2 id="Commands__26amp_3B_Parsing"><a href="#Commands__26amp_3B_Parsing" class="headerlink" title="Commands &amp; Parsing"></a>Commands &amp; Parsing</h2><p>Low-tech as they are, some text adventures allow the player to give directions to NPCs, such as <code>GARY, GO NORTH AND EAT CAKE</code>. It’s not as complicated as it sounds; once you’ve identified the target of the command, the rest is identical to parsing a normal instruction from the player. I haven’t seen an example of more advanced parsing (e.g. <code>TELL GARY HIS FACE IS BAD</code>), but if such a thing exists, kudos.</p>
-<p><strong>Pros:</strong></p>
-<ul>
-<li>Situationally useful feature when dealing with friendly NPCs</li>
-</ul>
-<p><strong>Cons:</strong></p>
-<ul>
-<li>More complex text parsing is really hard</li>
-</ul>
-<h2 id="The_StupidRPG_Way"><a href="#The_StupidRPG_Way" class="headerlink" title="The StupidRPG Way"></a>The StupidRPG Way</h2><p>I settled on a combination of the first two options, with the third a distant goal if I find a use for it. In SRPG, a command like <code>TALK TO THE OGRES</code> generally initiates a dialogue tree (if one is available). Each node has:</p>
-<ul>
-<li>Text (actually a callback, in case more complex text generation or other triggers are needed)</li>
-<li>(Optional) Restrictions (e.g. this node is only available if the player previously fought the minotaur)</li>
-<li>(Optional) A visibility setting (default is visible, some nodes may be hidden for reasons other than access restrictions)</li>
-<li>(Optional) A node list (nodes available from this point in the conversation)</li>
-<li>(Optional) A list of keywords (more on that in a second)</li>
-</ul>
-<p>The second option comes into play with a list of topics each NPC can discuss. These are actually tree nodes, but the player can shortcut to them via commands like <code>ASK ELLEN ABOUT DIVORCE</code>.</p>
-<p>As indicated in a previous post, the SRPG parser allows for a variety of command patterns, including patterns with ‘overflow’ text (i.e. arbitrary text only understood by a particular command or object). One of the neat things about that is the ability to define custom parsing behaviors for specific NPCs or types of NPCs. For example, a town guard might respond poorly to the (non-standard syntax) statement: <code>SAY &#39;GO LICK A BEAR&#39; TO CAPTAIN ROTH</code>. The sky’s the limit, really.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/16/stupidrpg-dialogue-trees/" data-id="ciowf2193003sfwohc0cn5gkt" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stupidrpg/">stupidrpg</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-so-im-making-a-video-game" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/15/so-im-making-a-video-game/">So I&#39;m Making a Video Game</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/07/15/so-im-making-a-video-game/">
-      <time datetime="2015-07-15T07:00:00.000Z" itemprop="datePublished">2015-07-15</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>I like to describe it as “a text adventure with graphics and sound.”<br>It’s called StupidRPG and it’s a semi-branching, largely fantasy-based game.<br>Loosely speaking, it’s the text adventure I want to play.<br>It’s mostly coded in scratch using vanilla Javascript, with a bit of jQuery on the side.</p>
-<p>So far I have:</p>
-<ul>
-<li>An ECS (entity-component-system) engine to store game state and propagate actions</li>
-<li>A language parser (to turn “PUNCH GOBLIN” into a meaningful action within the game)</li>
-<li>1 troglodyte</li>
-<li>A nice little forest to wander around</li>
-<li>Magical swords</li>
-<li>Modules for: combat, lighting, containers, dialogue trees, and a couple other things</li>
-<li>Just one magical sword, actually</li>
-<li>A park ranger</li>
-<li>Music!</li>
-</ul>
-<p>The first two items ate up about 90% of the work invested so far, and now that work is starting to pay off in the form of content creation:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Race list</span></span><br><span class="line">ECS.setData(<span class="string">'races'</span>, [</span><br><span class="line">  &#123;<span class="string">'text'</span>:<span class="string">'ELF'</span>,<span class="string">'command'</span>:<span class="string">'elf'</span>,<span class="string">'subtext'</span>:<span class="string">'+ KEEN SENSES, + EVASION'</span>&#125;,</span><br><span class="line">  &#123;<span class="string">'text'</span>:<span class="string">'DWARF'</span>,<span class="string">'command'</span>:<span class="string">'dwarf'</span>,<span class="string">'subtext'</span>:<span class="string">'+ DARKVISION'</span>&#125;,</span><br><span class="line">  &#123;<span class="string">'text'</span>:<span class="string">'CEO'</span>,<span class="string">'command'</span>:<span class="string">'ceo'</span>,<span class="string">'subtext'</span>:<span class="string">'+ PERSUASION'</span>&#125;,</span><br><span class="line">  &#123;<span class="string">'text'</span>:<span class="string">'HUMAN'</span>,<span class="string">'command'</span>:<span class="string">'human'</span>,<span class="string">'subtext'</span>:<span class="string">'+1 TO EVERYTHING'</span>&#125;,</span><br><span class="line">  &#123;<span class="string">'text'</span>:<span class="string">'PAN-DIMENSIONAL BEING'</span>,<span class="string">'command'</span>:<span class="string">'pan-dimensional being'</span>,<span class="string">'subtext'</span>:<span class="string">'- MATERIAL NEEDS'</span>&#125;</span><br><span class="line">]);</span><br></pre></td></tr></table></figure>
-<p>I’ll be documenting the rest of the game’s development here.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/07/15/so-im-making-a-video-game/" data-id="ciowf219h0045fwohgjah8ymu" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2015/07/24/breaking-the-game-mods-hacks-and-cheats/" data-id="cip80lwvx007bugohf515qwlt" class="article-share-link">Share</a>
       
       
     </footer>

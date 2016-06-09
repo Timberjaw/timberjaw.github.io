@@ -60,6 +60,473 @@
     <div class="outer">
       
       <section id="main">
+      <article id="post-Minecraft-Story-Mode" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/09/Minecraft-Story-Mode/">Minecraft Story Mode</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2016/01/09/Minecraft-Story-Mode/">
+      <time datetime="2016-01-09T08:00:00.000Z" itemprop="datePublished">2016-01-09</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Finished Minecraft Story Mode (Episodes 1-4) today. It’s basically like a Minecraft campaign for Dungeons &amp; Dragons, scripted as a movie. It’s also the first of the Telltale games/interactive movies I’ve played.</p>
+<p>Good bits:</p>
+<ul>
+<li>The visuals are top notch. Very Minecraft-authentic (at least if you’ve ever played the game with a shader pack installed), with a few concessions here and there (mostly character rigging and animations, which are significantly more detailed than in-game). The episode intros tend to be action-packed and end with some fun camera work.</li>
+<li>Plot seems decent. Telltale’s shtick is player choices that affect how characters in the game view you, how certain events pan out, who survives, etc. I don’t have much of a comparison point since this is my first, but it seemed well done.</li>
+<li>Doesn’t wear out its welcome. Each episode takes 90 minutes to 2 hours.</li>
+</ul>
+<p>Bad bits:</p>
+<ul>
+<li>Can’t save wherever you want. I played through the first 10 minutes or so twice, because the game doesn’t save until halfway through the second region. It’s not the end of the world; you just need at least 30-45 minutes to sit down with it (I’d recommend playing a whole episode at once though).</li>
+<li>A couple weird plot holes; nothing major.</li>
+<li>You don’t…do…very much. The game alternates between action sequences (basically on-rails with QTEs) and puzzle/social sections (talk to people, interact with objects, etc). The core is obviously the choice system, but in general the game didn’t feel very meaty.</li>
+</ul>
+<p>Next up is Tales of the Borderlands, a similar product for the Borderlands game series.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2016/01/09/Minecraft-Story-Mode/" data-id="cip80lwxt007wugohs62ruk24" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-Streamlining" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/08/Streamlining/">Streamlining</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2016/01/08/Streamlining/">
+      <time datetime="2016-01-09T07:11:14.000Z" itemprop="datePublished">2016-01-08</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>As I transition from engine construction to content creation, I’m finding it a bit cumbersome. Take for example the frequent task of adding small, inconsequential items and scenery, where I just need a name, some accepted identifiers, and a block of descriptive text. Here’s what that process looks like now:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ecs.e(<span class="string">'shiny-trinket'</span>, [<span class="string">'thing'</span>], &#123;</span><br><span class="line">    <span class="string">'name'</span>:<span class="string">'shiny trinket'</span>,</span><br><span class="line">    <span class="string">'nouns'</span>:[<span class="string">'trinket'</span>,<span class="string">'shiny trinket'</span>],</span><br><span class="line">    <span class="string">'spawn'</span>:<span class="string">'dim-clearing'</span>,</span><br><span class="line">    <span class="string">'descriptions'</span>:&#123;</span><br><span class="line">        <span class="string">'default'</span>:<span class="string">"A shiny locket, someone's discarded knick-knack. It's empty."</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>I think I can do better with some helper functions/macros. When approaching problems like this, I like to work in reverse: writing the code I want to work, then writing the necessary functions and support structures to make it actually run. The target code I want is something like this:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">item(<span class="string">'shiny trinket'</span>, <span class="string">"A shiny locket, someone's discarded knick-knack. It's empty."</span>)</span><br></pre></td></tr></table></figure>
+<p>This is mostly suitable for barebones items and scenery, where the player doesn’t interact with the entity beyond looking at it and possibly picking it up. Note that the location of the object isn’t specified; the intention is that it’s inferred from context (a bit of a dangerous game, but an idea I’m exploring). The function would work like so:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">item</span>(<span class="params">name, description</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> item_key = getKeyFromName(name);</span><br><span class="line">    <span class="keyword">var</span> parent = getParentFromContext();</span><br><span class="line">    ecs.e(item_key, &#123;</span><br><span class="line">        <span class="string">'name'</span>:name,</span><br><span class="line">        <span class="string">'nouns'</span>:[name],</span><br><span class="line">        <span class="string">'spawn'</span>:parent,</span><br><span class="line">        <span class="string">'descriptions'</span>:&#123;</span><br><span class="line">            <span class="string">'default'</span>:description</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>This got me thinking, though. For the Rulebook system, I built an ORM-style “query builder” of sorts, which uses method chaining to allow expressive creation of rules. Something similar could work for item creation, and support the above trinket example with added flexibility. See:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">item(<span class="string">'shiny trinket'</span>, <span class="string">"A shiny locket, someone's discarded knick-knack. It's empty."</span>)</span><br><span class="line">    .alias(<span class="string">'trinket'</span>)</span><br><span class="line">    .at(<span class="string">'dim-clearing'</span>)</span><br><span class="line">    .done()</span><br></pre></td></tr></table></figure>
+<p>Again, this is mainly intended for simple items. For more complex items and scenery, the current style would be preferred.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2016/01/08/Streamlining/" data-id="cip80lwwv007lugohqnngj3sz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-Daily-Update-2016-01-07" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/07/Daily-Update-2016-01-07/">Daily Update 2016.01.07</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2016/01/07/Daily-Update-2016-01-07/">
+      <time datetime="2016-01-07T23:10:30.000Z" itemprop="datePublished">2016-01-07</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><strong>Updates &amp; Changes:</strong></p>
+<ul>
+<li>Gave the troglodyte a locket.</li>
+<li>Updated cave description.</li>
+<li>Added a big tree.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2016/01/07/Daily-Update-2016-01-07/" data-id="cip80lx5c00bjugohbunvsfi2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-Daily-Update-2016-01-06" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/06/Daily-Update-2016-01-06/">Daily Update 2016.01.06</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2016/01/06/Daily-Update-2016-01-06/">
+      <time datetime="2016-01-06T23:10:20.000Z" itemprop="datePublished">2016-01-06</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><strong>Updates &amp; Changes:</strong></p>
+<ul>
+<li>Removed canyon east. Canyon center now connects directly to waterfall base.</li>
+<li>Added description for canyon west.</li>
+<li>Descriptions terse. Need more word.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2016/01/06/Daily-Update-2016-01-06/" data-id="cip80lx5d00bkugohwd8scw13" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-Daily-Update-2016-01-05" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/05/Daily-Update-2016-01-05/">Daily Update 2016.01.05</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2016/01/05/Daily-Update-2016-01-05/">
+      <time datetime="2016-01-06T06:52:07.000Z" itemprop="datePublished">2016-01-05</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><strong>Changes &amp; Updates:</strong></p>
+<ul>
+<li>Added canyon center, canyon east, and canyon west locations with basic descriptions.</li>
+<li>Added waterfall base location.</li>
+<li>Added waterfall and gold coin items/scenery.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2016/01/05/Daily-Update-2016-01-05/" data-id="cip80lx5e00blugohuopfra7g" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-Weekly-Update-23" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/04/Weekly-Update-23/">Weekly Update #23</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2016/01/04/Weekly-Update-23/">
+      <time datetime="2016-01-05T05:48:49.000Z" itemprop="datePublished">2016-01-04</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><strong>Changes &amp; Updates:</strong></p>
+<ul>
+<li>New Year’s! 2016 is here. Party time over.</li>
+<li>SRPG: Made a bunch of small text changes, added a couple scenery items.</li>
+<li>Started house hunting. Tired of renting.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2016/01/04/Weekly-Update-23/" data-id="cip80lww8007gugohvnkfdh21" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-Daily-Update-2016-01-03" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/03/Daily-Update-2016-01-03/">Daily Update 2016.01.03</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2016/01/03/Daily-Update-2016-01-03/">
+      <time datetime="2016-01-03T08:18:41.000Z" itemprop="datePublished">2016-01-03</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><strong>Changes &amp; Updates:</strong></p>
+<ul>
+<li>Did a pass through most of the starting location and item descriptions, making tweaks here and there to spice things up.</li>
+<li>GM now berates the player for not knowing you can’t take an odor.</li>
+<li>Added a couple new scenery descriptions.</li>
+<li>Added polystichum neolobatum alias.</li>
+<li>Referenced a flower-picking quest. Will see if I ever remember to actually add one.</li>
+<li>Spider is now more smug.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2016/01/03/Daily-Update-2016-01-03/" data-id="cip80lx5i00bmugohuzk4xyz7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-A-New-Year" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/02/A-New-Year/">A New Year</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2016/01/02/A-New-Year/">
+      <time datetime="2016-01-02T11:37:39.000Z" itemprop="datePublished">2016-01-02</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Happy New Year! I spent the last 24 hours-ish at an extended LAN party (the first I’ve attended; I’m a late bloomer). Mostly played Borderlands: The Pre-Sequel, with some TF2 and drinks on the side.</p>
+<p>Need a new wall calendar.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2016/01/02/A-New-Year/" data-id="cip80lx6700bxugohrutqfj0j" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-2015-Recap" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/02/2015-Recap/">2015 Recap</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2016/01/02/2015-Recap/">
+      <time datetime="2016-01-02T11:37:27.000Z" itemprop="datePublished">2016-01-02</time>
+    </a>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>I’ve been doing this dev journal for just over 6 months. At the start, I had a simple goal: make a post every day, documenting the progress on StupidRPG (my game project). For the most part that goal has been met. This is post #184, and while I’ve had to do a little bit of catch-up here and there, I have a post for every day since I started.</p>
+<p>Keeping up with the journal has been difficult, but keeping up with SRPG has been harder. That said, I made some solid progress on the game in 2015, including some serious structural work and a lot of early-game content. It’s more or less at the point where I can focus fully on content creation (rather than engine work).</p>
+<p>As expected, the biggest challenges have been overengineering (making complex, flexible systems for handling game logic where more simple, ‘hackish’ solutions would be quicker and arguably better) and procrastination (I’ll explain what that means some other time). Regarding game content, the challenge has been breaking things into bite-sized pieces that can be worked on piecemeal. I usually work on the game for an hour or two at a time, so it’s hard to tackle bigger elements. Most of the content is deeply intertwined (intentionally).</p>
+<p>Aside from SRPG, 2015 was a busy/stressful year. I’ve recently been focusing on work/life balance, stress relief, and cultivating a state of mindfulness and balance. I’m feeling optimistic going into 2016.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://timberjaw.github.io/2016/01/02/2015-Recap/" data-id="cip80lx6j00bzugoh6jm447sn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
       <article id="post-Darksiders" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -98,434 +565,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2016/01/02/Darksiders/" data-id="ciowf21fs0086fwohyhdbnj80" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-New-Years-Eve-Eve" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/30/New-Years-Eve-Eve/">New Year&#39;s Eve Eve</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/12/30/New-Years-Eve-Eve/">
-      <time datetime="2015-12-30T22:03:35.000Z" itemprop="datePublished">2015-12-30</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>I have a few things to wrap up before the new year, and time is running short. In particular, I need to find a new apartment and attend a LAN party. It’s important to keep your priorities in order.</p>
-<p>I’ll also be doing a retrospective of 2015, mostly focused on SRPG progress. Sort of a pre-postmortem to see what’s been going right and what’s been going wrong.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/12/30/New-Years-Eve-Eve/" data-id="ciowf21fb007tfwohcd5afzf6" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-Resolution" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/29/Resolution/">Resolution</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/12/29/Resolution/">
-      <time datetime="2015-12-29T22:08:06.000Z" itemprop="datePublished">2015-12-29</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Today I resolve to be more resolute. Starting tomorrow.</p>
-<p>I kid, but this is my biggest regret of 2015. Leaving things for tomorrow when I’m absolutely certain I could do them today. That’s why my New Year’s resolution is a bit early; I already know what needs to be done, so there’s no reason to wait.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/12/29/Resolution/" data-id="ciowf21ev007nfwohzcqrxo8d" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-Weekly-Update-22" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/28/Weekly-Update-22/">Weekly Update #22</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/12/28/Weekly-Update-22/">
-      <time datetime="2015-12-28T09:49:25.000Z" itemprop="datePublished">2015-12-28</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p><strong>Changes &amp; Updates:</strong></p>
-<ul>
-<li>Switched from Middleman to Hexo</li>
-<li>Trialed some SRPG ideas in Numenera</li>
-</ul>
-<p><strong>Bugs &amp; Problems:</strong></p>
-<ul>
-<li>Nothing new</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/12/28/Weekly-Update-22/" data-id="ciowf21eo007ifwohqohj8zyp" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-Homecoming" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/27/Homecoming/">Homecoming</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/12/27/Homecoming/">
-      <time datetime="2015-12-27T08:00:00.000Z" itemprop="datePublished">2015-12-27</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Drove home. Decided to replace Middleman with Hexo. Seems much faster and cleaner so far. Unfortunately, it uses different date and filename formats, so I have to do a bunch of manual cleanup. You’ll notice the site looks a bit different now.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/12/27/Homecoming/" data-id="ciowf21fn0082fwohvzjicp1r" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-Generator-Problems" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/26/Generator-Problems/">Generator Problems</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/12/26/Generator-Problems/">
-      <time datetime="2015-12-26T08:00:00.000Z" itemprop="datePublished">2015-12-26</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Middleman is misbehaving. It’s been getting very slow lately anyway, so I’m going to look at other site generators to replace it.</p>
-<p>Didn’t get to see TFA; theaters are too packed this weekend.</p>
-<p>Meanwhile, got to try out some SRPG ideas in Numenera.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/12/26/Generator-Problems/" data-id="ciowf21fo0083fwohfabk7i88" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-Merry-Christmas" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/25/Merry-Christmas/">Merry Christmas!</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/12/25/Merry-Christmas/">
-      <time datetime="2015-12-25T08:00:00.000Z" itemprop="datePublished">2015-12-25</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Merry Christmas! No update today, too much candy.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/12/25/Merry-Christmas/" data-id="ciowf21fi007yfwohbsul5hue" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-On-the-Road" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/24/On-the-Road/">On the Road</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/12/24/On-the-Road/">
-      <time datetime="2015-12-24T08:00:00.000Z" itemprop="datePublished">2015-12-24</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Christmas Eve, time to drive down to Oregon. Plans include food, roleplaying (Numenera, Star Wars and D&amp;D), possibly going to see TFA again.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/12/24/On-the-Road/" data-id="ciowf21ez007rfwoh7ec0yuk4" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-the-star-war" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/23/the-star-war/">The Star War</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/12/23/the-star-war/">
-      <time datetime="2015-12-23T08:00:00.000Z" itemprop="datePublished">2015-12-23</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Went and saw Star Wars: TFA today. We need to go see it again because we had front-row seats. The 30% of the screen I could view seemed like an excellent film. Going to go see it again later to get the full experience.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/12/23/the-star-war/" data-id="ciowf217k002efwohuct98900" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-    
-      <article id="post-daily-update-355-2015" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/22/daily-update-355-2015/">Daily Update 355.2015</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          
-  <div class="article-date">
-    <i class="fa fa-calendar"></i>
-    <a href="/2015/12/22/daily-update-355-2015/">
-      <time datetime="2015-12-22T08:00:00.000Z" itemprop="datePublished">2015-12-22</time>
-    </a>
-  </div>
-
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-                
-        <p>Numenera prep today, hoping to run a session over Christmas. I run two Numenera campaigns (R and W, for reasons) currently and will be using both of them as testbeds for SRPG characters, puzzles, etc.</p>
-<p>The W campaign gets the Baron, the city, and the aethernaut sections. The R campaign (for Christmas) will get more of the puzzle elements and characters.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://timberjaw.github.io/2015/12/22/daily-update-355-2015/" data-id="ciowf21bz005dfwohwygzslyy" class="article-share-link">Share</a>
+      <a data-url="http://timberjaw.github.io/2016/01/02/Darksiders/" data-id="cip80lwy40085ugohmu853xbw" class="article-share-link">Share</a>
       
       
     </footer>
