@@ -8,8 +8,26 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Dev journal and geek stuff.</description>
-    <pubDate>Thu, 09 Jun 2016 08:00:56 GMT</pubDate>
+    <pubDate>Wed, 22 Nov 2017 08:18:49 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>IFComp 2018</title>
+      <link>http://timberjaw.github.io/2017/11/22/IFComp-2018/</link>
+      <guid>http://timberjaw.github.io/2017/11/22/IFComp-2018/</guid>
+      <pubDate>Wed, 22 Nov 2017 08:15:47 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;I’ve set a new goal for StupidRPG. I’ll be entering it into the 2018 Interactive Fiction Competition. 9/28/2018.&lt;/p&gt;
+
+      
+      </description>
+      
+      <content:encoded>&lt;p&gt;I’ve set a new goal for StupidRPG. I’ll be entering it into the 2018 Interactive Fiction Competition. 9/28/2018.&lt;/p&gt;
+</content:encoded>
+      
+      <comments>http://timberjaw.github.io/2017/11/22/IFComp-2018/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Daily Update 2016.06.08</title>
@@ -430,23 +448,6 @@
 </content:encoded>
       
       <comments>http://timberjaw.github.io/2016/05/21/Daily-Update-2016-05-21/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Daily Update 2016.05.20</title>
-      <link>http://timberjaw.github.io/2016/05/20/Daily-Update-2016-05-20/</link>
-      <guid>http://timberjaw.github.io/2016/05/20/Daily-Update-2016-05-20/</guid>
-      <pubDate>Fri, 20 May 2016 07:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;Finished Numenera prep. Lots of lunar exploration ideas to be trialed. Item drops won’t be relevant to SRPG, but aethernaut interactions 
-      
-      </description>
-      
-      <content:encoded>&lt;p&gt;Finished Numenera prep. Lots of lunar exploration ideas to be trialed. Item drops won’t be relevant to SRPG, but aethernaut interactions and general lunar navigation (and associated gravity/oxygen issues) will be.&lt;/p&gt;
-</content:encoded>
-      
-      <comments>http://timberjaw.github.io/2016/05/20/Daily-Update-2016-05-20/#disqus_thread</comments>
     </item>
     
   </channel>
